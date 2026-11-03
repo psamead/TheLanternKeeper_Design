@@ -196,3 +196,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | `deprecated/` 改为上传（方便查看视觉演变）；新增 `ForDesignScreenshot/` 放 Unity / Codex 截图；README 两版同步 |
 | 2026-11-03 | 菜单 BGM / 环境声 AudioSource 初始音量保存为 0，由 MenuMusic 淡入至目标音量；Editor 检查 Settings Escape 返回音有效，但音乐源后续报告停止且输出采样为零，持续播放与扬声器听感仍待核验。详见 TechnicalArt/MENU_UNITY_PROGRESS.md。 |
 | 2026-11-03 | 菜单跟手调整：悬停浪声 v2（起音即达峰）+ 新选项立即切掉旧声；PLAY → 01_Home 过渡缩短为 0.5 s；Home 恢复占位字、深蓝背景。Unity 改动待提交，详见 MENU_UNITY_PROGRESS |
+| 2026-11-04 | 菜单悬停 v3（“哒”声起音 + 停留 1 s 后海浪轻拍）用户确认通过；Codex 提交指令 `2026-11-04_Unity_Commit_MenuFeel.md` |
