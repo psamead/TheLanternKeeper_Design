@@ -367,3 +367,27 @@ if __name__ == "__main__":
         save("AMB_Menu_SeaWind_loop", ambience(), False)
     if "bgm" in which:
         save("BGM_Menu_Gwerz_loop", bgm(), False)
+
+# ---------------------------------------------------------------- v2 hover (2026-11-03)
+def sfx_hover_v2(seed, dur=0.7):
+    """Immediate wave lap: loudest within ~15 ms, then foam recedes. Follows fast mouse sweeps."""
+    r = np.random.default_rng(seed)
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    low = lp(noise(n, "brown"), 420)
+    mid = bp(noise(n, "pink"), 300, 1600)
+    hi = bp(noise(n), 1600, 5500)
+    att = np.clip(t / 0.012, 0, 1)
+    e_low = att * np.exp(-t / 0.16)
+    e_mid = att * np.exp(-t / 0.22)
+    e_hi = np.clip(t / 0.03, 0, 1) * np.exp(-t / 0.30) * (0.6 + 0.4 * np.sin(np.pi * np.clip(t / 0.4, 0, 1)))
+    crackle = bp((r.random(n) < 0.004) * r.standard_normal(n), 2500, 7000) * 5 * np.exp(-t / 0.35)
+    m = 0.9 * low * e_low + 0.7 * mid * e_mid + 0.3 * hi * e_hi + 0.2 * crackle
+    st = pan(m, r.uniform(-0.15, 0.15))
+    st = lp(st.T, 4200, 2).T
+    st = add_reverb(st, wet=0.15, dur=0.6)
+    return fade(norm(st, -9), 0.002, 0.12)
+
+if __name__ == "__main__" and "hover2" in sys.argv[2:]:
+    for i in range(3):
+        save(f"SFX_Menu_Hover_Wave_0{i+1}", sfx_hover_v2(70 + i * 9))

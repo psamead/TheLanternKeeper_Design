@@ -76,3 +76,16 @@
 
 - Cleared the `PlaceholderLabel` TMP text in `01_Home` at the user's request, including the `Esc → menu` helper that appeared over the Start Menu when scenes were loaded additively in the Editor. Saved the scene and verified the label text is empty and the scene is not dirty.
 - The screenshot's duplicate AudioListener/EventSystem warnings were caused by both scenes being loaded additively; Start Menu and Home each have one listener/EventSystem in their own scene. Commit `7415565` was pushed to GitHub `main`.
+
+## 2026-11-03 — Fade startup follow-up
+
+- Set the serialized MenuMusic source volumes to zero; `MenuMusic` then fades to the specified 0.6 / 0.45 targets. The scene was saved cleanly.
+- A fresh Editor probe confirmed both volumes reached their targets, but then reported `isPlaying == false` and zero output samples. The Settings Escape path closed the panel and started the SFX source. BGM/ambience audibility and sustained playback remain unverified; a focused Game view or speaker listening check is still needed. This probe does not establish whether the condition is Editor focus or runtime behavior.
+## 2026-11-03 下午 — 悬停跟手、Play 过渡、Home 占位（Claude 直接改，用户已在 Editor 验证前两版）
+
+- 编辑器里 `01_Home` 曾被叠加打开 → Play 时两场景同跑（Home 字压在菜单上、2 AudioListener / 2 EventSystem）。用户已移除；只开当前场景。
+- `MenuAudio.cs`：悬停改为两个专用声道轮换；划到新选项时旧浪声约 15 ms 内切掉、新的从头播（跟随玩家速度）；不划时浪声自然放完。确认音改在 DontDestroyOnLoad 的临时物体上播放，切场景不被截断。
+- 悬停浪声 v2：起音即最响（13–35 ms 达峰，v1 要 0.1–0.3 s），长约 0.75 s；v1 移到 `deprecated/audio_2026-11-03/`。Unity 内同名替换（GUID 不变）。
+- `MenuMusic.cs` + `00_StartMenu`：PLAY 后不再等确认音放完（原约 3 s + 1 s 淡出），改为 0.5 s 淡出后加载 `01_Home`。
+- `01_Home.unity`：恢复两行居中占位字 `01_Home` / `Esc → menu`（游戏内点 PLAY 后才出现），相机背景 #1E2633。
+- 以上 Unity 改动**未提交**：提交时还原 `LiberationSans SDF - Fallback.asset`（TMP 自动写入），其余 7 个文件提交。

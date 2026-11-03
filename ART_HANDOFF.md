@@ -194,3 +194,5 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | 共享文件夹建为 Git 仓库，公开发布到 `psamead/TheLanternKeeper_Design`（学生只拉取）；新增 README（Agent 阅读顺序）、`.gitignore`（不传 deprecated/、源文件、第三方参考图 BRETON_* / FAIRYHILLS_*）；UNITY_AGENTS.md 去掉局域网路径，改指向设计仓库 |
 | 2026-11-03 | 仓库已推送到 GitHub；README 改为英文在前（`README.md`），中文另存 `README.zh-CN.md`，顶部互相链接切换；handoff、AGENT_PROCESS_GUIDELINES、LESSONS 与《项目总览与文件说明》Word 加入仓库说明 |
 | 2026-11-03 | `deprecated/` 改为上传（方便查看视觉演变）；新增 `ForDesignScreenshot/` 放 Unity / Codex 截图；README 两版同步 |
+| 2026-11-03 | 菜单 BGM / 环境声 AudioSource 初始音量保存为 0，由 MenuMusic 淡入至目标音量；Editor 检查 Settings Escape 返回音有效，但音乐源后续报告停止且输出采样为零，持续播放与扬声器听感仍待核验。详见 TechnicalArt/MENU_UNITY_PROGRESS.md。 |
+| 2026-11-03 | 菜单跟手调整：悬停浪声 v2（起音即达峰）+ 新选项立即切掉旧声；PLAY → 01_Home 过渡缩短为 0.5 s；Home 恢复占位字、深蓝背景。Unity 改动待提交，详见 MENU_UNITY_PROGRESS |
