@@ -1,0 +1,15 @@
+# 旧版本：有 Git 历史后不再上传
+deprecated/
+# 临时 / 工具目录
+.story_document_qa/
+*.tmp
+~$*
+Thumbs.db
+desktop.ini
+.DS_Store
+# 美术源文件（体积大，不进 Git）
+*.psd
+*.psb
+# 第三方参考图：不是本项目的作品，只留在本地，不公开
+ART_ref/BRETON_*_REF_*.png
+ART_ref/FAIRYHILLS_REF_*.png
