@@ -97,3 +97,4 @@
 - 改动文件：`MenuAudio.cs`、`MenuItemHover.cs`（加 PointerExit）、`MainMenuController.cs`（`PointerLeft`、键盘不进停留）。仍未提交（同上，Fallback 字体资源不提交）。
 
 - 2026-11-04：用户试听通过——划过的“哒”声（v3 起音冲击）可以，海浪停留机制保留。待 Codex 按 `CommandForAgentToInitialRun/2026-11-04_Unity_Commit_MenuFeel.md` 提交。
+- 2026-11-04：编辑模式下选中图标 / 下划线错位（位置只在运行时计算）→ `MainMenuController` 加 `OnValidate` 编辑器预览，按运行时规则摆放第一项；只移动现有物体，不加组件、不发声。

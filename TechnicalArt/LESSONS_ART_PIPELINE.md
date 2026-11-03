@@ -35,6 +35,7 @@
 - TMP 字体第一次生成可能不完整：要先导入 TMP Essentials；失败的旧 SDF 要手动删。`Examples & Extras` 不需要，删掉。
 - 全屏 UI Image 背景全黑 → 检查 RectTransform 锚点是否纵向反转（高度 -1080）。
 - 下划线要按 TMP 实际字形边界定位，不要按文本框。
+- 运行时才计算位置的 UI（选中图标、下划线）在编辑模式会错位：加 `OnValidate` + `EditorApplication.delayCall` 做编辑器预览，按运行时同一套规则摆放。
 - Codex 改别的场景时会留下“未保存”的场景，**做完让用户在 Unity 里 Ctrl+S 后再提交**。
 - **编辑器里不要叠加打开场景**：Codex 为改别的场景用 additive 打开后没关，Play 时两个场景一起跑——另一个场景的字压在菜单上，Console 刷“2 audio listeners / 2 event systems”。Hierarchy 里只留当前场景。
 - 悬停音不要用 `PlayOneShot` 叠播：单独一个 AudioSource，新的一响先快速淡掉旧的再从头播。
