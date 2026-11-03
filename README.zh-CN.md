@@ -42,8 +42,10 @@ git pull
 | `ART_ref/` | 概念图、参考图、`ASSETS.md` 资产总表 |
 | `TechArtAsset/` | 做好的游戏资产（导出 PNG、OGG） |
 | `CommandForAgentToInitialRun/` | 交给 Codex 的分步指令（按日期） |
+| `ForDesignScreenshot/` | Unity / Codex 那边的截图，供设计核对 |
+| `deprecated/` | 被取代的旧版本和过程图（保留视觉演变） |
 
-未上传：`deprecated/`（旧版本）、`.psd/.psb` 源文件、第三方参考图（`BRETON_*`、`FAIRYHILLS_*`，`ASSETS.md` 中有登记但只在本地）。
+未上传：`.psd/.psb` 源文件、第三方参考图（`BRETON_*`、`FAIRYHILLS_*`，`ASSETS.md` 中有登记但只在本地）。
 
 ## 版权
 

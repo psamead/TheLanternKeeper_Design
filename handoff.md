@@ -61,7 +61,7 @@
 - 灰盒先行：用 `HANDPAINTED_SPEC.md` §7 的色块；美术到位后关闭碰撞 Tilemap 的渲染，挂上分层美术（§5 层级）。
 - 文本（对话、插图文字）放 ScriptableObject，不写死在脚本里。
 - Git：每完成一项提交一次；美术源文件（.psd / .psb）不进 Git，放 `TechArtAsset/`。
-- 设计仓库：由 Psamead 维护。Claude 改完文档在本地提交（作者 `psamead <psamead@users.noreply.github.com>`），Psamead 在 Windows 上 `git push`。不上传：`deprecated/`、源文件、第三方参考图（见 `.gitignore`）。README 英文在前（`README.md`），中文 `README.zh-CN.md`，两份同步改。
+- 设计仓库：由 Psamead 维护。Claude 改完文档在本地提交（作者 `psamead <psamead@users.noreply.github.com>`），Psamead 在 Windows 上 `git push`。不上传：源文件、第三方参考图（见 `.gitignore`）。README 英文在前（`README.md`），中文 `README.zh-CN.md`，两份同步改。
 - 完成事项后在 `DEMO_IMPLEMENTATION_PLAN.md` 第 7 节把 ☐ 改为 ☑；未在 Play Mode 验证的不要标为完成。
 
 ## 7. 当前状态（2026-10-30）

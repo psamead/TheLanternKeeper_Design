@@ -1,5 +1,3 @@
-# 旧版本：有 Git 历史后不再上传
-deprecated/
 # 临时 / 工具目录
 .story_document_qa/
 *.tmp

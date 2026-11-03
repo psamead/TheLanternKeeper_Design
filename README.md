@@ -44,8 +44,10 @@ What happened recently: `ART_HANDOFF.md` §10 (change log), `TechnicalArt/MENU_U
 | `ART_ref/` | Concept art, references, `ASSETS.md` asset list |
 | `TechArtAsset/` | Finished game assets (exported PNG, OGG) |
 | `CommandForAgentToInitialRun/` | Step-by-step instructions given to Codex (dated) |
+| `ForDesignScreenshot/` | Screenshots from the Unity / Codex side for design review |
+| `deprecated/` | Superseded versions and process images (kept for visual history) |
 
-Not uploaded: `deprecated/` (old versions), `.psd/.psb` source files, third-party reference images (`BRETON_*`, `FAIRYHILLS_*` — listed in `ASSETS.md` but kept local only).
+Not uploaded: `.psd/.psb` source files, third-party reference images (`BRETON_*`, `FAIRYHILLS_*` — listed in `ASSETS.md` but kept local only).
 
 ## Licences
 

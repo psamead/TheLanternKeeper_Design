@@ -41,7 +41,7 @@
 | `TechArtAsset/` | **做好的**游戏资产（PSD / PSB 源文件 + 导出 PNG） | 人 + Unity |
 | `deprecated/` | 旧版本 | — |
 
-**Git**：本文件夹即公开仓库 `psamead/TheLanternKeeper_Design`（2026-11-03 起）。改完在本地提交，由 Psamead 推送；`deprecated/`、`.psd/.psb`、第三方参考图（`ART_ref/BRETON_*`、`FAIRYHILLS_*`）不上传。新增第三方图片时同样写进 `.gitignore`。
+**Git**：本文件夹即公开仓库 `psamead/TheLanternKeeper_Design`（2026-11-03 起）。改完在本地提交，由 Psamead 推送；`deprecated/` 也上传（保留视觉演变）；Unity 那边的截图放 `ForDesignScreenshot/`。`.psd/.psb`、第三方参考图（`ART_ref/BRETON_*`、`FAIRYHILLS_*`）不上传。新增第三方图片时同样写进 `.gitignore`。
 
 规则：新版本另存新文件名（`_v2`），不覆盖用户编辑过的文件。`TechArtAsset/` 子目录与命名：
 
@@ -193,3 +193,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | 按用户要求清空 `01_Home` 的占位标题与 `Esc → menu` 文本，避免其在 Editor 同时加载开始菜单与 Home 时叠显示；场景已保存，单场景各自 AudioListener / EventSystem 正常。提交 `7415565` 已推送至 GitHub `main`；详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
 | 2026-11-03 | 共享文件夹建为 Git 仓库，公开发布到 `psamead/TheLanternKeeper_Design`（学生只拉取）；新增 README（Agent 阅读顺序）、`.gitignore`（不传 deprecated/、源文件、第三方参考图 BRETON_* / FAIRYHILLS_*）；UNITY_AGENTS.md 去掉局域网路径，改指向设计仓库 |
 | 2026-11-03 | 仓库已推送到 GitHub；README 改为英文在前（`README.md`），中文另存 `README.zh-CN.md`，顶部互相链接切换；handoff、AGENT_PROCESS_GUIDELINES、LESSONS 与《项目总览与文件说明》Word 加入仓库说明 |
+| 2026-11-03 | `deprecated/` 改为上传（方便查看视觉演变）；新增 `ForDesignScreenshot/` 放 Unity / Codex 截图；README 两版同步 |
