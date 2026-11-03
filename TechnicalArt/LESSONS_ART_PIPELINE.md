@@ -45,7 +45,15 @@
 - 循环素材：多渲染几秒，把超出循环点的尾巴（混响等）叠回开头，接缝无咔哒。
 - BGM 和环境声分成两个文件，Unity 里各自调音量。
 
-## 6. 文件管理
+## 6. 协作与 GitHub
+
+- 让学生的 Agent 知道进度：把设计文件夹做成**公开仓库**（`psamead/TheLanternKeeper_Design`），学生只 `git pull`。只由一个人推送——Word / Excel 是二进制，多人同改会冲突且无法合并。
+- 公开前先查：第三方参考图（别人的作品、网上找的纹样图）、带电脑名的局域网路径、个人邮箱。提交作者用 `<用户名>@users.noreply.github.com`。
+- 有 Git 历史后 `deprecated/` 不必上传；`.psd/.psb` 不进 Git。
+- 设备上的 Linux 环境没有 GitHub 凭据：Claude 在本地 init / commit，用户在 Windows 上 `git push`（在网页建仓库时不要勾选自动 README，否则推送被拒）。
+- GitHub README 没有切换按钮：英文 `README.md` 放前面，中文 `README.zh-CN.md`，顶部互链 `English | 简体中文`。
+
+## 7. 文件管理
 
 - 被取代的版本和过程图按日期放 `deprecated/art_日期/`（`previews/`、`poster_process/` 子文件夹）。
 - 合成用的分层素材留在 `TechArtAsset/Poster/_work/`；MJ / AI Studio 原图改名放 `ART_ref/`（如 `MENU_SRC_*`）。

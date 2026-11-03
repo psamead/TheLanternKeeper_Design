@@ -6,6 +6,7 @@
 
 - 游戏：《The Lantern Keeper》（中文工作名《守灯人》），2D 手绘横版解谜，布列塔尼海岸民俗题材。
 - 项目：York（Game_York）；协作：Psamead。
+- GitHub：设计仓库（本文件夹）：<https://github.com/psamead/TheLanternKeeper_Design>（公开）；Unity 仓库：<https://github.com/psamead/TheLanternKeeper2D>。学生 / 其他 Agent 只拉取（`git pull`），不改。
 - 当前目标：**小体量 Demo**，4 个 Scene，5–8 分钟，体量参考 Game_zixiang 的 2D Battle Car Arena。
 - 引擎：Unity 6.3 LTS，URP 2D；平台 PC（Windows）。游戏内只用英文。
 - 一句话：梅拉提着能照见“正在沉没的过去”的灯笼，在码头用两层世界切换走过只存在于记忆里的路，找回一枚记忆贝壳。
@@ -60,6 +61,7 @@
 - 灰盒先行：用 `HANDPAINTED_SPEC.md` §7 的色块；美术到位后关闭碰撞 Tilemap 的渲染，挂上分层美术（§5 层级）。
 - 文本（对话、插图文字）放 ScriptableObject，不写死在脚本里。
 - Git：每完成一项提交一次；美术源文件（.psd / .psb）不进 Git，放 `TechArtAsset/`。
+- 设计仓库：由 Psamead 维护。Claude 改完文档在本地提交（作者 `psamead <psamead@users.noreply.github.com>`），Psamead 在 Windows 上 `git push`。不上传：`deprecated/`、源文件、第三方参考图（见 `.gitignore`）。README 英文在前（`README.md`），中文 `README.zh-CN.md`，两份同步改。
 - 完成事项后在 `DEMO_IMPLEMENTATION_PLAN.md` 第 7 节把 ☐ 改为 ☑；未在 Play Mode 验证的不要标为完成。
 
 ## 7. 当前状态（2026-10-30）

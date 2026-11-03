@@ -41,6 +41,8 @@
 | `TechArtAsset/` | **做好的**游戏资产（PSD / PSB 源文件 + 导出 PNG） | 人 + Unity |
 | `deprecated/` | 旧版本 | — |
 
+**Git**：本文件夹即公开仓库 `psamead/TheLanternKeeper_Design`（2026-11-03 起）。改完在本地提交，由 Psamead 推送；`deprecated/`、`.psd/.psb`、第三方参考图（`ART_ref/BRETON_*`、`FAIRYHILLS_*`）不上传。新增第三方图片时同样写进 `.gitignore`。
+
 规则：新版本另存新文件名（`_v2`），不覆盖用户编辑过的文件。`TechArtAsset/` 子目录与命名：
 
 ```text
@@ -160,6 +162,8 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 2. Maela 转身图（`ART_PROMPTS.md` C01-T，加 STYLE_GAME）→ 游戏版侧面（C01-G）→ 拆部件。
 3. 海报 A3 放大（PS 保留细节 2.0 → 3508×4961）。
 
+设计仓库（公开，学生只拉取）：<https://github.com/psamead/TheLanternKeeper_Design>，入口 `README.md`（英文）/ `README.zh-CN.md`（中文）。
+
 Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`、`02_Harbor`、`03_EndCard`；开始菜单 OGG 音效、BGM 与海风环境声已接入，最新提交见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。
 
 **经验库**：`TechnicalArt/LESSONS_ART_PIPELINE.md`（全部踩坑）；Midjourney 细节另见 `ART_PRODUCTION_GUIDE.md` §12。
@@ -188,3 +192,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | Unity 菜单音频接入：OGG 悬停/确认/返回音、循环 BGM 与海风环境声及淡入淡出；Play Mode 验证 Play 到 Home、Escape 返回菜单。未做扬声器听测、80 秒循环监听或独立 Player 构建。提交 `be85569`，详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
 | 2026-11-03 | 按用户要求清空 `01_Home` 的占位标题与 `Esc → menu` 文本，避免其在 Editor 同时加载开始菜单与 Home 时叠显示；场景已保存，单场景各自 AudioListener / EventSystem 正常。提交 `7415565` 已推送至 GitHub `main`；详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
 | 2026-11-03 | 共享文件夹建为 Git 仓库，公开发布到 `psamead/TheLanternKeeper_Design`（学生只拉取）；新增 README（Agent 阅读顺序）、`.gitignore`（不传 deprecated/、源文件、第三方参考图 BRETON_* / FAIRYHILLS_*）；UNITY_AGENTS.md 去掉局域网路径，改指向设计仓库 |
+| 2026-11-03 | 仓库已推送到 GitHub；README 改为英文在前（`README.md`），中文另存 `README.zh-CN.md`，顶部互相链接切换；handoff、AGENT_PROCESS_GUIDELINES、LESSONS 与《项目总览与文件说明》Word 加入仓库说明 |

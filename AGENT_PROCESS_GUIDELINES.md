@@ -17,6 +17,8 @@
 | 9 | 11-02 | 画风定稿 | 游戏画风改为手绘 2D，新规格 HANDPAINTED_SPEC | TechnicalArt/HANDPAINTED_SPEC.md 与 Word |
 | 10 | 11-02~03 | 标题 · 海报 · 菜单 | 字体系统；标题框（蕾丝 + 白鼬尾纹）；海报 v2；开始菜单 v1；MJ 编辑器故障改用 AI Studio；交 Codex 进 Unity | TechArtAsset/Menu、Poster、UI；TechnicalArt/MENU_UNITY_HANDOFF.md |
 | 11 | 11-03 | Unity 首跑 | Codex 建 4 场景 + 开始菜单 v1；用户试玩反馈（音效太电子、缺 BGM）；建立经验库 | TechnicalArt/MENU_UNITY_PROGRESS.md、LESSONS_ART_PIPELINE.md |
+| 12 | 11-03 | 菜单音频 · 编号 | 代码合成菜单 BGM、海浪海风环境声、自然音效；场景改为 00_StartMenu / 01_Home / 02_Harbor / 03_EndCard；Codex 接入 | TechArtAsset/Audio/Menu/；CommandForAgentToInitialRun/2026-11-03_Unity_SceneRename_MenuAudio.md |
+| 13 | 11-03 | 设计仓库上 GitHub | 共享文件夹建为公开仓库 psamead/TheLanternKeeper_Design，学生只拉取；英文 README + 中文 README.zh-CN | README.md、README.zh-CN.md、.gitignore |
 
 ## 2. 关键决策
 
@@ -25,6 +27,7 @@
 | 布列塔尼民俗（伊斯、达于） | 与海和灯塔契合；和《妖精丘陵》的爱尔兰题材区分 | 可（备选：苏格兰海豹人） |
 | ~~像素风~~ → **手绘 2D**（2026-11-02） | 美术靠 AI 出图再清理，像素需全手画反而慢；与海报、概念图画风统一；用分层大图 + 骨骼动画控制工作量 | 可 |
 | Demo 只做全屏切换 | 小体量；初学者能实现 | 光圈模式留给完整版 |
+| 设计文档公开到 GitHub（2026-11-03） | 学生与他们的 Agent 拉下即知进度；Psamead 单人推送避免 Word 冲突 | 可 |
 | 游戏内只用英文 | 与《妖精丘陵》一致；民俗名词保持原文 | 可，文本表预留中文 |
 
 ## 3. 工作准则
@@ -34,6 +37,7 @@
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。
 - md 与对应 Word 同源，改一处要同步另一处。
 - 参考图放 `ART_ref/`，每次新增或替换都更新 `ART_ref/ASSETS.md`。
+- 本文件夹是公开 Git 仓库：改完在本地 commit（作者 `psamead <psamead@users.noreply.github.com>`，不用个人邮箱），提醒用户 `git push`。第三方素材、源文件、`deprecated/` 不上传；新增第三方图写进 `.gitignore`。改 README 时英文 `README.md` 与中文 `README.zh-CN.md` 一起改。
 
 ### 3.2 设定
 - 设定以 `STORY_BIBLE.md` 为准；修改先登记 `DESIGN_CHANGES.md`。
