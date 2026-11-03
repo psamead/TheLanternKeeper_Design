@@ -51,6 +51,7 @@
 - 公开前先查：第三方参考图（别人的作品、网上找的纹样图）、带电脑名的局域网路径、个人邮箱。提交作者用 `<用户名>@users.noreply.github.com`。
 - `deprecated/` 也上传：人查起来能看到视觉演变（上传前把里面的局域网路径等去掉）；`.psd/.psb` 不进 Git。截图另放 `ForDesignScreenshot/`。
 - 设备上的 Linux 环境没有 GitHub 凭据：Claude 在本地 init / commit，用户在 Windows 上 `git push`（在网页建仓库时不要勾选自动 README，否则推送被拒）。
+- 在国内推 GitHub 报 `Connection was reset` / 超时：给 git 设代理（`git config --global http.proxy http://192.168.1.41:10808`，即 Windows 系统代理地址）；大文件推送中途断开时再加 `http.postBuffer 524288000` 并用 `git -c http.version=HTTP/1.1 push`。注意：断开后仍可能显示 "Everything up-to-date"，要用 `git ls-remote origin main` 核对远端。
 - GitHub README 没有切换按钮：英文 `README.md` 放前面，中文 `README.zh-CN.md`，顶部互链 `English | 简体中文`。
 
 ## 7. 文件管理
