@@ -89,3 +89,9 @@
 - `MenuMusic.cs` + `00_StartMenu`：PLAY 后不再等确认音放完（原约 3 s + 1 s 淡出），改为 0.5 s 淡出后加载 `01_Home`。
 - `01_Home.unity`：恢复两行居中占位字 `01_Home` / `Esc → menu`（游戏内点 PLAY 后才出现），相机背景 #1E2633。
 - 以上 Unity 改动**未提交**：提交时还原 `LiberationSans SDF - Fallback.asset`（TMP 自动写入），其余 7 个文件提交。
+
+## 2026-11-03 傍晚 — 悬停 v3 与“停留”状态（Claude 直接改，待用户验证）
+
+- 悬停浪声 v3：开头加 ~10 ms 的“拍石”冲击，5–6 ms 达峰（v2 为 13–35 ms），总长约 0.7 s。v2 移入 `deprecated/audio_2026-11-03/`。
+- 停留状态：鼠标停在同一选项上 **1.0 s** 后，浪声以 1.4–2.2 s 随机间隔轻拍（音量 0.42，划过时 0.6）；移出选项、键盘切换、确认 / 返回时结束。参数在 `MenuAudio` Inspector（Dwell 组）可调。
+- 改动文件：`MenuAudio.cs`、`MenuItemHover.cs`（加 PointerExit）、`MainMenuController.cs`（`PointerLeft`、键盘不进停留）。仍未提交（同上，Fallback 字体资源不提交）。

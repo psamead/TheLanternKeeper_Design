@@ -391,3 +391,33 @@ def sfx_hover_v2(seed, dur=0.7):
 if __name__ == "__main__" and "hover2" in sys.argv[2:]:
     for i in range(3):
         save(f"SFX_Menu_Hover_Wave_0{i+1}", sfx_hover_v2(70 + i * 9))
+
+# ---------------------------------------------------------------- v3 hover: peak within 5-10 ms
+def sfx_hover_v3(seed, dur=0.7):
+    r = np.random.default_rng(seed)
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    low = lp(noise(n, "brown"), 420)
+    mid = bp(noise(n, "pink"), 300, 1600)
+    hi = bp(noise(n), 1600, 5500)
+    att = np.clip(t / 0.004, 0, 1)                      # 4 ms attack
+    e_low = att * np.exp(-t / 0.14)
+    e_mid = att * np.exp(-t / 0.20)
+    e_hi = att * np.exp(-t / 0.28)
+    crackle = bp((r.random(n) < 0.004) * r.standard_normal(n), 2500, 7000) * 5 * np.exp(-t / 0.3)
+    slap = bp(noise(n, "pink"), 180, 3200)
+    slap = slap / (np.std(slap[: int(0.03 * SR)]) + 1e-9)
+    e_slap = att * np.exp(-t / 0.010)                   # water slapping stone: ~10 ms burst
+    body = 0.9 * low * e_low + 0.75 * mid * e_mid + 0.3 * hi * e_hi + 0.2 * crackle
+    sl = slap * e_slap
+    sl = sl / (np.max(np.abs(sl)) + 1e-9)
+    body = body / (np.max(np.abs(body)) + 1e-9)
+    m = 1.8 * sl + 0.4 * body                            # slap always the loudest moment
+    st = pan(m, r.uniform(-0.15, 0.15))
+    st = lp(st.T, 4200, 2).T
+    st = add_reverb(st, wet=0.12, dur=0.5)
+    return fade(norm(st, -9), 0.001, 0.12)
+
+if __name__ == "__main__" and "hover3" in sys.argv[2:]:
+    for i in range(3):
+        save(f"SFX_Menu_Hover_Wave_0{i+1}", sfx_hover_v3(90 + i * 11))
