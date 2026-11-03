@@ -187,3 +187,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | 场景编号改为开始菜单 `00_StartMenu`、章节 `01_Home` / `02_Harbor` / `03_EndCard`；Unity Editor 内重命名并保留 GUID，Build Settings、脚本路由、Harbor/EndCard 占位标签已同步。 |
 | 2026-11-03 | Unity 菜单音频接入：OGG 悬停/确认/返回音、循环 BGM 与海风环境声及淡入淡出；Play Mode 验证 Play 到 Home、Escape 返回菜单。未做扬声器听测、80 秒循环监听或独立 Player 构建。提交 `be85569`，详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
 | 2026-11-03 | 按用户要求清空 `01_Home` 的占位标题与 `Esc → menu` 文本，避免其在 Editor 同时加载开始菜单与 Home 时叠显示；场景已保存，单场景各自 AudioListener / EventSystem 正常。提交 `7415565` 已推送至 GitHub `main`；详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
+| 2026-11-03 | 共享文件夹建为 Git 仓库，公开发布到 `psamead/TheLanternKeeper_Design`（学生只拉取）；新增 README（Agent 阅读顺序）、`.gitignore`（不传 deprecated/、源文件、第三方参考图 BRETON_* / FAIRYHILLS_*）；UNITY_AGENTS.md 去掉局域网路径，改指向设计仓库 |
