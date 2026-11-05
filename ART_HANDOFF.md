@@ -145,7 +145,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 5. ~~游戏内画风~~：已定为手绘 2D、偏暗民俗奇幻（2026-11-02）；与《妖精丘陵》的借鉴 / 回避见 HANDPAINTED_SPEC §0。
 6. Maela 提灯的手：朝右走时左手灯笼会被身体挡住，游戏版阶段考虑改右手（美术细节，改后登记）。
 
-## 9. 当前进度与下一步（2026-11-02 更新）
+## 9. 当前进度与下一步（2026-11-05 更新）
 
 > 下次对话从这里接着做。
 
@@ -155,11 +155,11 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 - **游戏画风定为手绘 2D**（2026-11-02）：新规格 `TechnicalArt/HANDPAINTED_SPEC.md`；像素规格移入 `deprecated/`。
 
 **下一步（2026-11-03 更新，建议顺序）**
-1. **完善开始菜单**（用户定：先于搭场景）：
+1. ☑ **开始菜单**（2026-11-03 ~ 05 完成）：
    - ☑ 菜单音频 v1 已做好并经用户确认（2026-11-03）：`TechArtAsset/Audio/Menu/`（BGM 80 s 循环、海浪海风环境声 60 s 循环、悬停浪声 ×3、灯笼确认音、木头返回音；代码合成，无第三方版权，脚本 `_src/synth_menu_audio.py`）。已拷入 Unity `Assets/_Project/Audio/Menu/`。
    - ☑ 按 `CommandForAgentToInitialRun/2026-11-03_Unity_SceneRename_MenuAudio.md` 完成场景重新编号和菜单音频接入；Play Mode 路由通过。扬声器听测与 80 秒循环点监听未验证。
-   - ◐ 雾横移 + 灯笼呼吸光（2026-11-05）：素材与预览 `TechArtAsset/Menu/FX/`（两层可平铺雾、暖金光晕，`MENU_FX_preview_v2.mp4` 用户确认：雾可以，呼吸加强到亮度 30–100 %、大小 86–110 %、3.2 s）。Unity 脚本 `UVScroll.cs`、`LanternGlowPulse.cs` 与贴图已放入项目；**下一步交 Codex：`CommandForAgentToInitialRun/2026-11-05_Unity_MenuFX.md`**。完成后开始菜单即收尾。
-2. **Maela（建议在新对话里做，从本节读起）**：转身图（`ART_PROMPTS.md` C01-T，加 STYLE_GAME）→ 游戏版侧面（C01-G）→ 拆部件。
+   - ☑ 雾横移 + 灯笼呼吸光（2026-11-05）：素材 `TechArtAsset/Menu/FX/`（预览 `MENU_FX_preview_v2.mp4`）；Unity 提交 `f714830`，雾边缘修复 `dd02e9b`。**开始菜单完成。**（小尾巴：URP 保存场景时给 Main Camera 自动补的 `UniversalAdditionalCameraData` 未提交，下次 Codex 顺手提交。）
+2. **▶ 现在做：Maela（新对话，从本节读起）**：转身图（`ART_PROMPTS.md` C01-T，加 STYLE_GAME）→ 游戏版侧面（C01-G）→ 拆部件。
 3. 海报 A3 放大（PS 保留细节 2.0 → 3508×4961）。
 
 设计仓库（公开，学生只拉取）：<https://github.com/psamead/TheLanternKeeper_Design>，入口 `README.md`（英文）/ `README.zh-CN.md`（中文）。
@@ -199,3 +199,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-04 | 菜单悬停 v3（“哒”声起音 + 停留 1 s 后海浪轻拍）用户确认通过；Codex 提交指令 `2026-11-04_Unity_Commit_MenuFeel.md` |
 | 2026-11-05 | 菜单动效：两层雾横移（14 / 26 px/s）+ 灯笼呼吸光（用户要求加强）；素材 `TechArtAsset/Menu/FX/`，脚本已放入 Unity；Codex 指令 `2026-11-05_Unity_MenuFX.md`；Maela 改在新对话进行 |
 | 2026-11-05 | 雾层硬边修复：Fog_A / Fog_B 上下边缘 alpha 0、Wrap V = Clamp；Codex 提交指令 `2026-11-05_Unity_FogEdgeFix.md` |
+| 2026-11-05 | 开始菜单完成（音频、跟手悬停、动效、雾边修复）；§9 下一步改为 Maela（新对话） |
