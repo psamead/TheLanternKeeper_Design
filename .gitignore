@@ -11,3 +11,5 @@ desktop.ini
 # 第三方参考图：不是本项目的作品，只留在本地，不公开
 ART_ref/BRETON_*_REF_*.png
 ART_ref/FAIRYHILLS_REF_*.png
+# Claude 推送用的临时打包文件
+.push.bundle
