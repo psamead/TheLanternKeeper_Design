@@ -107,3 +107,4 @@
 - 2026-11-05：菜单雾气与提灯呼吸光已接入并推送：f71483008d8baace8bb608a676d77f1c55093d0f。1920×1080 Play Mode 检查确认双层 UV 运动、3.2 秒呼吸、UI hover/click 命中，Play 加载 01_Home 并返回 00_StartMenu；TMP 字体资源已还原。MCP 使用过期 Camera ID 的捕获失败在 Console 留下一条工具错误，未发现其他项目错误。
 - 2026-11-05：Codex 已接入菜单动效（`f714830`）。用户发现雾层下边有硬边 → Claude 重做 Fog_A / Fog_B（上下边缘 alpha 0），`.meta` Wrap V 改 Clamp；未提交，待用户确认后提交。
 - 2026-11-05：Fog A/B 贴图边缘透明度修复并推送：dd02e9be74bc149227bcf100dfe5027107f49ba7。用户确认 00_StartMenu 已保存，Play Mode 中硬边已消失；仅提交两张雾贴图及其导入设置（Wrap U Repeat、Wrap V Clamp）。
+- 2026-11-05：提交并推送 Cinemachine 3.1.7 包、相机规范与 URP Main Camera 附加数据：204379b3b1a69577101727045c39e3d8f134c4cf。Unity 中仅 00_StartMenu 打开且场景干净；未创建或配置 Cinemachine 相机。
