@@ -200,3 +200,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-05 | 菜单动效：两层雾横移（14 / 26 px/s）+ 灯笼呼吸光（用户要求加强）；素材 `TechArtAsset/Menu/FX/`，脚本已放入 Unity；Codex 指令 `2026-11-05_Unity_MenuFX.md`；Maela 改在新对话进行 |
 | 2026-11-05 | 雾层硬边修复：Fog_A / Fog_B 上下边缘 alpha 0、Wrap V = Clamp；Codex 提交指令 `2026-11-05_Unity_FogEdgeFix.md` |
 | 2026-11-05 | 开始菜单完成（音频、跟手悬停、动效、雾边修复）；§9 下一步改为 Maela（新对话） |
+| 2026-11-05 | 用户在 Unity 装入 Cinemachine 3.1.7；HANDPAINTED_SPEC §相机、UNITY_AGENTS 写入用法（相机跟随一律用 Cinemachine） |

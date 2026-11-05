@@ -26,7 +26,7 @@
 |---|---|
 | 参考分辨率 | 1920×1080（16:9） |
 | PPU | 100（1 Unity 单位 = 100 px） |
-| 相机 | 正交，Size 5.4（一屏 19.2×10.8 单位）；不使用 Pixel Perfect Camera |
+| 相机 | 正交，Size 5.4（一屏 19.2×10.8 单位）；不使用 Pixel Perfect Camera。跟随用 **Cinemachine 3.1**（2026-11-05 装入）：`CinemachineCamera` + `CinemachinePositionComposer`（跟随 Maela，带少量阻尼）+ `CinemachineConfiner2D`（房间边界 PolygonCollider2D），不写自定义跟随脚本 |
 | 关卡网格 | 1 格 = 1 单位 = 100 px（只用于碰撞 / 关卡布局，不再是美术图块） |
 | Maela 屏幕高度 | 约 1.6 单位 = 160 px（建议；与原像素方案角色/屏幕比例一致，关卡尺度不用改） |
 | 绘制倍率 | 源文件按 **2×** 绘制（Maela 源约 320 px 高），导出时缩到 1× |
