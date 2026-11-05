@@ -198,3 +198,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | 菜单跟手调整：悬停浪声 v2（起音即达峰）+ 新选项立即切掉旧声；PLAY → 01_Home 过渡缩短为 0.5 s；Home 恢复占位字、深蓝背景。Unity 改动待提交，详见 MENU_UNITY_PROGRESS |
 | 2026-11-04 | 菜单悬停 v3（“哒”声起音 + 停留 1 s 后海浪轻拍）用户确认通过；Codex 提交指令 `2026-11-04_Unity_Commit_MenuFeel.md` |
 | 2026-11-05 | 菜单动效：两层雾横移（14 / 26 px/s）+ 灯笼呼吸光（用户要求加强）；素材 `TechArtAsset/Menu/FX/`，脚本已放入 Unity；Codex 指令 `2026-11-05_Unity_MenuFX.md`；Maela 改在新对话进行 |
+| 2026-11-05 | 雾层硬边修复：Fog_A / Fog_B 上下边缘 alpha 0、Wrap V = Clamp；Codex 提交指令 `2026-11-05_Unity_FogEdgeFix.md` |
