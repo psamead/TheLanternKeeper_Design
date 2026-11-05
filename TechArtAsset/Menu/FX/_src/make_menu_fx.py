@@ -13,6 +13,8 @@ def fog(h,w,beta,seed,thresh,soft,amax,band):
     a=np.clip((n-thresh)/soft,0,1)**1.5
     y=np.linspace(0,1,h)[:,None]
     a*=np.exp(-((y-0.5)/band)**2)            # soft top / bottom edges
+    d=np.clip(np.minimum(y,1-y)/0.18,0,1)      # 0 at the very top/bottom rows, 1 after 18 %
+    a*=d*d*(3-2*d)                             # smoothstep window: no visible cut at the rect edge
     a*=amax
     col=np.array([0x9C,0xAD,0xC4],float)     # cool mist, close to present-layer light #8FA3BF
     img=np.zeros((h,w,4),np.uint8); img[...,:3]=col; img[...,3]=(a*255).astype(np.uint8)
