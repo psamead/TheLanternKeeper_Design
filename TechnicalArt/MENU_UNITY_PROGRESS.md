@@ -98,3 +98,9 @@
 
 - 2026-11-04：用户试听通过——划过的“哒”声（v3 起音冲击）可以，海浪停留机制保留。待 Codex 按 `CommandForAgentToInitialRun/2026-11-04_Unity_Commit_MenuFeel.md` 提交。
 - 2026-11-04：编辑模式下选中图标 / 下划线错位（位置只在运行时计算）→ `MainMenuController` 加 `OnValidate` 编辑器预览，按运行时规则摆放第一项；只移动现有物体，不加组件、不发声。
+- 2026-11-04：菜单手感改动已提交并推送：da9a7f37de04af3eb51efd7907b89ac9053fd290。Edit Mode 截图确认 PLAY 金色选中、灯图标与下划线位置；Play Mode Console 为 0 errors，直接验证 SceneLoader 在 00_StartMenu 与 01_Home 间切换。MCP 合成 Button.onClick 未完成淡出协程；实际鼠标点击的 Play→Home 仍以用户此前的 Play Mode 验证为准。
+
+## 2026-11-05 — 菜单动效素材就绪（Claude）
+
+- 贴图 `Assets/_Project/Art/Menu/FX/`（Fog_A / Fog_B / LanternGlow）与脚本 `UVScroll.cs`、`LanternGlowPulse.cs` 已放入项目，未提交、未接入场景。
+- 预览 `SharedWorkFolder/TechArtAsset/Menu/FX/MENU_FX_preview_v2.mp4` 经用户确认。接入见 `CommandForAgentToInitialRun/2026-11-05_Unity_MenuFX.md`。
