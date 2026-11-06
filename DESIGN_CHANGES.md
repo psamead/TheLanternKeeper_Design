@@ -39,6 +39,7 @@
 | 2026-11-02 | 字体系统：标题 Cinzel Decorative（油墨毛边）、副标题 IM Fell English SC、菜单 Cinzel、对话 EB Garamond、回忆 Cormorant Garamond Italic；取代像素字体候选 | 画风改手绘；与《妖精丘陵》区分 | ART_HANDOFF §2、ART_DIRECTION §2、字体与UI决定.xlsx | 已完成 |
 | 2026-11-02 | 民俗视觉符号：主用**白鼬尾纹 + 布列塔尼蕾丝**；三螺旋纹不作主视觉（《妖精丘陵》标题与菜单图标已用），最多作灯笼底座小刻纹 | 用户：与《妖精丘陵》太像 | ART_DIRECTION、HANDPAINTED_SPEC §0、标题框、UI 边框 | 已完成 |
 | 2026-11-03 | 菜单音效改为自然声（海浪 / 海风 / 木头或黄铜轻响），不用合成电子音；菜单需背景音乐 | 用户试玩：太电子、与主题不符 | Unity `ProceduralMenuAudio`、MENU_UNITY_PROGRESS | 提议（待做） |
+| 2026-11-07 | **Demo 范围再缩小（提议）**：只做 01_Home（新手村第一章：移动、跳跃、互动、灯笼切换全部在这里学会）→ 以故事版（4–6 张插图的慢推镜头 slide show 或短视频 + 英文字幕）引出后续故事 → To be continued；**02_Harbor 整个场景不做**（连带老佩尔、贝壳、人群剪影、码头分层底图）。03_EndCard 改为故事版播放。补充（用户）：灯笼能力在阁楼获得，用一段故事版（slide show / 短动画 + 文字）讲清来历；之后玩家按键切换现在 / 记忆，场景随之变化；不另设多段切换谜题（分层切换的做法借自《妖精丘陵》，不扩展成主要玩法）；保留一处必须切换才能前进：断梯只在记忆层完好，灯笼在楼下拾起 | 用户：避免工作量过大 | DEMO_IMPLEMENTATION_PLAN v1.1、ART_HANDOFF §4.4 / §6 / §9、STORY_BIBLE §6、handoff.md、UNITY_AGENTS / Unity AGENTS.md、README ×2、Demo 制作方案 Word v1.4 | 已完成（11-07 用户确认） |
 | 2026-10-31 | Maela 改为右手提灯（朝右时灯笼在近镜头一侧，不被身体挡住；flipX 后同样在近侧） | 侧面可读性 | ART_HANDOFF §4.2 / §8、ART_PROMPTS C01-T / C01-G、HANDPAINTED_SPEC §3.1 | 已完成（11-05 用户确认；概念图 Maela_v1 保持左手不改） |
 
 ## 4. 影响清单（改设定时逐项检查）

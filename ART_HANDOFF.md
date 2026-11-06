@@ -15,7 +15,7 @@
 - 游戏：《The Lantern Keeper》（中文工作名《守灯人》），2D 手绘横版解谜，布列塔尼海岸民俗题材。项目：York；协作：Psamead。
 - 引擎 Unity 6.3 LTS（URP 2D）；平台 PC（Windows）。
 - 游戏内文字、标题、菜单**只用英文**。
-- 策略：**小体量 Demo**（体量参考 2D Battle Car Arena）：4 个 Scene，5–8 分钟。完整版设计只作为方向，见 `purposal_story/守灯人_完整版概念设计说明_v1.0.docx`。
+- 策略：**小体量 Demo**（11-07 再缩小）：00_StartMenu → 01_Home（奶奶家 + 阁楼，含故事版 A）→ 03_EndCard（故事版 B），4–6 分钟；码头移到完整版。完整版设计只作为方向，见 `purposal_story/守灯人_完整版概念设计说明_v1.0.docx`。
 
 ## 2. 关键决定
 
@@ -89,8 +89,8 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 | 场景 | 现在层 | 记忆层 |
 |---|---|---|
 | 01 开始菜单 | 夜晚，熄灭的灯塔立在海边悬崖，海雾 | —（可选：灯塔顶一点灯笼光） |
-| 02 Home 奶奶家 + 阁楼 | 昏暗石屋、家具盖白布、梯子断 | 阳光、梯子完好、墙上挂渔网与照片 |
-| 03 Harbor 码头 | 断木板、搁浅的蓝色渔船、浓雾 | 节日彩旗、整齐的渔船、人群剪影 |
+| 01 Home 奶奶家 + 阁楼（Demo 唯一关卡） | 昏暗石屋、家具盖白布、梯子断 | 阳光、梯子完好、墙上挂渔网与照片 |
+| 02 Harbor 码头（**完整版**，Demo 不做） | 断木板、搁浅的蓝色渔船、浓雾 | 节日彩旗、整齐的渔船、人群剪影 |
 | 远景（两层共用） | 天空 / 海 / 小镇剪影；可选海平线下伊斯钟楼剪影 | 同一张，用光照变暖 |
 
 ## 5. 现有资产状态（详见 `ART_ref/ASSETS.md`）
@@ -110,19 +110,18 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 - ◐ Maela 游戏版：概念 ☑ `ART_ref/MAELA_GAME_SIDE_v1.png`（11-06）；拆部件计划 `TechArtAsset/Characters/Maela/_work/Maela_parts_plan_v1.png`；◐ `Maela.psb` v1 已导出（11-06，149×320，19 层，Claude 用代码调色 + 切层；大图工作文件 `Maela_src.psd`）。占位待补：左臂 Arm_*_L 为空、Boot_L 被挡部分、大腿、Coat_Body 袖下为自动填补。Unity 导入时 **PPU = 200**（2× 源 → 屏幕 1.6 单位）。细节进 Unity 动起来后再修
 - ☐ Maela 骨骼动画：Idle / Run / JumpUp / Fall / Lantern
 - ☐ Soazig 现在版 + 年轻版（待机 2–4 帧）
-- ☐ Old Per（待机 2–4 帧）
+- ☐ Old Per（**完整版**，Demo 不做）
 - ☐ Flick（飞行 4 帧，有时间再做）
 
 ### 6.2 场景
-- ☐ 码头概念图（AI，16:9，现在层 + 记忆层各一张）
-- ☐ Harbor 分层底图 L0–L4 + 记忆层标志物 Sprite（彩旗、完好木板、人群剪影）
+- ✕ 码头概念图、Harbor 分层底图（11-07 移到完整版）
 - ☐ Home 室内分层底图 + 标志物（完好梯子、渔网照片；现在层白布家具、断梯）
 - ☐ 远景层（天空、海、伊斯钟楼剪影）两个场景可共用
 
 ### 6.3 道具 / UI
-- ☐ 灯笼（熄 / 亮）、记忆贝壳
+- ☐ 灯笼（地上可拾起的版本）；记忆贝壳移到完整版
 - ☐ 对话框（9-slice）、头像框 ×3
-- ☐ 回忆插图 ×3（160×90）：亡灵之夜出海 / 佩尔跳回岸上 / 灯塔下的扬
+- ☐ 故事版 A ×4（灯笼的来历）、B ×5（后续引子），画面与字幕见 DEMO_IMPLEMENTATION_PLAN §6
 
 ### 6.4 宣传美术（详见 `ART_DIRECTION.md`）
 - ☑ 标题字 → `TechArtAsset/Menu/TITLE_v1.png`（+ `_nosub` / `_noglow` / `_glow`）
@@ -160,6 +159,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
    - ☑ 按 `CommandForAgentToInitialRun/2026-11-03_Unity_SceneRename_MenuAudio.md` 完成场景重新编号和菜单音频接入；Play Mode 路由通过。扬声器听测与 80 秒循环点监听未验证。
    - ☑ 雾横移 + 灯笼呼吸光（2026-11-05）：素材 `TechArtAsset/Menu/FX/`（预览 `MENU_FX_preview_v2.mp4`）；Unity 提交 `f714830`，雾边缘修复 `dd02e9b`。**开始菜单完成。**（小尾巴：URP 保存场景时给 Main Camera 自动补的 `UniversalAdditionalCameraData` 未提交，下次 Codex 顺手提交。）
 2. **▶ Maela**：☑ 转身图 ☑ 游戏版侧面 ☑ `Maela.psb` v1 + 只改颜色的去边 / 灯笼补孔（11-07 定版；Unity 提交 `6ec559b`；部件源在 `TechArtAsset/Characters/Maela/_work/parts_v1_safe/`，大图 `Maela_src.psd`）→ ▶ Run / JumpUp / Fall / Lantern 动画。已知小问题：远眼从鼻梁后露出一点（修要改头发层外框，需 Codex 同时重摆该部件，暂缓）。**改图规则：不改任何图层外框。**
+2b. **Demo 范围已定（11-07）**：只做 01_Home + 两段故事版（见 DEMO_IMPLEMENTATION_PLAN v1.1）。美术顺序：▶ Maela Run / JumpUp / Fall / Lantern → Soazig → Home 室内分层底图（楼下 + 阁楼，现在 + 记忆标志物）→ 地上的灯笼 → 对话框 → 故事版 A / B 插图。
 3. 海报 A3 放大（PS 保留细节 2.0 → 3508×4961）。
 
 设计仓库（公开，学生只拉取）：<https://github.com/psamead/TheLanternKeeper_Design>，入口 `README.md`（英文）/ `README.zh-CN.md`（中文）。
@@ -202,6 +202,7 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-05 | 开始菜单完成（音频、跟手悬停、动效、雾边修复）；§9 下一步改为 Maela（新对话） |
 | 2026-11-05 | 用户在 Unity 装入 Cinemachine 3.1.7；HANDPAINTED_SPEC §相机、UNITY_AGENTS 写入用法（相机跟随一律用 Cinemachine） |
 | 2026-11-07 | Maela v1.2：用户在 Unity 里发现“眼睛 / 肩膀重复”——AI 原图不是纯侧脸，远眼从鼻梁后露出；头发与脖子间有透明缝。已涂掉远眼、补缝、压暗棕色发梢；psb 已替换进 Unity；Codex 指令 `2026-11-07_Unity_Maela_v1.2.md` |
+| 2026-11-07 | **Demo 范围再缩小（用户确认）**：01_Home（灯笼在楼下拾起 → 故事版 A → 记忆层梯子完好 → 阁楼）+ 03_EndCard 故事版 B；码头、老佩尔、贝壳移到完整版；DEMO_IMPLEMENTATION_PLAN v1.1、handoff、README、UNITY_AGENTS、Demo 制作方案 Word v1.4 同步 |
 | 2026-11-07 | 用户确认 v1 + 只改颜色去边版：白边已除，无错位（Unity `6ec559b`）。中间部件图不进 Git（.gitignore） |
 | 2026-11-07 | v1.1 / v1.2 改了图层外框 → Unity 部件错位；“整张画布 + 对位脚本”补救失败。**全部回滚到 Unity 1517f47（v1）**，只做“只换颜色”的去边 + 灯笼补孔（逐层核对外框与 v1 一致）；Codex 指令 `2026-11-07_Unity_Maela_v1.2.md` 已改写；规格 §6、经验库改为“进 Unity 后不改外框” |
 | 2026-11-07 | 给人读的 Word 同步：`守灯人_出图Prompt集_v1.3`、`守灯人_技术美术方案_手绘规格_v1.1`、`守灯人_美术资产制作指南_v1.4`（新增 §13 Maela 实操经验；HANDPAINTED_SPEC 加 §8.1 以游戏尺寸为准、PPU 200、剪纸式骨骼）；旧版移入 deprecated/ |

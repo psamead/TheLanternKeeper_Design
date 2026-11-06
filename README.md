@@ -32,7 +32,7 @@ What happened recently: `ART_HANDOFF.md` §10 (change log), `TechnicalArt/MENU_U
 
 ## Scenes (demo)
 
-`00_StartMenu` → `01_Home` → `02_Harbor` → `03_EndCard` → back to menu (start menu is 00; chapters start at 01)
+`00_StartMenu` → `01_Home` (grandma's house + attic, with storyboard A) → `03_EndCard` (storyboard B) → back to menu. `02_Harbor` is kept for the full game and is not in the Demo build (scope reduced 2026-11-07).
 
 ## Folders
 

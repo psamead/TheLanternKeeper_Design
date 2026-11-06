@@ -19,6 +19,9 @@
 | 11 | 11-03 | Unity 首跑 | Codex 建 4 场景 + 开始菜单 v1；用户试玩反馈（音效太电子、缺 BGM）；建立经验库 | TechnicalArt/MENU_UNITY_PROGRESS.md、LESSONS_ART_PIPELINE.md |
 | 12 | 11-03 | 菜单音频 · 编号 | 代码合成菜单 BGM、海浪海风环境声、自然音效；场景改为 00_StartMenu / 01_Home / 02_Harbor / 03_EndCard；Codex 接入 | TechArtAsset/Audio/Menu/；CommandForAgentToInitialRun/2026-11-03_Unity_SceneRename_MenuAudio.md |
 | 13 | 11-03 | 设计仓库上 GitHub | 共享文件夹建为公开仓库 psamead/TheLanternKeeper_Design，学生只拉取；英文 README + 中文 README.zh-CN | README.md、README.zh-CN.md、.gitignore |
+| 14 | 11-05 | 菜单完成 | 悬停“哒”声 + 海浪停留、雾与灯笼呼吸光、Cinemachine | TechArtAsset/Menu/FX、MENU_UNITY_PROGRESS.md |
+| 15 | 11-05~07 | Maela 游戏版 | 右手提灯、Demo 不画包；转身图、游戏版侧面、psb + 剪纸式骨骼 + Idle；去边（只改颜色，不改图层外框）；Claude 直接操作 Photoshop | ART_ref/MAELA_*、TechArtAsset/Characters/Maela/、LESSONS §8 |
+| 16 | 11-07 | Demo 再缩小 | 只做 01_Home（拾灯笼 → 故事版 A → 记忆层梯子 → 阁楼）+ 03_EndCard 故事版 B；码头、老佩尔、贝壳移到完整版 | DEMO_IMPLEMENTATION_PLAN v1.1、DESIGN_CHANGES |
 
 ## 2. 关键决策
 

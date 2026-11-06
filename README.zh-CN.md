@@ -30,7 +30,7 @@ git pull
 
 ## 场景（Demo）
 
-`00_StartMenu` → `01_Home` → `02_Harbor` → `03_EndCard` → 回菜单（开始菜单 00，章节从 01 起）
+`00_StartMenu` → `01_Home`（奶奶家 + 阁楼，含故事版 A）→ `03_EndCard`（故事版 B）→ 回菜单。`02_Harbor` 留给完整版，不进 Demo（2026-11-07 缩小范围）。
 
 ## 文件夹
 
