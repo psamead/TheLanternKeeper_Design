@@ -16,6 +16,12 @@
 | `Maela_v1_alt.png` | 角色 | Maela 正面 ×2 + 背面 | v1 | Midjourney Niji 6（原名 `psamead_..._5a0cef49-…png`） | 同上，左上（A1） | 备选：靴子较高 | 定稿候选 |
 | `Maela_sheet_B1_REF.png` | 角色 | Maela 表情头像 + 灯笼 + 正背面 | — | Midjourney Niji 6（原名 `0_0.png`） | C01 修正版（hood down / pale grey bg / `--no backpack, bag, hood on head`）左上（B1） | 以后做对话头像时参考表情；有 AI 假文字，不作定稿 | 参考 |
 | `MAELA_REF_v1.png` | 角色 | Maela 正面单人，白底 1024×1024 | v1 | 由 `Maela_v1.png` 左侧正面裁切、去背景补白 | — | 后续出图的 Character Reference（`--cref`） | 参考（当前） |
+| `MAELA_SRC_side_v1.png` | 角色 | Maela 侧面朝右走路，右手提灯（1792×2688） | v1 | Midjourney Niji 6 | C01-T 侧面单出版（--cw 40, --ar 2:3）→ Vary (Subtle) ④ → Upscale (Subtle) | 转身图侧面原图 | 参考 |
+| `MAELA_SRC_back_v1.png` | 角色 | Maela 正面 + 背面（3072×1536；只用右半背面） | v1 | Midjourney Niji 6 | C01-T v2（--cw 90, --ar 2:1）第一轮左上 → Upscale (Subtle) | 转身图背面原图；后脑顶被原图裁平 | 参考 |
+| `Maela_v1_turnaround.png` | 角色 | 侧面 + 背面，白底 4000×2000，两者等高 | v1 | 程序抠图拼合（分层 PNG 在 `TechArtAsset/Characters/Maela/_work/`） | — | 游戏版、拆部件的依据 | 当前定稿 |
+| `MAELA_SIDE_REF_v1.png` | 角色 | 侧面单人，白底 1024² | v1 | 由 MAELA_SRC_side_v1 抠出 | — | C01-G 的 Character Reference | 参考（当前） |
+| `MAELA_SRC_game_side_v1.png` | 角色 | Maela 游戏版侧面原图（1792×2688） | v1 | Midjourney Niji 6 | C01-G v3（cref = MAELA_SIDE_REF_v1, --cw 90）② → Upscale (Subtle) | 游戏版来源 | 参考 |
+| `MAELA_GAME_SIDE_v1.png` | 角色 | 游戏版侧面，透明底 1157×2490 | v1 | 由上图抠出；2× / 1× 缩图与拆部件计划 `Maela_parts_plan_v1.png` 在 `TechArtAsset/Characters/Maela/_work/` | — | PS 清理、拆层为 Maela.psb 的底稿 | 当前定稿 |
 | `deprecated/art_2026-11-02/POSTER_BG_v1.png` | 宣传 | 海报背景（竖版 2:3，绘本风），Upscale Subtle | v1 | Midjourney Niji 6（原名 `psamead_a_dark_unlit_lighthouse_on_a_rocky_cliff_above_a_foggy__c1ef3925-711e-4b0a-8785-f95d50ebcaa1.png`） | 远景小人物 prompt + Style ref MAELA_REF_v1 `--sw 30` → 编辑器擦塔顶改为熄灭 → 2:3 缩放外扩补顶部夜空 | 海报 K1 背景；上方约 1/3 留给标题 | 已被 v2 取代 |
 | `BRETON_LACE_REF_01.png` | 参考 | 布列塔尼（比古登）白色镂空蕾丝：叶瓣 + 圆孔 | — | 用户提供 | — | 标题框、UI 边框纹样 | 参考 |
 | `BRETON_HERMINE_REF_01.png` | 参考 | 白鼬尾纹（Hermine）重复图案 | — | 用户提供 | — | 标题主徽、UI 图标 | 参考 |
@@ -28,6 +34,7 @@
 
 | 文件 | 类别 | 规格 | 依据参考图 | 状态 |
 |---|---|---|---|---|
+| `Characters/Maela/Maela.psb`（工作文件 `Maela_src.psd` 不进 Git） | 角色 | 149×320（2×），19 个部件图层，组 `Maela` | MAELA_GAME_SIDE_v1 → Maela_CLEAN_v1（代码调色）→ 代码切层（`_work/parts/`） | 当前定稿（11-07：v1 + 只改颜色去边、灯笼补孔；Unity `6ec559b`）；左臂空、被挡部分未补、远眼未修 |
 | `Poster/POSTER_v2.png` + `POSTER_v2_social.png` | 海报 | 竖版 2:3 | v1 + 标题框 TITLE_FRAME_v1（蕾丝花边 + 白鼬尾纹圆章 + 切角铭牌，整体 90%） | 当前定稿 |
 | `Menu/MENU_BG_v1.png`（+ `MENU_L0_BG_1920.png`、`MENU_L1_left_dark.png`） | 菜单 | 16:9，原图 2752×1536 | MJ niji 6（Style ref = POSTER_v2）构图 → AI Studio Nano Banana 2.1 改夜景、熄灯塔 | 当前定稿 |
 | `ART_ref/MENU_SRC_fantasy.png` / `MENU_SRC_realistic.png` | 菜单原图 | 16:9 | MJ 原图（MENU_BG_v1 / _alt 的来源） | 参考 |
@@ -53,4 +60,6 @@
 | 2026-11-02 | 加入布列塔尼蕾丝、白鼬尾纹参考；决定不用三螺旋纹作主视觉（与《妖精丘陵》撞） |
 | 2026-11-02 | 海报 v2：加布列塔尼标题框；v1 移入 deprecated |
 | 2026-11-03 | 开始菜单 v1 静态稿与分层 |
+| 2026-11-06 | Maela 游戏版侧面 v1 + 拆部件计划 |
+| 2026-11-06 | Maela 转身图 v1：侧面 / 背面原图、拼合图、侧面参考图 |
 | 2026-11-03 | 菜单原图入 ART_ref；海报 AI Studio 过程图移入 deprecated/art_2026-11-03/poster_process |

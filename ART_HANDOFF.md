@@ -70,7 +70,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 | 角色 | 外观关键词 | 必须保留 | 不要画 |
 |---|---|---|---|
-| **Maela** 梅拉（11 岁，玩家） | 明黄雨衣（兜帽放下）、红色短靴、齐肩黑发、深色长袜；左手提铜灯笼 | 雨衣是全画面最亮色；灯笼始终发暖光 | 不要成年感；不要武器；**不要 Q 版**（约 5 头身、正常眼睛，2026-11-02） |
+| **Maela** 梅拉（11 岁，玩家） | 明黄雨衣（兜帽放下）、红色短靴、齐肩黑发、深色长袜；**右手**提铜灯笼（11-05 改；概念图为左手） | 雨衣是全画面最亮色；灯笼始终发暖光 | 不要成年感；不要武器；**不要 Q 版**（约 5 头身、正常眼睛，2026-11-02）；Demo 不画斜挎包（11-05） |
 | **Soazig** 索齐格（奶奶） | 灰白发髻、深绿羊毛披肩、深色长裙、坐在摇椅上织网；记忆层为年轻版（黑发、白色蕾丝头饰 Coiffe） | Coiffe 只在年轻版出现 | — |
 | **Old Per** 老佩尔 | 驼背老渔夫、旧水手帽、蓝色渔夫罩衫、灰胡子，手里一段打结的绳子 | 蓝色罩衫（布列塔尼渔民特征） | — |
 | **Flick** 飞蛾 | 8×8，白色、翅膀淡金边、发微光 | — | 不要蝴蝶化 |
@@ -106,8 +106,8 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 ### 6.1 角色
 - ☑ Maela 概念图（AI）→ 选定 → 存为 `ART_ref/Maela_v1.png`；参考图 `MAELA_REF_v1.png` 已裁好
-- ☐ Maela 转身图（侧面朝右 + 背面）→ `ART_ref/Maela_v1_turnaround.png`
-- ☐ Maela 游戏版：按转身图侧面清理成游戏风格，拆部件为 `Maela.psb`（部件清单见 HANDPAINTED_SPEC §3.1）
+- ☑ Maela 转身图（侧面朝右 + 背面）→ `ART_ref/Maela_v1_turnaround.png`（11-06；侧面参考 `MAELA_SIDE_REF_v1.png`）
+- ◐ Maela 游戏版：概念 ☑ `ART_ref/MAELA_GAME_SIDE_v1.png`（11-06）；拆部件计划 `TechArtAsset/Characters/Maela/_work/Maela_parts_plan_v1.png`；◐ `Maela.psb` v1 已导出（11-06，149×320，19 层，Claude 用代码调色 + 切层；大图工作文件 `Maela_src.psd`）。占位待补：左臂 Arm_*_L 为空、Boot_L 被挡部分、大腿、Coat_Body 袖下为自动填补。Unity 导入时 **PPU = 200**（2× 源 → 屏幕 1.6 单位）。细节进 Unity 动起来后再修
 - ☐ Maela 骨骼动画：Idle / Run / JumpUp / Fall / Lantern
 - ☐ Soazig 现在版 + 年轻版（待机 2–4 帧）
 - ☐ Old Per（待机 2–4 帧）
@@ -141,9 +141,9 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 1. ~~字体~~：已定（2026-11-02）。待定：UI 边框主题（黄铜铆钉 / 绳结纹）。
 2. 主角是否保留“黄色雨衣”作为标志色（建议保留）。
 3. ~~出图工具~~：已用 Midjourney（2026-10-31）。
-4. Maela 斜挎小包（概念图里自带，设定中没有）：保留作贝壳包，还是擦掉。
+4. ~~Maela 斜挎小包~~：已定（11-05）——Demo 不画；另留“背包版”，完整版作过了新手村之后的储物包（提议，见 DESIGN_CHANGES）。
 5. ~~游戏内画风~~：已定为手绘 2D、偏暗民俗奇幻（2026-11-02）；与《妖精丘陵》的借鉴 / 回避见 HANDPAINTED_SPEC §0。
-6. Maela 提灯的手：朝右走时左手灯笼会被身体挡住，游戏版阶段考虑改右手（美术细节，改后登记）。
+6. ~~Maela 提灯的手~~：已定（11-05）——改**右手**（朝右时灯笼在近镜头一侧）。
 
 ## 9. 当前进度与下一步（2026-11-05 更新）
 
@@ -159,7 +159,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
    - ☑ 菜单音频 v1 已做好并经用户确认（2026-11-03）：`TechArtAsset/Audio/Menu/`（BGM 80 s 循环、海浪海风环境声 60 s 循环、悬停浪声 ×3、灯笼确认音、木头返回音；代码合成，无第三方版权，脚本 `_src/synth_menu_audio.py`）。已拷入 Unity `Assets/_Project/Audio/Menu/`。
    - ☑ 按 `CommandForAgentToInitialRun/2026-11-03_Unity_SceneRename_MenuAudio.md` 完成场景重新编号和菜单音频接入；Play Mode 路由通过。扬声器听测与 80 秒循环点监听未验证。
    - ☑ 雾横移 + 灯笼呼吸光（2026-11-05）：素材 `TechArtAsset/Menu/FX/`（预览 `MENU_FX_preview_v2.mp4`）；Unity 提交 `f714830`，雾边缘修复 `dd02e9b`。**开始菜单完成。**（小尾巴：URP 保存场景时给 Main Camera 自动补的 `UniversalAdditionalCameraData` 未提交，下次 Codex 顺手提交。）
-2. **▶ 现在做：Maela（新对话，从本节读起）**：转身图（`ART_PROMPTS.md` C01-T，加 STYLE_GAME）→ 游戏版侧面（C01-G）→ 拆部件。
+2. **▶ Maela**：☑ 转身图 ☑ 游戏版侧面 ☑ `Maela.psb` v1 + 只改颜色的去边 / 灯笼补孔（11-07 定版；Unity 提交 `6ec559b`；部件源在 `TechArtAsset/Characters/Maela/_work/parts_v1_safe/`，大图 `Maela_src.psd`）→ ▶ Run / JumpUp / Fall / Lantern 动画。已知小问题：远眼从鼻梁后露出一点（修要改头发层外框，需 Codex 同时重摆该部件，暂缓）。**改图规则：不改任何图层外框。**
 3. 海报 A3 放大（PS 保留细节 2.0 → 3508×4961）。
 
 设计仓库（公开，学生只拉取）：<https://github.com/psamead/TheLanternKeeper_Design>，入口 `README.md`（英文）/ `README.zh-CN.md`（中文）。
@@ -201,3 +201,11 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-05 | 雾层硬边修复：Fog_A / Fog_B 上下边缘 alpha 0、Wrap V = Clamp；Codex 提交指令 `2026-11-05_Unity_FogEdgeFix.md` |
 | 2026-11-05 | 开始菜单完成（音频、跟手悬停、动效、雾边修复）；§9 下一步改为 Maela（新对话） |
 | 2026-11-05 | 用户在 Unity 装入 Cinemachine 3.1.7；HANDPAINTED_SPEC §相机、UNITY_AGENTS 写入用法（相机跟随一律用 Cinemachine） |
+| 2026-11-07 | Maela v1.2：用户在 Unity 里发现“眼睛 / 肩膀重复”——AI 原图不是纯侧脸，远眼从鼻梁后露出；头发与脖子间有透明缝。已涂掉远眼、补缝、压暗棕色发梢；psb 已替换进 Unity；Codex 指令 `2026-11-07_Unity_Maela_v1.2.md` |
+| 2026-11-07 | 用户确认 v1 + 只改颜色去边版：白边已除，无错位（Unity `6ec559b`）。中间部件图不进 Git（.gitignore） |
+| 2026-11-07 | v1.1 / v1.2 改了图层外框 → Unity 部件错位；“整张画布 + 对位脚本”补救失败。**全部回滚到 Unity 1517f47（v1）**，只做“只换颜色”的去边 + 灯笼补孔（逐层核对外框与 v1 一致）；Codex 指令 `2026-11-07_Unity_Maela_v1.2.md` 已改写；规格 §6、经验库改为“进 Unity 后不改外框” |
+| 2026-11-07 | 给人读的 Word 同步：`守灯人_出图Prompt集_v1.3`、`守灯人_技术美术方案_手绘规格_v1.1`、`守灯人_美术资产制作指南_v1.4`（新增 §13 Maela 实操经验；HANDPAINTED_SPEC 加 §8.1 以游戏尺寸为准、PPU 200、剪纸式骨骼）；旧版移入 deprecated/ |
+| 2026-11-07 | Maela v1.1：全部件去边、灯笼玻璃补孔 + 火焰改暖白光芯；psb 已替换进 Unity（同名、同 meta）；Codex 指令 `2026-11-07_Unity_Maela_Defringe.md`；经验库 §8 |
+| 2026-11-06 | Codex 指令 `2026-11-06_Unity_Maela_Import_Idle.md`：PPU 200、剪纸式骨骼（每个部件只绑一根骨）、Idle 3 s、灯笼 Point Light 2D |
+| 2026-11-06 | Maela 转身图、游戏版侧面、`Maela.psb` v1（自动拆层，部分占位）完成；登记 ASSETS |
+| 2026-11-05 | 开始 Maela：定右手提灯、Demo 不画斜挎包（§4.2、§8）；ART_PROMPTS C01-T / C01-G 改为 v2（去掉 cute / Q 版写法，加 STYLE_GAME 线条与上色部分） |

@@ -1,6 +1,6 @@
-# 技术美术规格：手绘 2D 资产与 Unity 管线（v1）
+# 技术美术规格：手绘 2D 资产与 Unity 管线（v1.1）
 
-> 给美术与 Unity 制作共用。与 `TechnicalArt/守灯人_技术美术方案_手绘规格_v1.docx` 同源。取代已移入 `deprecated/` 的 `PIXEL_ART_SPEC.md`（2026-11-02，见 `DESIGN_CHANGES.md`）。
+> 给美术与 Unity 制作共用。与 `TechnicalArt/守灯人_技术美术方案_手绘规格_v1.1.docx` 同源。取代已移入 `deprecated/` 的 `PIXEL_ART_SPEC.md`（2026-11-02，见 `DESIGN_CHANGES.md`）。
 > 标「建议」的数值是起点，做出第一批素材、在 Unity 里试过后可调，调整后登记。
 
 ## 0. 风格目标
@@ -29,7 +29,7 @@
 | 相机 | 正交，Size 5.4（一屏 19.2×10.8 单位）；不使用 Pixel Perfect Camera。跟随用 **Cinemachine 3.1**（2026-11-05 装入）：`CinemachineCamera` + `CinemachinePositionComposer`（跟随 Maela，带少量阻尼）+ `CinemachineConfiner2D`（房间边界 PolygonCollider2D），不写自定义跟随脚本 |
 | 关卡网格 | 1 格 = 1 单位 = 100 px（只用于碰撞 / 关卡布局，不再是美术图块） |
 | Maela 屏幕高度 | 约 1.6 单位 = 160 px（建议；与原像素方案角色/屏幕比例一致，关卡尺度不用改） |
-| 绘制倍率 | 源文件按 **2×** 绘制（Maela 源约 320 px 高），导出时缩到 1× |
+| 绘制倍率 | 源文件按 **2×** 绘制（Maela 源约 320 px 高）。角色 .psb 保持 2× 尺寸，Unity 里用 **PPU 200** 显示为 1.6 单位（2026-11-06） |
 | NPC | 与 Maela 同比例（老佩尔驼背略矮） |
 | Flick | 约 0.3 单位（30 px） |
 | 回忆插图 | 1920×1080（全屏） |
@@ -63,7 +63,7 @@
 | 靴子 ×2 | Boot_L/R |
 | 灯笼 | Lantern（单独 Sprite，挂 Point Light 2D） |
 
-> 提灯的手（左 / 右）以转身图结果为准，见 `ART_HANDOFF.md` §8。
+> 提灯用**右手**（2026-11-05 定）：朝右时 Arm_*_R / Hand_R / Lantern 在身体前面（近镜头一侧），图层顺序在 Coat_Body 之上；左臂在 Coat_Body 之下。
 
 ### 3.2 动画清单（Demo）
 
@@ -119,7 +119,8 @@ Interactables（NPC、灯笼、贝壳）
 ## 6. 导入设置
 
 - Texture Type = Sprite (2D and UI)；Pixels Per Unit = 100；Filter Mode = Bilinear；Generate Mip Maps = 关；Compression = High Quality（主角、UI 用 None）；Max Size 按图片实际尺寸（大背景 8192）。
-- 角色 `.psb`：PSD Importer，Character Rig 勾选，在 Skinning Editor 绑骨骼。
+- 角色 `.psb`（2× 源）：PSD Importer，**PPU 200**，Compression None，Mosaic、Use Layer Group 开。骨骼用**剪纸式**：每个部件 100 % 跟一个关节、不做网格变形。Maela 由 Codex 用 Transform 层级实现（Character Rig 关；关节坐标见 `CommandForAgentToInitialRun/2026-11-06_Unity_Maela_Import_Idle.md`）。
+- **角色进 Unity 后，改图不得改变任何图层的像素外框**（只改颜色和内部）；改完在 Photoshop 里逐层核对外框与上一版一致。否则 Sprite 裁切范围变化，骨骼里的部件全部错位（2026-11-07 教训）。
 - 小物件打 Sprite Atlas。
 
 ## 7. 占位色块（灰盒阶段）
@@ -134,7 +135,11 @@ Interactables（NPC、灯笼、贝壳）
 
 ## 8. 生产流程
 
-AI 概念图（Midjourney Niji 6，风格后缀 STYLE_GAME，见 `ART_PROMPTS.md`）→ 定稿（ASSETS.md 标“当前定稿”）→ **Photoshop 清理**：统一线条与调色板、去 AI 瑕疵、补缺的部分 → **拆层**（场景按 §4，角色按 §3.1）→ 导出 PNG / `.psb` → `TechArtAsset/` → Unity 替换色块。
+AI 概念图（Midjourney Niji 6，风格后缀 STYLE_GAME，见 `ART_PROMPTS.md`）→ 定稿（ASSETS.md 标“当前定稿”）→ **Photoshop 清理**：统一线条与调色板、去 AI 瑕疵、**去边**（浅色背景抠图留下的亮边，深色场景里很显眼）、发光物体内部填实、补缺的部分 → **拆层**（场景按 §4，角色按 §3.1）→ 导出 PNG / `.psb` → `TechArtAsset/` → Unity 替换色块。
+
+### 8.1 清理以游戏尺寸为准（2026-11-07）
+
+角色在游戏里约 160 px 高，很多细节只剩 1–2 px。清理时只检查四件事：**剪影可读、主色对（雨衣全画面最亮）、无浅色毛边、关节转动不露缝**。被挡部分、头发前后层、褶皱细节不精修，进 Unity 动起来后再决定。NPC 和道具同样按此标准。
 
 ## 9. 命名与存放
 

@@ -108,3 +108,26 @@
 - 2026-11-05：Codex 已接入菜单动效（`f714830`）。用户发现雾层下边有硬边 → Claude 重做 Fog_A / Fog_B（上下边缘 alpha 0），`.meta` Wrap V 改 Clamp；未提交，待用户确认后提交。
 - 2026-11-05：Fog A/B 贴图边缘透明度修复并推送：dd02e9be74bc149227bcf100dfe5027107f49ba7。用户确认 00_StartMenu 已保存，Play Mode 中硬边已消失；仅提交两张雾贴图及其导入设置（Wrap U Repeat、Wrap V Clamp）。
 - 2026-11-05：提交并推送 Cinemachine 3.1.7 包、相机规范与 URP Main Camera 附加数据：204379b3b1a69577101727045c39e3d8f134c4cf。Unity 中仅 00_StartMenu 打开且场景干净；未创建或配置 Cinemachine 相机。
+- 2026-11-06：Maela 导入、刚性 cut-out rig 与 Idle 已提交并推送：1517f472a4c56e07e1b6d0f001a52c52a65b6465（导入前检查点 1e1fd7d）。使用任务允许的 Transform 层级 fallback：Character Rig 关闭，15 个指定关节、17 张 Sprite、每张只跟随所属关节，无网格形变；两个空白左臂层按要求跳过。PPU 200，Bilinear，无 mipmap/压缩，Mosaic；原 PSB 未修改。Maela.prefab 足底为根节点 y=0，01_Home 仅保留 (0,-2) 的正常实例；3 秒 Idle、提灯旋转及随灯 Point Light 2D 已接入。为渲染预览将静态 Main Camera z 从 0 改为 -10，添加规格色 #8FA3BF / 0.8 的全局填充光和 Sprite-Lit 材质；无移动/输入/碰撞/相机跟随代码。1920×1080 Play Mode 观察到循环、身体角度与灯光强度变化，角色约 1.59–1.60 单位，正常/镜像及手臂提灯特写未见明显肩肘膝接缝；放大图中部分轮廓有浅色边缘，留给美术复核，未重绘。截图 4 张：ForDesignScreenshot/2026-11-06_Maela_Idle_{NormalAndMirrored,Normal,Mirrored,ArmLantern_Closeup}.png；截图时临时隐藏旧 PlaceholderLabel，退出后原 UI 保留。Recorder 未安装，按任务跳过可选视频。TMP 自动变化已还原；最终 Console 无 Error，之前有一条 Unity AI Account API 超时 Warning。最终仅 01_Home 打开且 clean，镜像测试对象已移除，Git clean。
+- 2026-11-06：追补 Unity Recorder 录像：安装 `com.unity.recorder` 5.1.7（Unity 6000.3 兼容发行版），Play Mode 捕获 Maela Idle 5.3 秒 H.264 MP4，1920×1080、30 fps、159 帧，存于 `ForDesignScreenshot/2026-11-06_Maela_Idle_Recorder.mp4`；ffprobe 已核验格式、分辨率、帧率和时长。此安装请求未包含 commit/push，因此 Packages/manifest.json 与 packages-lock.json 保持本地修改。捕获后已回到干净的 01_Home，临时 Editor helper 已移除。
+
+## 2026-11-07 — Maela art v1.1: defringe and lantern flame (Codex)
+
+- Reimported the updated `Maela.psb`. Unity regenerated the sprite subasset IDs, so the prefab's 17 `SpriteRenderer` references were null; reconnected all 17 by their unchanged layer names without changing bones or pivots. The two intentionally empty left-arm layers remain omitted.
+- Play Mode check: only `01_Home` loaded; all 17 sprites rendered, the 3-second Idle advanced, lantern Point Light 2D followed the lantern, and the camera rendered at 1920×1080. Console error count was zero. No obvious joint gaps in the rendered screenshot.
+- Screenshot: `ForDesignScreenshot/2026-11-07_Maela_Idle_v1.1.png` (1920×1080).
+- Unity commit `a6d55819e1edef04db59eb1e72d228e8fab9a559` pushed to `main`; includes PSB, Unity reimport metadata, and prefab sprite-reference updates. Recorder package edits remain uncommitted and were excluded.
+
+## 2026-11-07 — Maela art v1.2: face and shoulder cleanup (Codex)
+
+- Reimported the updated PSB and reconnected four missing sprite references (`Head`, `Hair_Front`, `Hair_Back`, `Coat_Body`) by unchanged layer names. Kept the existing bones and pivots.
+- Play Mode: 17 sprites present; 3-second Idle advanced; only `01_Home` loaded; 1920×1080 camera; Console had zero errors. No changes to scene layout.
+- Screenshots: `ForDesignScreenshot/2026-11-07_Maela_v1.2_Overview.png` and `ForDesignScreenshot/2026-11-07_Maela_v1.2_HeadCloseup_4x.png` (both 1920×1080; close-up camera zoom 4×).
+- Commit `68dc87d4489a356ae770ea3c73b2a4db7eea1ae8` pushed to Unity `main`; includes PSB, Unity reimport metadata, and the four prefab sprite-reference updates. Recorder package modifications remain uncommitted.
+
+## 2026-11-07 — Maela v1 safe colour-only art update (Codex)
+
+- Imported the replacement v1 PSB. Unity regenerated sprite subasset IDs; reconnected all 17 existing prefab renderers by exact layer name. Preserved the v1 rig, bone transforms, and centered sprite pivots; the two intentionally empty left-arm layers remain omitted.
+- Play Mode: only `01_Home` loaded; `Maela_Idle` was active; 17 renderers had valid sprite references. Main Camera output was 1920×1080. Visual check showed no doubled eye or visible shoulder gap; white edge fringe was not visible and the lantern glow was clean.
+- Screenshots: `ForDesignScreenshot/2026-11-07_Maela_v1safe_Overview.png` (1920×1080) and `ForDesignScreenshot/2026-11-07_Maela_v1safe_HeadCloseup_4x.png` (4× crop from the overview).
+- Unity commit `6ec559bc4dea22263eacdebe72cdf30eb5abb83c` pushed to `main`; includes PSB, Unity reimport metadata, and prefab reference updates. No scene diff was needed. Recorder package changes and `_to_delete/` were excluded.

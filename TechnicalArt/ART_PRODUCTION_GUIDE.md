@@ -1,6 +1,6 @@
 # 《The Lantern Keeper》美术资产制作指南：角色 · 场景 · 海报（v1）
 
-> 给人看的操作手册。与 `TechnicalArt/守灯人_美术资产制作指南_v1.3.docx` 同源。流程参考 Animation_yichun《妖精丘陵》的实际做法（概念图 → 定稿参考 → 用定稿统一后续出图 → 合成海报）。
+> 给人看的操作手册。与 `TechnicalArt/守灯人_美术资产制作指南_v1.4.docx` 同源。流程参考 Animation_yichun《妖精丘陵》的实际做法（概念图 → 定稿参考 → 用定稿统一后续出图 → 合成海报）。
 > 配套文件：`ART_PROMPTS.md`（全部 prompt）、`ART_HANDOFF.md`（角色外观约束、调色板）、`TechnicalArt/HANDPAINTED_SPEC.md`（手绘规格）、`ART_ref/ASSETS.md`（登记表）。
 
 ## 0. 总览：做什么、按什么顺序
@@ -52,7 +52,8 @@
 
 1. 定稿图存为 `ART_ref/Maela_v1.png`，在 ASSETS.md 标“当前定稿”。
 2. 裁出正面，补白底成方形，放大到 1024 → `ART_ref/MAELA_REF_v1.png`。之后所有图都用它作 Character Reference。
-3. 转身图：把 MAELA_REF_v1 放进编辑器，画布扩成 2:1，生成侧面 + 背面（`--cw 90`）→ 存为 `Maela_v1_turnaround.png`。**朝右侧面**是游戏版角色的基准；海报要用**背面**。
+3. 转身图（2026-11-06 实际做法）：**一张只出一个人**。侧面用 C01-T 侧面版（`--ar 2:3 --cw 40`，`--no front view, three-quarter view, looking at viewer`）→ Vary (Subtle) 挑脸最侧的一张；背面从 C01-T v2（`--ar 2:1 --cw 90`）出的“正 + 背”图里裁右半。两张抠图等高拼成 `Maela_v1_turnaround.png`，侧面另存 `MAELA_SIDE_REF_v1.png`（1024² 白底）作下一步参考。**朝右侧面**是游戏版角色的基准；海报要用**背面**。
+4. 一次出“侧面 + 背面”会被 Character Reference 拉回正面（第一轮四张全是正 + 背）。
 
 ## 3. 第二步：灯笼与贝壳
 
@@ -126,8 +127,8 @@
 
 概念图清理后进游戏。按 `HANDPAINTED_SPEC.md`：
 
-1. **角色**：用转身图的朝右侧面（或 C01-G）作底稿，在 Photoshop 2× 尺寸上统一线条、压成 2–3 层明暗，按 §3.1 拆部件，存 `TechArtAsset/Characters/Maela/Maela.psb`。
-2. Unity：PSD Importer 导入 → Skinning Editor 绑骨骼 → 做 Idle / Run / JumpUp / Fall / Lantern。
+1. **角色**：C01-G 出站姿侧面（Character Ref = `MAELA_SIDE_REF_v1`，服装颜色写全）→ 抠图 → 调色（头发、雨衣主色、火焰）→ **去边** → 按 HANDPAINTED_SPEC §3.1 拆部件（Maela 另有 Dress 层）→ 大图存 `Maela_src.psd`，缩到高 320 px 存 `TechArtAsset/Characters/Maela/Maela.psb`。Maela 这一步由 Claude 用代码 + 直接操作 Photoshop 完成（见 §13）。
+2. Unity：PSD Importer 导入（**PPU 200**）→ 剪纸式骨骼（每个部件只跟一个关节；Codex 用 Transform 层级实现）→ 做 Idle / Run / JumpUp / Fall / Lantern。
 3. **场景**：AI 出 16:9 概念 → 按房间长度外扩 → Photoshop 清理 → 拆成 L0–L4 → 记忆层标志物单独存 → 导出 PNG。
 4. 现在 / 记忆层用同一套底图，对齐后在 Unity 里由 Global Light 2D 变冷暖。
 5. 每做完一张，在 ASSETS.md 第二张表登记。
@@ -153,3 +154,18 @@
 | 外扩时多出物体 | 外扩可能凭空多画一座亮灯塔，从 4 张里挑没有的 |
 | 下载前 | 先 **Upscale (Subtle)**；未放大的只有 896×1344。A3 最终放大在 PS 做 |
 | 海报画风 | 海报概念沿用 Maela 绘本风；游戏内画风另定（ART_HANDOFF §8） |
+
+## 13. 实操经验（2026-11-05 ~ 07，Maela 游戏版）
+
+| 情况 | 结论 / 做法 |
+|---|---|
+| 提灯的手 | 改为**右手**：朝右时灯笼在近镜头一侧，不被身体挡住；flipX 后仍在近侧 |
+| 斜挎包 | Demo 不画（`--no bag, backpack, strap`）；完整版作过了新手村后的储物包（提议） |
+| 出侧面 | 一张只出一个人；`--cw 40` 只借脸和衣服，不照搬参考图的正面姿势 |
+| 游戏版颜色乱 | 挂了 Character Reference 也要把服装颜色写全，否则靴子变棕、内裙变红、灯不亮 |
+| 游戏尺寸 | Maela 在游戏里只有约 160 px 高，很多细节只剩 1–2 px。**清理只管：剪影、主色、去边、关节不露缝**；头发前后层、被挡部分、褶皱不必精修 |
+| 浅色毛边 | 浅色背景上抠出的角色，轮廓带一圈亮边，放到深色夜景上很显眼（角色越小越显眼）→ 必须去边 |
+| 灯笼里的“白斑” | 其实是抠穿的透明孔，深色背景上变成灰洞 → 发光物体内部要整体填实 |
+| 拆手臂 | 沿袖子上缘把整只袖子切下来，在肘部再分两段；袖子拿走后给身体层补底色 |
+| 细线（提环） | 贴着别的部件的细线要按走向单独切，提环归灯笼，握在手里的一小段归手 |
+| 工具 | Photoshop 可由 Claude 直接操作（导入图层、导出 .psb）；PhotoCraft 无法连接 |
