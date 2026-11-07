@@ -131,3 +131,39 @@
 - Play Mode: only `01_Home` loaded; `Maela_Idle` was active; 17 renderers had valid sprite references. Main Camera output was 1920×1080. Visual check showed no doubled eye or visible shoulder gap; white edge fringe was not visible and the lantern glow was clean.
 - Screenshots: `ForDesignScreenshot/2026-11-07_Maela_v1safe_Overview.png` (1920×1080) and `ForDesignScreenshot/2026-11-07_Maela_v1safe_HeadCloseup_4x.png` (4× crop from the overview).
 - Unity commit `6ec559bc4dea22263eacdebe72cdf30eb5abb83c` pushed to `main`; includes PSB, Unity reimport metadata, and prefab reference updates. No scene diff was needed. Recorder package changes and `_to_delete/` were excluded.
+
+## 2026-11-07 — Maela Run / JumpUp / Fall / Lantern animations (Codex)
+
+- Pre-animation checkpoint: `f73794fc26b3d1d8c04f402b08f68a333669a6a6` (empty marker; existing unrelated working-tree edits were excluded).
+- Built and committed `Maela_Run`, `Maela_JumpUp`, `Maela_Fall`, and `Maela_Lantern`; added Animator states and `Speed`, `Grounded`, `VelY`, `RaiseLantern` parameters. The generated `MaelaAnimBuilder.cs` is included for reproducibility. All clip curve paths resolved against the current Maela prefab hierarchy. Unity completed compilation; Console inspection found one unrelated Unity Account API timeout warning and no animation error.
+- Play Mode review in `01_Home`, 1920×1080; scene remained clean. No PlayerController exists under `Assets`, so parameter wiring was skipped as instructed. Run, jump peak, fall, and lantern raised were previewed; four Run phase screenshots were also captured:
+  - `ForDesignScreenshot/2026-11-07_Maela_Anim_Run_01.png` through `_04.png`
+  - `ForDesignScreenshot/2026-11-07_Maela_Anim_JumpUp_Peak.png`
+  - `ForDesignScreenshot/2026-11-07_Maela_Anim_Fall.png`
+  - `ForDesignScreenshot/2026-11-07_Maela_Anim_Lantern_Raised.png`
+- Visual follow-up: Fall reads nearly upright at game size; the Lantern pose shows a small white gap behind the right shoulder. No clear skirt/thigh gap was seen. Please address those in the animation/art source pass; the generated pose source was not hand-edited. PSB, its metadata, prefab sprite positions, and scene layout were untouched.
+- Commit `1a65a73` (`Maela: Run / JumpUp / Fall / Lantern animations`) pushed to Unity `main`.
+
+## 2026-11-07 — Maela v1.3 art + animation round 2 (Codex)
+
+- Pre-import checkpoint `b8d50e1` (`Before Maela v1.3`) pushed before forcing the PSB reimport; the scene was already saved and clean. The v1.3 PSB and generated builder updates were kept for the final commit.
+- Reimported `Maela.psb` without changing importer settings. Opened `Assets/_Project/Prefabs/Maela.prefab`: all 17 SpriteRenderers retained valid sprites and their local positions/scales; compared the overall placement with the previous committed overview. No prefab, sprite/child position, or scene edits were made.
+- Ran `Tools > Lantern Keeper > Build Maela Animations`. Updated Lantern option A: no arm raise, lantern slightly forward, Light2D peaks at 2.6. `MaelaAnimBuilder.cs` was committed with the controller and clip update.
+- Recorded `ForDesignScreenshot/2026-11-07_Maela_Anim_r2.mp4` in `01_Home`: idle, run right, run left, jump, fall/land, lantern. `ffprobe`: H.264 + AAC, 1920×1080, 30 fps, 306 video frames, 10.2 s. Local-to-shared SHA256 verified: `7B0B991A068407E39C8F7627DD5985DBB08959E095F441E6B471D97340C0C95F`.
+- Close-up Run Scene capture: `ForDesignScreenshot/2026-11-07_Maela_Anim_r2_Run_SceneView.png` (Run sampled at 0.125 s, 410×487 px). Temporary Editor capture helper was removed. Final Editor state: only `01_Home` loaded, not playing, not compiling, scene clean.
+- Unity commit `6620fad` (`Maela v1.3 art + anim round 2`) pushed to `main`; includes the v1.3 PSB, regenerated Animator controller/Lantern clip, and updated builder. Recorder package, TMP fallback, AGENTS, and `_to_delete/` changes remain excluded.
+- Tool hiccups resolved during capture: Recorder helper initially used obsolete API members; fixed for the installed package. One SceneView request exceeded the supported PPU and one helper compile attempt failed before the corrected capture. No unresolved animation/importer issue remains; Unity also logged an unrelated Account API timeout warning.
+
+## 2026-11-07 — Home playable placeholder room (Codex)
+
+- Added the painted Home background, floor and side-wall colliders, crate, frictionless player physics, PlayerController wiring, Cinemachine follow/confiner, and the specified cool Global Light 2D. Ground top is y=-4.0. No PlayerController source changes; jump velocity is a scene override of 7.6.
+- Play Mode: verified walking both directions and jumping onto/off the crate with the configured physics; checked the existing RaiseLantern Animator trigger route. Scene saved clean and Editor returned to Edit Mode.
+- Recorded `ForDesignScreenshot/2026-11-07_Home_Playable.mp4` (15 s, H.264 + AAC, 1920×1080, 30 fps). Local/shared SHA256: `8E589F0C4EB00721251E77AA95DDE0A4E7CCC8BDF304C2751D193590C2BE5BB2`.
+- Commit `e5edf680` (`Home: playable placeholder room + PlayerController`) pushed to Unity `main`.
+
+## 2026-11-07 — Home camera + Prologue storyboard (Codex)
+
+- Set the `01_Home` Cinemachine orthographic size to **3.8**; kept the existing follow, composer, and Confiner2D setup. Play Mode movement across the room and jumping onto/off the crate were exercised. The specific confiner-edge jitter check was not independently instrumented.
+- Added the four-frame placeholder Prologue (`00b_Prologue`) with the specified captions, timing, Ken Burns movement, fades, keyboard/click advance, Esc skip, and transition to `01_Home`. Start Menu Play now enters the Prologue; Build Settings order is `00_StartMenu`, `00b_Prologue`, `01_Home`, `03_EndCard` (Harbor excluded).
+- Play Mode: menu → Prologue, caption display and frame advance, Esc → Home were verified. A 40 s H.264 capture was reviewed at 1920×1080, 30 fps and includes the menu, Prologue frames, and playable Home. Shared video: `ForDesignScreenshot/2026-11-07_Prologue_Camera/2026-11-07_Prologue_Flow.mp4`; local/shared SHA256: `CD643D3F31212B1A43A7B4AF553EBE2B8BD6ECF0A6698D96B7AB22122F9CAECC`.
+- Commits: `9ece716` (`Home: closer camera`) and `aa2dc4f` (`Prologue storyboard (placeholders) + menu → prologue → home`).

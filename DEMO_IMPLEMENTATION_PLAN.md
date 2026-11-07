@@ -1,8 +1,10 @@
-<!-- 与 purposal_story/守灯人_Demo制作方案_v1.4.docx 同源；更新时两者同步。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
+<!-- 与 purposal_story/守灯人_Demo制作方案_v1.5.docx 同源；更新时两者同步。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
 
-# 《The Lantern Keeper》Demo 制作方案（v1.1，2026-11-07）
+# 《The Lantern Keeper》Demo 制作方案（v1.2，2026-11-07）
 
 > **2026-11-07 范围再缩小**（DESIGN_CHANGES）：只做第一章的开头——奶奶家 + 阁楼（新手村），用两段故事版（插图慢推镜头 + 英文字幕）讲清灯笼的来历、引出后面的故事，然后 To be continued。**码头（02_Harbor）、老佩尔、记忆贝壳移到完整版。** 目标：4–6 分钟、能从头玩到尾。
+>
+> **v1.2（2026-11-07）加序章**：开始菜单 → **故事版 P：序章（4 张，约 25 秒）** 交代地点、海雾带走记忆、梅拉来到奶奶家、奶奶认不出她 → 进入 01_Home。做法：静态插图 + 慢推 / 慢移为主；P1（无人物空镜）**试用 Google Flow（Veo）**做 8 秒动画，效果不好就退回静态。Flow 的深入调试不在本项目做（留给《妖精丘陵》项目）。
 
 ## 1. 范围原则
 
@@ -15,7 +17,7 @@
 
 | 级别 | 内容 |
 |---|---|
-| 必须做 | 3 个 Scene 与切换（00_StartMenu、01_Home、03_EndCard）；移动 / 跳跃；拾起灯笼；灯笼切换；对话框（奶奶）；故事版 A（灯笼的来历，3–4 张）与故事版 B（后续引子，4–5 张）；Back to Menu / Quit |
+| 必须做 | 3 个 Scene 与切换（00_StartMenu、01_Home、03_EndCard）；移动 / 跳跃；拾起灯笼；灯笼切换；对话框（奶奶）；**故事版 P（序章，4 张）**、故事版 A（灯笼的来历，3–4 张）与故事版 B（后续引子，4–5 张）；Back to Menu / Quit |
 | 有时间再做 | 飞蛾跟随提示；切换颜色过渡与音效；Home 背景音乐（冷 / 暖两轨）；记忆层窗外灯塔亮灯 |
 | 不做（移到完整版） | **02_Harbor 码头、老佩尔、记忆贝壳、人群剪影**；记忆值 / 灯油、烛台检查点、海妖、潮汐、多结局、存档、手柄、中文切换；掉落重生（Home 里没有坑） |
 
@@ -26,6 +28,7 @@
 | 段落 | 玩家做什么 | 完成标准 | 时长 |
 |---|---|---|---|
 | 00_StartMenu | 标题 + 夜晚灯塔背景；Play / Settings / Quit | 已完成（11-05） | — |
+| 序章（故事版 P） | 点 Play 后播放 4 张插图 + 字幕；任意键下一张，Esc 跳过 → 淡入 01_Home | 知道在哪、发生了什么、奶奶为什么认不出梅拉 | 约 25 秒 |
 | 01_Home ① 楼下 | 移动、跳上箱子；和摇椅上的奶奶对话——她认不出梅拉 | 学会移动、跳跃、互动 | 约 1 分钟 |
 | 01_Home ② 断梯 | 通往阁楼的梯子断了，上不去 | 看懂“此路不通” | — |
 | 01_Home ③ 灯笼 | 在楼下（爷爷的旧箱子旁）拾起灯笼 → **故事版 A：灯笼的来历** → 提示「E」 | 拿到能力，知道为什么 | 约 40 秒 |
@@ -55,7 +58,7 @@
 | LanternSwitch | 切换两层、改光照颜色；事件 `OnWorldSwitched(bool isMemory)` |
 | WorldLayerObject | Present / Memory / Both |
 | Interactable + DialogueBox | 对话、拾取 |
-| StoryboardPlayer | 播放故事版 A / B |
+| StoryboardPlayer | 播放故事版 P（序章）/ A / B；支持静态图（Ken Burns）和短视频（VideoPlayer，给 Flow 空镜用） |
 | EndCard | 播放故事版 B，Back to Menu |
 
 Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 200）· 正交相机 Size 5.4，Cinemachine 3.1 · 2D Animation + PSD Importer · Codex · Git / GitHub。
@@ -68,6 +71,17 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 | Home | Maela | …Grandma. It's me. |
 | Home | Soazig | The lighthouse is dark. Has it always been dark? |
 | Home（拾灯笼） | — | The lantern flickers. For a moment, the room looks the way it used to. |
+
+**故事版 P：序章（4 张，Menu → Home 之间）**
+
+| # | 画面 | 字幕（草稿） | 做法 |
+|---|---|---|---|
+| P1 | 布列塔尼海岸的夜，灯塔熄灭 | On the coast of Brittany, the old lighthouse has gone dark. | 插图；试 Flow 8 秒空镜，不好就用静态 |
+| P2 | 海雾漫进小镇的窗户 | Each night the sea fog rolls in, and takes a little of what people remember. | 插图 + 慢推 |
+| P3 | 梅拉提着行李站在奶奶家门口（背影） | Seven days before the Night of Anaon, Maela comes to stay with her grandmother. | 插图 + 慢移（有人物，不用 Veo） |
+| P4 | 清晨，奶奶坐在摇椅上，看着梅拉像看陌生人 | The next morning, Grandma looks at her as if she were a stranger. | 插图 + 慢推 → 淡出进 Home |
+
+> P1 与 A3 都提到灯塔熄灭：序章只交代现状，A 讲原因，不冲突。表格版：`TechnicalArt/LanternKeeper_Prologue_Storyboard.xlsx`。
 
 **故事版 A：灯笼的来历（3–4 张）**
 
@@ -92,23 +106,23 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 
 ### 程序
 - ☑ 建项目、Git；场景互相切换；开始菜单（11-05）
-- ☐ PlayerController（色块）+ Cinemachine 跟随
+- ☑ PlayerController + Cinemachine 跟随（Home 可玩房间，11-07）
 - ☐ 色块搭 Home（楼下、断梯、阁楼）
 - ☐ LanternSwitch + 冷暖光照 + WorldLayerObject
 - ☐ 对话、拾灯笼、GameSession
-- ☐ StoryboardPlayer（A、B）+ EndCard
-- ☐ Build Settings 去掉 02_Harbor
+- ☐ StoryboardPlayer（P 序章、A、B；静态图 + 可选视频）+ Menu → 序章 → Home 衔接 + EndCard
+- ☑ Build Settings 去掉 02_Harbor（11-07）
 - ☐ 试玩 2–3 人并修改
 - ☐ 打包 Windows
 
 ### 美术（详见 ART_HANDOFF.md）
 - ☑ 主角 Maela 定稿 + `.psb` + Idle（11-07）
-- ☐ Maela Run / JumpUp / Fall / Lantern（举灯切换）
+- ☑ Maela Run / JumpUp / Fall / Lantern（举灯切换，11-07）
 - ☐ NPC：Soazig（摇椅，Idle）
-- ☐ Home 室内分层底图（楼下 + 阁楼）+ 记忆层 / 现在层标志物（完好梯子 / 断梯、渔网、照片、白布家具）
+- ◐ Home 楼下现在层底图 v1（Midjourney，11-07 已进 Unity）；☐ 阁楼、记忆层、分层+ 记忆层 / 现在层标志物（完好梯子 / 断梯、渔网、照片、白布家具）
 - ☐ 道具：灯笼（地上可拾起的版本）；飞蛾（有时间再做）
 - ☐ UI：对话框
-- ☐ 故事版 A ×4、B ×5（Midjourney，海报绘本风；1920×1080，推镜头留 15 % 余量 → 源图约 2208×1242）
+- ☐ 故事版 **P ×4（序章；P1 试 Flow）**、A ×4、B ×5（Midjourney，海报绘本风；1920×1080，推镜头留 15 % 余量 → 源图约 2208×1242）
 - ☑ UI：开始菜单（11-05）
 - ☑ Demo 海报（v2，11-02）
 
@@ -122,4 +136,4 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 | 4 | 故事版插图、美术替换、声音 |
 | 5 | 修 Bug、打包、录屏（缓冲） |
 
-时间更紧时：故事版 A 缩到 2 张、B 缩到 3 张；阁楼只做一个小房间。
+时间更紧时：序章缩到 2 张（P1 + P4）、故事版 A 缩到 2 张、B 缩到 3 张；阁楼只做一个小房间；Flow 动画直接放弃，全用静态图。
