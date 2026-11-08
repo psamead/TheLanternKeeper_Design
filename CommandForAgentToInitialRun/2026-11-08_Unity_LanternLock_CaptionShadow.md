@@ -14,7 +14,7 @@ Fix:
    - E only accepted when grounded and not locked (no mid-air raise).
    - Animator: Lantern state plays fully; no Speed/Grounded transitions out of it while locked; return to Idle after. Reset the `RaiseLantern` trigger after use so it can't queue.
 3. Test: E then spam E/arrows/space during the ring → one clean ring, no pitch change, no movement, then normal control. Walk/run footsteps still randomise pitch. Commit "Lantern action lock + separate lantern AudioSource".
-(Later, per DEMO plan, E will also switch Present/Memory and only work after picking up the lantern — not in this task.)
+(Later, per DEMO_IMPLEMENTATION_PLAN 灯笼切换 row: the full lock is only for the **first** raise after picking up the lantern; afterwards E switches the layer immediately, movement stays free during the ring, only E is blocked until the ring ends. Build the lock so it can be turned off per call, e.g. `RaiseLantern(bool lockAll)`; for now always lockAll = true.)
 
 ## Part 2 — P1 caption shadow lighter
 Colour `#F0EED1` stays. The underlay is now too heavy (text "jumps" out). Set: alpha **0.55**, dilate **0.2**, softness **0.65**, offset (0, −0.3); remove any Face Dilate added last time. Screenshot → `ForDesignScreenshot/2026-11-08_Prologue_Caption/P1_moon_v3.png`. Commit "P1 caption: lighter underlay".
