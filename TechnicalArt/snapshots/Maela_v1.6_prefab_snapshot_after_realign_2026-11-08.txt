@@ -1,0 +1,20 @@
+Created: 2026-11-08T01:31:38.4807118+08:00
+dataPath=C:/Users/Administrator/Documents/UnityProject/TheLanternKeeper2D/Assets
+Hair_Front_Sprite | Hair_Front | 0.1225,1.395,0
+Head_Sprite | Head | -0.00250000134,1.4075,0
+Hair_Back_Sprite | Hair_Back | -0.1275,1.4025,0
+Lantern_Sprite | Lantern | 0.3475,0.715,0
+Hand_R_Sprite | Hand_R | 0.36,0.9725,0
+Arm_Lower_R_Sprite | Arm_Lower_R | 0.2875,0.935,0
+Arm_Upper_R_Sprite | Arm_Upper_R | 0.1675,1.005,0
+Hand_L_Sprite | Hand_L | -0.0475,0.665,0
+Coat_Body_Sprite | Coat_Body | 0.06,1.0325,0
+Boot_R_Sprite | Boot_R | 0.07000001,0.110000014,0
+Leg_Lower_R_Sprite | Leg_Lower_R | 0.0124999993,0.355,0
+Leg_Upper_R_Sprite | Leg_Upper_R | 0.0575000048,0.4325,0
+Boot_L_Sprite | Boot_L | -0.0449999981,0.120000005,0
+Leg_Lower_L_Sprite | Leg_Lower_L | -0.105000004,0.295,0
+Leg_Upper_L_Sprite | Leg_Upper_L | -0.075,0.4425,0
+Coat_Hem_Sprite | Coat_Hem | 0.025,0.715,0
+Dress_Sprite | Dress | 0.0325,0.5175,0
+activeScene=Assets/_Project/Scenes/01_Home.unity dirty=False

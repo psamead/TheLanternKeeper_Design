@@ -19,3 +19,6 @@ TechArtAsset/Characters/*/_work/parts*/
 
 __pycache__/
 *.pyc
+
+# Codex capture scratch (local only)
+ForDesignScreenshot/_codex_capture/

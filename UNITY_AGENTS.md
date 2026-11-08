@@ -23,6 +23,7 @@
 - 不做：灯油、检查点、敌人、潮汐、多结局、存档。新增内容先对照 DEMO_IMPLEMENTATION_PLAN §2。
 
 ## 工作规则
+- 录屏 / 截图的中间文件放 `SharedWorkFolder/ForDesignScreenshot/_codex_capture/`（本地，不进 git），**不要**在 `UnityProject/` 下新建文件夹；正式交付的放 `ForDesignScreenshot/YYYY-MM-DD_主题/`。
 - 一次只做实施清单里的一项；在 Play Mode 验证后才在 §7 打勾，并 git commit 一次。
 - 文本放 ScriptableObject，不写死在脚本里。
 - 美术资产只从 `SharedWorkFolder/TechArtAsset/` 拷入 `Assets/Art/`，不改源文件；美术源文件（.psd/.psb）不进 Git。

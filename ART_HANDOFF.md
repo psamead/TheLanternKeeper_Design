@@ -160,6 +160,18 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
    - ☑ 雾横移 + 灯笼呼吸光（2026-11-05）：素材 `TechArtAsset/Menu/FX/`（预览 `MENU_FX_preview_v2.mp4`）；Unity 提交 `f714830`，雾边缘修复 `dd02e9b`。**开始菜单完成。**（小尾巴：URP 保存场景时给 Main Camera 自动补的 `UniversalAdditionalCameraData` 未提交，下次 Codex 顺手提交。）
 2. **▶ Maela**：☑ 转身图 ☑ 游戏版侧面 ☑ `Maela.psb` v1 + 只改颜色的去边 / 灯笼补孔（11-07 定版；Unity 提交 `6ec559b`；部件源在 `TechArtAsset/Characters/Maela/_work/parts_v1_safe/`，大图 `Maela_src.psd`）→ ◐ Run / JumpUp / Fall / Lantern 动画（11-07 Claude 已出姿势与 Unity 生成脚本 `Assets/_Project/Editor/MaelaAnimBuilder.cs`，姿势源 `TechArtAsset/Characters/Maela/_work/anim_v1/poses.py`，预览 gif 同目录；第一轮 Unity 截图发现缝隙 → 动作幅度减小 + `Maela.psb` v1.3（只改 8 层内部，外框脚本核对与 v1 完全一致；举灯改为方案 A：不抬手，只往前送 + 灯光变亮）；待 Codex 按 `CommandForAgentToInitialRun/2026-11-07_Unity_Maela_v1.3_Anim_Round2.md` 导入并录视频）。已知小问题：远眼从鼻梁后露出一点（修要改头发层外框，需 Codex 同时重摆该部件，暂缓）。**改图规则：不改任何图层外框。**
 2a. ☑ Maela Run / JumpUp / Fall / Lantern（11-07 Unity 提交 `6620fad`，基本完成；遗留：远侧腿偏暗，见 LESSONS §8，后续角色注意）。▶ Home 可玩占位：代码画的楼下占位图 `TechArtAsset/Scenes/Home/Home_Present_placeholder_v0.png` + `PlayerController.cs`，Codex 任务 `CommandForAgentToInitialRun/2026-11-07_Unity_Home_Playable_Demo.md`；正式手绘图用 ART_PROMPTS S01-H（地板线对齐占位图）。
+**▶ 新对话从这里开始（2026-11-08 交接，顺序 3 → 1 → 2）**
+- 现状：Unity `cd0243f` 可玩——Maela **v1.5**（Unity 用 `_work/fix_v1.5/Maela_v1.5_before_v1.6.psb`），背景按用户手调（pos −1.9156, −0.8494；scale 0.645），ortho 3.45，单一 AudioListener。地面线待用户在 Inspector 改：Ground Y −3.5225、Crate Y −2.43、Player Y −3.20（参考 `ForDesignScreenshot/2026-11-07_Home_Scale_Review/user_note_1857_good_framing_ref.png`）。
+- **3. Maela v1.6 导入**：设计文件夹 `TechArtAsset/Characters/Maela/Maela.psb` = v1.6（用户补画前脚掌 / 大腿 / 裙摆，8 层外框变大，图层 ID 已修回）。问题：Unity PSD Importer 只更新 `spritePosition`，不更新 `rect` 宽高 → 新像素被裁（LESSONS §8）。先在副本上小范围试：改 meta 的 rect 宽高，或让这几层生成新 Sprite 后重绑 prefab；验收必须比对 `sprite.rect` = PSB 图层尺寸。工具：`Assets/_Project/Editor/MaelaSpriteRealign.cs` + json。
+- **1. 序章 P2–P4**：MJ 出图（ART_PROMPTS §4b SB-P2..P4，风格参考 `SB_P1.png`），裁 2208×1242 → `TechArtAsset/Storyboard/Prologue/SB_P2..4.png` → Unity 同名替换占位。Flow 已放弃（两次改色 + 加海鸥）。
+- **2. 声音**：序章配乐 + 海风浪环境（可用 `TechArtAsset/Audio/Prologue/SB_P1_flow_v1_ambience.wav` 风 / 浪 / 海鸥 7.9 s，需做成循环）、Home 屋内环境、脚步、跳 / 落地、举灯。代码合成，参考 `TechArtAsset/Audio/Menu/_src/synth_menu_audio.py`。之后 Codex 接入，用户手动录屏（Codex 的模拟输入进不了 Game 视图）。
+- **11-08 本轮结果**：
+  - 3 ◐ 已备好待 Codex 试：`CommandForAgentToInitialRun/2026-11-08_Unity_Maela_v1.6_ImportFix_Trial.md`（分支 `try/maela-v1.6`；A 路：`_work/fix_v1.6_import/patch_psb_meta.py` 把 8 层新宽高写进 meta；不行走 B 路：新 Sprite + 按名重绑）。验收工具 `Assets/_Project/Editor/MaelaSpriteRectCheck.cs`（菜单 Check Maela Sprite Rects，PASS 才合并）。
+  - 1 ◐ 等用户 MJ 出图：提示词见 ART_PROMPTS §4b（加 `--sref SB_P1.png`），下载后 `python TechArtAsset/Storyboard/Prologue/_work/finish_sb.py <图> P2` 自动裁成 2208×1242。
+  - 2 ◐ v1 已合成待试听：序章 BGM「Ar Mor Du」96 s 循环 + 海风浪 48 s 循环（含 Flow 音轨）→ `TechArtAsset/Audio/Prologue/`；Home 屋内 40 s 循环（墙外风浪、钟、炉火、梁木吱呀）→ `Audio/Home/`；脚步 ×4、跳 ×2、落地 ×2、举灯 → `Audio/Maela/`。脚本 `Audio/Prologue/_src/synth_prologue_home_audio.py`，试听合集 `_src/PREVIEW_Prologue_Home_audio_v1.mp3`。用户确认后再交 Codex 接入。
+- 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
+
+2c. ☐ **Maela 补被挡部分（延后）**：Boot_L 前脚掌、Leg_Upper_L 大腿、Dress 下沿等，在 `TechArtAsset/Characters/Maela/_work/fix_v1.5/Maela_v1.5_m.psb` 上继续画（可扩外框；不改图层名 / 顺序，画布 149×320）。完成后：Claude 对比 v1.5 外框 → 生成 `Assets/_Project/Art/Characters/Maela/maela_realign.json` → Codex 运行 Tools ▸ Lantern Keeper ▸ Realign Maela Sprites（`MaelaSpriteRealign.cs`，每个 psb 版本只运行一次）。当前 Unity 用 v1.5（外框与 v1.4 相同）。
 2b. **Demo 范围已定（11-07）**：01_Home + 三段故事版（序章 P、A、B；见 DEMO_IMPLEMENTATION_PLAN v1.2）。Home 楼下现在层 v1 已进 Unity（`TechArtAsset/Scenes/Home/Present/`，记忆层参考在 `Memory_ref/`）。美术顺序：☑ Maela 动作 → ▶ **序章 P1–P4 插图**（☑ P1 定稿 C 版：`TechArtAsset/Storyboard/Prologue/SB_P1.png`，海报灯室接到 MJ 塔上；P2–P4 待出）；Home 比例已改为 Maela ×1.4 / 背景 ×0.8（Codex 任务 `2026-11-07_Unity_Home_Scale_P1`）（ART_PROMPTS SB-P*；P1 试 Flow，不行就静态）→ Soazig → Home 室内分层底图（楼下 + 阁楼，现在 + 记忆标志物）→ 地上的灯笼 → 对话框 → 故事版 A / B 插图。
 3. 海报 A3 放大（PS 保留细节 2.0 → 3508×4961）。
 
@@ -211,3 +223,4 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-06 | Codex 指令 `2026-11-06_Unity_Maela_Import_Idle.md`：PPU 200、剪纸式骨骼（每个部件只绑一根骨）、Idle 3 s、灯笼 Point Light 2D |
 | 2026-11-06 | Maela 转身图、游戏版侧面、`Maela.psb` v1（自动拆层，部分占位）完成；登记 ASSETS |
 | 2026-11-05 | 开始 Maela：定右手提灯、Demo 不画斜挎包（§4.2、§8）；ART_PROMPTS C01-T / C01-G 改为 v2（去掉 cute / Q 版写法，加 STYLE_GAME 线条与上色部分） |
+| 2026-11-08 | Maela v1.6 导入修复方案（meta 改 rect + 检查脚本，待 Codex 分支试）；序章 P2–P4 裁图脚本；序章 / Home / Maela 音频 v1 合成 |

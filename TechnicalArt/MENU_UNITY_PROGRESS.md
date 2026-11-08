@@ -167,3 +167,66 @@
 - Added the four-frame placeholder Prologue (`00b_Prologue`) with the specified captions, timing, Ken Burns movement, fades, keyboard/click advance, Esc skip, and transition to `01_Home`. Start Menu Play now enters the Prologue; Build Settings order is `00_StartMenu`, `00b_Prologue`, `01_Home`, `03_EndCard` (Harbor excluded).
 - Play Mode: menu → Prologue, caption display and frame advance, Esc → Home were verified. A 40 s H.264 capture was reviewed at 1920×1080, 30 fps and includes the menu, Prologue frames, and playable Home. Shared video: `ForDesignScreenshot/2026-11-07_Prologue_Camera/2026-11-07_Prologue_Flow.mp4`; local/shared SHA256: `CD643D3F31212B1A43A7B4AF553EBE2B8BD6ECF0A6698D96B7AB22122F9CAECC`.
 - Commits: `9ece716` (`Home: closer camera`) and `aa2dc4f` (`Prologue storyboard (placeholders) + menu → prologue → home`).
+
+## 2026-11-07 — Home scale correction + Prologue P1 final art (Codex)
+
+- Saved `01_Home`: Maela visual child scale 1.4; Player CapsuleCollider2D 0.63×2.1, offset (0,1.05); jumpVelocity 8 and Rigidbody2D gravityScale 1.7 for the resized crate; lantern outer radius 4.2. Background/ground/wall/confiner scale 0.8 with floor top y=-3.2 and walls at x=±10.08; crate scale 1.4; Cinemachine orthographic size 3.8. Ground check unchanged. Visual height measured about 29% of a 1920×1080 frame.
+- Set Prologue P1 to `Assets/_Project/Art/Storyboard/Prologue/SB_P1.png`, matching placeholder importer settings; zoom 1→1.08, pan (0,0)→(-0.15,0.05). P2–P4 remain placeholders.
+- Captured/reviewed `ForDesignScreenshot/2026-11-07_Home_Scale_P1/2026-11-07_Home_Scale_P1.mp4`: 42 s, H.264, 1920×1080; shows Start Menu → Prologue storyboard → Home. Shared SHA256: `4B386A0DD3A64B45B20DD313068918F89B6F58753261F04539D2A52220CC917B`.
+- Validation limit: Unity loaded the Home scene in Play Mode and framing/ground alignment were inspected. Synthetic keyboard input did not reach the Game View in this desktop session, so controller-driven room traversal, crate jump, E trigger, and confiner-edge jitter were not confirmed; the recording does not demonstrate those interactions.
+- Checkpoint `1f45a38` (`Before Home scale fix`) and final commit `cef0bf1f9fff6aa45c87d64058b4e1d3a44a2182` (`Home: Maela ×1.4, room ×0.8; prologue P1 final art`) are on `main`. TMP generated font changes and temporary ProjectSettings change were restored; pre-existing unrelated working-tree edits remain excluded.
+
+## 2026-11-07 — Maela v1.4 legs + Console pass (Codex)
+
+- User confirmed Unity changes were saved; checkpoint `3e026eb` (`Before Maela v1.4`) created before the PSB reimport. Reimported `Assets/_Project/Art/Characters/Maela/Maela.psb` without changing importer settings. Compared prefab and `01_Home` character snapshots before/after: all 17 SpriteRenderers remained valid and the placement snapshot hash stayed `D75FD96481A50798601B7A27A8EC74E5`; no offsets detected.
+- Removed the untracked duplicate `Cormorant Garamond Italic SDF.asset` and its `.meta`; Prologue uses the separate Persistent font asset. Forced TMP mesh generation produced 49 visible caption characters.
+- Cleared the stale 999+ Console entries. A fresh ~10 s `01_Home` Play Mode run reported 0 logs, 0 warnings, and 0 errors. No `SCALEP1_CRATE_CHECK` or `CRATE_JUMP_RESULT` project-source hits were found.
+- Synthetic keyboard input still did not reach Game View, so walking/jump/E could not be exercised. The attempted Animator-preview screen capture stayed static; a Unity render-command retry was rejected by the bridge with `User interactions are not supported for MCP tool calls`. No valid motion video was delivered in this pass; capture remains outstanding.
+- No importer setting, sprite child position, repaint, or scene edits were included in this task commit. The pre-existing `01_Home` transform diff and unrelated package/AGENTS/TMP changes remain outside it.
+
+## 2026-11-08 — Maela v1.6 preflight stopped on missing sprite refs (Codex)
+
+- Confirmed Unity target `Application.dataPath=C:/Users/Administrator/Documents/UnityProject/TheLanternKeeper2D/Assets`; active `01_Home` reported clean in the Editor. Checkpoint `d5f4cce` (`Before Maela v1.6`) is local. User asked to preserve the existing `01_Home` edits, so the task's scene-discard step was skipped and that scene remains untouched.
+- Saved pre-force snapshot to `TechnicalArt/Maela_v1.6_prefab_snapshot_before.txt` (17 SpriteRenderers with sprite names and world-space bounds centers). It already showed 2 missing sprites: `Hand_L_Sprite` and `Boot_R_Sprite`. Forced PSD reimport with no importer setting edits; result remained 15 valid / 2 missing. Per task stop condition, did not run `Realign Maela Sprites` or edit the prefab. Restored the tracked PSB and removed the incoming realignment JSON; preserved incoming PSB/JSON copies locally at `PrologueCapture/Maela_v1.6_reverted_backup/`. A subsequent tracked-PSB import still reports those same 2 missing references; unresolved and needs review before retrying v1.6.
+- Read-only Home geometry while preserving the user's current scene edit: Background center (-1.9156,-0.8494), bounds extents (8.16,3.47), CameraBounds extents (10.08,4.32), walls at x=±10.08, camera orthographic size 3.8. Background no longer matches the bounds polygon and is shorter than the 7.6-unit camera view. No Home repair or runtime navigation was performed. Edit Mode currently shows one enabled Main Camera AudioListener; menu→Prologue→Home Play Mode count/warnings were not tested because the missing-sprite stop condition ended the task.
+
+## 2026-11-08 — Maela v1.6 repaired layer IDs and completed realignment (Codex)
+
+- Follow-up to the earlier preflight entry: the two PSB layer IDs for `Hand_L` and `Boot_R` were corrected in the supplied v1.6 art. Captured the required prefab placement snapshot before reimport; after restoring the PSB importer metadata from Git, forced reimport without changing importer settings. All 17 SpriteRenderers were valid (0 missing).
+- Ran `Tools > Lantern Keeper > Realign Maela Sprites` exactly once. Compared all eight configured sprite offsets with before/after world-bound centers; every delta matched the JSON expectation, with maximum discrepancy about 0.000003 px. Saved the post-realignment snapshot at `TechnicalArt/Maela_v1.6_prefab_snapshot_after_realign_2026-11-08.txt`. Visual review against the supplied comparison image showed the expected alignment and no displaced parts.
+- `01_Home` background bounds are 20.16×8.64 units, centered at (0,0); CameraBounds and side walls align to those bounds. The Cinemachine Confiner2D references CameraBounds. Orthographic size is 3.8 (7.6-unit view height), which fits within the background. Home remained clean in the Editor.
+- Play Mode route check: Start Menu Play loaded `00b_Prologue`; the standard `SceneLoader` then loaded `01_Home`. Each tested scene had exactly one enabled AudioListener on its Main Camera; no duplicate-listener warning appeared. The Prologue was not allowed to finish naturally in this check. No video was requested.
+- Unity Console contained stale Unity AI MCP bridge/account warnings plus one rejected SceneView capture request with an unsupported PPU value; no project AudioListener warning was observed. This is not a claim of a globally warning-free Console.
+- Editor returned to Edit Mode, not compiling, on `00_StartMenu`; `01_Home` was clean. The v1.6 PSB SHA256 is `6DB0CFB499BFAFFFFA953E5F6B6170B8C49F113D559A655D384C42E238C10256`.
+
+## 2026-11-08 — Maela v1.5 rollback + Home framing restore (Codex)
+
+- Empty pre-change checkpoint `8c0ce2c` (`Before rollback to v1.5`) was created without staging any pre-existing working-tree edits.
+- Restored `Maela.prefab` and `Maela.psb.meta` from `d5f4cce`; replaced `Maela.psb` with shared `Maela_v1.5_before_v1.6.psb`; Unity reimported it. Removed `maela_realign.json` and its meta; kept `MaelaSpriteRealign.cs`. All 17 prefab SpriteRenderers are valid. Each prefab sprite rect matches the corresponding imported PSB layer rect:
+
+| Layer / Sprite | Rect (px) |
+|---|---:|
+| Arm_Lower_R | 33 × 46 |
+| Arm_Upper_R | 23 × 70 |
+| Boot_L | 36 × 45 |
+| Boot_R | 46 × 45 |
+| Coat_Body | 138 × 91 |
+| Coat_Hem | 116 × 50 |
+| Dress | 65 × 35 |
+| Hair_Back | 51 × 73 |
+| Hair_Front | 51 × 76 |
+| Hand_L | 17 × 18 |
+| Hand_R | 18 × 11 |
+| Head | 101 × 73 |
+| Lantern | 39 × 118 |
+| Leg_Lower_L | 30 × 37 |
+| Leg_Lower_R | 23 × 37 |
+| Leg_Upper_L | 20 × 34 |
+| Leg_Upper_R | 43 × 34 |
+
+- Rest, Run (0.25 s), JumpUp (0.15 s), and Fall (0.30 s) poses were sampled and visually reviewed; no gaps were visible.
+- Restored `Background` to position (-1.9156, -0.8494, 0), scale (0.645, 0.645, 1). Its bounds are 16.254 × 6.966 units, from (-10.0426, -4.3324) to (6.2114, 2.6336). Aligned Ground top, Player bottom, and Crate bottom at y=-3.4294; walls at x=-10.0426 and x=6.2114; CameraBounds and Cinemachine Confiner2D match the background bounds. Cinemachine orthographic size is 3.45 (below the 3.483 maximum).
+- Play Mode physics/input check: PlayerController moved to the right boundary and stayed grounded. The crate jump landed with Player bottom y=-1.8844 vs crate top y=-1.8894 (0.005 units). The keyboard Space edge did not register in the MCP-paused frame, so the jump arc was exercised directly with the configured Rigidbody2D velocity; walking used the PlayerController with a virtual D key.
+- Invoked the Start Menu Play button; its fade did not advance while Unity's unscaled clock was stationary. Loaded `00b_Prologue` and `01_Home` through the project's `SceneLoader` while in Play Mode. This confirms both scene loads but not the live menu fade/storyboard skip input sequence. Final Editor state: Edit Mode on `01_Home`, scene clean, one enabled AudioListener.
+- Console contained prior Unity AI MCP bridge warnings and a rejected capture request; no new project-code error was observed in this pass. Pre-existing AGENTS/TMP font/Recorder package edits were left untouched.
+- Final commit `cd0243f` (`Rollback Maela to v1.5 and restore Home framing`) and checkpoint `8c0ce2c` were pushed to Unity `main`; verified `origin/main` at `cd0243f111ae4378cad3f9ffc3a22ccc230f3c2c`.
