@@ -232,3 +232,17 @@ def sfx_lantern_raise_v2(seed=9):
 
 if __name__ == "__main__" and "lantern2" in sys.argv[2:]:
     save("SFX_Maela_LanternRaise_v2", sfx_lantern_raise_v2(), True)
+
+# ---------------------------------------------------------------- v3 lantern (11-08): v1's brass strike (head only) + v2 from the "beep" on
+def sfx_lantern_raise_v3(seed=7):
+    dur = 1.9; n = int(dur * SR); t = np.arange(n) / SR; out = np.zeros((n, 2))
+    c = rope_creak(.3, seed); out[:len(c)] += pan(c, -.1) * .2
+    b = brass_ting(1180, .8, seed); tb = np.arange(len(b)) / SR
+    b = b * np.where(tb < .12, 1.0, np.exp(-(tb - .12) / .07))          # keep the strike, cut the long temple-bell tail
+    o = int(.12 * SR); out[o:o + len(b)] += pan(b, .1) * .35
+    v2 = sfx_lantern_raise_v2(9); s = int(.08 * SR)                      # v2 tink + glow "beep" + shimmer
+    k = min(len(v2), n - s); out[s:s + k] += v2[:k] * .8
+    out = add_reverb(out, .12, dur=.8, damp_hz=5000); return fade(norm(out, -7), .002, .25)
+
+if __name__ == "__main__" and "lantern3" in sys.argv[2:]:
+    save("SFX_Maela_LanternRaise_v3", sfx_lantern_raise_v3(), True)
