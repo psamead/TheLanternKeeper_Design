@@ -1,10 +1,12 @@
-<!-- 与 purposal_story/守灯人_Demo制作方案_v1.5.docx 同源；更新时两者同步。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
+<!-- 与 purposal_story/守灯人_Demo制作方案_v1.6.docx 同源；更新时两者同步。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
 
-# 《The Lantern Keeper》Demo 制作方案（v1.2，2026-11-07）
+# 《The Lantern Keeper》Demo 制作方案（v1.3，2026-11-08）
 
 > **2026-11-07 范围再缩小**（DESIGN_CHANGES）：只做第一章的开头——奶奶家 + 阁楼（新手村），用两段故事版（插图慢推镜头 + 英文字幕）讲清灯笼的来历、引出后面的故事，然后 To be continued。**码头（02_Harbor）、老佩尔、记忆贝壳移到完整版。** 目标：4–6 分钟、能从头玩到尾。
 >
 > **v1.2（2026-11-07）加序章**：开始菜单 → **故事版 P：序章（4 张，约 25 秒）** 交代地点、海雾带走记忆、梅拉来到奶奶家、奶奶认不出她 → 进入 01_Home。做法：静态插图 + 慢推 / 慢移为主；P1（无人物空镜）**试用 Google Flow（Veo）**做 8 秒动画，效果不好就退回静态。Flow 的深入调试不在本项目做（留给《妖精丘陵》项目）。
+
+> **v1.3（2026-11-08）**：Unity 改为常驻场景 `Core_Persistent` + 叠加关卡（照《妖精丘陵》）；Maela 分走 / 跑（默认跑，Shift 慢走）；灯笼切换规则定稿（第一次全锁 + 推动剧情，之后只挡 E）；序章、Home、角色音效 v1 已进 Unity。
 
 ## 1. 范围原则
 
@@ -40,8 +42,8 @@
 
 | 机制 | 规格 | Unity 实现提示 |
 |---|---|---|
-| 移动 / 跳跃 | 左右 + 单段跳，参数在 Inspector 可调 | Rigidbody2D + BoxCollider2D；Maela 骨骼 Prefab（Idle / Run / JumpUp / Fall） |
-| 拾起灯笼 | 拾起前 Maela 手里的 Lantern 部件和 Point Light 2D 隐藏 | GameSession.hasLantern |
+| 移动 / 跳跃 | 左右 + 单段跳；**默认跑**（3.2），按住 **Shift 慢走**（速度按步幅匹配，约 0.8）；参数在 Inspector 可调 | Rigidbody2D + BoxCollider2D；Maela 骨骼 Prefab（Idle / Walk / Run / JumpUp / Fall / Lantern），动作数据唯一来源 `TechArtAsset/Characters/Maela/_work/anim_v2/poses.py` |
+| 拾起灯笼 | 拾起前 Maela 手里的 Lantern 部件和 Point Light 2D 隐藏 | GameState.HasLantern |
 | 灯笼切换 | 拿到灯笼后按 E 切换（11-08 定）：**第一次**＝完整长铃声，响铃期间锁定一切操作，铃声结束后场景变换、推动剧情；**之后**＝按 E 立即切换场景并响铃，响铃期间可以移动 / 跳，但 E 无效（直接忽略：不切换、不排队、不发声，保证“铃声 = 切换那一刻”；可选：灯光轻闪一下表示还在响），铃声响完才能再切换 | 碰撞 Tilemap（Present / Memory）开关 TilemapCollider2D；标志物 Sprite 按 WorldLayerObject 显隐 |
 | 冷暖 | 现在层冷蓝、记忆层暖金 | Global Light 2D 颜色（HANDPAINTED_SPEC §4） |
 | 互动 | 靠近出现提示，按 W | 触发器 |
@@ -52,9 +54,13 @@
 
 | 脚本 | 职责 |
 |---|---|
-| GameSession | Singleton + DontDestroyOnLoad；`hasLantern` |
-| SceneLoader | 切换场景 |
-| PlayerController | 移动、跳跃、驱动 Maela Animator |
+| Core_Persistent（场景） | 常驻：Maela、Main Camera（唯一 AudioListener）、Cinemachine + Confiner2D、Global Light 2D、EventSystem、下面三个单例 |
+| GameState | 单例；`HasLantern`、`MemoryLayer` |
+| AudioManager | 单例；BGM / 环境声各两路交叉淡入淡出 |
+| LevelLoader | 单例；叠加加载关卡、移到 SpawnPoint、按 LevelInfo 设相机边界 / ortho / 环境声 / 光，卸载上一关 |
+| LevelInfo + SpawnPoint + LevelBootstrap | 每个关卡场景里；Bootstrap 让 Editor 里单独打开关卡也能玩 |
+| SceneLoader | 菜单 / 序章 / EndCard 等普通场景切换 |
+| PlayerController + MaelaAudio | 移动、跳跃、走 / 跑、举灯锁定；MaelaAudio：脚步（动画事件）/ 跳 / 落地一个声源（随机音高），灯笼单独声源（音高固定） |
 | LanternSwitch | 切换两层、改光照颜色；事件 `OnWorldSwitched(bool isMemory)` |
 | WorldLayerObject | Present / Memory / Both |
 | Interactable + DialogueBox | 对话、拾取 |
@@ -109,16 +115,18 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 - ☑ PlayerController + Cinemachine 跟随（Home 可玩房间，11-07）
 - ☐ 色块搭 Home（楼下、断梯、阁楼）
 - ☐ LanternSwitch + 冷暖光照 + WorldLayerObject
-- ☐ 对话、拾灯笼、GameSession
-- ☐ StoryboardPlayer（P 序章、A、B；静态图 + 可选视频）+ Menu → 序章 → Home 衔接 + EndCard
+- ☑ Core_Persistent + 叠加关卡（GameState / AudioManager / LevelLoader，11-08）
+- ☐ 对话、拾灯笼
+- ◐ StoryboardPlayer：☑ P 序章 + Menu → 序章 → Home（每页可设字幕位置 / 颜色 / underlay，11-08）；☐ A、B + EndCard
 - ☑ Build Settings 去掉 02_Harbor（11-07）
 - ☐ 试玩 2–3 人并修改
 - ☐ 打包 Windows
 
 ### 美术（详见 ART_HANDOFF.md）
 - ☑ 主角 Maela 定稿 + `.psb` + Idle（11-07）
-- ☑ Maela Run / JumpUp / Fall / Lantern（举灯切换，11-07）
-- ☐ NPC：Soazig（摇椅，Idle）
+- ☑ Maela Run / JumpUp / Fall / Lantern（举灯切换，11-07）；☑ v1.6_m 补画被挡部分 + Walk / Run 分开（11-08）
+- ☑ 声音 v1：序章 BGM + 海风浪、Home 屋内环境、脚步 v4、跳 / 落地、举灯 v5（11-08）
+- ☐ NPC：Soazig（摇椅，Idle）——提示词 C02-v2 已备好（ART_PROMPTS §4b v2）
 - ◐ Home 楼下现在层底图 v1（Midjourney，11-07 已进 Unity）；☐ 阁楼、记忆层、分层+ 记忆层 / 现在层标志物（完好梯子 / 断梯、渔网、照片、白布家具）
 - ☐ 道具：灯笼（地上可拾起的版本）；飞蛾（有时间再做）
 - ☐ UI：对话框

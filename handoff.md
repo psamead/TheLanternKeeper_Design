@@ -1,6 +1,6 @@
 <!-- 给后续开发 Agent（Codex / Claude）的交接文档。新对话先读这份。 -->
 
-# handoff：《The Lantern Keeper》项目交接（v1.2）
+# handoff：《The Lantern Keeper》项目交接（v1.3，2026-11-08：Unity 改为 Core_Persistent + 叠加关卡，详见 UNITY_AGENTS.md）
 
 ## 1. 项目速览
 
