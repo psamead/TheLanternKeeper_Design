@@ -10,7 +10,7 @@ User: walking looks like floating. Cause: walk speed 1.8 u/s is far faster than 
 
 ## Part 2 — P1 caption: stronger separation from the sky
 `#BFE6E2` + soft underlay still blends into the bright cyan sky.
-- Text colour: the **P3 lighthouse light** itself, **`#93FEFC`** (sampled from `SB_P3_placeholder.png`).
+- Text colour **`#F0EED1`**: same lightness as the P3 lighthouse light (#93FEFC, Lab L 93.5) but moved toward pale neutral-yellow (Lab a −4, b +14) — a muted warm complement to the cold-blue sky, close to neutral so it keeps the mood (user: a calm, sober look at reality). If it reads too warm, try `#E9EFD9`; too cold → `#F5EDCA`. Same lightness for all three.
 - Underlay much stronger: colour `#0B1A2E`, alpha **0.85**, offset (0, −0.4), dilate **0.4**, softness **0.45** (dark halo reads as a soft shadow, not a box).
 - If still low-contrast at 1920×1080, also raise font weight via TMP `Face Dilate 0.1` on the same per-frame material. Don't touch shared materials.
 - Screenshot → `ForDesignScreenshot/2026-11-08_Prologue_Caption/P1_moon_v2.png`. Commit "P1 caption: lighthouse-light colour + stronger underlay".
