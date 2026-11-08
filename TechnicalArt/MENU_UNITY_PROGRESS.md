@@ -248,3 +248,18 @@
 - `Crate` collider adjustment: position `(-1.5, -2.43, 0)`, scale `(1.4, 1.4, 1)`, `BoxCollider2D` offset `(0, -0.016816527)`, size `(1.3, 1.0663669)`. Its world bounds are X `[-2.41, -0.59]`, Y `[-3.2, -1.707086]`, so the crate collider bottom meets the Ground top at Y `-3.2`.
 - Unity MCP readback confirmed the scene is clean in Edit Mode and both saved collider configurations are present. No Play Mode collision test was run for these adjustments.
 
+
+## 2026-11-08 — Core_Persistent + additive Home (Codex)
+
+- Added `Core_Persistent` as the owner of Player/Maela, Main Camera/AudioListener, Cinemachine camera and Confiner2D, Global Light 2D, EventSystem, AudioManager, GameState and LevelLoader. `01_Home` now contains only level geometry and its LevelInfo, Spawn_Start and direct-open bootstrap. Ground/Crate collision geometry was preserved.
+- Flow is Menu → Prologue → Core → additive Home; Prologue audio playback state transfers to Core audio voices. Escape returns to Menu and unloads both Home and Core. Core is enabled in Build Settings; Harbor remains excluded.
+- Editor Play Mode acceptance passed: 6,846 samples with exactly one enabled AudioListener and EventSystem; Home rest/floor, both wall contacts, crate jump/landing, Escape/menu teardown, and direct-open Home bootstrap. Fresh bounded project diagnostics recorded zero warnings/errors. No physical speaker listening or standalone build was performed.
+- Commit `76b4163ec849b3867913f95c4391174799f47794` (`Core_Persistent + additive level loading (AudioManager, GameState, LevelLoader)`) pushed; verified remote `main` at the same hash.
+- Screenshot: `ForDesignScreenshot/2026-11-08_CoreSplit/Home_Rest_after.png` (1920×1080). Temporary runtime capture settings were restored; Editor returned to Edit Mode.
+
+## 2026-11-08 — Maela v1.6_m, Footstep v4 and Prologue caption (Codex)
+
+- Part 2: Maela v1.6_m import check passed for all 17 expected sprite rectangles; prefab had no missing references. Applied the one supplied realignment (+3.5 px X to `Leg_Upper_L_Sprite`) and requested draw order. Magenta Rest/Run/JumpUp/Fall/Lantern captures and Play Mode state checks showed no visible boot/leg seams; five states and all sprites passed. Screenshots are in `ForDesignScreenshot/2026-11-08_Maela_v1.6m/`. Commit `1d801545a9e331c0680cdbb71e5c81e07d17ee3c` pushed.
+- Part 3: Imported the four v4 footstep OGGs with v1 importer settings and changed the Core `MaelaAudio` array to v4. Unity readback matched all four references; v1 source assets remain. Commit `3ae585f30d1f58e20ff6a40369b90c5ee6a54ec6` pushed.
+- Part 4: Added per-frame caption anchors/alignment/font scale and word-wrap control. P1 uses anchors `(0.51, 0.36)`–`(0.82, 0.71)`, scale 1.5 and the requested two-line text; P2–P4 retain their original caption content and default bottom-centre layout. Captured/reviewed `ForDesignScreenshot/2026-11-08_Prologue_Caption/P1.png` (1920×1080); exactly two lines appear in the sky and the navigation prompt is unchanged. Commit `d40cce5676e527286dee811960928853efb4b9d4` pushed.
+- Final `origin/main` verified at `d40cce5676e527286dee811960928853efb4b9d4`. Complete ordered task commits: `28aae3e` checkpoint, `76b4163` Core/additive levels, `1d80154` Maela v1.6_m, `3ae585f` Footstep v4, `d40cce5` Prologue P1 caption.

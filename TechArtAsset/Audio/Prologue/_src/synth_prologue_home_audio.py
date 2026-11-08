@@ -212,3 +212,23 @@ def footstep_v4(seed):
 
 if __name__ == "__main__" and "step4" in sys.argv[2:]:
     for i in range(4): save(f"SFX_Maela_Step_Wood_0{i+1}_v4", footstep_v4(800 + i * 17), True)
+
+# ---------------------------------------------------------------- v2 lantern (11-08): no temple-bell tail.
+# Small handle-wire tick + glass/tin "tink" with very short decay, then the soft glow swell.
+def sfx_lantern_raise_v2(seed=9):
+    r = np.random.default_rng(seed); dur = 1.8; n = int(dur * SR); t = np.arange(n) / SR; out = np.zeros((n, 2))
+    c = rope_creak(.2, seed); out[:len(c)] += pan(lp(c, 2500), -.1) * .18
+    tink = modal([2650, 4120, 6900], [.05, .03, .015], [1, .5, .25], .3, .3, (4000, 10000), seed)   # tin/glass, short
+    o = int(.1 * SR); out[o:o + len(tink)] += pan(tink, .1) * .22
+    wire = modal([3400, 5100], [.02, .012], [1, .4], .12, .2, (5000, 11000), seed + 1)
+    o2 = int(.16 * SR); out[o2:o2 + len(wire)] += pan(wire, .15) * .1
+    glow = np.zeros(n)
+    for f, a in [(587.3, 1), (880, .5), (1174.7, .2)]:
+        glow += a * np.sin(2 * np.pi * f * t)
+    shimmer = bp(noise(n), 3500, 9000) * .05
+    env = smooth_env(n, [0, .2, .8, 1.3, dur], [0, 0, 1, .5, 0])
+    out += pan((glow * .12 + shimmer) * env, 0)
+    out = add_reverb(out, .18, dur=1.0, damp_hz=5000); return fade(norm(out, -8), .002, .25)
+
+if __name__ == "__main__" and "lantern2" in sys.argv[2:]:
+    save("SFX_Maela_LanternRaise_v2", sfx_lantern_raise_v2(), True)
