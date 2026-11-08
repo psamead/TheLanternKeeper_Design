@@ -72,6 +72,18 @@
 | SB-P3 | 序章 3：梅拉到奶奶家（背影） | a small girl seen from behind standing at the wooden door of an old stone fisherman's cottage at dusk, holding a small worn suitcase, shoulder-length wavy black hair, bright yellow raincoat with the hood down, dark brown dress, dark stockings, red short rain boots, sea fog in the lane, one warm light in the cottage window, soft painterly storybook illustration, cold blue dusk with a single warm light | `--cref MAELA_REF_v1 --cw 40`；`--no front view, face, text, lantern`（这时还没拿到灯笼） |
 | SB-P4 | 序章 4：奶奶认不出她 | interior of an old Breton cottage in cold grey morning light, an old grandmother with grey hair in a bun and a dark green wool shawl sitting in a wooden rocking chair, looking with a polite empty expression at a small girl in a bright yellow raincoat standing in front of her (girl seen from behind, red boots), quiet and sad, soft painterly storybook illustration, muted cold palette | `--cref MAELA_REF_v1 --cw 40`；`--no text, horror, smiling grandmother`。奶奶尚无定稿，这张同时当 Soazig 的风格探索 |
 
+**11-08 定稿用提示词 v2（P2–P4 + Soazig，可直接粘贴）**
+共通：Niji 6，`--ar 16:9 --s 150 --sref SB_P1.png --sw 60`（只带 P1 画风）。每张**留一块干净的大面积（天空 / 墙面 / 雾）给两行字幕**，字幕颜色 #F0EED1 + 深色柔光，所以留白处不要太亮。顺序：先出 Soazig（C02-v2）→ 定稿裁 `SOAZIG_REF_v1.png`（白底正面）→ 再出 P4。
+
+| 编号 | 提示词 | 参数 |
+|---|---|---|
+| C02-v2 Soazig 现在 | an old Breton grandmother in her seventies, full body, standing calmly, grey hair in a neat low bun, kind but tired face with a distant polite expression, dark green wool shawl over her shoulders, long dark charcoal skirt, plain white apron, black wooden-soled shoes, holding a half-mended fishing net, natural adult proportions, restrained expression, clean silhouette, limited palette, soft painterly storybook shading, plain light background, character concept sheet, front view and side view | `--ar 3:2 --s 150 --sref MAELA_REF_v1.png --sw 80 --no chibi, big eyes, blush, pastel, witch, horror` |
+| SB-P2 v2 海雾进镇 | a narrow cobbled street of an old Breton fishing village at night, thick pale sea fog rolling in from the harbour and curling around low granite cottages, one small window with a faint warm candle being slowly swallowed by the fog, wet slate roofs, quiet and empty, large soft area of fog in the upper half, soft painterly storybook illustration, cold foggy blue-grey palette #4A5A6E #1E2633 #9AA3AD, a single tiny warm light, dreamlike and sad | `--no people, text, horror, lit lighthouse` |
+| SB-P3 v2 梅拉到奶奶家 | a small 11-year-old girl seen from behind at the wooden door of an old granite fisherman's cottage at dusk, holding a small worn brown suitcase, shoulder-length wavy black hair, bright yellow raincoat with the hood down, dark brown dress, dark stockings, red short rain boots, sea fog in the lane, one warm light in the cottage window, far in the background a dark unlit lighthouse on a cliff, girl small in the lower left third, open foggy sky in the upper right, soft painterly storybook illustration, cold blue dusk with a single warm light | `--cref MAELA_REF_v1.png --cw 40 --no front view, face, text, lantern, lit lighthouse` |
+| SB-P4 v2 奶奶认不出她 | interior of an old Breton cottage in cold grey morning light from a small window, an old grandmother with a grey bun and a dark green wool shawl sitting in a wooden rocking chair, a half-mended fishing net on her lap, looking with a polite empty expression at a small girl in a bright yellow raincoat and red boots standing in front of her (girl seen from behind), quiet and sad, plain bare stone wall above them, soft painterly storybook illustration, muted cold palette with the yellow raincoat as the only bright colour | `--cref SOAZIG_REF_v1.png MAELA_REF_v1.png --cw 30 --no text, horror, smiling grandmother, lantern` |
+
+检查：P2–P4 灯塔一律不亮；人物服装颜色照写；留白处放得下两行字。下载 Upscale (Subtle) 后：`python TechArtAsset/Storyboard/Prologue/_work/finish_sb.py <图> P2`（`--x/--y/--zoom` 调裁切）。
+
 **Flow（Google Veo）— P1 空镜动画（试用，不行就用静态）**：Flow 里选 Frames to Video，起始帧放 SB-P1 定稿图，8 秒，提示词：
 `Slow gentle push-in toward the dark lighthouse. Sea fog drifts slowly from left to right over the water, small waves move softly, a few village windows flicker faintly. The lighthouse stays dark. Painterly storybook style kept exactly as the input image. No camera shake, no people, no text, no new objects.`
 检查：画风不变、灯塔不亮、无新物体。导出 1080p MP4 → `TechArtAsset/Storyboard/Prologue/`。不理想就不改了，直接用静态图（深入调 Flow 留给《妖精丘陵》）。
@@ -85,3 +97,4 @@
 | 2026-11-02 | 按《妖精丘陵》拆解结果定 STYLE_GAME；STYLE_CHAR 去掉 Q 版（3 heads tall → 约 5 头身） |
 | 2026-11-06 | C01-T 实际改为单出侧面（--cw 40）+ 背面取自 v2 第一轮；C01-G v3 补服装颜色 |
 | 2026-11-05 | C01-T、C01-G 改 v2：右手提灯、`--no bag`、5 头身；C01-G 用中性光照 |
+| 2026-11-08 | 新增 §4b v2：SB-P2..P4 v2（留字幕位、--sref SB_P1）与 C02-v2 Soazig（--sref MAELA_REF_v1） |
