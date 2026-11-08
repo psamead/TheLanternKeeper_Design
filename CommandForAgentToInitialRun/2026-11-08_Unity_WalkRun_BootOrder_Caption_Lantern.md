@@ -6,7 +6,7 @@ Unity `TheLanternKeeper2D`, `main` at `d40cce5`. Re-read `AGENTS.md`. One commit
 Maela prefab SpriteRenderer `sortingOrder`: **Boot_L 7, Leg_Upper_R 8, Leg_Lower_R 9, Boot_R 10** (Leg_Lower_L 6, Leg_Upper_L 5, Dress 11 unchanged) — i.e. the order before `1d80154`. Check rest + Run on magenta. Commit "Maela boot draw order: back to v1.6 order".
 
 ## Part 2 — Walk and Run as two states
-Source data (single source of truth): `SharedWorkFolder/TechArtAsset/Characters/Maela/_work/anim_v2/poses.py` — new clip **Maela_Walk** (0.9 s loop: upright body −1…−2°, thighs ±10°, near-straight legs) and changed **Maela_Run v3** (0.5 s: lean −10…−12°, back leg bent to −52°, front leg straight under the body at contact like the old Run, thighs +15/−14). Preview gifs and `contact_walk_run_v2.png` in the same folder; user reviewed them.
+Source data (single source of truth): `SharedWorkFolder/TechArtAsset/Characters/Maela/_work/anim_v2/poses.py` — new clip **Maela_Walk** (0.9 s loop: upright body −1…−2°, thighs ±10°, near-straight legs) and changed **Maela_Run v4** (0.5 s: lean −10…−12°, back leg bent to −55°, front leg = thigh lifted +22° with shin tucked back −22° (shin vertical, no forward kick), Hip.y lower at contact 0.532; use `contact_run_v4.png` / `Maela_Run_v4.gif`). Preview gifs and `contact_walk_run_v2.png` in the same folder; user reviewed them.
 1. Copy the Walk and Run key values into `Assets/_Project/Editor/MaelaAnimBuilder.cs` exactly (same paths/props as the existing Run; JumpUp/Fall/Lantern unchanged). Regenerate clips. Footstep Animation Events: Walk at **0 and 0.45 s**, Run at 0 and 0.25 s (keep them in the builder so they survive rebuilds).
 2. Controller: Idle → Walk when Speed > 0.1; Walk → Run when Speed > 2.6; back with the same thresholds (Run → Walk < 2.6, Walk → Idle < 0.1). Transition durations as now (0.08–0.1).
 3. `PlayerController`: **default = run** `runSpeed = 3.2`; **hold Left/Right Shift = slow walk** `walkSpeed = 1.8` (user decision 11-08). No other movement changes (jump, coyote, buffer unchanged).
@@ -19,8 +19,8 @@ P1 frame only (per-frame field; add `Color captionColor` + underlay settings to 
 - TMP **Underlay** on a per-frame material instance: colour `#0B1A2E`, alpha ~0.6, offset (0, −0.5), dilate 0.2, softness 0.6 — a soft dark halo so the text separates from the bright sky. Do NOT change the shared font material used by other frames/menu.
 - Screenshot 1920×1080 → `ForDesignScreenshot/2026-11-08_Prologue_Caption/P1_moon.png`. Commit "Prologue P1 caption: moonlight colour + soft underlay".
 
-## Part 4 — Lantern SFX v3 (v1 tail sounded like a temple bell)
-Import `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_LanternRaise_v3.ogg` (v1 brass strike with the tail cut + v2 tink/glow) (DecompressOnLoad, like v1), set it in MaelaAudio instead of v1 (keep v1/v2 files). Commit "Lantern raise SFX v3 (short brass strike + glow)".
+## Part 4 — Lantern SFX v4 (v1 tail sounded like a temple bell)
+Import `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_LanternRaise_v4.ogg` (v1 without the lingering glow tones / fifth ring / long reverb) (DecompressOnLoad, like v1), set it in MaelaAudio instead of v1 (keep older files). Commit "Lantern raise SFX v4 (v1 without lingering tail)".
 
 ## Report
 Hashes, pass/fail per part, notes in `TechnicalArt/MENU_UNITY_PROGRESS.md`. User records the run-through himself.

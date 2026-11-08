@@ -22,16 +22,16 @@ CLIPS = {
  }),
  "Maela_Run": dict(length=0.5, loop=True, keys={
    # t:       0     .125   .25    .375   .5
-   "Hip:y":   [0.546,0.578,0.546,0.578,0.546],
+   "Hip:y":   [0.532,0.572,0.532,0.572,0.532],
    "Hip/Body":[-10,-12,-10,-12,-10],
    "Hip/Body/Head":[6,8,6,8,6],
-   # v3 (11-08 user): front leg at contact like the old Run (straight, under the body) = steadier
-   "Hip/Thigh_R":[15,2,-14,2,15],
-   "Hip/Thigh_R/Shin_R":[-6,-4,-28,-52,-6],
-   "Hip/Thigh_R/Shin_R/Foot_R":[6,0,-14,-8,6],
-   "Hip/Thigh_L":[-14,2,15,2,-14],
-   "Hip/Thigh_L/Shin_L":[-28,-52,-6,-4,-28],
-   "Hip/Thigh_L/Shin_L/Foot_L":[-14,-8,6,0,-14],
+   # v4 (11-08 user): front leg = thigh lifted more, shin tucked back under the knee (no forward kick)
+   "Hip/Thigh_R":[22,4,-14,4,22],
+   "Hip/Thigh_R/Shin_R":[-22,-10,-28,-55,-22],
+   "Hip/Thigh_R/Shin_R/Foot_R":[2,0,-14,-6,2],
+   "Hip/Thigh_L":[-14,4,22,4,-14],
+   "Hip/Thigh_L/Shin_L":[-28,-55,-22,-10,-28],
+   "Hip/Thigh_L/Shin_L/Foot_L":[-14,-6,2,0,-14],
    "Hip/Body/Shoulder_R":[-4,2,10,2,-4],
    "Hip/Body/Shoulder_R/Elbow_R":[8,10,8,10,8],
    "Hip/Body/Shoulder_R/Elbow_R/Wrist_R/Lantern":[12,2,-12,-2,12],

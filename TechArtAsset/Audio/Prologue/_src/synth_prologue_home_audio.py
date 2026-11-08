@@ -246,3 +246,18 @@ def sfx_lantern_raise_v3(seed=7):
 
 if __name__ == "__main__" and "lantern3" in sys.argv[2:]:
     save("SFX_Maela_LanternRaise_v3", sfx_lantern_raise_v3(), True)
+
+# ---------------------------------------------------------------- v4 lantern (11-08): v1 exactly, minus everything that lingers
+# removed: sustained glow tones, sympathetic fifth ring, long reverb; brass ting decay shortened.
+def sfx_lantern_raise_v4(seed=7):
+    dur = 1.2; n = int(dur * SR); out = np.zeros((n, 2))
+    c = rope_creak(.3, seed); out[:len(c)] += pan(c, -.1) * .25
+    b = brass_ting(1180, .9, seed); tb = np.arange(len(b)) / SR
+    b = b * np.exp(-tb / .28)
+    o = int(.12 * SR); out[o:o + len(b)] += pan(b, .1) * .35
+    shimmer = bp(noise(n), 3000, 9000) * .05 * smooth_env(n, [0, .2, .5, .8, dur], [0, 0, 1, 0, 0])
+    out += pan(shimmer, 0)
+    out = add_reverb(out, .12, dur=.6, damp_hz=5000); return fade(norm(out, -7), .002, .15)
+
+if __name__ == "__main__" and "lantern4" in sys.argv[2:]:
+    save("SFX_Maela_LanternRaise_v4", sfx_lantern_raise_v4(), True)
