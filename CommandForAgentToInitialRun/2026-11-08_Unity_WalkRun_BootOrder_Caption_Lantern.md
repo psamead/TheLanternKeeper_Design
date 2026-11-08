@@ -19,8 +19,8 @@ P1 frame only (per-frame field; add `Color captionColor` + underlay settings to 
 - TMP **Underlay** on a per-frame material instance: colour `#0B1A2E`, alpha ~0.6, offset (0, −0.5), dilate 0.2, softness 0.6 — a soft dark halo so the text separates from the bright sky. Do NOT change the shared font material used by other frames/menu.
 - Screenshot 1920×1080 → `ForDesignScreenshot/2026-11-08_Prologue_Caption/P1_moon.png`. Commit "Prologue P1 caption: moonlight colour + soft underlay".
 
-## Part 4 — Lantern SFX v4 (v1 tail sounded like a temple bell)
-Import `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_LanternRaise_v4.ogg` (v1 without the lingering glow tones / fifth ring / long reverb) (DecompressOnLoad, like v1), set it in MaelaAudio instead of v1 (keep older files). Commit "Lantern raise SFX v4 (v1 without lingering tail)".
+## Part 4 — Lantern SFX v5 (v1 tail sounded like a temple bell)
+Import `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_LanternRaise_v5.ogg` (bright strike, straight tone, long clean tail) (DecompressOnLoad, like v1), set it in MaelaAudio instead of v1 (keep older files). Commit "Lantern raise SFX v5 (bright strike, clean long tail)".
 
 ## Report
 Hashes, pass/fail per part, notes in `TechnicalArt/MENU_UNITY_PROGRESS.md`. User records the run-through himself.

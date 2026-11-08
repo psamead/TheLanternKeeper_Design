@@ -261,3 +261,15 @@ def sfx_lantern_raise_v4(seed=7):
 
 if __name__ == "__main__" and "lantern4" in sys.argv[2:]:
     save("SFX_Maela_LanternRaise_v4", sfx_lantern_raise_v4(), True)
+
+# ---------------------------------------------------------------- v5 lantern (11-08): bright loud strike, straight tone (no beating pairs), long clean tail
+def sfx_lantern_raise_v5(seed=7):
+    dur = 3.2; n = int(dur * SR); out = np.zeros((n, 2))
+    c = rope_creak(.3, seed); out[:len(c)] += pan(c, -.1) * .2
+    ratios = [1.0, 2.32, 4.07, 5.6]; decays = [1.6, .7, .3, .15]; amps = [1.0, .5, .3, .15]   # single partials -> no wobble
+    b = modal([1180 * r for r in ratios], decays, amps, 3.0, strike_noise=.6, strike_bp=(3000, 11000), seed=seed)
+    o = int(.12 * SR); out[o:o + len(b)] += pan(b, .1) * .6
+    out = add_reverb(out, .1, dur=.8, damp_hz=6000); return fade(norm(out, -5), .001, .4)
+
+if __name__ == "__main__" and "lantern5" in sys.argv[2:]:
+    save("SFX_Maela_LanternRaise_v5", sfx_lantern_raise_v5(), True)
