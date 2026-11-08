@@ -42,7 +42,7 @@
 |---|---|---|
 | 移动 / 跳跃 | 左右 + 单段跳，参数在 Inspector 可调 | Rigidbody2D + BoxCollider2D；Maela 骨骼 Prefab（Idle / Run / JumpUp / Fall） |
 | 拾起灯笼 | 拾起前 Maela 手里的 Lantern 部件和 Point Light 2D 隐藏 | GameSession.hasLantern |
-| 灯笼切换 | 拿到灯笼后按 E 切换（11-08 定）：**第一次**＝完整长铃声，响铃期间锁定一切操作，铃声结束后场景变换、推动剧情；**之后**＝按 E 立即切换场景并响铃，响铃期间可以移动 / 跳，但 E 无效（不切换、不排队），铃声响完才能再切换 | 碰撞 Tilemap（Present / Memory）开关 TilemapCollider2D；标志物 Sprite 按 WorldLayerObject 显隐 |
+| 灯笼切换 | 拿到灯笼后按 E 切换（11-08 定）：**第一次**＝完整长铃声，响铃期间锁定一切操作，铃声结束后场景变换、推动剧情；**之后**＝按 E 立即切换场景并响铃，响铃期间可以移动 / 跳，但 E 无效（直接忽略：不切换、不排队、不发声，保证“铃声 = 切换那一刻”；可选：灯光轻闪一下表示还在响），铃声响完才能再切换 | 碰撞 Tilemap（Present / Memory）开关 TilemapCollider2D；标志物 Sprite 按 WorldLayerObject 显隐 |
 | 冷暖 | 现在层冷蓝、记忆层暖金 | Global Light 2D 颜色（HANDPAINTED_SPEC §4） |
 | 互动 | 靠近出现提示，按 W | 触发器 |
 | 对话 | 底部对话框逐句翻页 | ScriptableObject |
