@@ -197,3 +197,18 @@ def footstep_v3(seed):
 
 if __name__ == "__main__" and "step3" in sys.argv[2:]:
     for i in range(4): save(f"SFX_Maela_Step_Wood_0{i+1}_v3", footstep_v3(700 + i * 17), True)
+
+# ---------------------------------------------------------------- v4 footstep (11-08): old floorboards, deep "dong", ~1 octave below v3
+def footstep_v4(seed):
+    r = np.random.default_rng(seed); dur = .40; n = int(dur * SR); y = np.zeros(n); t = np.arange(n) / SR
+    heel = plank_knock(r.uniform(130, 155), seed, 1.0); y[:len(heel)] += lp(heel, 2200)
+    o = int(r.uniform(.06, .085) * SR); toe = plank_knock(r.uniform(165, 195), seed + 1, .35); y[o:o + len(toe)] += lp(toe, 2000)[:n - o]
+    body = bp(r.standard_normal(n), 60, 120) * np.exp(-t / .045) * .6     # hollow space under old boards
+    y += body
+    if r.random() < .5:                                                    # old board gives a small creak sometimes
+        c = lp(rope_creak(.18, seed + 5), 1200); s = int(.04 * SR); y[s:s + len(c)] += c[:n - s] * .12 / (np.max(np.abs(c)) + 1e-9) * np.max(np.abs(y))
+    st = pan(y, r.uniform(-.1, .1)); st = add_reverb(st, .16, dur=.6, damp_hz=3000)
+    return fade(norm(st, -10 - r.uniform(0, 1.5)), .0005, .05)
+
+if __name__ == "__main__" and "step4" in sys.argv[2:]:
+    for i in range(4): save(f"SFX_Maela_Step_Wood_0{i+1}_v4", footstep_v4(800 + i * 17), True)

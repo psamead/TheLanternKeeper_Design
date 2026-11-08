@@ -32,12 +32,12 @@ Prepared in `SharedWorkFolder/TechArtAsset/Characters/Maela/_work/fix_v1.6m_impo
 1. Copy `Maela_v1.6_m.psb` → `Assets/_Project/Art/Characters/Maela/Maela.psb`; `Maela.psb.meta.v1.6m_patched` → `Maela.psb.meta`; both json → same folder (replace). Same path A as last time.
 2. Reimport → **Check Maela Sprite Rects** must PASS. FAIL → revert, report the log + meta diff, stop (no path B).
 3. **Realign Maela Sprites** once.
-4. Draw order to match Photoshop — set SpriteRenderer `sortingOrder` on the prefab children (don't touch PSB/importer order): **Leg_Lower_L 6, Boot_R 7, Boot_L 8, Leg_Upper_R 9, Leg_Lower_R 10** (others unchanged: Leg_Upper_L 5, Dress 11 …). If `MaelaAnimBuilder.cs` or any script sets sortingOrder, update it there too.
+4. Draw order to match Photoshop — set SpriteRenderer `sortingOrder` on the prefab children (don't touch PSB/importer order): **Leg_Lower_L 6, Boot_R 7, Boot_L 8, Leg_Upper_R 9, Leg_Lower_R 10** (others unchanged: Leg_Upper_L 5, Dress 11 …). If `MaelaAnimBuilder.cs` or any script sets sortingOrder, update it there too. **If the new order looks wrong in any pose (boot/leg overlap, seams), revert to the old order** (Boot_L 7, Leg_Upper_R 8, Leg_Lower_R 9, Boot_R 10) and say so in the report — user decision 11-08.
 5. Check rest pose on magenta + Run/Jump/Fall/Lantern; screenshots → `ForDesignScreenshot/2026-11-08_Maela_v1.6m/`. Commit "Maela v1.6_m (Leg_Upper_L wider, Boot_R draw order)".
 
 ---
-## Part 3 — Footstep v3
-Replace footsteps with `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_Step_Wood_01..04_v3.ogg` (same import settings as v1; remove v1 steps from the MaelaAudio list, keep the files). Commit "Footstep v3 (lower wood knock)".
+## Part 3 — Footstep v4 (v3 superseded)
+Replace footsteps with `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_Step_Wood_01..04_v3.ogg` (same import settings as v1; remove v1 steps from the MaelaAudio list, keep the files). Commit "Footstep v4 (deep old floorboards)".
 
 ---
 ## Part 4 — Prologue caption layout (P1)
