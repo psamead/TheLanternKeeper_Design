@@ -4,21 +4,22 @@
 HIP_Y = 0.565
 CLIPS = {
  # v2 (11-08): Walk = upright, small swing, near-straight legs. Run = more lean, back leg bent, front leg slightly bent.
- "Maela_Walk": dict(length=0.9, loop=True, keys={
-   # t:       0     .225   .45    .675   .9
-   "Hip:y":   [0.559,0.566,0.559,0.566,0.559],
-   "Hip/Body":[-1,-2,-1,-2,-1],
+ # v3 (11-08 user: slower, less floaty): longer cycle, almost no hip bob, legs straighter at contact.
+ "Maela_Walk": dict(length=1.1, loop=True, keys={
+   # t:       0     .275   .55    .825   1.1
+   "Hip:y":   [0.561,0.564,0.561,0.564,0.561],
+   "Hip/Body":[-1,-1,-1,-1,-1],
    "Hip/Body/Head":[1,1,1,1,1],
-   "Hip/Thigh_R":[10,0,-9,0,10],
-   "Hip/Thigh_R/Shin_R":[-3,-2,-8,-18,-3],
-   "Hip/Thigh_R/Shin_R/Foot_R":[3,0,-5,-3,3],
-   "Hip/Thigh_L":[-9,0,10,0,-9],
-   "Hip/Thigh_L/Shin_L":[-8,-18,-3,-2,-8],
-   "Hip/Thigh_L/Shin_L/Foot_L":[-5,-3,3,0,-5],
-   "Hip/Body/Shoulder_R":[-2,1,5,1,-2],
-   "Hip/Body/Shoulder_R/Elbow_R":[5,6,5,6,5],
-   "Hip/Body/Shoulder_R/Elbow_R/Wrist_R/Lantern":[5,1,-5,-1,5],
-   "Hip/Body/Shoulder_L":[3,0,-6,0,3],
+   "Hip/Thigh_R":[12,0,-11,0,12],
+   "Hip/Thigh_R/Shin_R":[-2,-2,-6,-16,-2],
+   "Hip/Thigh_R/Shin_R/Foot_R":[2,0,-4,-2,2],
+   "Hip/Thigh_L":[-11,0,12,0,-11],
+   "Hip/Thigh_L/Shin_L":[-6,-16,-2,-2,-6],
+   "Hip/Thigh_L/Shin_L/Foot_L":[-4,-2,2,0,-4],
+   "Hip/Body/Shoulder_R":[-2,1,4,1,-2],
+   "Hip/Body/Shoulder_R/Elbow_R":[5,5,5,5,5],
+   "Hip/Body/Shoulder_R/Elbow_R/Wrist_R/Lantern":[4,1,-4,-1,4],
+   "Hip/Body/Shoulder_L":[3,0,-5,0,3],
  }),
  "Maela_Run": dict(length=0.5, loop=True, keys={
    # t:       0     .125   .25    .375   .5
