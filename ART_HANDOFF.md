@@ -169,6 +169,8 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
   - 3 ◐ 已备好待 Codex 试：`CommandForAgentToInitialRun/2026-11-08_Unity_Maela_v1.6_ImportFix_Trial.md`（分支 `try/maela-v1.6`；A 路：`_work/fix_v1.6_import/patch_psb_meta.py` 把 8 层新宽高写进 meta；不行走 B 路：新 Sprite + 按名重绑）。验收工具 `Assets/_Project/Editor/MaelaSpriteRectCheck.cs`（菜单 Check Maela Sprite Rects，PASS 才合并）。
   - 1 ◐ 等用户 MJ 出图：提示词见 ART_PROMPTS §4b（加 `--sref SB_P1.png`），下载后 `python TechArtAsset/Storyboard/Prologue/_work/finish_sb.py <图> P2` 自动裁成 2208×1242。
   - 2 ◐ v1 已合成待试听：序章 BGM「Ar Mor Du」96 s 循环 + 海风浪 48 s 循环（含 Flow 音轨）→ `TechArtAsset/Audio/Prologue/`；Home 屋内 40 s 循环（墙外风浪、钟、炉火、梁木吱呀）→ `Audio/Home/`；脚步 ×4、跳 ×2、落地 ×2、举灯 → `Audio/Maela/`。脚本 `Audio/Prologue/_src/synth_prologue_home_audio.py`，试听合集 `_src/PREVIEW_Prologue_Home_audio_v1.mp3`。用户确认后再交 Codex 接入。
+- **11-08 晚结果**（Unity `bc5f3df` 之后还有 LanternLock 任务在跑）：Core_Persistent + 叠加关卡已拆（`76b4163`）；Maela v1.6_m 进 Unity（A 路 PASS），靴子顺序回旧；走 / 跑分开（默认跑 v4，Shift 慢走 v3，速度按步幅匹配）；脚步 v4、举灯 v5；P1 字幕两行在天空，颜色 `#F0EED1` + 柔和 underlay；灯笼切换规则见 DEMO_IMPLEMENTATION_PLAN（第一次全锁，之后只挡 E）。
+- **下一步**：① 序章 P2–P4（用户 MJ，`finish_sb.py` 裁图）② Soazig 概念（P4 / 对话都要）③ 拾灯笼 + LanternSwitch 现在 / 记忆层 ④ Home 记忆层底图 ⑤ 对话框 ⑥ 故事版 A / B。
 - 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
 
 2c. ☐ **Maela 补被挡部分（延后）**：Boot_L 前脚掌、Leg_Upper_L 大腿、Dress 下沿等，在 `TechArtAsset/Characters/Maela/_work/fix_v1.5/Maela_v1.5_m.psb` 上继续画（可扩外框；不改图层名 / 顺序，画布 149×320）。完成后：Claude 对比 v1.5 外框 → 生成 `Assets/_Project/Art/Characters/Maela/maela_realign.json` → Codex 运行 Tools ▸ Lantern Keeper ▸ Realign Maela Sprites（`MaelaSpriteRealign.cs`，每个 psb 版本只运行一次）。当前 Unity 用 v1.5（外框与 v1.4 相同）。
