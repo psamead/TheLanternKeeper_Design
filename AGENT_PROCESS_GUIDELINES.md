@@ -39,6 +39,7 @@
 - md（给 Agent）放根目录；Word（给人看）放 `story_draft/`、`purposal_story/`、`TechnicalArt/`；旧版本放 `deprecated/`。
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。
 - md 与对应 Word 同源，改一处要同步另一处。
+- `UNITY_AGENTS.md` 改完后，Claude 直接复制到 Unity 根目录 `AGENTS.md`（两份保持完全一样，2026-11-09 定）；提交由 Codex 或用户在 Unity 仓库做。
 - 参考图放 `ART_ref/`，每次新增或替换都更新 `ART_ref/ASSETS.md`。
 - 本文件夹是公开 Git 仓库：改完在本地 commit（作者 `psamead <psamead@users.noreply.github.com>`，不用个人邮箱），提醒用户 `git push`。第三方素材、源文件不上传（`deprecated/` 上传）；Unity 截图放 `ForDesignScreenshot/`；新增第三方图写进 `.gitignore`。改 README 时英文 `README.md` 与中文 `README.zh-CN.md` 一起改。
 
