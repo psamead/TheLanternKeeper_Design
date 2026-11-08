@@ -230,3 +230,21 @@
 - Invoked the Start Menu Play button; its fade did not advance while Unity's unscaled clock was stationary. Loaded `00b_Prologue` and `01_Home` through the project's `SceneLoader` while in Play Mode. This confirms both scene loads but not the live menu fade/storyboard skip input sequence. Final Editor state: Edit Mode on `01_Home`, scene clean, one enabled AudioListener.
 - Console contained prior Unity AI MCP bridge warnings and a rejected capture request; no new project-code error was observed in this pass. Pre-existing AGENTS/TMP font/Recorder package edits were left untouched.
 - Final commit `cd0243f` (`Rollback Maela to v1.5 and restore Home framing`) and checkpoint `8c0ce2c` were pushed to Unity `main`; verified `origin/main` at `cd0243f111ae4378cad3f9ffc3a22ccc230f3c2c`.
+
+## 2026-11-08 — Maela v1.6 import trial + Prologue/Home audio v1 (Codex)
+
+- Maela v1.6 path A passed: all 17 imported sprite rects matched expected sizes; prefab had no missing sprite references. Ran the Maela realign action once, visually checked Rest/Run/Jump/Fall/Lantern, and captured `ForDesignScreenshot/2026-11-08_Maela_v1.6_Import/RestPose_Magenta.png` and `Run.png`.
+- Maela trial commit `cdc42a1` (`Maela v1.6 import rect fix and realign (path A)`) merged to `main` and pushed; remote ref verified.
+- Added Prologue music/sea ambience and Home ambience, crossfaded Prologue audio into Home over 2 s, and added Maela footstep/jump/land/lantern one-shots. All 12 new audio import settings match the requested Streaming/DecompressOnLoad presets at Vorbis q=0.7.
+- `01_Home`: Ground y=-3.5225, Crate y=-2.43, Player y=-3.20; saved screenshot `ForDesignScreenshot/2026-11-08_Home_Ground_Line/Home_Rest.png`. Main Camera and Cinemachine settings were preserved.
+- Play Mode route Menu → Prologue → Home: one enabled AudioListener in each scene; Prologue music and ambience reached 0.6/0.5 and stopped on Home; Home ambience reached 0.5. Player started grounded; physics drop settled on crate at bottom y=-1.655 vs crate top y=-1.66. Run animation event played through the single Player AudioSource.
+- Console review showed existing Unity AI Account/MCP warnings and one MCP camera-preview error; no project audio/listener warning was seen during the route. User should listen for balance and the 96 s loop seam, then record a full run-through with Win+Alt+R.
+- Audio commit `fb1958e` (`Prologue/Home audio v1 + Maela SFX; Home ground line`) pushed to `main`; remote ref verified at `fb1958e6010cdfafa988c2a51ba7c2146c826797`.
+
+## 2026-11-08 — Home Ground collision alignment
+
+- In `01_Home`, `Ground` is positioned at `(-1.91, -3.5225, 0)`. `BoxCollider2D` offset remains `(0, 0)`, size `(25.2, 1)`, and Transform scale `(0.645, 0.645, 1)`.
+- This gives world collision bounds X `[-10.037, 6.217]`, Y `[-3.845, -3.200]`; the top surface is Y `-3.2`. The shifted horizontal span follows the Home ground/background layout.
+- `Crate` collider adjustment: position `(-1.5, -2.43, 0)`, scale `(1.4, 1.4, 1)`, `BoxCollider2D` offset `(0, -0.016816527)`, size `(1.3, 1.0663669)`. Its world bounds are X `[-2.41, -0.59]`, Y `[-3.2, -1.707086]`, so the crate collider bottom meets the Ground top at Y `-3.2`.
+- Unity MCP readback confirmed the scene is clean in Edit Mode and both saved collider configurations are present. No Play Mode collision test was run for these adjustments.
+

@@ -20,8 +20,8 @@ Last time v1.6 was imported, PSD Importer updated `spritePosition` but kept the 
    `Maela.psb` (v1.6), `Maela.psb.meta.v1.6_patched` → **as** `Maela.psb.meta`, `maela_expected_rects.json`, and `_work/fix_v1.5/maela_realign.json` → `maela_realign.json`.
 2. Open Unity, let it import. Run **Check Maela Sprite Rects**.
    - **PASS** → go to 4 (path A worked).
-   - FAIL on size → path B (step 3).
-3. Path B (new sprites + rebind) — only if A failed:
+   - FAIL on size → **stop**: copy the RectCheck log + `git diff` of `Maela.psb.meta` after import into the report, switch back to main, do NOT try path B (user decision 11-08: path A only).
+3. ~~Path B~~ — **not authorised** (user chose path A only, 11-08). Kept for reference:
    a. `git checkout -- Assets/_Project/Art/Characters/Maela/Maela.psb.meta`, then in the meta delete the 8 changed layers' entries from `layeredSpriteImportData` (and set their `spriteID` empty in the PSD layer list) so the importer creates fresh sprites with the correct size. Reimport.
    b. Rebind: for every SpriteRenderer in `Maela.prefab` whose sprite is missing, assign the sprite from `Maela.psb` with the same name (`<Layer>_Sprite` → `<Layer>`). Also check `.anim` files don't reference sprites (they shouldn't — animation is transforms only).
    c. Run the check → must PASS. If not, stop and report the log.

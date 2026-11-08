@@ -164,3 +164,36 @@ if __name__ == "__main__":
         for i in range(2): save(f"SFX_Maela_Jump_0{i+1}_v1", sfx_jump(300 + i * 7), True)
         for i in range(2): save(f"SFX_Maela_Land_0{i+1}_v1", sfx_land(400 + i * 7), True)
         save("SFX_Maela_LanternRaise_v1", sfx_lantern_raise(), True)
+
+# ---------------------------------------------------------------- v2 footstep (11-08): "knock on a door", not a drum
+def plank_knock(f0, seed, vel=1.0):
+    """Hollow wooden plank: mid-frequency modes, very short decay, sharp click, small cavity boom."""
+    r = np.random.default_rng(seed); dur = .18; n = int(dur * SR); t = np.arange(n) / SR
+    ratios = [1.0, 1.58, 2.71, 4.3, 6.2]; decays = [.035, .022, .014, .008, .005]; amps = [1, .7, .45, .25, .12]
+    y = modal([f0 * k * r.uniform(.98, 1.02) for k in ratios], decays, amps, dur, strike_noise=.9, strike_bp=(1500, 6000), seed=seed)
+    cav = bp(r.standard_normal(n), 170, 320) * np.exp(-t / .018) * .35      # hollow under the boards, short
+    click = hp(r.standard_normal(n), 2500) * np.exp(-t / .0012) * .5
+    return hp(y + cav + click, 140) * vel
+
+def footstep_v2(seed):
+    r = np.random.default_rng(seed); dur = .30; n = int(dur * SR); y = np.zeros(n)
+    heel = plank_knock(r.uniform(420, 520), seed, 1.0); y[:len(heel)] += heel
+    o = int(r.uniform(.05, .075) * SR); toe = plank_knock(r.uniform(520, 640), seed + 1, .45); y[o:o + len(toe)] += toe[:n - o]
+    st = pan(y, r.uniform(-.1, .1)); st = add_reverb(st, .14, dur=.45, damp_hz=5000)
+    return fade(norm(st, -11 - r.uniform(0, 1.5)), .0005, .04)
+
+if __name__ == "__main__" and "step2" in sys.argv[2:]:
+    for i in range(4): save(f"SFX_Maela_Step_Wood_0{i+1}_v2", footstep_v2(600 + i * 17), True)
+
+# ---------------------------------------------------------------- v3 footstep (11-08): v2 knock, but lower and heavier
+def footstep_v3(seed):
+    r = np.random.default_rng(seed); dur = .32; n = int(dur * SR); y = np.zeros(n); t = np.arange(n) / SR
+    heel = plank_knock(r.uniform(260, 310), seed, 1.0); y[:len(heel)] += lp(heel, 3500)
+    o = int(r.uniform(.055, .08) * SR); toe = plank_knock(r.uniform(320, 380), seed + 1, .4); y[o:o + len(toe)] += lp(toe, 3000)[:n - o]
+    body = bp(r.standard_normal(n), 110, 200) * np.exp(-t / .03) * .45   # deeper hollow under the boards
+    y += body
+    st = pan(y, r.uniform(-.1, .1)); st = add_reverb(st, .14, dur=.5, damp_hz=4000)
+    return fade(norm(st, -11 - r.uniform(0, 1.5)), .0005, .04)
+
+if __name__ == "__main__" and "step3" in sys.argv[2:]:
+    for i in range(4): save(f"SFX_Maela_Step_Wood_0{i+1}_v3", footstep_v3(700 + i * 17), True)

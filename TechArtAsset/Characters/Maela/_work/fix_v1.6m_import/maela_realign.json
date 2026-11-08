@@ -1,0 +1,7 @@
+{
+ "ppu": 200,
+ "applied_for": "Maela v1.6_m (from v1.6 bounds)",
+ "layers": [
+  { "name": "Leg_Upper_L", "dx_px": 3.5, "dy_px": 0.0 }
+ ]
+}
