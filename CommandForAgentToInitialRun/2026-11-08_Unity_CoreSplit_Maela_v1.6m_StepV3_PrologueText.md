@@ -37,7 +37,7 @@ Prepared in `SharedWorkFolder/TechArtAsset/Characters/Maela/_work/fix_v1.6m_impo
 
 ---
 ## Part 3 — Footstep v4 (v3 superseded)
-Replace footsteps with `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_Step_Wood_01..04_v3.ogg` (same import settings as v1; remove v1 steps from the MaelaAudio list, keep the files). Commit "Footstep v4 (deep old floorboards)".
+Replace footsteps with `SharedWorkFolder/TechArtAsset/Audio/Maela/SFX_Maela_Step_Wood_01..04_v4.ogg` (deep old-floorboard "dong") (same import settings as v1; remove v1 steps from the MaelaAudio list, keep the files). Commit "Footstep v4 (deep old floorboards)".
 
 ---
 ## Part 4 — Prologue caption layout (P1)
