@@ -84,6 +84,12 @@
 
 检查：P2–P4 灯塔一律不亮；人物服装颜色照写；留白处放得下两行字。下载 Upscale (Subtle) 后：`python TechArtAsset/Storyboard/Prologue/_work/finish_sb.py <图> P2`（`--x/--y/--zoom` 调裁切）。
 
+
+**11-09 实际用的改版**（参考图一律用 GitHub raw 链接，见 LESSONS §8）：
+- SB-P2：v2 原样，`--sw 60` 偏青蓝，后期调色。
+- SB-P3 v3：开头改成 `back view, a tiny lone figure seen from far behind, a small girl with her back to the camera facing the wooden door ...`，加 `wide shot, far in the background a dark extinguished lighthouse silhouette on a cliff with no light, muted ... desaturated`；**去掉 --cref**；`--sw 30 --no face, looking back, looking at viewer, front view, text, lantern, lit lighthouse, lighthouse beam, glowing lighthouse, close-up`。四张全背影、灯塔全暗。
+- SB-P4 v3：只挂 `--cref SOAZIG_REF_v1 --cw 50`，梅拉靠文字；奶奶对了但会笑。v4：开头 `over-the-shoulder view from behind a girl ... back fully to the camera`，奶奶写 `polite blank expression, not smiling`，`--no smile, smiling, girl face, girl profile, side view of girl`（结果待看）。
+
 **Flow（Google Veo）— P1 空镜动画（试用，不行就用静态）**：Flow 里选 Frames to Video，起始帧放 SB-P1 定稿图，8 秒，提示词：
 `Slow gentle push-in toward the dark lighthouse. Sea fog drifts slowly from left to right over the water, small waves move softly, a few village windows flicker faintly. The lighthouse stays dark. Painterly storybook style kept exactly as the input image. No camera shake, no people, no text, no new objects.`
 检查：画风不变、灯塔不亮、无新物体。导出 1080p MP4 → `TechArtAsset/Storyboard/Prologue/`。不理想就不改了，直接用静态图（深入调 Flow 留给《妖精丘陵》）。
@@ -97,4 +103,5 @@
 | 2026-11-02 | 按《妖精丘陵》拆解结果定 STYLE_GAME；STYLE_CHAR 去掉 Q 版（3 heads tall → 约 5 头身） |
 | 2026-11-06 | C01-T 实际改为单出侧面（--cw 40）+ 背面取自 v2 第一轮；C01-G v3 补服装颜色 |
 | 2026-11-05 | C01-T、C01-G 改 v2：右手提灯、`--no bag`、5 头身；C01-G 用中性光照 |
+| 2026-11-09 | §4b 记录 P3 v3、P4 v3/v4 实际写法（背影不挂 cref；双人只挂一张 cref） |
 | 2026-11-08 | 新增 §4b v2：SB-P2..P4 v2（留字幕位、--sref SB_P1）与 C02-v2 Soazig（--sref MAELA_REF_v1） |
