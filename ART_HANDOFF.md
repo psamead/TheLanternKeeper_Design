@@ -196,6 +196,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
   - Codex：上一轮留下很多场景没关，用户手动 unload 后编辑器快了一倍 → UNITY_AGENTS 新规则"做完只留 00_StartMenu"（已同步 Unity `AGENTS.md`），并加进拾灯笼任务最后一步；该任务也改为直接用已有的 A4 / B1–B5 暂用图。
 - **选图记录（11-12）**：每张故事版 / Soazig 选了哪张、为什么 → `TechArtAsset/Storyboard/STORYBOARD_SELECTION.md`（agent）/ `.xlsx`（人看；同一份，由 `_storyboard_selection.py` 生成）。以后挑图后先更新这里。
 - **下一步（11-11 更新）**：① ☑ A1–A3、B4、B5 已处理完 ② 视情况重跑 A4（暖光圈）、B1（方窗） ③ Codex 跑拾灯笼 + A + EndCard B ④ LanternSwitch（现在 / 记忆层）+ Home 记忆层底图 + 阁楼（结尾触发从临时位置挪到阁楼窗边）⑤ 对话框 + 奶奶对白（Soazig 游戏版立绘 / 摇椅 Idle）⑥ 地上灯笼正式美术。
+- **11-12 计划（用户定）**：**11-15 基本做完**，之后进入最后排版。不做试玩。顺序：① Codex `2026-11-11_Unity_StoryAB_InterimArt.md`（9 张故事版 + 修 2 倍速）→ ② Codex `2026-11-12_Unity_LanternSwitch_Ladder_Attic_Greybox.md`（E 切现在 / 记忆层、断梯 / 完好梯、阁楼、结尾挪到阁楼窗）→ ③ 美术并行：A4、B1 重跑（11-12 已提交 MJ v2）、Home 记忆层底图 `Scenes/Home/Memory/Home_Memory_v1.png`、阁楼底图、梯子两态、地上灯笼 → ④ 奶奶 Soazig 游戏版 + 对话框 + 三句台词 → ⑤ A / B 每页字幕框（等 Codex 跑完看）→ ⑥ Windows 打包。
 - Unity `AGENTS.md` 已与 `UNITY_AGENTS.md` 同步（11-09，未提交，下次让 Codex 一起提交）；以后改 `UNITY_AGENTS.md` 就直接复制过去。
 - 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
 
