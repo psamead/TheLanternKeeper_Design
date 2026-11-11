@@ -181,7 +181,18 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 - **11-11 晚**：字幕 v3（P2 上移、P3 左移，字号 37.4，全 PASS，Unity `f1864f3`）+ 箱子 v1 进 Unity（PPU 400、底边贴地，Unity `28e326b`）——用户确认无问题。Codex 剩余小尾巴：`CAPTION_BOUNDS PASS` 日志要关掉（已写进下一个任务第 0 步）。
   - **故事版 A / B**：占位图 `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/`、`Ending_B/placeholder/`；Codex 任务 `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md`（地上灯笼 W 拾起 → A → 提示 E；临时结尾触发 → 03_EndCard 播 B → Back to Menu / Quit）。
   - MJ 第一轮 A1–A4、B1–B5 已出（提示词与结果 ART_PROMPTS §4c；挑选表 Sheets「守灯人 故事版 A/B 第一轮」）：A1 A2 B2 B3 B4 B5 可定；A3（灯塔仍亮）、A4（暖光圈弱）、B1（圆窗像舷窗）要重跑。
-- **下一步（11-11 更新）**：① 用户挑 A/B 定稿 → Upscale → 裁 2208×1242 → 同名替换占位 ② 重跑 A3 / A4 / B1 ③ Codex 跑拾灯笼 + A + EndCard B ④ LanternSwitch（现在 / 记忆层）+ Home 记忆层底图 + 阁楼（结尾触发从临时位置挪到阁楼窗边）⑤ 对话框 + 奶奶对白（Soazig 游戏版立绘 / 摇椅 Idle）⑥ 地上灯笼正式美术。
+- **11-11 深夜：用户挑 A / B（理由一并记下）**
+  - A1：选**右下**（灯型最接近我们的灯笼）；左上留备用。（原图待放进来）
+  - A3：灯塔最暗那张已放大存下作备用；仍先试编辑擦灯室 / 重跑。（原图待放进来）
+  - A4：右上暂存 → `LanternOrigin_A/SB_A4.png`（暖光圈弱，可能重跑）。
+  - B1：圆窗版暂存 → `Ending_B/SB_B1.png`（可能改方窗重跑）。
+  - B2：选**左上**——回忆感最强，暖色的"高光时刻"和后面熄灯、失踪形成跌落感，现实与回忆的反差拉大。另一张也存。→ `SB_B2.png`
+  - B3：左上 → `SB_B3.png`。
+  - B4：左下（雾里有人影）→ `SB_B4.png`；**要去掉塔身的橘色光**：橘色让气氛像"还有希望"，去掉后才是"熄灯、雾中人"的怨恨、遗憾与内疚。用户在 PS 处理（脚本自动去橘色试过，留绿边、穹顶仍金，作废）。
+  - B5：右上 → `SB_B5.png`；**举灯的杆子很怪**，用户在 PS 里重摆。
+  - 源图：`Storyboard/LanternOrigin_A/_work/`、`Storyboard/Ending_B/_work/SB_B*_src_*.png`；裁切脚本 `finish_sb.py` 两个 `_work/` 各一份。
+  - Codex：上一轮留下很多场景没关，用户手动 unload 后编辑器快了一倍 → UNITY_AGENTS 新规则"做完只留 00_StartMenu"（已同步 Unity `AGENTS.md`），并加进拾灯笼任务最后一步；该任务也改为直接用已有的 A4 / B1–B5 暂用图。
+- **下一步（11-11 更新）**：① A1 / A3 / B2 备用图放进来后裁切；B4 去橘光、B5 重摆杆子（用户 PS） ② 重跑 / 编辑 A3（灯塔熄灭）、A4（暖光圈）、B1（方窗） ③ Codex 跑拾灯笼 + A + EndCard B ④ LanternSwitch（现在 / 记忆层）+ Home 记忆层底图 + 阁楼（结尾触发从临时位置挪到阁楼窗边）⑤ 对话框 + 奶奶对白（Soazig 游戏版立绘 / 摇椅 Idle）⑥ 地上灯笼正式美术。
 - Unity `AGENTS.md` 已与 `UNITY_AGENTS.md` 同步（11-09，未提交，下次让 Codex 一起提交）；以后改 `UNITY_AGENTS.md` 就直接复制过去。
 - 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
 

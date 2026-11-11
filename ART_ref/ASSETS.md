@@ -67,3 +67,4 @@
 | 2026-11-11 | 序章定稿 `TechArtAsset/Storyboard/Prologue/SB_P2.png`（远处雾团、远窗一盏灯）/ `SB_P3.png`（背影门口）/ `SB_P4.png`（奶奶摇椅，PS 压冷；`SB_P4.psd`）；源 `Prologue/_work/SB_P*_src*.png`，候选 `Prologue/_candidates/` |
 | 2026-11-11 | Home 箱子 `TechArtAsset/Scenes/Home/Props/Crate_v1.png`（520×440，底边贴地；MJ 源 `Props/_work/Crate_src_MJ.png`，脚本 `make_crate.py`） |
 | 2026-11-11 | 故事版 A / B 占位 `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/SB_A1..4_placeholder.png`、`Ending_B/placeholder/SB_B1..5_placeholder.png`（2208×1242，代码生成） |
+| 2026-11-11 | 故事版暂用图（MJ 第一轮）：`Storyboard/LanternOrigin_A/SB_A4.png`；`Storyboard/Ending_B/SB_B1..B5.png`（B4 待去橘光、B5 待重摆举灯杆、B1/A4 可能重跑）；源 `_work/SB_*_src_*.png` |
