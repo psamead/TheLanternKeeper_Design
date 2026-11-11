@@ -115,4 +115,5 @@
 - **MJ 下载文件名的 `0_N` 不是格子位置**（11-12）：A1 右下那张下载后叫 `0_1.png`。认图要看画面内容，别按文件名推格子。
 - **选图理由要落到文件里**（11-12 用户要求）：在线挑选表（Claude Sheets）不在共享文件夹，换对话就找不到。选图结果和理由统一写进 `TechArtAsset/Storyboard/STORYBOARD_SELECTION.md/.xlsx`。
 - **Codex 从局域网取设计文件，不走 GitHub**（11-12 用户要求）：Codex 曾从 GitHub 下载设计内容，而 GitHub 常比共享文件夹旧。UNITY_AGENTS 写明一律读 `\\haoxi-surfacep\...\SharedWorkFolder`，连不上可以退回 GitHub，但要在汇报和进度记录里写「GitHub fallback」：原因、取了哪些文件、GitHub commit hash，方便检查是否用了旧版；任务文件里不再写 "git pull the design repo"。附带好处：Codex 用到的新图不用等用户 push。
+- **MJ 里别写 "circle of light"**（11-12 A4）：会被画成发光光环 / 传送门。写"光柔和地洒到屋子一侧、远处一侧仍冷"+ `natural soft light falloff`，并 `--no ring, circle, portal, halo`。
 - 去边的安全做法：透明度一点不动，只把轮廓带（半透明像素 + 6 px 内发白的像素）的颜色换成内部颜色。

@@ -112,6 +112,11 @@
 
 **用户挑选（11-11）**：A1 右下（灯型接近）；B2 左上（回忆高光 → 后面跌落）；B3 左上；B4 左下，但塔身橘色光要去掉（橘色 = "还有希望"，与熄灯后的怨恨 / 内疚相反）；B5 右上，举灯杆子 PS 重摆。下一轮提示词注意：熄灯镜头 `--no orange light, warm glow on the tower`；梅拉举灯写 `holding a small brass lantern by its ring handle, arm bent`（避免长杆）。
 
+**第二轮（11-12）**
+- B1 v2：`view from inside a dark dusty attic ... a small square wooden attic window with four panes under the sloping roof beams, through the glass a dark extinguished stone lighthouse ...` + `--no round window, porthole, lit lighthouse, light beam, glowing lamp, orange light` → 四张都是方窗、灯塔暗，可用。
+- A4 v2：写 "casts a large warm golden circle of light" → MJ 画成**发光的光环 / 传送门**，不能用（别写 circle of light）。
+- A4 v3：`warm lantern light spills softly across the room so the side of the room near her looks warm, old and lived-in like years ago ... while the far side of the room stays cold, dark blue and empty, natural soft light falloff` + `--no ring, circle, portal, halo, magic circle, sparks, long pole` → 冷暖分边自然，左上最好。
+
 **道具：Home 箱子（11-11 定稿 `Crate_v1.png`）**
 `game prop sprite, one old weathered wooden crate, orthographic front view, flat 2D side-on elevation, dark oak planks with one diagonal brace, worn iron corner straps, small coil of rope on top, centered, isolated on pure white background, clean silhouette, soft painterly hand-painted storybook texture, muted desaturated brown and blue-grey --ar 13:11 --s 100 --niji 6 --sref <GitHub raw>/TechArtAsset/Scenes/Home/Present/Home_Present_v1.png --sw 15 --no scenery, background, floor, ground, grass, night sky, lantern, candle, light, glow, shadow, perspective, three-quarter view, text`
 （第一版 `--sw 60` 把整个夜景带进来，抠不出；道具一律低 sw + 白底 + 正面。后处理 `TechArtAsset/Scenes/Home/Props/_work/make_crate.py`。）
