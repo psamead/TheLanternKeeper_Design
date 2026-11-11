@@ -1,6 +1,6 @@
 # 2026-11-12 Unity — LanternSwitch (present / memory) + broken ladder + attic (greybox)
 
-**Deadline context**: the Demo should be basically complete by **2026-11-15**. This is the core mechanic — keep it simple, robust, and data-driven so the real art can be dropped in later by swapping sprites only.
+**Deadline context**: the Demo is shown to students at noon on **2026-11-15** and should be basically complete by then. This is the core mechanic — keep it simple, robust, and data-driven so the real art can be dropped in later by swapping sprites only.
 
 Run this **after** `2026-11-11_Unity_StoryAB_InterimArt.md` (separate commits).
 
