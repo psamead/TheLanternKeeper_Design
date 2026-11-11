@@ -189,6 +189,9 @@
 - 调色先和 P1 并排比；室内图用 PS Photo Filter（偏青、约 50 %）压冷，脸和手用蒙版保暖。脚本自动换色（LAB 匹配、按色相去橘色）都会坏图，局部改色交给 PS。
 - 道具抠图：去白底 + 去地面淡影 + 去边（品红底检查）+ 往场景冷色压；底边贴图片底部，进 Unity 直接落地（例：`Props/_work/make_crate.py`）。
 
+**选图记录**
+- 每次挑图都把“选了哪张、为什么”写进 `TechArtAsset/Storyboard/STORYBOARD_SELECTION.xlsx`（同内容的 `.md` 给 agent）。选图原则：情绪落差（回忆选最暖的高光，悲剧去掉多余暖色）、远处的灯（希望在那边但不是想要的）、道具和游戏一致、留字幕位。
+
 **字幕与 Unity**
 - 插图要预留一块不太亮的大面积给字幕；每页单独定字幕框，字必须在框内，Codex 用数字核对（`textBounds`）。
 - 交给 Codex 的截图 / 录屏一律放 `ForDesignScreenshot/日期_主题/`；自动播放的段落用 Unity Recorder 录，需要按键的由人录。
