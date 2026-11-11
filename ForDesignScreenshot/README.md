@@ -15,5 +15,12 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 | 2026-11-07_Home_Scale_Review | 用户标注：比例、腿部、背景偏移（`user_note_1857_good_framing_ref` = 用户认可的站位参考） |
 | 2026-11-08_Maela_v1.6_Realign_Issue | v1.6 扩外框后 Unity 部件断开（导入器未重切图） |
 | 2026-11-08_Home_Ground_Line | 地面线偏低 → 目标线（Ground −3.5225 / Crate −2.43 / Player −3.20） |
+| 2026-11-08_Maela_WalkRun | 走 / 跑分开、靴子前后顺序（含 Maela_*_BootOrder） |
+| 2026-11-08_Prologue_Caption | P1 字幕对比度；`_work/` = 旧 `_codex_capture` 的中间帧和视频 |
+| 2026-11-08_user_notes | 用户 11-08 的随手截图（原 `New folder/1–9`，按本地时间改名；主题未标） |
+| 2026-11-11_Prologue_FinalArt | 序章 P2–P4 正式图、Codex Recorder 录屏、字幕框标注（`user_note_1225_*`、`_1411/_1414_*_v2`）、用户录的菜单→Home（`user_note_1154_menu_to_home.mp4`）；`_work/` = Codex 中间文件 |
+| 2026-11-11_Home_Crate | 箱子 v1 换上后的截图（Codex） |
+
+**存放规则（11-11）**：Codex 的所有输出直接放 `YYYY-MM-DD_主题/`，中间文件放其中的 `_work/`；写不进来时先放 Unity 根目录 `_CodexCaptures/` 再拷过来。`_codex_capture/` 不再使用。用户标注图命名 `user_note_HHMM_说明.png`（本地时间）。
 
 注：2026-11-07 之前的任务说明和 deprecated 进度记录里写的是旧的平铺路径，文件现在在对应日期文件夹里。
