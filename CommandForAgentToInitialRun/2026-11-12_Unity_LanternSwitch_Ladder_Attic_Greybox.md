@@ -9,6 +9,10 @@ Rules for this task: design files from the LAN share `SharedWorkFolder` (GitHub 
 
 Read: DEMO_IMPLEMENTATION_PLAN §3 rows ②–⑤, §4 (lantern switch rules — already decided, follow exactly), §5 (`LanternSwitch`, `WorldLayerObject`, `GameState`); HANDPAINTED_SPEC §4 "两层世界".
 
+## 0. Small art refresh (do first, own commit)
+- Re-copy `TechArtAsset/Storyboard/LanternOrigin_A/SB_A4.png` and `TechArtAsset/Storyboard/Ending_B/SB_B1.png` from the share over the Unity copies (same names/GUIDs) — both were replaced with final versions on 11-12.
+- Your last report said the storyboard source images were **2048×1152**. The files on the share are **2208×1242** (15 % margin for Ken Burns). Check every storyboard texture (P, A, B): source file must be 2208×1242 and the importer must not downscale it (Max Size 4096, no NPOT scaling). If anything was resized on copy, re-copy the originals. Report the actual sizes.
+
 ## What to build
 
 ### 1. GameState + LanternSwitch

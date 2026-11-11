@@ -69,3 +69,4 @@
 | 2026-11-11 | 故事版 A / B 占位 `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/SB_A1..4_placeholder.png`、`Ending_B/placeholder/SB_B1..5_placeholder.png`（2208×1242，代码生成） |
 | 2026-11-11 | 故事版暂用图（MJ 第一轮）：`Storyboard/LanternOrigin_A/SB_A4.png`；`Storyboard/Ending_B/SB_B1..B5.png`（B4 待去橘光、B5 待重摆举灯杆、B1/A4 可能重跑）；源 `_work/SB_*_src_*.png` |
 | 2026-11-12 | 故事版 A1–A3 暂用图 `LanternOrigin_A/SB_A1..A3.png`（A1 右下，灯型接近）；B4 去橘光、B5 重摆举灯杆（用户 PS，源 `Ending_B/_work/*_PSfix.*`） |
+| 2026-11-12 | 故事版 A4 定稿（第三轮，`LanternOrigin_A/_work/SB_A4_src_r3.png`）、B1 定稿（第二轮斜构图方窗，`Ending_B/_work/SB_B1_src_r2_slanted.png`；正面版备用）。P / A / B 全部定稿 |
