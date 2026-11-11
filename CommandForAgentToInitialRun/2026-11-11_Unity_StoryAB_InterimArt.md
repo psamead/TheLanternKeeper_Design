@@ -1,6 +1,6 @@
 # 2026-11-11 Unity — Storyboard A/B: interim art + caption-free placeholders
 
-Follow-up to `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md` (Unity `75aec35`). Read all design files from the LAN share `SharedWorkFolder` (path in AGENTS.md) — not from GitHub.
+Follow-up to `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md` (Unity `75aec35`). Read all design files from the LAN share `SharedWorkFolder` (path in AGENTS.md) — GitHub only if the share is unreachable, and then log a "GitHub fallback" note (reason, files, GitHub commit hash) per AGENTS.md.
 
 ## Inputs (LAN share `SharedWorkFolder`, all 2208×1242)
 - Interim real art: `TechArtAsset/Storyboard/LanternOrigin_A/SB_A1.png` … `SB_A4.png` (all four now exist); `TechArtAsset/Storyboard/Ending_B/SB_B1.png` … `SB_B5.png`.

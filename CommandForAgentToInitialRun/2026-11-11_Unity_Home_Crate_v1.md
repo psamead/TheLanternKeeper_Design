@@ -1,6 +1,6 @@
 # 2026-11-11 Unity — Home crate: replace placeholder with painted Crate_v1
 
-On the LAN share `SharedWorkFolder` (not GitHub): `TechArtAsset/Scenes/Home/Props/Crate_v1.png` — 520×440 RGBA, transparent background, crate bottom edge = image bottom row. Visible crate is ~436×440 px, centred horizontally (≈42 px transparent margin left and right). Already cooled to the Home night palette; edges defringed (checked on magenta).
+On the LAN share `SharedWorkFolder` (GitHub only as a logged fallback, see AGENTS.md): `TechArtAsset/Scenes/Home/Props/Crate_v1.png` — 520×440 RGBA, transparent background, crate bottom edge = image bottom row. Visible crate is ~436×440 px, centred horizontally (≈42 px transparent margin left and right). Already cooled to the Home night palette; edges defringed (checked on magenta).
 
 ## Steps
 1. Copy to `Assets/_Project/Art/Scenes/Home/Crate_v1.png` (keep `Crate_placeholder_v0.png` for now). Import: Sprite (Single), **pivot Bottom Center**, no mips, Bilinear, Compression High Quality, Read/Write off.

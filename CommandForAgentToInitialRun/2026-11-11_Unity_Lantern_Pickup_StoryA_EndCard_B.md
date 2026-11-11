@@ -4,7 +4,7 @@
 
 Goal: the Demo loop plays start-to-end with placeholders: Menu → Prologue → Home → pick up lantern → **Storyboard A** → "E" hint → (temporary) end trigger → **03_EndCard: Storyboard B** → "To be continued…" → Back to Menu. Real A/B art and the attic/memory layer come later with the same names.
 
-Read all design files from the LAN share `SharedWorkFolder` (path in AGENTS.md) — not from GitHub. Read DEMO_IMPLEMENTATION_PLAN §3 (flow), §4 (mechanics), §5 (scripts), §6 (captions).
+Read all design files from the LAN share `SharedWorkFolder` (path in AGENTS.md) — GitHub only if the share is unreachable, and then log a "GitHub fallback" note (reason, files, GitHub commit hash) per AGENTS.md. Read DEMO_IMPLEMENTATION_PLAN §3 (flow), §4 (mechanics), §5 (scripts), §6 (captions).
 
 ## Inputs (LAN share `SharedWorkFolder`)
 - `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/SB_A1..A4_placeholder.png` (2208×1242)

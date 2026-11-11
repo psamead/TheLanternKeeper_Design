@@ -1,6 +1,6 @@
 # 2026-11-11 Unity — Prologue P2–P4 final art (replace placeholders)
 
-Read from the LAN share `SharedWorkFolder` (path in AGENTS.md), not GitHub. Final art (all 2208×1242 RGB, same as SB_P1):
+Read from the LAN share `SharedWorkFolder` (path in AGENTS.md); GitHub only as a logged fallback (see AGENTS.md). Final art (all 2208×1242 RGB, same as SB_P1):
 - `TechArtAsset/Storyboard/Prologue/SB_P2.png` — fog over the harbour village, one distant lit window (near houses dark on purpose)
 - `TechArtAsset/Storyboard/Prologue/SB_P3.png` — Maela from behind at the cottage door, lighthouse dark
 - `TechArtAsset/Storyboard/Prologue/SB_P4.png` — Grandma in the rocking chair, Maela from behind; cool teal room, warm floor light

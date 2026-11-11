@@ -11,7 +11,7 @@ Same rules as before: normalized screen coords (0,0 bottom-left), measured at th
 | P1, P4 | unchanged | unchanged | — |
 
 ## Steps
-0. Read everything from the LAN share `SharedWorkFolder` (path in AGENTS.md) — not from GitHub.
+0. Read everything from the LAN share `SharedWorkFolder` (path in AGENTS.md) — GitHub only if the share is unreachable, and then log a "GitHub fallback" note (reason, files, GitHub commit hash) per AGENTS.md.
 1. Update P2/P3 caption rects in `SB_Prologue.asset`; keep underlay sized to the text.
 2. Re-run the `textBounds` check; report box, text bounds, line count, and font size per frame (PASS/FAIL).
 3. Screenshots `P2_caption_v3.png`, `P3_caption_v3.png` → `ForDesignScreenshot/2026-11-11_Prologue_FinalArt/`.
