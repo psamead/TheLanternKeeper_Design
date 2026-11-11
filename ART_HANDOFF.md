@@ -177,6 +177,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
   - ◐ P3：v3（去 cref、开头写 back view、--sw 30）→ `SB_P3.png`，背影 + 灯塔暗，可用。
   - ◐ P4：v3（只挂 Soazig cref --cw 50）奶奶像了但都在笑、梅拉侧脸；v4（过肩背影写法 + --no smile）可用；三张候选已裁到 `Prologue/_candidates/SB_P4_1..3.png`（1、2 = v4，3 = v3 右上），用户选 1 → 已复制为 `SB_P4.png`（11-11）。
   - **下一步**：挑 P2 / P4 → P4 Upscale → `finish_sb.py` 裁 → 调色：对比后发现 P1 本身就是饱和青蓝，P2 / P3 已与 P1 一致，不用调；只有 P4（室内暖光）不同，P4 用户在 PS 压冷完成（Photo Filter 颜色偏青 50 %，脸手蒙版保暖；`SB_P4.psd`）。**序章 P1–P4 美术完成（11-11）**；Codex 任务 `CommandForAgentToInitialRun/2026-11-11_Unity_Prologue_P2-P4_FinalArt.md`（需先 push 设计仓库）（自动 LAB 匹配试过，失败：P2 变紫、P4 变蓝，`_work/grade_v1/` 作废）→ Unity 同名替换。源图在 `Prologue/_work/SB_P*_src*.png`。
+- **11-11**：序章 P1–P4 进 Unity（`0db0d79`，Codex 用 Recorder 录了序章 `ForDesignScreenshot/2026-11-11_Prologue_FinalArt/`）；用户标注字幕要挪进空白处 → Codex 任务 `2026-11-11_Unity_Prologue_CaptionLayout.md`（字必须在框内，数值核对）。Home 箱子 v1：MJ（`--sref Home_Present_v1 --sw 15`，正面、白底）→ `TechArtAsset/Scenes/Home/Props/Crate_v1.png`（520×440，脚本 `Props/_work/make_crate.py`：去白底 + 去地面影子 + 去边 + 压冷）→ Codex 任务 `2026-11-11_Unity_Home_Crate_v1.md`。存放规则：Codex 输出一律进 `ForDesignScreenshot/日期_主题/`，失败才放 Unity 根目录 `_CodexCaptures/`（UNITY_AGENTS 已写）。
 - Unity `AGENTS.md` 已与 `UNITY_AGENTS.md` 同步（11-09，未提交，下次让 Codex 一起提交）；以后改 `UNITY_AGENTS.md` 就直接复制过去。
 - 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
 

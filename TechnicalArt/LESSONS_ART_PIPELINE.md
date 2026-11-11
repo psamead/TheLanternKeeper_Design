@@ -104,4 +104,5 @@
 - **cref 会把背影拉成正脸**（P3 实测）：背影镜头不要挂人物 cref，只写服装颜色，提示词开头写 "back view, ... seen from far behind"，`--no face, looking back`。多人画面 `--cref` 挂两张参考会混脸（P4：奶奶变年轻 / 变胖），只挂主角色那一张，另一人靠文字。
 - **--sref SB_P1 会带出高饱和青蓝**：`--sw 60` 偏色明显，降到 30 并写 "muted, desaturated"；最后 P1–P4 统一在 PS 调色。
 - **MJ 大图页的按钮**：页面把上一张图的按钮藏在屏幕外，自动点击要选屏幕内（x ≥ 0）那个，点之前截图确认是哪张图（11-09 因此多放大了两张错图）。
+- **MJ 出单个道具（11-11 箱子）**：`--sref` 场景图权重高时会把整个场景（夜空、地面、灯笼）一起画进来；道具图用 `--sw 15` + "game prop sprite, orthographic front view, isolated on pure white background" + `--no scenery, floor, lantern, light, shadow, perspective, three-quarter view`。横版游戏选正面那张，斜角透视放进去会歪。抠图时地面淡影要单独去掉（底部一条浅灰蓝），颜色再往场景冷色压。
 - 去边的安全做法：透明度一点不动，只把轮廓带（半透明像素 + 6 px 内发白的像素）的颜色换成内部颜色。
