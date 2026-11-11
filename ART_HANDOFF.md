@@ -182,8 +182,9 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
   - **故事版 A / B**：占位图 `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/`、`Ending_B/placeholder/`；Codex 任务 `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md`（地上灯笼 W 拾起 → A → 提示 E；临时结尾触发 → 03_EndCard 播 B → Back to Menu / Quit）。
   - MJ 第一轮 A1–A4、B1–B5 已出（提示词与结果 ART_PROMPTS §4c；挑选表 Sheets「守灯人 故事版 A/B 第一轮」）：A1 A2 B2 B3 B4 B5 可定；A3（灯塔仍亮）、A4（暖光圈弱）、B1（圆窗像舷窗）要重跑。
 - **11-11 深夜：用户挑 A / B（理由一并记下）**
-  - A1：选**右下**（灯型最接近我们的灯笼）；左上留备用。（原图待放进来）
-  - A3：灯塔最暗那张已放大存下作备用；仍先试编辑擦灯室 / 重跑。（原图待放进来）
+  - A1：选灯型最接近的那张 → `SB_A1.png`（源 `_work/SB_A1_src_main.png`，MJ 文件名 0_1）；另一张备用 `SB_A1_src_alt.png`（0_0）。
+  - A2：右上 → `SB_A2.png`。
+  - A3：最暗那张 → `SB_A3.png` 暂用（灯室还有一点小亮光，要 PS 涂暗或重跑）。B2 另一张备用 `Ending_B/_work/SB_B2_src_alt.png`。
   - A4：右上暂存 → `LanternOrigin_A/SB_A4.png`（暖光圈弱，可能重跑）。
   - B1：圆窗版暂存 → `Ending_B/SB_B1.png`（可能改方窗重跑）。
   - B2：选**左上**——回忆感最强，暖色的"高光时刻"和后面熄灯、失踪形成跌落感，现实与回忆的反差拉大。另一张也存。→ `SB_B2.png`
