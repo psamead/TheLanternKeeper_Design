@@ -94,6 +94,26 @@
 `Slow gentle push-in toward the dark lighthouse. Sea fog drifts slowly from left to right over the water, small waves move softly, a few village windows flicker faintly. The lighthouse stays dark. Painterly storybook style kept exactly as the input image. No camera shake, no people, no text, no new objects.`
 检查：画风不变、灯塔不亮、无新物体。导出 1080p MP4 → `TechArtAsset/Storyboard/Prologue/`。不理想就不改了，直接用静态图（深入调 Flow 留给《妖精丘陵》）。
 
+## 4c. 故事版 A / B（11-11 第一轮，MJ 网页实际用的）
+
+共通：`--ar 16:9 --s 150 --niji 6 --sref <GitHub raw>/TechArtAsset/Storyboard/Prologue/SB_P1.png --sw 30`（B2、B3 回忆画面 `--sw 20` 让暖棕色出来）。梅拉镜头不挂 cref，写服装 + `back view` + `--no face, looking back`。灯塔熄灭的镜头 `--no lit lighthouse, light beam, glowing lamp`（仍常常亮，挑暗的或编辑器擦）。
+
+| 编号 | 提示词要点 | 结果（第一轮） |
+|---|---|---|
+| A1 | lamp room at top of lighthouse, old keeper from behind (grey beard, navy sweater, cap) lighting a small brass hand lantern from the great lamp, warm fire on hands, cold blue sea through windows | 构图好，爷爷是侧脸；大塔灯没画出来 |
+| A2 | wide village + harbour, lit lighthouse casting a big soft circle of warm gold light, fog outside the circle held back | 暖光圈明显，可用 |
+| A3 | lighthouse gone dark, fog rolling ashore toward the dim village | 4 张里 3 张灯塔仍亮 |
+| A4 | cold blue cottage room, Maela from behind raising the lantern, warm circle shows old memories (fishing net, photos) | 背影对；暖光圈偏弱 |
+| B1 | through a small attic window: dark lighthouse, black sea under fog | 圆窗像船舷窗 |
+| B2 | warm faded memory: two boats rowing out on Anaon night, candles in village windows | 暖棕回忆色好 |
+| B3 | one fisherman jumped back on the rocks, the other rows into fog toward a faint cold light | 有两张“空中跳跃”像喜剧 |
+| B4 | keeper from behind before the just-darkened great lamp, fog at the glass with a faint figure | 部分灯仍亮；一张雾里有人影 |
+| B5 | Maela from behind at the end of a long pier, lantern up, distant bell tower, open sky for title | 很好 |
+
+**道具：Home 箱子（11-11 定稿 `Crate_v1.png`）**
+`game prop sprite, one old weathered wooden crate, orthographic front view, flat 2D side-on elevation, dark oak planks with one diagonal brace, worn iron corner straps, small coil of rope on top, centered, isolated on pure white background, clean silhouette, soft painterly hand-painted storybook texture, muted desaturated brown and blue-grey --ar 13:11 --s 100 --niji 6 --sref <GitHub raw>/TechArtAsset/Scenes/Home/Present/Home_Present_v1.png --sw 15 --no scenery, background, floor, ground, grass, night sky, lantern, candle, light, glow, shadow, perspective, three-quarter view, text`
+（第一版 `--sw 60` 把整个夜景带进来，抠不出；道具一律低 sw + 白底 + 正面。后处理 `TechArtAsset/Scenes/Home/Props/_work/make_crate.py`。）
+
 ## 5. 变更记录
 
 | 日期 | 变更 |
@@ -103,5 +123,7 @@
 | 2026-11-02 | 按《妖精丘陵》拆解结果定 STYLE_GAME；STYLE_CHAR 去掉 Q 版（3 heads tall → 约 5 头身） |
 | 2026-11-06 | C01-T 实际改为单出侧面（--cw 40）+ 背面取自 v2 第一轮；C01-G v3 补服装颜色 |
 | 2026-11-05 | C01-T、C01-G 改 v2：右手提灯、`--no bag`、5 头身；C01-G 用中性光照 |
+| 2026-11-11 | 新增 §4c 箱子提示词 |
+| 2026-11-11 | 新增 §4c 故事版 A / B 第一轮提示词与结果 |
 | 2026-11-09 | §4b 记录 P3 v3、P4 v3/v4 实际写法（背影不挂 cref；双人只挂一张 cref） |
 | 2026-11-08 | 新增 §4b v2：SB-P2..P4 v2（留字幕位、--sref SB_P1）与 C02-v2 Soazig（--sref MAELA_REF_v1） |

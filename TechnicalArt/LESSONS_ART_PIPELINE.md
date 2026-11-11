@@ -105,4 +105,8 @@
 - **--sref SB_P1 会带出高饱和青蓝**：`--sw 60` 偏色明显，降到 30 并写 "muted, desaturated"；最后 P1–P4 统一在 PS 调色。
 - **MJ 大图页的按钮**：页面把上一张图的按钮藏在屏幕外，自动点击要选屏幕内（x ≥ 0）那个，点之前截图确认是哪张图（11-09 因此多放大了两张错图）。
 - **MJ 出单个道具（11-11 箱子）**：`--sref` 场景图权重高时会把整个场景（夜空、地面、灯笼）一起画进来；道具图用 `--sw 15` + "game prop sprite, orthographic front view, isolated on pure white background" + `--no scenery, floor, lantern, light, shadow, perspective, three-quarter view`。横版游戏选正面那张，斜角透视放进去会歪。抠图时地面淡影要单独去掉（底部一条浅灰蓝），颜色再往场景冷色压。
+- **序章调色（11-11）**：先把新图和 P1 并排比，别凭印象说"太青"——P1 本身就是饱和青蓝，P2 / P3 不用调。脚本自动 LAB 颜色匹配会坏图（P2 变紫、P4 人物变蓝），室内图（P4）由用户在 PS 用 Photo Filter（颜色偏青、密度约 50 %）压冷，脸和手用蒙版保暖，保留门口暖光和黄雨衣。
+- **Codex 文件位置（11-11 用户要求）**：Recorder 不能直接写 UNC 共享路径，Codex 曾把录屏存到那台电脑的 Videos 里，用户找不到。规则写进 UNITY_AGENTS：一律 `ForDesignScreenshot/日期_主题/`，失败先放 Unity 根目录 `_CodexCaptures/` 再拷。
+- **MJ 网页的 Cloudflare 人机验证**由用户点，Claude 不点；通过后可以继续由 Claude 提交提示词。
+- **字幕框验收用数字**：每页给字幕框（归一化屏幕坐标），Codex 读 TMP `textBounds` 在推镜头结束时核对四角 PASS / FAIL；放不下先多换行，再缩字号（≤15 %）。验收日志用完要关掉，否则 Console 一直刷。
 - 去边的安全做法：透明度一点不动，只把轮廓带（半透明像素 + 6 px 内发白的像素）的颜色换成内部颜色。

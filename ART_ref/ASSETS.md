@@ -63,3 +63,7 @@
 | 2026-11-06 | Maela 游戏版侧面 v1 + 拆部件计划 |
 | 2026-11-06 | Maela 转身图 v1：侧面 / 背面原图、拼合图、侧面参考图 |
 | 2026-11-03 | 菜单原图入 ART_ref；海报 AI Studio 过程图移入 deprecated/art_2026-11-03/poster_process |
+| 2026-11-09 | Soazig 概念定稿：`ART_ref/SOAZIG_REF_v1.png`（白底正面 1024²，MJ C02-v2 → Vary Subtle → 用户 PS 去竿子 → 脚本去网堆）；源 `SOAZIG_SRC_v1.psd`、`_src_soazig/SOAZIG_SRC_v1_MJ_upscale.png`；作 P4 等的 `--cref` |
+| 2026-11-11 | 序章定稿 `TechArtAsset/Storyboard/Prologue/SB_P2.png`（远处雾团、远窗一盏灯）/ `SB_P3.png`（背影门口）/ `SB_P4.png`（奶奶摇椅，PS 压冷；`SB_P4.psd`）；源 `Prologue/_work/SB_P*_src*.png`，候选 `Prologue/_candidates/` |
+| 2026-11-11 | Home 箱子 `TechArtAsset/Scenes/Home/Props/Crate_v1.png`（520×440，底边贴地；MJ 源 `Props/_work/Crate_src_MJ.png`，脚本 `make_crate.py`） |
+| 2026-11-11 | 故事版 A / B 占位 `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/SB_A1..4_placeholder.png`、`Ending_B/placeholder/SB_B1..5_placeholder.png`（2208×1242，代码生成） |

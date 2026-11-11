@@ -178,6 +178,10 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
   - ◐ P4：v3（只挂 Soazig cref --cw 50）奶奶像了但都在笑、梅拉侧脸；v4（过肩背影写法 + --no smile）可用；三张候选已裁到 `Prologue/_candidates/SB_P4_1..3.png`（1、2 = v4，3 = v3 右上），用户选 1 → 已复制为 `SB_P4.png`（11-11）。
   - **下一步**：挑 P2 / P4 → P4 Upscale → `finish_sb.py` 裁 → 调色：对比后发现 P1 本身就是饱和青蓝，P2 / P3 已与 P1 一致，不用调；只有 P4（室内暖光）不同，P4 用户在 PS 压冷完成（Photo Filter 颜色偏青 50 %，脸手蒙版保暖；`SB_P4.psd`）。**序章 P1–P4 美术完成（11-11）**；Codex 任务 `CommandForAgentToInitialRun/2026-11-11_Unity_Prologue_P2-P4_FinalArt.md`（需先 push 设计仓库）（自动 LAB 匹配试过，失败：P2 变紫、P4 变蓝，`_work/grade_v1/` 作废）→ Unity 同名替换。源图在 `Prologue/_work/SB_P*_src*.png`。
 - **11-11**：序章 P1–P4 进 Unity（`0db0d79`，Codex 用 Recorder 录了序章 `ForDesignScreenshot/2026-11-11_Prologue_FinalArt/`）；用户标注字幕要挪进空白处 → Codex 任务 `2026-11-11_Unity_Prologue_CaptionLayout.md`（字必须在框内，数值核对）。Home 箱子 v1：MJ（`--sref Home_Present_v1 --sw 15`，正面、白底）→ `TechArtAsset/Scenes/Home/Props/Crate_v1.png`（520×440，脚本 `Props/_work/make_crate.py`：去白底 + 去地面影子 + 去边 + 压冷）→ Codex 任务 `2026-11-11_Unity_Home_Crate_v1.md`。存放规则：Codex 输出一律进 `ForDesignScreenshot/日期_主题/`，失败才放 Unity 根目录 `_CodexCaptures/`（UNITY_AGENTS 已写）。
+- **11-11 晚**：字幕 v3（P2 上移、P3 左移，字号 37.4，全 PASS，Unity `f1864f3`）+ 箱子 v1 进 Unity（PPU 400、底边贴地，Unity `28e326b`）——用户确认无问题。Codex 剩余小尾巴：`CAPTION_BOUNDS PASS` 日志要关掉（已写进下一个任务第 0 步）。
+  - **故事版 A / B**：占位图 `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/`、`Ending_B/placeholder/`；Codex 任务 `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md`（地上灯笼 W 拾起 → A → 提示 E；临时结尾触发 → 03_EndCard 播 B → Back to Menu / Quit）。
+  - MJ 第一轮 A1–A4、B1–B5 已出（提示词与结果 ART_PROMPTS §4c；挑选表 Sheets「守灯人 故事版 A/B 第一轮」）：A1 A2 B2 B3 B4 B5 可定；A3（灯塔仍亮）、A4（暖光圈弱）、B1（圆窗像舷窗）要重跑。
+- **下一步（11-11 更新）**：① 用户挑 A/B 定稿 → Upscale → 裁 2208×1242 → 同名替换占位 ② 重跑 A3 / A4 / B1 ③ Codex 跑拾灯笼 + A + EndCard B ④ LanternSwitch（现在 / 记忆层）+ Home 记忆层底图 + 阁楼（结尾触发从临时位置挪到阁楼窗边）⑤ 对话框 + 奶奶对白（Soazig 游戏版立绘 / 摇椅 Idle）⑥ 地上灯笼正式美术。
 - Unity `AGENTS.md` 已与 `UNITY_AGENTS.md` 同步（11-09，未提交，下次让 Codex 一起提交）；以后改 `UNITY_AGENTS.md` 就直接复制过去。
 - 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
 
@@ -233,5 +237,6 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-06 | Codex 指令 `2026-11-06_Unity_Maela_Import_Idle.md`：PPU 200、剪纸式骨骼（每个部件只绑一根骨）、Idle 3 s、灯笼 Point Light 2D |
 | 2026-11-06 | Maela 转身图、游戏版侧面、`Maela.psb` v1（自动拆层，部分占位）完成；登记 ASSETS |
 | 2026-11-05 | 开始 Maela：定右手提灯、Demo 不画斜挎包（§4.2、§8）；ART_PROMPTS C01-T / C01-G 改为 v2（去掉 cute / Q 版写法，加 STYLE_GAME 线条与上色部分） |
+| 2026-11-11 | 序章 P1–P4 进 Unity + 字幕 v2/v3；箱子 v1；故事版 A/B 占位 + MJ 第一轮；Codex 存放规则；ForDesignScreenshot 整理 |
 | 2026-11-09 | Soazig REF v1 定稿；序章 P2 / P3 出图并裁切，P4 第 3、4 轮；MJ 网页操作经验写入 LESSONS §8 |
 | 2026-11-08 | Maela v1.6 导入修复方案（meta 改 rect + 检查脚本，待 Codex 分支试）；序章 P2–P4 裁图脚本；序章 / Home / Maela 音频 v1 合成 |

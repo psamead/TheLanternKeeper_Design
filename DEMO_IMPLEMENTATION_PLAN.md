@@ -116,8 +116,8 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 - ☐ 色块搭 Home（楼下、断梯、阁楼）
 - ☐ LanternSwitch + 冷暖光照 + WorldLayerObject
 - ☑ Core_Persistent + 叠加关卡（GameState / AudioManager / LevelLoader，11-08）
-- ☐ 对话、拾灯笼
-- ◐ StoryboardPlayer：☑ P 序章 + Menu → 序章 → Home（每页可设字幕位置 / 颜色 / underlay，11-08）；☐ A、B + EndCard
+- ◐ 对话、拾灯笼（拾灯笼在 11-11 任务里；对话待做）
+- ◐ StoryboardPlayer：☑ P 序章 + Menu → 序章 → Home（每页可设字幕位置 / 颜色 / underlay，11-08；P2–P4 正式图 + 每页字幕框，11-11）；◐ A、B + EndCard（占位版 Codex 任务 `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md`）
 - ☑ Build Settings 去掉 02_Harbor（11-07）
 - ☐ 试玩 2–3 人并修改
 - ☐ 打包 Windows
@@ -126,11 +126,11 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 - ☑ 主角 Maela 定稿 + `.psb` + Idle（11-07）
 - ☑ Maela Run / JumpUp / Fall / Lantern（举灯切换，11-07）；☑ v1.6_m 补画被挡部分 + Walk / Run 分开（11-08）
 - ☑ 声音 v1：序章 BGM + 海风浪、Home 屋内环境、脚步 v4、跳 / 落地、举灯 v5（11-08）
-- ☐ NPC：Soazig（摇椅，Idle）——提示词 C02-v2 已备好（ART_PROMPTS §4b v2）
+- ◐ NPC：Soazig 概念定稿 `ART_ref/SOAZIG_REF_v1.png`（11-09）；☐ 游戏版立绘（摇椅，Idle）
 - ◐ Home 楼下现在层底图 v1（Midjourney，11-07 已进 Unity）；☐ 阁楼、记忆层、分层+ 记忆层 / 现在层标志物（完好梯子 / 断梯、渔网、照片、白布家具）
-- ☐ 道具：灯笼（地上可拾起的版本）；飞蛾（有时间再做）
+- ☑ 道具：箱子 v1（11-11，`TechArtAsset/Scenes/Home/Props/Crate_v1.png`）；☐ 灯笼（地上可拾起的版本）；飞蛾（有时间再做）
 - ☐ UI：对话框
-- ☐ 故事版 **P ×4（序章；P1 试 Flow）**、A ×4、B ×5（Midjourney，海报绘本风；1920×1080，推镜头留 15 % 余量 → 源图约 2208×1242）
+- ◐ 故事版 ☑ **P ×4（序章，11-11 完成）**；◐ A ×4、B ×5（MJ 第一轮 11-11，见 ART_PROMPTS §4c）（Midjourney，海报绘本风；1920×1080，推镜头留 15 % 余量 → 源图约 2208×1242）
 - ☑ UI：开始菜单（11-05）
 - ☑ Demo 海报（v2，11-02）
 
