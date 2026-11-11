@@ -2,16 +2,15 @@
 
 **Deadline context**: the Demo is shown to students at noon on **2026-11-15** and should be basically complete by then. This is the core mechanic — keep it simple, robust, and data-driven so the real art can be dropped in later by swapping sprites only.
 
-Run this **after** `2026-11-11_Unity_StoryAB_InterimArt.md` (separate commits).
+Run this **after** `2026-11-12_Unity_StoryAB_Refresh_ForCaptions.md` (separate commits).
 
 ## First: re-read `AGENTS.md`
 Rules for this task: design files from the LAN share `SharedWorkFolder` (GitHub only as a logged "GitHub fallback"); captures to `SharedWorkFolder/ForDesignScreenshot/2026-11-12_LanternSwitch/`; **when done, unload extra scenes, leave only `00_StartMenu` open** and say so.
 
 Read: DEMO_IMPLEMENTATION_PLAN §3 rows ②–⑤, §4 (lantern switch rules — already decided, follow exactly), §5 (`LanternSwitch`, `WorldLayerObject`, `GameState`); HANDPAINTED_SPEC §4 "两层世界".
 
-## 0. Small art refresh (do first, own commit)
-- Re-copy `TechArtAsset/Storyboard/LanternOrigin_A/SB_A4.png` and `TechArtAsset/Storyboard/Ending_B/SB_B1.png` from the share over the Unity copies (same names/GUIDs) — both were replaced with final versions on 11-12.
-- Your last report said the storyboard source images were **2048×1152**. The files on the share are **2208×1242** (15 % margin for Ken Burns). Check every storyboard texture (P, A, B): source file must be 2208×1242 and the importer must not downscale it (Max Size 4096, no NPOT scaling). If anything was resized on copy, re-copy the originals. Report the actual sizes.
+## 0. Prerequisite
+`2026-11-12_Unity_StoryAB_Refresh_ForCaptions.md` (A4/B1 final art + size check) must be done first.
 
 ## What to build
 
