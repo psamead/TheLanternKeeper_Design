@@ -2,6 +2,12 @@
 
 Follow-up to `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md` (Unity `75aec35`). Read all design files from the LAN share `SharedWorkFolder` (path in AGENTS.md) — GitHub only if the share is unreachable, and then log a "GitHub fallback" note (reason, files, GitHub commit hash) per AGENTS.md.
 
+## First: re-read `AGENTS.md`
+It changed since your last run. New rules you must follow in this task:
+1. **Design files come from the LAN share** `\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder`, not from GitHub. If the share is unreachable you may use GitHub, but log a "GitHub fallback" note (error text, files taken, GitHub commit hash) in your report and in `TechnicalArt/MENU_UNITY_PROGRESS.md`.
+2. **Captures** (screenshots / recordings) go to `SharedWorkFolder/ForDesignScreenshot/YYYY-MM-DD_topic/`; if the share can't be written, use `TheLanternKeeper2D/_CodexCaptures/…` and copy over. Report full paths.
+3. **Close extra scenes when done**: leave the Editor with only `00_StartMenu` open, no leftover DontDestroyOnLoad test objects, and say so in the report.
+
 ## Inputs (LAN share `SharedWorkFolder`, all 2208×1242)
 - Interim real art: `TechArtAsset/Storyboard/LanternOrigin_A/SB_A1.png` … `SB_A4.png` (all four now exist); `TechArtAsset/Storyboard/Ending_B/SB_B1.png` … `SB_B5.png`.
 - Placeholders **regenerated without caption text** (the old ones had the caption baked in → it showed twice): `TechArtAsset/Storyboard/LanternOrigin_A/placeholder/SB_A1..A3_placeholder.png`.
