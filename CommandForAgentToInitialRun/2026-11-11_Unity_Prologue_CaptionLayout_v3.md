@@ -11,8 +11,9 @@ Same rules as before: normalized screen coords (0,0 bottom-left), measured at th
 | P1, P4 | unchanged | unchanged | — |
 
 ## Steps
+0. `git pull` the design repo `psamead/TheLanternKeeper_Design` (main) first — the markup screenshots and the crate task/art come from there.
 1. Update P2/P3 caption rects in `SB_Prologue.asset`; keep underlay sized to the text.
 2. Re-run the `textBounds` check; report box, text bounds, line count, and font size per frame (PASS/FAIL).
 3. Screenshots `P2_caption_v3.png`, `P3_caption_v3.png` → `ForDesignScreenshot/2026-11-11_Prologue_FinalArt/`.
 4. Commit "Prologue caption layout v3 (P2/P3 nudge)", push, note in `TechnicalArt/MENU_UNITY_PROGRESS.md`.
-5. Then continue with `2026-11-11_Unity_Home_Crate_v1.md`.
+5. Then continue with `CommandForAgentToInitialRun/2026-11-11_Unity_Home_Crate_v1.md` (separate commit). Do not skip it; that file holds the crate steps.
