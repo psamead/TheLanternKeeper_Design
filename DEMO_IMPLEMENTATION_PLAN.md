@@ -116,8 +116,8 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 - ☐ 色块搭 Home（楼下、断梯、阁楼）
 - ☐ LanternSwitch + 冷暖光照 + WorldLayerObject
 - ☑ Core_Persistent + 叠加关卡（GameState / AudioManager / LevelLoader，11-08）
-- ◐ 对话、拾灯笼（拾灯笼在 11-11 任务里；对话待做）
-- ◐ StoryboardPlayer：☑ P 序章 + Menu → 序章 → Home（每页可设字幕位置 / 颜色 / underlay，11-08；P2–P4 正式图 + 每页字幕框，11-11）；◐ A、B + EndCard（占位版 Codex 任务 `2026-11-11_Unity_Lantern_Pickup_StoryA_EndCard_B.md`）
+- ◐ 对话、☑ 拾灯笼（拾灯笼 + W 拾取 + E 提示验证于 11-11；对话待做）
+- ☑ StoryboardPlayer：☑ P 序章 + Menu → 序章 → Home（每页可设字幕位置 / 颜色 / underlay，11-08；P2–P4 正式图 + 每页字幕框，11-11）；☑ A、B + EndCard（占位版，拾取 / Home 叠加 / EndCard 按钮与状态重置于 11-11 验证）
 - ☑ Build Settings 去掉 02_Harbor（11-07）
 - ☐ 试玩 2–3 人并修改
 - ☐ 打包 Windows

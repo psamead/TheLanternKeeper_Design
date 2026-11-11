@@ -1,3 +1,5 @@
+> **Done (Unity `75aec35`).** The interim-art note (step −1) and the scene-cleanup step were added after Codex ran it; they are carried out in `2026-11-11_Unity_StoryAB_InterimArt.md`.
+
 # 2026-11-11 Unity — Lantern pickup → Storyboard A; end trigger → 03_EndCard → Storyboard B (placeholders)
 
 Goal: the Demo loop plays start-to-end with placeholders: Menu → Prologue → Home → pick up lantern → **Storyboard A** → "E" hint → (temporary) end trigger → **03_EndCard: Storyboard B** → "To be continued…" → Back to Menu. Real A/B art and the attic/memory layer come later with the same names.
