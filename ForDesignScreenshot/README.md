@@ -20,6 +20,12 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 | 2026-11-08_user_notes | 用户 11-08 的随手截图（原 `New folder/1–9`，按本地时间改名；主题未标） |
 | 2026-11-11_Prologue_FinalArt | 序章 P2–P4 正式图、Codex Recorder 录屏、字幕框标注（`user_note_1225_*`、`_1411/_1414_*_v2`）、用户录的菜单→Home（`user_note_1154_menu_to_home.mp4`）；`_work/` = Codex 中间文件 |
 | 2026-11-11_Home_Crate | 箱子 v1 换上后的截图（Codex） |
+| 2026-11-11_Lantern_StoryA_EndCard | 拾灯笼 → 故事版 A → EndCard B（占位版，Codex） |
+| 2026-11-11_user_notes / 2026-11-12_user_notes | 用户随手截图（根目录的 1/2/3.PNG 按本地时间改名移入） |
+| 2026-11-12_StoryAB_InterimArt | 故事版 A/B 暂用图 + 2 倍速修复（Codex）；`user_markup/` = 用户 03:11 画的字幕框 |
+| 2026-11-12_StoryAB_Final | 定稿 A4/B1 + 尺寸核对 + A/B 字幕框（Codex）；`user_markup/` = 用户 10:30 画的字幕框 |
+| 2026-11-12_Story_Polish | （Codex 下一个任务）跳页 bug、字幕加粗、Press W、序章配乐 |
+| 2026-11-12_LanternSwitch | （Codex 之后的任务）灯笼切换、梯子、阁楼 |
 
 **存放规则（11-11）**：Codex 的所有输出直接放 `YYYY-MM-DD_主题/`，中间文件放其中的 `_work/`；写不进来时先放 Unity 根目录 `_CodexCaptures/` 再拷过来。`_codex_capture/` 不再使用。用户标注图命名 `user_note_HHMM_说明.png`（本地时间）。
 
