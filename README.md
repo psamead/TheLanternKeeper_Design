@@ -9,6 +9,12 @@ The Unity project lives in a separate repository: <https://github.com/psamead/Th
 >
 > Most documents are written in Chinese. In-game text, titles and menus are English only.
 
+## Latest handoff 2026-11-13
+
+Home greybox, world switching, ladder climbing and attic exit have recorded Unity validation at `b61eb3f`. Current work is art consistency and integration preparation: preserve the painterly Midjourney style; room perspective is acceptable. Use `Lantern_v4.png` and the upscaled attic candidate `Attic_PerspectiveRef_v2.png`. These new exports have not been integrated into Unity. Ladder art and the memory room remain pending.
+
+Start with [Home art knowledge base](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) and [new-chat handoff](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md). The matching human-readable Word supplement is `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`. Read it alongside the older v1.5 guides. Historical source files may be local-only; the shared folder remains the primary source for Unity work.
+
 ## Get and update
 
 ```bash

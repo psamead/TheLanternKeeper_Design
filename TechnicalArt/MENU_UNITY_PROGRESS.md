@@ -363,3 +363,24 @@
 - Captures at `ForDesignScreenshot/2026-11-12_StoryAB_Final/`: `A1_end.png`–`A4_end.png`, `B1_end.png`–`B5_end.png`, matching `_clean.png` captures, and `CaptionBounds_A.txt` / `CaptionBounds_B.txt`. All 18 screenshots are 1920×1080.
 - Unity Recorder clips: `StoryA_final.mp4` (H.264/AAC, 1920×1080, 30 fps, 25.700 s) and `StoryB_final.mp4` (H.264/AAC, 1920×1080, 30 fps, 33.767 s). Both clips were recorded locally, copied to the shared folder, and SHA256-verified against their local originals: A `5280EFDB0282E82A2C444ACF33285F92F944F71021E2EF067AB3D86A55D705B2`; B `F1D275750AC3E3E0FC542EF8FCA9CD95A11B27C2605297439F2731BF5C1CB202`.
 - Commit `d9ed6803810d45e4316d5d529caef611f5494e92` (`Storyboard A4/B1 final art + size check + A/B caption boxes`) pushed; `origin/main` verified at the same hash. Editor returned to Edit Mode with only `00_StartMenu` open and caption capture disabled.
+
+## 2026-11-12 — Story polish + Press W + prologue music (Codex)
+
+- Fixed the storyboard advance jump: the outgoing frame now retains its current UV pose on key advance/Esc; only naturally completed frames move to the final Ken Burns pose. Incoming frames still begin at their own start pose.
+- Updated all P/A/B caption material settings: face dilation `0.17`, `#F0EED1`, underlay `#0B1A2E` at alpha `0.78`, offset `(0.8, -0.8)`, softness `0.18`. Adjusted A2/A4/B1/B4 to the new markup boxes. P1 keeps its box, wraps to three lines, and uses the maximum allowed 15% type reduction.
+- End-of-move bounds: PASS on all 13 frames. Evidence: `ForDesignScreenshot/2026-11-12_Story_Polish/CaptionBounds_{P,A,B}.txt` and `P1_end.png`–`B5_end.png`.
+- Moved the B5 buttons into the lower band and reduced the backplate to 520×150 at 0.28 alpha; the entire caption remains visible. `B5_buttons.png` is in the evidence folder.
+- Pickup hint is now `Press W` in Cormorant Garamond Italic with a rounded outline and 0.25-second fade in/out. The post-A `Press E` hint uses the matching style and has been raised above Maela. Prompt captures are `press_w.png` and `press_e.png`.
+- Prologue audio uses the existing loops at BGM `0.6` and sea ambience `0.5` with a 1.5-second fade-in. On arrival at Home, the BGM fades out and Home ambience crossfades in; runtime readback confirmed Home ambience playing at `0.5`. Story A ducks Home ambience; Story B uses the same BGM and fades it in/out at `0.6`.
+- Scripted advance probe: A1 at 30% and A2 at 80%; outgoing UV rectangles were unchanged across advance (maximum delta `0.000000` for both). `SkipContinuity.txt` records the values.
+- Play route began at `00_StartMenu`, reached Prologue, and loaded Home; Story A and Story B timelines were also played through. Unity Recorder MP4 clips were not produced in this run; only the requested still captures and runtime/audio checks are recorded here.
+
+## 2026-11-12 — LanternSwitch + ladder + attic greybox (Codex)
+
+- Added `LanternSwitch` with the lantern pickup gate and `OnWorldSwitched(bool isMemory)`. The first switch plays the full 3.317-second bell and locks Maela until it finishes; later switches change immediately and play the bell. E presses during a later bell are ignored. The Present light is `#8FA3BF` at `0.8`; Memory is `#F2C48A` at `0.92`, blended over `0.6 s`.
+- Added `WorldLayerObject` modes Present / Memory / Both. Layer colliders change immediately while renderers fade over `0.6 s`.
+- Built the Home greybox with a broken Present ladder, full Memory ladder, W/Up to climb, S/Down to descend, Space to leave, first-use memory hint, and broken-ladder hint. Switching to Present while climbing safely drops Maela onto the ground; the Both-layer attic remains walkable.
+- Added attic floor/walls/sloped roof/window/lighthouse silhouette, attic camera zone and confiner bounds. Moved the end trigger to `EndTrigger_AtticWindow`; runtime route reached `03_EndCard` when entering it.
+- Play Mode checks passed for pickup gating, first and repeat switch timing, ignored E during bell, lighting/layer state, both ladder hints, climbing/gravity, safe drop to Present, attic landing/camera framing, and window exit transition. Captures: `ForDesignScreenshot/2026-11-12_LanternSwitch/` (`present_room.png`, `memory_room.png`, `broken_ladder_hint.png`, `climbing.png`, `attic.png`, `window_trigger.png`). SHA256 was compared for every copied image.
+- No Recorder movie was produced in this run; still captures and runtime route checks are available.
+- Commit `b61eb3f3f666b5a5e7ce85bc4c08250ecdd9322a` (`LanternSwitch + ladder + attic greybox`) pushed; `origin/main` verified at the same hash. Editor returned to Edit Mode with only `00_StartMenu` open.

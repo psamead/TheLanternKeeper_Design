@@ -1,6 +1,6 @@
 # ART_ref 图片资产清单（ASSETS）
 
-> 给 Agent 读取，并追踪美术资产版本。位置：`SharedWorkFolder/ART_ref/`。最后更新：2026-10-31。
+> 给 Agent 读取，并追踪美术资产版本。位置：`SharedWorkFolder/ART_ref/`。最后更新：2026-11-12。
 
 ## 约定
 
@@ -29,6 +29,18 @@
 | `POSTER_BG_v2.png` | 宣传 | 海报背景 v2：女孩兜帽放下露黑发、红色短靴（1792×2688） | v2 | POSTER_BG_v1 局部（x640 y1300，1024²）→ Google AI Studio Nano Banana 2.1 编辑（附 MAELA_REF_v1）→ 柔边蒙版只贴回头部与靴子 | 见 TechArtAsset/Poster/_work/ | 海报 K1 背景 | 当前定稿（取代 v1） |
 | `POSTER_TITLE_REF_v1.png` | 宣传 | 海报背景 + 标题 TITLE_v1（1792×2688） | v1 | 程序合成 | — | 作海报 / 菜单出图的 Style 或 Image 参考；合成前预览 | 参考 |
 | `deprecated/art_2026-11-02/POSTER_BG_v1_small.png` | 宣传 | 同上，放大前 896×1344 | v1 | Midjourney Niji 6（原名 `0_3.png`） | — | 存档 | 已被 POSTER_BG_v1 取代 |
+| `TechArtAsset/Scenes/Home/Props/_work/LadderPair_MJ_src_v1.png` | Home 道具源图 | 完整梯 + 断梯组合（2688×1792） | v1 | Midjourney Niji 6，job `591563a6-dd42-49c8-b459-5326e4fc8a07` | P02 梯子；`--sref eghoPUBkfKo --sw 15` | 形状、木纹与色彩参考 | 参考 |
+| `TechArtAsset/Scenes/Home/Props/_work/Lantern_MJ_src_v1.png` | Home 道具源图 | 铜制手提灯笼（2048×2048） | v1 | Midjourney Niji 6，job `2a9fe918-de40-4649-993d-9780b09c1ac0` | P01 灯笼；`--sref eghoPUBkfKo --sw 15` | 造型与材质参考 | 参考 |
+| `TechArtAsset/Scenes/Home/Attic/_candidates/Attic_PerspectiveRef_v1.png` | Home 场景候选 | 阁楼透视构图，16:9 | v1 | Midjourney Niji 6，job `de6dc6e8-64ba-48a2-9835-8cdf91dc0d12` | 原 S02 阁楼图，`--sref eghoPUBkfKo --sw 60` | 仅作画风、灯光与物件参考；透视构图不作游戏背景 | 参考 |
+| `TechArtAsset/Scenes/Home/Attic/_candidates/Attic_PerspectiveRef_v2.png` | Home 场景候选 | 阁楼轻透视背景，2912×1632（16:9） | v2 | Midjourney Niji 6，job `83223836-af12-427b-ae2d-cdd704152b9a` index 0 → Upscale (Subtle)，job `bf19f584-cd7e-43d5-b936-2b345e8a5097` | S02-H v4，`--sref eghoPUBkfKo --sw 60` | 用户选定的放大图；保留为手绘风格 / 构图候选，待 Unity 校对镜头和梯口位置 | 候选 |
+| `TechArtAsset/Scenes/Home/Props/_work/Ladder_Whole_cutout_src_v1.png` | 道具抠图源 | 完整木梯，透明底（1024×1536） | v1 | OpenAI 图像生成，用户选定 | 依照 LadderPair_MJ_src_v1 的木梯画风出单体 | 完整梯游戏图的透明底来源 | 参考 |
+| `TechArtAsset/Scenes/Home/Props/_work/Ladder_Broken_cutout_src_v1.png` | 道具抠图源 | 断梯下半段，透明底（1024×1536） | v1 | OpenAI 图像生成 | 依照完整梯造型制作断梯，保留三档踏棍与断裂栏杆 | 现在层梯子残段 | 参考 |
+| `TechArtAsset/Scenes/Home/Props/_work/Lantern_cutout_src_v1.png` | 道具抠图源 | 铜灯笼，透明底（1254×1254） | v1 | OpenAI 图像生成 | 依照 Lantern_MJ_src_v1 生成单体透明图 | Home 灯笼游戏图来源 | 参考 |
+| `TechArtAsset/Scenes/Home/Props/_work/Ladder_Whole_cutout_src_v2.png` | 道具抠图源 | 完整木梯，透明底（1024×1536） | v2 | OpenAI ImageGen | 依据 MJ 梯子源图左侧完整梯单独生成；严格正视、无光晕 | v2 游戏梯子来源 | 参考 |
+| `TechArtAsset/Scenes/Home/Props/_work/Ladder_Broken_cutout_src_v2.png` | 道具抠图源 | 断梯下半段，透明底（1199×1312） | v2 | OpenAI ImageGen | 依据 v1 断梯单体重制；保留三档踏棍与断裂栏杆 | v2 游戏梯子来源 | 参考 |
+| `TechArtAsset/Scenes/Home/Props/_work/Lantern_cutout_src_v2.png` | 道具抠图源 | 铜灯笼，透明底（1254×1254） | v2 | OpenAI ImageGen | 依据 Lantern_MJ_src_v1 单独生成；灯光仅在玻璃内 | v2 游戏灯笼来源 | 参考 |
+| `TechArtAsset/Scenes/Home/Attic/_work/Home_Attic_Both_src_v1.png` | Home 场景图源 | 阁楼正视横版背景（1672×941） | v1 | OpenAI ImageGen | 由正视阁楼候选编辑；移除烘焙梯子与壁挂灯，留下空梯口 | 阁楼游戏背景来源 | 参考 |
+| `TechArtAsset/Scenes/Home/Attic/Home_Attic_Both_v1.png` | Home 场景候选 | 阁楼正视横版背景（1672×941） | v1 | OpenAI ImageGen | 依据 S02-H 正视构图；冷蓝石墙、屋梁、箱子、四格方窗与熄灯灯塔 | 旧正视候选；用户反馈风格不符，保留历史 | 旧候选 |
 
 ## 游戏资产（TechArtAsset/）
 
@@ -44,6 +56,17 @@
 | `Menu/TITLE_FRAMED_v1.png`（标题+框）/ `TITLE_FRAME_v1.png`（只有框） | 标题 | 透明底 | 程序绘制 SVG，参考 BRETON_LACE / HERMINE | 当前定稿 |
 | `deprecated/art_2026-11-02/POSTER_v1.png`（3508 前的源尺寸 1792×2688）+ `POSTER_v1_social.png`（1080×1620） | 海报 | 竖版 2:3 | POSTER_BG_v2 + 记忆层 MEMORY_aligned（AI Studio 暖金版，SIFT 对齐）圆形柔边光圈 88% + 保留女孩 + 灯笼暖光 + TITLE_v1 + DEMO · 2026 · PC | 已被 v2 取代 |
 | `Menu/TITLE_v1.png`（+ _nosub / _noglow / _glow） | 标题 | 透明底，约 2848×1324 | 字体 Cinzel Decorative + IM Fell English SC，程序加油墨毛边 | 当前定稿 |
+| `Scenes/Home/Props/Ladder_Whole_v1.png` | Home 道具 | 透明底，1024×1536 | LadderPair_MJ_src_v1 + 用户选定的单体风格图 | 已被 v2 取代；保留旧版存档 |
+| `Scenes/Home/Props/Ladder_Broken_v1.png` | Home 道具 | 透明底，1024×1536 | Ladder_Whole_v1 的木梯造型；下半段保留三档踏棍、断裂栏杆 | 已被 v2 取代；保留旧版存档 |
+| `Scenes/Home/Props/Lantern_v1.png` | Home 道具 | 透明底，1254×1254 | Lantern_MJ_src_v1 + 用户选定的单体风格图 | 已被 v2 取代；保留旧版存档 |
+| `Scenes/Home/Props/Ladder_Whole_v2.png` | Home 道具 | 透明底，1024×1536 | LadderPair_MJ_src_v1；完整梯单体化 | 旧候选；本轮未定稿，待重新选定完整梯 |
+| `Scenes/Home/Props/Ladder_Broken_v2.png` | Home 道具 | 透明底，1199×1312 | LadderPair_MJ_src_v1 + Ladder_Broken_v1；三档踏棍、上端断裂 | 旧候选；本轮未定稿，须与完整梯配对 |
+| `Scenes/Home/Props/Lantern_v2.png` | Home 道具 | 透明底，1254×1254 | Lantern_MJ_src_v1；火焰限制在玻璃内部 | 旧候选；保留存档 |
+| `Scenes/Home/Attic/Home_Attic_Both_v1.png` | Home 场景背景 | 16:9，1672×941；可叠加角色与道具 | 蓝灰石墙、平直地板、左侧空梯口、右侧四格方窗与熄灯灯塔 | 旧正视候选；用户反馈风格不符，当前选用见 Attic_PerspectiveRef_v2 |
+
+| `TechArtAsset/Scenes/Home/Props/_work/Lantern_MJ_v2_PS.psd` | Home 道具可编辑源 | Photoshop 分层文件，保留 MJ 原图隐藏层 | v2 | Adobe Photoshop 2023；源 `Lantern_MJ_src_v1.png` | 主体选区加底座边缘蒙版，去白底和地面投影 | `Lantern_v3.png` 的可编辑源文件 |
+| `Scenes/Home/Props/Lantern_v3.png` | Home 道具 | 透明底，1032×1875 | Midjourney 原图 `Lantern_MJ_src_v1.png`；Photoshop 去白底与地面投影 | 已被 v4 取代；保留旧版 |
+| `Scenes/Home/Props/Lantern_v4.png` | Home 道具 | 透明底，1032×1875 | `Lantern_v3.png`；用户手工清除剩余未抠净区域，原临时名 `Lantern_v3_m.png` 按版本规则重命名 | 当前手绘风格候选；待 Unity 校对挂点与比例 |
 
 ## 变更记录
 
@@ -70,3 +93,10 @@
 | 2026-11-11 | 故事版暂用图（MJ 第一轮）：`Storyboard/LanternOrigin_A/SB_A4.png`；`Storyboard/Ending_B/SB_B1..B5.png`（B4 待去橘光、B5 待重摆举灯杆、B1/A4 可能重跑）；源 `_work/SB_*_src_*.png` |
 | 2026-11-12 | 故事版 A1–A3 暂用图 `LanternOrigin_A/SB_A1..A3.png`（A1 右下，灯型接近）；B4 去橘光、B5 重摆举灯杆（用户 PS，源 `Ending_B/_work/*_PSfix.*`） |
 | 2026-11-12 | 故事版 A4 定稿（第三轮，`LanternOrigin_A/_work/SB_A4_src_r3.png`）、B1 定稿（第二轮斜构图方窗，`Ending_B/_work/SB_B1_src_r2_slanted.png`；正面版备用）。P / A / B 全部定稿 |
+| 2026-11-12 | Home 道具首轮：完整梯、断梯、灯笼透明图入 `TechArtAsset/Scenes/Home/Props/`；MJ 原图及 ImageGen 输出入 `_work/`。原阁楼透视图移入 `Attic/_candidates/`，只作画风和道具参考；阁楼重跑 job `59ae29d2…`（画风回归但仍有透视）与 `aa2c55e4…`（同风格，仍有透视；暂不采纳） |
+| 2026-11-12 | Home 美术第二版：梯子与灯笼 v2 作为透明单体图入 `Scenes/Home/Props/`，v1 保留存档；阁楼正视背景 `Attic/Home_Attic_Both_v1.png` 入库，保留空梯口以便叠加可切换梯子，不把灯笼烘焙进背景。原透视候选仍仅作风格参考；所有新图待 Unity 中检查比例 / 锚点与地形对齐 |
+| 2026-11-12 | 灯笼 v3：用户选用 MJ 铜灯原图；Photoshop 2023 去白底与落地投影，输出透明 PNG 1032×1875 与分层 PSD；v1 / v2 / MJ 源图均保留 |
+| 2026-11-13 | Home 阁楼透视候选 v2：用户选定 Midjourney job `83223836-af12-427b-ae2d-cdd704152b9a` index 0，经 Upscale (Subtle) job `bf19f584-cd7e-43d5-b936-2b345e8a5097`，保存为 `Attic/_candidates/Attic_PerspectiveRef_v2.png`（2912×1632）；保留候选待 Unity 校对，未替换现有正视背景 |
+| 2026-11-13 | Home 灯笼 v4：用户在 v3 上手工清除剩余未抠净区域；保留 `Lantern_v3.png`，将 `Lantern_v3_m.png` 按 `对象_vN.png` 命名规则改为 `Scenes/Home/Props/Lantern_v4.png`（透明底，1032×1875） |
+
+> 2026-11-13：当前采用表以 Home 知识库为准。v4 灯笼和阁楼透视 v2 随本次文档发布；未采用源图和 PSD/PSB 保留本地，尚未进行新图 Unity 接入。

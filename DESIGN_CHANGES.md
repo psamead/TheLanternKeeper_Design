@@ -52,3 +52,7 @@
 - ☐ `DEMO_IMPLEMENTATION_PLAN.md`、`handoff.md`
 - ☐ `ART_HANDOFF.md` §4、`ART_PROMPTS.md`、`ART_ref/ASSETS.md`、已做好的资产
 - ☐ Demo 台词
+
+## 2026-11-13 Home 画风与构图修正 用户确认
+
+用户确认手绘绘本风格优先，阁楼允许透视；不再以严格正视切面作为选图硬门槛。采用 MJ 铜灯的用户清理版 Lantern_v4 和 Subtle 放大的阁楼候选 Attic_PerspectiveRef_v2。此决定涉及美术生产与构图，Demo 机制和故事范围不变。梯子及记忆层房间待选定；Unity 适配尚未执行。来源和待办见 TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md。

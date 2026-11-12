@@ -1,3 +1,5 @@
+> 最新补充：同目录 `HOME_ART_KNOWLEDGE_BASE.md` / `守灯人_Home美术交接与经验_2026-11-13_v1.docx`。与旧版流程冲突时采用本轮确认的手绘优先、接受场景透视、MJ 出候选及 PS 清理流程。
+
 # 《The Lantern Keeper》美术资产制作指南：角色 · 场景 · 海报（v1）
 
 > 给人看的操作手册。与 `TechnicalArt/守灯人_美术资产制作指南_v1.4.docx` 同源。流程参考 Animation_yichun《妖精丘陵》的实际做法（概念图 → 定稿参考 → 用定稿统一后续出图 → 合成海报）。

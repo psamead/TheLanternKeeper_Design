@@ -1,3 +1,5 @@
+> 2026-11-13 Home 更新：以 `TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md` 及同目录 `守灯人_Home美术交接与经验_2026-11-13_v1.docx` 为最新补充。风格优先，接受场景透视；旧正视限制按历史记录阅读。
+
 <!-- 出图 prompt 集。每生成 / 采用一张图，更新 ART_ref/ASSETS.md。准则来自《妖精丘陵》AGENT_PROCESS_GUIDELINES §5.3–5.4。 -->
 
 # 《The Lantern Keeper》出图 Prompt 集（v1）
@@ -7,7 +9,7 @@
 - 英文书写；一条只描述一个对象；同类图用同一个风格后缀。
 - 不写具体游戏、作品、艺术家名称，用风格描述代替。
 - 角色图：Midjourney 用 Niji 6 + Character Reference（选定第一张后作为后续参考，--cw 70–100）；OpenAI 图像则上传选定图作参考。
-- 场景、道具：Midjourney V7。
+- Home 本轮采用 Midjourney Niji 6，以已选图实际参数为准；V7 为早期建议。
 - 出来的图是**概念图**，游戏内素材按 `TechnicalArt/HANDPAINTED_SPEC.md` 在 Photoshop 清理、拆层。
 - 文字（标题）不要让 AI 生成：先用字体排好，再让 AI 只做质感（Retexture）。
 
@@ -121,6 +123,35 @@
 `game prop sprite, one old weathered wooden crate, orthographic front view, flat 2D side-on elevation, dark oak planks with one diagonal brace, worn iron corner straps, small coil of rope on top, centered, isolated on pure white background, clean silhouette, soft painterly hand-painted storybook texture, muted desaturated brown and blue-grey --ar 13:11 --s 100 --niji 6 --sref <GitHub raw>/TechArtAsset/Scenes/Home/Present/Home_Present_v1.png --sw 15 --no scenery, background, floor, ground, grass, night sky, lantern, candle, light, glow, shadow, perspective, three-quarter view, text`
 （第一版 `--sw 60` 把整个夜景带进来，抠不出；道具一律低 sw + 白底 + 正面。后处理 `TechArtAsset/Scenes/Home/Props/_work/make_crate.py`。）
 
+## 4d Home 道具与阁楼（2026-11-12）
+
+Home 道具共通：单体透明图用于游戏；原 MJ 合成图留 `_work/`。道具比例和锚点需在 Unity 中结合场景确认。
+
+| 编号 | 对象 | 提示词 | 参数 / 备注 |
+|---|---|---|---|
+| P01-H | 铜灯笼（MJ 源） | game prop sprite, one old brass ship's hand lantern with a round ring handle on top, glass chimney with a small warm flame, dented weathered brass, standing upright on the ground, orthographic front view, flat 2D side-on, centered, isolated on pure white background, clean silhouette, soft painterly hand-painted storybook texture | `--niji 6 --sref https://s.mj.run/eghoPUBkfKo --sw 15 --no scenery, background, floor, shadow, perspective, three-quarter view, text, hand, person`。源 job `2a9fe918-de40-4649-993d-9780b09c1ac0`；之后依照用户选定的单体画风制作成 `Lantern_v1.png` |
+| P02-H | 完整梯 + 断梯（MJ 源） | game prop sprites, two versions of the same old wooden ladder side by side: on the left a complete sturdy wooden ladder, on the right the same ladder broken, only the lower half remaining with snapped splintered rails and missing rungs, orthographic front view, flat 2D, isolated on pure white background, clean silhouettes, soft painterly hand-painted storybook texture, muted brown | `--niji 6 --ar 3:2 --sref https://s.mj.run/eghoPUBkfKo --sw 15 --no scenery, background, floor, shadow, perspective, three-quarter view, text, person`。源 job `591563a6-dd42-49c8-b459-5326e4fc8a07`；原合成图只作形状参考，分成 `Ladder_Whole_v1.png` 与 `Ladder_Broken_v1.png` |
+| S02-H v2 | 阁楼现在层（正视版重跑） | side view 2D game background of a small cramped attic room inside an old Breton stone cottage at night, composed as a flat straight-on side elevation for a 2D side-scroller. See the room directly from the side with no visible floor depth: a horizontal worn timber floor spans the bottom, low sloping roof beams meet above, and rough stone walls frame the room. On the left, a square open hatch breaks the floor and a ladder rises into the attic; a few old trunks covered with dusty white sheets sit against the wall. On the right wall, a small square window divided into four panes; beyond it the dark unlit lighthouse stands on a distant cliff above a foggy sea. Empty room, uncluttered playable floor through the middle. Cold blue-grey night with restrained amber accents. Closely match the attached style reference's hand-painted storybook brushwork, inked shapes, color treatment and lighting, with painterly textured surfaces and crisp readable forms | `--ar 16:9 --niji 6 --sw 60 --stylize 150 --sref https://s.mj.run/eghoPUBkfKo --no people, characters, text, round window, lit lighthouse, light beam, three-quarter view, isometric view, perspective floor, receding floorboards, visible downstairs, moon, cast shadow`。旧图 job `de6dc6e8-64ba-48a2-9835-8cdf91dc0d12` 透视太强，只作画风、灯光参考；此版 job `59ae29d2-4e1e-49cb-b31b-dbed6f94c1d0`，提交于 2026-11-12 |
+| S02-H v3 | 阁楼现在层（扁平切面） | 2D side-scrolling attic background, orthographic side elevation of one small cramped attic inside an old Breton stone cottage at night. The room is a flat theatrical cutaway viewed head-on: camera parallel to the broad back wall, front wall removed, back wall flat across the frame. Show no side walls and no floor surface; the floor is only a thin perfectly horizontal strip along the bottom, with no receding floorboards or vanishing point. Roof beams sit flat against the back wall and slope up to the ridge. At far left, a square hatch interrupts the floor with a vertical ladder rising through it. A few old trunks under dusty white sheets rest against the wall. At far right, a small square four-pane window; through it, a tiny dark unlit lighthouse on a distant cliff above a foggy sea. Keep the middle floor open for gameplay. Closely match the attached style reference: same hand-painted storybook brushwork, inked shapes, textured paint, saturated cobalt blue shadows and restrained amber highlights | `--ar 16:9 --niji 6 --sw 60 --stylize 150 --sref https://s.mj.run/eghoPUBkfKo --no people, characters, text, round window, lit lighthouse, light beam, three-quarter view, isometric, perspective, vanishing point, visible side walls, floor plane, receding lines, visible downstairs, moon, cast shadow`。job `aa2c55e4-7411-4076-8118-3e244ea8c1a0`；已出四张，画风一致但仍有透视，暂不作游戏背景 |
+| S02-H v4 | 阁楼（用户选定的轻透视候选） | Hand-painted 2D game background illustration for a Breton storybook adventure: one small cramped attic room inside an old stone fishing cottage at night. Gentle three-quarter side perspective from the left, shallow visible side walls and timber floorboards receding naturally toward the back. The attic must read clearly as an attic: steep sloping roof with heavy exposed crossbeams, rough blue-grey granite walls, one square open hatch in the floor at far left with a short old wooden ladder emerging through it, a few trunks draped in faded off-white sheets against the back wall, and one small four-pane square window high on the right wall. Through that small window, show dark sea and a tiny completely unlit lighthouse. Keep a broad uncluttered patch of floor through the center for platform game play. Warm amber light from off-screen, cobalt blue-grey shadows, visible loose brushstrokes, hand-painted shapes and softened edges matching the existing Home scene reference. Keep the back wall continuous except for the small window; no large opening or doorway. | `--ar 16:9 --niji 6 --sw 60 --stylize 150 --sref https://s.mj.run/eghoPUBkfKo --no people, text, doorway, large opening, missing wall, large window, visible ship, glowing lighthouse, light beam, photorealism, 3d render`。原 job `83223836-af12-427b-ae2d-cdd704152b9a` index 0；Upscale (Subtle) job `bf19f584-cd7e-43d5-b936-2b345e8a5097`，图片已下载为 `Attic_PerspectiveRef_v2.png`（2912×1632）；用户认可，待 Unity 校对 |
+
+## 4e Home 梯子 / 灯笼清理版与阁楼背景（2026-11-12）
+
+本轮把选定的梯子与灯笼做成透明单体 v2；旧 v1 保留，不覆盖。阁楼采用正视切面构图，制作后再把烘焙进背景的梯子和壁挂灯移除，便于 Unity 以独立图层切换 / 替换道具。
+
+| 文件 | 工具 / 参考 | Prompt 要点 | 结果 |
+|---|---|---|---|
+| `Ladder_Whole_v2.png` | OpenAI ImageGen；参考 `LadderPair_MJ_src_v1.png` 左侧完整梯 | 单独重绘完整木梯，严格正视，双侧木轨 + 五档踏棍；手绘木纹、深色墨线；真实透明底，不要光晕、阴影或背景 | 透明单体，1024×1536 |
+| `Ladder_Broken_v2.png` | OpenAI ImageGen；参考 `Ladder_Broken_v1.png` | 保留断梯下半段，双侧断裂栏杆 + 三档踏棍；正视；真实透明底，光线限制在木头表面 | 透明单体，1199×1312 |
+| `Lantern_v2.png` | OpenAI ImageGen；参考 `Lantern_MJ_src_v1.png` | 铜制圆环提手灯笼，正视；火焰仅在玻璃内发光；真实透明底，无外部光晕、地面阴影与背景 | 透明单体，1254×1254 |
+| `Home_Attic_Both_v1.png` | OpenAI ImageGen；参考原阁楼透视候选的画风，按 S02-H 正视切面构图 | 16:9 横版石墙阁楼；平直地板与屋梁；左侧空方形梯口，右侧四格方窗，窗外熄灯灯塔；保留中间可走区域。二次编辑仅移除烘焙梯子和壁挂灯，保持其余布局不变 | 阁楼现在 / 记忆共用背景，1672×941；待 Unity 检查镜头和梯口对位 |
+
+## 4f Home 铜灯笼去影（2026-11-12）
+
+| 文件 | 工具 / 参考 | 处理 | 结果 |
+|---|---|---|---|
+| `Scenes/Home/Props/Lantern_v3.png` | Photoshop 2023；用户选定 `Props/_work/Lantern_MJ_src_v1.png`，MJ Niji 6 job `2a9fe918-de40-4649-993d-9780b09c1ac0` | 保留 MJ 绘制像素；选择主体后修正底座边缘蒙版，移除白底和地面投影；透明画布留 16 px 边距 | 透明单体，1032×1875；分层 PSD `Props/_work/Lantern_MJ_v2_PS.psd` 保存原图层和去影图层 |
+
 ## 5. 变更记录
 
 | 日期 | 变更 |
@@ -134,3 +165,14 @@
 | 2026-11-11 | 新增 §4c 故事版 A / B 第一轮提示词与结果 |
 | 2026-11-09 | §4b 记录 P3 v3、P4 v3/v4 实际写法（背影不挂 cref；双人只挂一张 cref） |
 | 2026-11-08 | 新增 §4b v2：SB-P2..P4 v2（留字幕位、--sref SB_P1）与 C02-v2 Soazig（--sref MAELA_REF_v1） |
+| 2026-11-12 | 新增 §4d Home 梯子、灯笼来源提示词与阁楼重跑提示词；阁楼沿用原 Niji 6 与 style reference；v2 `59ae29d2…` 仍有透视，v3 `aa2c55e4…` 画风接近参考但仍有透视 |
+| 2026-11-12 | 新增 §4e：梯子、灯笼透明单体 v2 和阁楼正视共用背景；说明 ImageGen 参考来源、去掉烘焙道具的处理及 Unity 对位检查 |
+| 2026-11-12 | 新增 §4f：选用 MJ 灯笼并在 Photoshop 去白底与地面投影；保留 MJ 原图和透明单体 v1 / v2 |
+
+## 2026-11-13 采用与拒绝记录
+
+- P01-H 原 MJ 铜灯继续采用；Photoshop 清理 v3 后由用户去除残留，临时名 Lantern_v3_m.png 已改为 Lantern_v4.png。此步没有新生成提示词。
+- S02-H v4 左上 index 0 已被用户选中并 Subtle 放大下载；实际图为轻透视，画风获认可。提示词中的四格窗、梯口和熄灯灯塔属于目标要求，不能当作输出已满足的验收结论。
+- 拒绝的梯子 job：15a42fcf-e51e-4992-8858-29f08ec21907；提示词要求左右完整梯／破损下半梯，参数 --ar 3:2 --niji 6 --sw 60 --stylize 150，style ref eghoPUBkfKo。输出形状、配对和场景污染不适用，勿自动复用。
+- 拒绝的灯笼 job：e4a50227-c748-4813-bd78-33773a913f4c；蓝色灯笼批次未采用，继续用 P01-H 铜灯。该批次完整 prompt 未在本地归档，不凭截图补造。
+- 下一轮梯子建议单独生成完整梯，选定后再制作断梯；保持松散笔触，低权重场景 style ref 起步。此建议未提交生成任务。

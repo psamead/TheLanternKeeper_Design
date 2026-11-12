@@ -113,8 +113,8 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 ### 程序
 - ☑ 建项目、Git；场景互相切换；开始菜单（11-05）
 - ☑ PlayerController + Cinemachine 跟随（Home 可玩房间，11-07）
-- ☐ 色块搭 Home（楼下、断梯、阁楼）
-- ☐ LanternSwitch + 冷暖光照 + WorldLayerObject
+- ☑ 色块搭 Home（楼下、断梯、阁楼；阁楼梯子与窗口路线 Play Mode 验证，11-12）
+- ☑ LanternSwitch + 冷暖光照 + WorldLayerObject（首次锁定铃声、后续即时切换、层物体显隐/碰撞，11-12）
 - ☑ Core_Persistent + 叠加关卡（GameState / AudioManager / LevelLoader，11-08）
 - ◐ 对话、☑ 拾灯笼（拾灯笼 + W 拾取 + E 提示验证于 11-11；对话待做）
 - ☑ StoryboardPlayer：☑ P 序章 + Menu → 序章 → Home（每页可设字幕位置 / 颜色 / underlay，11-08；P2–P4 正式图 + 每页字幕框，11-11）；☑ A、B + EndCard（占位版，拾取 / Home 叠加 / EndCard 按钮与状态重置于 11-11 验证）

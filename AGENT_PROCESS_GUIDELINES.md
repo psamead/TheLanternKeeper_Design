@@ -53,7 +53,7 @@
 
 ### 3.4 出图（沿用《妖精丘陵》经验）
 - prompt 用英文；一条一个对象；同类图同一风格后缀；不写作品或艺术家名称。
-- 角色用 Niji 6 + Character Reference；场景、道具用 V7；选定新造型后用新图作参考并调高 --cw（70–100）。
+- 角色用 Niji 6 + Character Reference；Home 本轮场景与道具沿用 Niji 6 已选图，V7 为早期建议；选定新造型后用新图作参考并调高 --cw（70–100）。
 - 想摆脱参考图配色时 Style reference 留空，并用 --no 排除颜色。
 - 网页版不填 URL：把图拖进对应格子，删掉 prompt 里的占位符。
 - 编辑器局部重画一次只改一处。
@@ -69,3 +69,11 @@
 - 每张生成图对照 `ART_HANDOFF.md` §4 的“必须保留 / 不要画”逐项检查。
 
 - 截图 / 录屏放 `ForDesignScreenshot/YYYY-MM-DD_主题/` 子文件夹，不要放在根目录（2026-11-07 起）。
+
+## 2026-11-13 Home 美术交接
+
+**2026-11-13 当前交接**：Home 灰盒、切层、爬梯和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。手绘风格优先，房间透视可接受。灯笼采用 `Props/Lantern_v4.png`；阁楼采用 `_candidates/Attic_PerspectiveRef_v2.png`（已 Subtle 放大下载）；梯子和记忆层房间仍待定稿。新图尚未接入 Unity。
+
+新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和 [接续说明](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+
+本轮经验、拒绝批次和素材来源详见知识库。用户明确要求本次提交后推送 GitHub，可直接完成推送；后续发布按当次授权执行。
