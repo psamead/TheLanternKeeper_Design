@@ -30,3 +30,7 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 **存放规则（11-11）**：Codex 的所有输出直接放 `YYYY-MM-DD_主题/`，中间文件放其中的 `_work/`；写不进来时先放 Unity 根目录 `_CodexCaptures/` 再拷过来。`_codex_capture/` 不再使用。用户标注图命名 `user_note_HHMM_说明.png`（本地时间）。
 
 注：2026-11-07 之前的任务说明和 deprecated 进度记录里写的是旧的平铺路径，文件现在在对应日期文件夹里。
+
+- `2026-11-13_Home_Review/`：用户 8 项反馈的命名副本与索引、82 秒录屏抽帧概览；原图和录屏留在原位，修复回报放 `after/`。
+
+Unity 执行清单：`CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。

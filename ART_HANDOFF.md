@@ -82,14 +82,14 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 |---|---|---|
 | 灯笼 | 铜制手提风灯、玻璃罩、顶部提环，刻一个小三螺旋纹 | 熄灭 / 点亮 |
 | 记忆贝壳 | 扇贝形，内侧发暖金光 | 静止 + 闪烁 2 帧 |
-| 梯子 | 木梯 | 断（现在层）/ 完好（记忆层） |
+| 梯子 | 木梯 | 现在层梯位空置并显示状态字；完整梯在钟声后出现，用于传送触发（不操作攀爬） |
 
 ### 4.4 场景（Demo）
 
 | 场景 | 现在层 | 记忆层 |
 |---|---|---|
 | 01 开始菜单 | 夜晚，熄灭的灯塔立在海边悬崖，海雾 | —（可选：灯塔顶一点灯笼光） |
-| 01 Home 奶奶家 + 阁楼（Demo 唯一关卡） | 昏暗石屋、家具盖白布、梯子断 | 阳光、梯子完好、墙上挂渔网与照片 |
+| 01 Home 奶奶家 + 阁楼（Demo 唯一关卡） | 昏暗石屋、家具盖白布、梯位留空并提示损坏 | 同一底图经滤镜变暖、独立完整梯出现后传送至阁楼；不是另换记忆底图 |
 | 02 Harbor 码头（**完整版**，Demo 不做） | 断木板、搁浅的蓝色渔船、浓雾 | 节日彩旗、整齐的渔船、人群剪影 |
 | 远景（两层共用） | 天空 / 海 / 小镇剪影；可选海平线下伊斯钟楼剪影 | 同一张，用光照变暖 |
 
@@ -115,7 +115,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 ### 6.2 场景
 - ✕ 码头概念图、Harbor 分层底图（11-07 移到完整版）
-- ☐ Home 室内分层底图 + 标志物（完好梯子、渔网照片；现在层白布家具、断梯）
+- ☐ Unity 接入 Home v3 楼下底图、阁楼 v3、完整梯 v4、灯笼 v4；按新交接单验证滤镜和传送
 - ☐ 远景层（天空、海、伊斯钟楼剪影）两个场景可共用
 
 ### 6.3 道具 / UI
@@ -146,9 +146,11 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 ## 9. 当前进度与下一步（2026-11-13 更新）
 
-**2026-11-13 当前交接**：Home 灰盒、切层、爬梯和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。手绘风格优先，房间透视可接受。灯笼采用 `Props/Lantern_v4.png`；阁楼采用 `_candidates/Attic_PerspectiveRef_v2.png`（已 Subtle 放大下载）；梯子和记忆层房间仍待定稿。新图尚未接入 Unity。
+**2026-11-13 当前交接**：Home 灰盒、切层、爬梯和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。手绘风格优先，房间透视可接受。灯笼采用 `Props/Lantern_v4.png`；阁楼当前候选为 `_candidates/Attic_PerspectiveRef_v3.png`（v2 放大原图经用户 Photoshop 去除画中梯子、处理窗外灯塔灯部；分层源在 `Attic/_work/Attic_PerspectiveRef_v3.psd`）。v2 保留历史；完整梯当前候选为 `Props/Ladder_Whole_v4.png`（用户手工拼接的透明长梯，分层源 `Props/_work/Ladder_Whole_v4.psd`）。用户最新决定取消操作攀爬和断梯占位物：现在层梯位留空，切换记忆并完成钟声后，玩家到梯下锁定操作、淡变到阁楼梯旁。灯笼 v4、楼下无梯底图 v3、阁楼候选 v3、完整梯 v4 均尚未接入 Unity。详细执行和验收见 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。
 
-新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和 [接续说明](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+楼下当前候选为 `Present/Home_Present_v3.png`（2520×1080，用户移除背景梯子；源 `Present/_work/Home_Present_v3.psd`）。用户说明游戏使用同底图加滤镜并在触发后叠加独立梯子，不另画记忆底图作为本次接入前置条件。新图未接入 Unity；具体触发和滤镜实现待核对。
+
+新对话先读 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`，再读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和 [接续说明](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
 
 ### 历史推进记录
 

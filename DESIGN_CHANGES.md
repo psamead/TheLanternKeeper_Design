@@ -56,3 +56,7 @@
 ## 2026-11-13 Home 画风与构图修正 用户确认
 
 用户确认手绘绘本风格优先，阁楼允许透视；不再以严格正视切面作为选图硬门槛。采用 MJ 铜灯的用户清理版 Lantern_v4 和 Subtle 放大的阁楼候选 Attic_PerspectiveRef_v2。此决定涉及美术生产与构图，Demo 机制和故事范围不变。梯子及记忆层房间待选定；Unity 适配尚未执行。来源和待办见 TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md。
+
+## 2026-11-13 Home 操作与过渡调整 用户确认待实施
+
+用户要求取消操作式攀爬：钟声触发完整梯后，进入梯下范围锁定操作、淡出并转移到阁楼入口梯旁，淡入后恢复操作；现在层移除灰盒短梯，以小型 Broken ladder 提示表示状态。拾取键不得再用 W，用户允许 T 或 Z，执行单默认建议 T；E 切换及首次完整钟声规则保留。底图共用无梯 v3，冷暖用现有滤镜/灯光，不再要求另画记忆底图。配套修正镜头与 UI、故事版遮挡并补中段配乐。以上为用户本轮授权的修改方向，尚未在 Unity 实施或验收；详见 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。

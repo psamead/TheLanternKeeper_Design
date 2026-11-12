@@ -384,3 +384,9 @@
 - Play Mode checks passed for pickup gating, first and repeat switch timing, ignored E during bell, lighting/layer state, both ladder hints, climbing/gravity, safe drop to Present, attic landing/camera framing, and window exit transition. Captures: `ForDesignScreenshot/2026-11-12_LanternSwitch/` (`present_room.png`, `memory_room.png`, `broken_ladder_hint.png`, `climbing.png`, `attic.png`, `window_trigger.png`). SHA256 was compared for every copied image.
 - No Recorder movie was produced in this run; still captures and runtime route checks are available.
 - Commit `b61eb3f3f666b5a5e7ce85bc4c08250ecdd9322a` (`LanternSwitch + ladder + attic greybox`) pushed; `origin/main` verified at the same hash. Editor returned to Edit Mode with only `00_StartMenu` open.
+
+## 2026-11-13 — Home 用户实机反馈与新 Unity 交接（待实施）
+
+用户录屏和 8 张标注图发现镜头构图/露底、提示尺寸和重叠、故事版过渡透出 Home、旧梯子占位、梯子攀爬动作/阁楼落点、EndCard 按钮内部尺寸及 Home/A 中段音乐等问题。用户确定取消操作攀爬：楼下梯位空置并显示 `Broken ladder` 状态字；钟声后显示完整梯，玩家走到梯下后锁输入，淡出并转移至阁楼梯旁，镜头就位后淡入解锁。拾取键改 T（若冲突再选 Z），按用户标注整体缩小提示。底图使用同一张无梯 Home_Present_v3 并使用既有滤镜表现冷暖。故事版透底与提示重叠先调查实际生命周期、Canvas/遮罩和状态逻辑；不把 Singleton 当作未经验证的修复。配乐先检查/接通现有 Ar Mor Du。
+
+执行入口：`CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。配套问题图、录屏及历史构图参考见 `ForDesignScreenshot/2026-11-13_Home_Review/`。本条是设计/待办交接，不代表 Unity 已改动或验证。
