@@ -2,7 +2,7 @@
 
 **Deadline context**: the Demo is shown to students at noon on **2026-11-15** and should be basically complete by then. This is the core mechanic — keep it simple, robust, and data-driven so the real art can be dropped in later by swapping sprites only.
 
-Run this **after** `2026-11-12_Unity_StoryAB_Refresh_ForCaptions.md` (separate commits).
+Run this **after** `2026-11-12_Unity_Story_Polish_PressW.md` (separate commits).
 
 ## First: re-read `AGENTS.md`
 Rules for this task: design files from the LAN share `SharedWorkFolder` (GitHub only as a logged "GitHub fallback"); captures to `SharedWorkFolder/ForDesignScreenshot/2026-11-12_LanternSwitch/`; **when done, unload extra scenes, leave only `00_StartMenu` open** and say so.
@@ -10,7 +10,7 @@ Rules for this task: design files from the LAN share `SharedWorkFolder` (GitHub 
 Read: DEMO_IMPLEMENTATION_PLAN §3 rows ②–⑤, §4 (lantern switch rules — already decided, follow exactly), §5 (`LanternSwitch`, `WorldLayerObject`, `GameState`); HANDPAINTED_SPEC §4 "两层世界".
 
 ## 0. Prerequisite
-`2026-11-12_Unity_StoryAB_Refresh_ForCaptions.md` (A4/B1 final art + size check) must be done first.
+`2026-11-12_Unity_StoryAB_Refresh_ForCaptions.md` (done, Unity) and `2026-11-12_Unity_Story_Polish_PressW.md` must be done first.
 
 ## What to build
 

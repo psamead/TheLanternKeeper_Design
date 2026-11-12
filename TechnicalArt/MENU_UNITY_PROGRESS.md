@@ -329,3 +329,37 @@
 - Screenshots and evidence: `ForDesignScreenshot/2026-11-12_StoryAB_InterimArt/A1_interim.png`–`A4_interim.png`, `B1_interim.png`–`B5_interim.png`, `B5_bounds.txt`, `StoryAB_timing.txt`, `RuntimeDiagnostics.txt`. Unity Recorder clips: `StoryA_interim.mp4` (26.0 s) and `StoryB_interim.mp4` (33.4 s), both H.264 1920×1080 at 30 fps with AAC audio. Captured locally, copied to the share, and SHA256 verified after copy.
 - Unity commit `c91cc8ae4bc0be9a7f4c637ce09430d5e85b0731` (`Storyboard A/B interim art`) pushed; `origin/main` verified at the same hash. This commit includes the updated project `AGENTS.md`.
 - Final Editor state: Edit Mode with only `00_StartMenu` open; no Play Mode or runtime test objects remain. Pre-existing unrelated TMP/font/package/EndCard edits and the temporary Recorder settings asset were excluded.
+
+## 2026-11-12 — Storyboard A4/B1 final art, size check, and A/B caption boxes (Codex)
+
+- Re-copied `SB_A4.png` and `SB_B1.png` directly from the LAN `TechArtAsset/Storyboard` sources, keeping Unity filenames and existing metadata/GUIDs. Each source image and imported storyboard texture is 2208×1242; all imported textures use Max Size 4096 and NPOT None. This corrects the prior interim entry's 2048×1152 A/B source-size note.
+
+| Texture | Source pixels | Unity imported pixels | Max Size | NPOT |
+|---|---:|---:|---:|---|
+| P1 | 2208×1242 | 2208×1242 | 4096 | None |
+| P2 | 2208×1242 | 2208×1242 | 4096 | None |
+| P3 | 2208×1242 | 2208×1242 | 4096 | None |
+| P4 | 2208×1242 | 2208×1242 | 4096 | None |
+| A1 | 2208×1242 | 2208×1242 | 4096 | None |
+| A2 | 2208×1242 | 2208×1242 | 4096 | None |
+| A3 | 2208×1242 | 2208×1242 | 4096 | None |
+| A4 | 2208×1242 | 2208×1242 | 4096 | None |
+| B1 | 2208×1242 | 2208×1242 | 4096 | None |
+| B2 | 2208×1242 | 2208×1242 | 4096 | None |
+| B3 | 2208×1242 | 2208×1242 | 4096 | None |
+| B4 | 2208×1242 | 2208×1242 | 4096 | None |
+| B5 | 2208×1242 | 2208×1242 | 4096 | None |
+
+- Added per-frame A/B caption measurement and clean/end screenshot capture to `StoryboardPlayer`. At each frame's end-of-Ken-Burns pose, `TMP_Text.textBounds` corners were measured in normalized 1920×1080 screen coordinates. All nine frames PASS:
+  - A1 box `(0.100,0.440)`–`(0.340,0.680)`; text `(0.105,0.486)`–`(0.335,0.634)`; font 44.0 px, 3 lines.
+  - A2 box `(0.540,0.650)`–`(0.780,0.760)`; text `(0.545,0.663)`–`(0.775,0.747)`; font 37.4 px (15% reduction), 2 lines.
+  - A3 box `(0.450,0.550)`–`(0.640,0.690)`; text `(0.463,0.553)`–`(0.627,0.687)`; font 39.6 px (10% reduction), 3 lines.
+  - A4 box `(0.200,0.370)`–`(0.390,0.580)`; text `(0.214,0.376)`–`(0.376,0.574)`; font 44.0 px, 4 lines. The replaced art leaves the caption on the left, clear of Maela and the raised lantern.
+  - B1 box `(0.060,0.620)`–`(0.300,0.850)`; text `(0.084,0.686)`–`(0.276,0.784)`; font 44.0 px, 2 lines. The proposed box reads over the dark upper-left beams and stays clear of the window.
+  - B2 box `(0.060,0.390)`–`(0.260,0.610)`; text `(0.072,0.401)`–`(0.248,0.599)`; font 44.0 px, 4 lines.
+  - B3 box `(0.400,0.460)`–`(0.650,0.600)`; text `(0.409,0.463)`–`(0.641,0.597)`; font 39.6 px (10% reduction), 3 lines.
+  - B4 box `(0.730,0.150)`–`(0.930,0.350)`; text `(0.747,0.151)`–`(0.913,0.349)`; font 44.0 px, 4 lines.
+  - B5 box `(0.360,0.750)`–`(0.630,0.880)`; text `(0.370,0.766)`–`(0.620,0.864)`; font 44.0 px, 2 lines.
+- Captures at `ForDesignScreenshot/2026-11-12_StoryAB_Final/`: `A1_end.png`–`A4_end.png`, `B1_end.png`–`B5_end.png`, matching `_clean.png` captures, and `CaptionBounds_A.txt` / `CaptionBounds_B.txt`. All 18 screenshots are 1920×1080.
+- Unity Recorder clips: `StoryA_final.mp4` (H.264/AAC, 1920×1080, 30 fps, 25.700 s) and `StoryB_final.mp4` (H.264/AAC, 1920×1080, 30 fps, 33.767 s). Both clips were recorded locally, copied to the shared folder, and SHA256-verified against their local originals: A `5280EFDB0282E82A2C444ACF33285F92F944F71021E2EF067AB3D86A55D705B2`; B `F1D275750AC3E3E0FC542EF8FCA9CD95A11B27C2605297439F2731BF5C1CB202`.
+- Commit `d9ed6803810d45e4316d5d529caef611f5494e92` (`Storyboard A4/B1 final art + size check + A/B caption boxes`) pushed; `origin/main` verified at the same hash. Editor returned to Edit Mode with only `00_StartMenu` open and caption capture disabled.
