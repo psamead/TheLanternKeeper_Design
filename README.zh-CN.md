@@ -9,9 +9,9 @@ Unity 工程在另一个仓库：<https://github.com/psamead/TheLanternKeeper2D>
 
 ## 最新交接 2026-11-13
 
-**2026-11-13 当前交接**：Home 灰盒、切层、爬梯和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。手绘风格优先，房间透视可接受。灯笼采用 `Props/Lantern_v4.png`；阁楼采用 `_candidates/Attic_PerspectiveRef_v2.png`（已 Subtle 放大下载）；梯子和记忆层房间仍待定稿。新图尚未接入 Unity。
+**2026-11-13 当前交接**：Home 灰盒、切层、梯子和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。保留手绘风格，房间透视可接受。已选资产为 `Lantern_v4.png`、`Home_Present_v3.png`、`Attic_PerspectiveRef_v3.png`、`Ladder_Whole_v4.png`，均尚未接入 Unity。
 
-新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和 [接续说明](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。另一台 Unity 工作站 Codex 的可执行任务单单独放在 [Home Unity 审查与接入指令](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md)。
 
 ## 获取与更新
 
@@ -47,7 +47,8 @@ git pull
 | `TechnicalArt/` | 技术美术与宣传美术文档、字体（OFL）、Unity 进度记录 |
 | `ART_ref/` | 概念图、参考图、`ASSETS.md` 资产总表 |
 | `TechArtAsset/` | 做好的游戏资产（导出 PNG、OGG） |
-| `CommandForAgentToInitialRun/` | 交给 Codex 的分步指令（按日期） |
+| 根目录 `HOME_ART_RESUME.md` | 本地美术 / 设计 Codex 的对话接续摘要，不是执行任务单 |
+| `CommandForAgentToInitialRun/` | 发给 Unity 工作站 / 网络端 Codex 的按日期可执行任务单；见其中 README |
 | `ForDesignScreenshot/` | Unity / Codex 那边的截图，供设计核对 |
 | `deprecated/` | 被取代的旧版本和过程图（保留视觉演变） |
 

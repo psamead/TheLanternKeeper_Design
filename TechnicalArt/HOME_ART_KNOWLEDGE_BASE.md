@@ -42,7 +42,7 @@ Unity 已完成 Home 灰盒、LanternSwitch、完整梯与断梯切换、爬梯�
 
 ## 文档与发布范围
 
-ART_ref/ASSETS 管文件版本；ART_PROMPTS 管实际提示词与参数；LESSONS_ART_PIPELINE 管可复用经验；CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md 是新对话入口。旧 Word v1.5 制作指南和 Prompt 集配合本次 Word 补充阅读。
+ART_ref/ASSETS 管文件版本；ART_PROMPTS 管实际提示词与参数；LESSONS_ART_PIPELINE 管可复用经验；根目录 `HOME_ART_RESUME.md` 是本地美术 / 设计 Codex 的对话续接入口；`CommandForAgentToInitialRun/` 只放发给 Unity 工作站 / 网络端 Codex 的可执行任务单。旧 Word v1.5 制作指南和 Prompt 集配合本次 Word 补充阅读。
 
 本轮推送应包含灯笼 v4、阁楼 v3、楼下 Home_Present_v3 与完整梯 v4 PNG；源 PSD/PSB 保留本地。所有新图尚未接入 Unity。
 

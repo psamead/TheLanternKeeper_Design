@@ -34,6 +34,8 @@
 | 位置 | 放什么 | 读者 |
 |---|---|---|
 | 根目录 `*.md` | 给 Agent / Codex 读的说明 | Agent |
+| 根目录 `*_RESUME.md` | 本地美术 / 设计对话的续接摘要与阅读顺序；不作为远程执行任务 | 本地 Agent |
+| `CommandForAgentToInitialRun/` | 发给 Unity 工作站 / 网络端 Codex 的有明确步骤与验收标准的执行任务单；见目录内 README | Unity Agent |
 | `story_draft/` | 故事设定 Word | 人 |
 | `purposal_story/` | 完整版概念设计说明、Demo 制作方案 Word | 人 |
 | `TechnicalArt/` | 技术美术与宣传美术给人看的文档、手绘规格、字体 | 人 |
@@ -150,7 +152,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 楼下当前候选为 `Present/Home_Present_v3.png`（2520×1080，用户移除背景梯子；源 `Present/_work/Home_Present_v3.psd`）。用户说明游戏使用同底图加滤镜并在触发后叠加独立梯子，不另画记忆底图作为本次接入前置条件。新图未接入 Unity；具体触发和滤镜实现待核对。
 
-新对话先读 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`，再读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和 [接续说明](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。发给另一台 Unity 工作站 Codex 的可执行任务单为 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
 
 ### 历史推进记录
 
@@ -227,6 +229,7 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 
 | 日期 | 变更 |
 |---|---|
+| 2026-11-13 | 明确本地对话续接摘要（根目录 `HOME_ART_RESUME.md`）与 Unity 工作站 Codex 执行单（`CommandForAgentToInitialRun/`）的归档边界；补目录 README 并同步根目录规范、知识库与交接入口。 |
 | 2026-10-30 | 建立本文件与美术文件夹结构（参考《妖精丘陵》） |
 | 2026-10-31 | 新增 `TechnicalArt/ART_PRODUCTION_GUIDE.md` 与对应 Word；同步给人读的 Word（Demo 制作方案 v1.1） |
 | 2026-10-31 | Maela 概念图 v1 定稿（Midjourney Niji 6，C01 → Vary Subtle）；裁出 `MAELA_REF_v1.png`；登记 ASSETS.md |

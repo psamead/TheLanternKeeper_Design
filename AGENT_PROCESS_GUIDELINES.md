@@ -37,6 +37,7 @@
 
 ### 3.1 文件与版本
 - md（给 Agent）放根目录；Word（给人看）放 `story_draft/`、`purposal_story/`、`TechnicalArt/`；旧版本放 `deprecated/`。
+- 根目录 `*_RESUME.md` 是**当前本地对话/工作续接摘要**，写清上下文、阅读顺序和暂停点，不写成另一台机器的执行命令。`CommandForAgentToInitialRun/` 专放**发给 Unity 工作站/网络端 Codex 的可执行任务单**，需有目标、步骤、相关资产、验收与回报要求；新任务先看该目录 `README.md`。不要把本地续接摘要放进该目录。
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。
 - md 与对应 Word 同源，改一处要同步另一处。
 - `UNITY_AGENTS.md` 改完后，Claude 直接复制到 Unity 根目录 `AGENTS.md`（两份保持完全一样，2026-11-09 定）；提交由 Codex 或用户在 Unity 仓库做。
@@ -72,8 +73,8 @@
 
 ## 2026-11-13 Home 美术交接
 
-**2026-11-13 当前交接**：Home 灰盒、切层、爬梯和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。手绘风格优先，房间透视可接受。灯笼采用 `Props/Lantern_v4.png`；阁楼采用 `_candidates/Attic_PerspectiveRef_v2.png`（已 Subtle 放大下载）；梯子和记忆层房间仍待定稿。新图尚未接入 Unity。
+**2026-11-13 当前交接**：Home 灰盒、切层、梯子和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。保留手绘风格，房间透视可接受。已选资产为 `Lantern_v4.png`、`Home_Present_v3.png`、`Attic_PerspectiveRef_v3.png`、`Ladder_Whole_v4.png`，均尚未接入 Unity。
 
-新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和 [接续说明](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。发给另一台 Unity 工作站 Codex 的可执行任务单为 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
 
 本轮经验、拒绝批次和素材来源详见知识库。用户明确要求本次提交后推送 GitHub，可直接完成推送；后续发布按当次授权执行。

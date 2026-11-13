@@ -11,9 +11,9 @@ The Unity project lives in a separate repository: <https://github.com/psamead/Th
 
 ## Latest handoff 2026-11-13
 
-Home greybox, world switching, ladder climbing and attic exit have recorded Unity validation at `b61eb3f`. Current work is art consistency and integration preparation: preserve the painterly Midjourney style; room perspective is acceptable. Use `Lantern_v4.png` and the upscaled attic candidate `Attic_PerspectiveRef_v2.png`. These new exports have not been integrated into Unity. Ladder art and the memory room remain pending.
+Home greybox, world switching, ladder climbing and attic exit have recorded Unity validation at `b61eb3f`. Current work is art consistency and integration preparation: preserve the painterly hand-painted style; room perspective is acceptable. Selected assets are `Lantern_v4.png`, `Home_Present_v3.png`, `Attic_PerspectiveRef_v3.png`, and `Ladder_Whole_v4.png`. They have not been integrated into Unity.
 
-Start with [Home art knowledge base](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) and [new-chat handoff](CommandForAgentToInitialRun/2026-11-13_Home_Art_Resume.md). The matching human-readable Word supplement is `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`. Read it alongside the older v1.5 guides. Historical source files may be local-only; the shared folder remains the primary source for Unity work.
+For a local design/art Codex chat, start with [Home art knowledge base](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) and [local chat resume](HOME_ART_RESUME.md). The matching human-readable Word supplement is `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`. The Unity workstation Codex task is separate: [Home Unity review and integration command](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md). Historical source files may be local-only; the shared folder remains the primary source for Unity work.
 
 ## Get and update
 
@@ -49,7 +49,8 @@ What happened recently: `ART_HANDOFF.md` §10 (change log), `TechnicalArt/MENU_U
 | `TechnicalArt/` | Technical / promotional art docs, fonts (OFL), Unity progress log |
 | `ART_ref/` | Concept art, references, `ASSETS.md` asset list |
 | `TechArtAsset/` | Finished game assets (exported PNG, OGG) |
-| `CommandForAgentToInitialRun/` | Step-by-step instructions given to Codex (dated) |
+| `HOME_ART_RESUME.md` (root) | Local design/art Codex chat continuation; context and reading order, not an execution task |
+| `CommandForAgentToInitialRun/` | Dated, actionable task instructions for the Unity-workstation / remote Codex; see its README |
 | `ForDesignScreenshot/` | Screenshots from the Unity / Codex side for design review |
 | `deprecated/` | Superseded versions and process images (kept for visual history) |
 
