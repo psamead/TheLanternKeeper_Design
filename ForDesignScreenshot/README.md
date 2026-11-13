@@ -32,5 +32,6 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 注：2026-11-07 之前的任务说明和 deprecated 进度记录里写的是旧的平铺路径，文件现在在对应日期文件夹里。
 
 - `2026-11-13_Home_Review/`：用户 8 项反馈的命名副本与索引、82 秒录屏抽帧概览；原图和录屏留在原位，修复回报放 `after/`。
+- `2026-11-13_Home_Visual_Notes/`：用户 11-13 晚新增 8 张视觉反馈图；11-14 视觉修整执行单与回报见该目录 README。
 
-Unity 执行清单：`CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。
+当前 Unity 视觉执行清单：`CommandForAgentToInitialRun/2026-11-14_Unity_Home_Visual_Refinement.md`；上一轮记录见 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。

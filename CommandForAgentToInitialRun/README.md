@@ -6,4 +6,4 @@ Put a task sheet here only when it is intended to be executed against the Unity 
 
 Local design/art chat continuation summaries belong in the repository root as `*_RESUME.md`. They provide context and reading order for the local Codex chat; they are not execution commands. Reusable art decisions and production lessons belong in `TechnicalArt/`, while people-facing supplements belong with the relevant Word documents.
 
-For the current Home Unity task, see [2026-11-13 Unity Home review, art transition, and audio](2026-11-13_Unity_Home_Review_Art_Transition_Audio.md). The local art-chat continuation is [HOME_ART_RESUME.md](../HOME_ART_RESUME.md).
+For the current Home visual task, see [2026-11-14 Unity Home visual refinement](2026-11-14_Unity_Home_Visual_Refinement.md). The preceding implementation task and its historical decisions are in [2026-11-13 Unity Home review, art transition, and audio](2026-11-13_Unity_Home_Review_Art_Transition_Audio.md). The local art-chat continuation is [HOME_ART_RESUME.md](../HOME_ART_RESUME.md).

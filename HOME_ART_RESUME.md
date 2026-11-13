@@ -1,5 +1,13 @@
 # Home 美术：本地对话接续
 
+## 最新状态 2026-11-14
+
+Unity 端 `3417fc4` 已接入楼下 v3、阁楼 v3、灯笼 v4 和完整梯 v4，并完成两轮路线检查；此文件下方的 11-13「尚未实施」描述是旧快照。用户新一轮视觉反馈及执行要求以 `CommandForAgentToInitialRun/2026-11-14_Unity_Home_Visual_Refinement.md` 为准：现在层改用带梯子的 `Home_Present_v1.png`，记忆层用无梯的 v3、滤镜及独立完整梯；拾灯提示固定在灯上方；故事版 A 右下小字去框；EndCard 选择项采用开始菜单灯笼图标和下划线。机制与其他 Bug 留到后续。
+
+完整梯 v5 已用 PhotoCraft CLI 对 v4 PNG 清理透明残留，保留 1440×4200 及完全不透明的原画像素；`TechArtAsset/Scenes/Home/Props/Ladder_Whole_v5.png` 是待 Unity 游戏画面验收的候选，v4 PNG 和 PSD 保留。用户标注图归档至 `ForDesignScreenshot/2026-11-13_Home_Visual_Notes/`。新视觉任务已准备交由 Unity 端 Codex 执行，尚未实施或验收。`TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md` 的 11-13 状态是历史记录，与上述新决定冲突时以本节和 11-14 执行单为准。
+
+## 2026-11-13 续接快照（历史）
+
 用途：供本地美术 / 设计 Codex 新对话恢复上下文；本文件不是 Unity 执行命令。发给另一台 Unity 工作站 / 网络端 Codex 的可执行任务单放在 `CommandForAgentToInitialRun/`，当前 Home 执行单见 [Unity Home 审查与接入](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md)。目录分类规则见 [CommandForAgentToInitialRun/README.md](CommandForAgentToInitialRun/README.md)。
 
 先读 TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md、ART_HANDOFF.md 第 9 节、ART_ref/ASSETS.md、ART_PROMPTS.md、TechnicalArt/MENU_UNITY_PROGRESS.md 末尾。

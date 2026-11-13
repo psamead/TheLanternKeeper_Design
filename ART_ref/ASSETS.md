@@ -65,7 +65,8 @@
 | `Scenes/Home/Props/Lantern_v1.png` | Home 道具 | 透明底，1254×1254 | Lantern_MJ_src_v1 + 用户选定的单体风格图 | 已被 v2 取代；保留旧版存档 |
 | `Scenes/Home/Props/Ladder_Whole_v2.png` | Home 道具 | 透明底，1024×1536 | LadderPair_MJ_src_v1；完整梯单体化 | 旧候选；当前完整梯见 v4 |
 | `Scenes/Home/Props/Ladder_Whole_v3.png` | Home 道具 | 透明底，1440×4200 | 用户 PSD `Props/_work/Ladder_Whole_v3.psd`，Photoshop 原尺寸导出 | 已被 v4 取代，保留历史 |
-| `Scenes/Home/Props/Ladder_Whole_v4.png` | Home 道具 | 透明背景，1440×4200 | 用户修订的 `Props/_work/Ladder_Whole_v4.psd`；增强主体不透明度并调整接缝，Photoshop 原尺寸导出 | 当前完整梯候选，用于钟声后的独立梯与剧情传送；待 Unity 校对；不制作配对断梯 |
+| `Scenes/Home/Props/Ladder_Whole_v4.png` | Home 道具 | 透明背景，1440×4200 | 用户修订的 `Props/_work/Ladder_Whole_v4.psd`；增强主体不透明度并调整接缝，Photoshop 原尺寸导出 | Unity `3417fc4` 已接入；游戏截图发现白边与低 alpha 矩形残留，v5 为待验收的去边候选；不制作配对断梯 |
+| `Scenes/Home/Props/Ladder_Whole_v5.png` | Home 道具 | 透明背景，1440×4200 | 从 v4 PNG 用 PhotoCraft CLI 清除近白低透明度残留并去白底色；原 PSD 与 v4 保留 | 2026-11-14 去边候选；深浅底已检查，须在 Unity 实际缩放下验收；未改 v4 的完全不透明像素 |
 | `Scenes/Home/Props/Ladder_Broken_v2.png` | Home 道具 | 透明底，1199×1312 | LadderPair_MJ_src_v1 + Ladder_Broken_v1；三档踏棍、上端断裂 | 旧候选；本轮未定稿，须与完整梯配对 |
 | `Scenes/Home/Props/Lantern_v2.png` | Home 道具 | 透明底，1254×1254 | Lantern_MJ_src_v1；火焰限制在玻璃内部 | 旧候选；保留存档 |
 | `Scenes/Home/Attic/Home_Attic_Both_v1.png` | Home 场景背景 | 16:9，1672×941；可叠加角色与道具 | 蓝灰石墙、平直地板、左侧空梯口、右侧四格方窗与熄灯灯塔 | 旧正视候选；用户反馈风格不符，当前选用见 Attic_PerspectiveRef_v3 |
@@ -74,7 +75,7 @@
 | `Scenes/Home/Props/Lantern_v3.png` | Home 道具 | 透明底，1032×1875 | Midjourney 原图 `Lantern_MJ_src_v1.png`；Photoshop 去白底与地面投影 | 已被 v4 取代；保留旧版 |
 | `Scenes/Home/Props/Lantern_v4.png` | Home 道具 | 透明底，1032×1875 | `Lantern_v3.png`；用户手工清除剩余未抠净区域，原临时名 `Lantern_v3_m.png` 按版本规则重命名 | 当前手绘风格候选；待 Unity 校对挂点与比例 |
 
-| `Scenes/Home/Present/Home_Present_v3.png` | Home 楼下背景 | 2520×1080，无背景梯子 | 用户修订；源 `Present/_work/Home_Present_v3.psd`（原名 Home_Present_v2.psd），PhotoCraft CLI 导出 | 当前候选，用于同底图滤镜及独立梯子叠加；未接入 Unity |
+| `Scenes/Home/Present/Home_Present_v3.png` | Home 楼下背景 | 2520×1080，无背景梯子 | 用户修订；源 `Present/_work/Home_Present_v3.psd`（原名 Home_Present_v2.psd），PhotoCraft CLI 导出 | 已在 Unity `3417fc4` 用于两种状态；用户 11-14 改为记忆层使用 v3 加滤镜及独立梯子，待按新执行单调整；现在层使用有梯子的 `Home_Present_v1.png` |
 
 ## 变更记录
 
