@@ -1,5 +1,7 @@
 # Unity：首次摇铃的探索顺序与 EndCard 位置（2026-11-15）
 
+> 执行状态更新：已在 Unity `c7ba7f2` 实施。本单保留历史，不重跑。用户观看后修订了拾灯前探索许可、铃声期间提示与收尾规则；后续请执行 [`2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`](2026-11-15_Unity_PickupGate_StoryAudio_Attic.md)。下面“允许较早记录探索”等内容已被新单覆盖。
+
 执行者：Unity 工作站上的 Codex。用户授权本轮先做本单两项，提供效果后再决定后续。请从局域网共享目录读取本单、Unity `AGENTS.md` 和最新 `TechnicalArt/MENU_UNITY_PROGRESS.md`；设计仓库 GitHub 只是发布副本。读取时 Unity HEAD 为 `a84fa6814ddd7f52693b1c6322c65fc88fcfd35f`。先核对实时 HEAD 和工作区，保留既有 EndCard、TMP 字体和 Packages 等无关未提交改动。任务已放入共享入口，是否已启动以 Unity 端实际回报为准。
 
 ## 用户图与上一轮反馈

@@ -37,5 +37,6 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 - `2026-11-13_Home_Visual_Notes/`：用户 11-13 晚新增 8 张视觉反馈图；11-14 视觉修整执行单与回报见该目录 README。
 - `2026-11-13_Home_User_Recordings/`：根目录两段 22:11 / 22:13 用户旧版录像，11-15 核对内容与哈希后归档，保留原始文件字节；不是新探索机制的验收。
 - `2026-11-15_Home_FirstBell_Exploration/`：3 张新标注图，首次摇铃的两阶段探索、固定文字和 EndCard 移位；Unity 新验收放 `after/`。
+- `2026-11-15_Home_Pickup_Story_Attic/`：本轮 12 张用户附图、85 秒原始录像，拾灯/A 前置、故事版音频/收尾、铃声后碰撞移交、阁楼安全落点；图序见目录 README，新验收放 `after/`。
 
-当前 Unity 执行清单：`CommandForAgentToInitialRun/2026-11-15_Unity_FirstBell_Exploration_EndCard.md`，尚待 Unity 端执行。11-14 视觉单已在 Unity `a84fa68` 实施，回报见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。此前任务和证据保留历史。
+当前 Unity 执行清单：`CommandForAgentToInitialRun/2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`，待 Unity 端执行。11-15 第一轮已在 `c7ba7f2` 实施，11-14 视觉单已在 `a84fa68` 实施，回报见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。此前任务和证据保留历史。
