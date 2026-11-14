@@ -2,6 +2,8 @@
 
 本次只实施两个有顺序的探索碰撞区、固定世界提示和 EndCard 选项位置。执行单：[`2026-11-15_Unity_FirstBell_Exploration_EndCard.md`](../../CommandForAgentToInitialRun/2026-11-15_Unity_FirstBell_Exploration_EndCard.md)。Unity 实施与验收待工作站 Codex 执行。
 
+用户补充确认：当前 Unity 铃铛关卡背景图正确。Home 标注取自之前背景错误的版本，只参考碰撞区和文字位置，本轮不调整当前背景。
+
 | 原文件 | 归档文件 | 含义 |
 |---|---|---|
 | `ForDesignScreenshot/1.PNG` | `user_note_0238_01_bell_discovery.png` | 铃铛附近第一区域；Press E 固定位置 |

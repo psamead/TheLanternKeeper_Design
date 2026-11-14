@@ -4,6 +4,8 @@
 
 ## 用户图与上一轮反馈
 
+**用户补充确认（2026-11-15）：当前 Unity 铃铛关卡背景图正确，本轮不调整背景、纹理引用或配色。附图/两段旧录像中的背景来自之前的错误版本，只参考其中标注的碰撞区与文字位置，不能依据旧画面回退或修正当前背景。** 本轮仍只执行首次摇铃探索门槛、固定文字和 EndCard 选项移位。
+
 - `ForDesignScreenshot/2026-11-15_Home_FirstBell_Exploration/user_note_0238_01_bell_discovery.png`：铃铛/原地上灯笼附近绿色框为第一个探索触发区；上方红框为固定 `Press E` 锚点。原 `ForDesignScreenshot/1.PNG`。
 - 同目录 `user_note_0327_02_ladder_inspection.png`：梯位绿色框为第二个探索触发区；其上红框为固定 `Broken ladder` 锚点。原 `2.PNG`。
 - 同目录 `user_note_20261114_0826_10_endcard_position.png`：EndCard 选项移入女孩左侧的红框。原 `10.PNG`，原文件修改时间 11-14 08:26，归入本次 11-15 任务。
