@@ -89,4 +89,4 @@ PSD 在对应 _work，Unity 只导入所列 PNG。保留用户手绘风格和原
 - 问题图 6.PNG：`ForDesignScreenshot/2026-11-13_Home_Review/user_note_0053_06_camera_edge.png`
 - 问题图 7.PNG：`ForDesignScreenshot/2026-11-13_Home_Review/user_note_0054_07_attic_transition.png`
 - 问题图 8.PNG：`ForDesignScreenshot/2026-11-13_Home_Review/user_note_0038_08_endcard_buttons.png`
-- 用户完整录屏：`ForDesignScreenshot/2026-11-13 00-39-31.mp4`（82 秒；本轮已抽帧核对，精确异常时间由 Unity 复现时补记）。
+- 用户完整录屏：`ForDesignScreenshot/2026-11-13_Home_Review/2026-11-13_00-39-31_home_review.mp4`（82 秒；本轮已抽帧核对，精确异常时间由 Unity 复现时补记；11-15 更新归档路径，文件内容未变）。

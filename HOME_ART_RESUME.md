@@ -1,6 +1,14 @@
 # Home 美术：本地对话接续
 
-## 最新状态 2026-11-14
+## 最新状态 2026-11-15
+
+Unity `a84fa68` 已完成 11-14 视觉单：T 提示固定到地上灯笼，Present 带暗梯 v1 / Memory 无梯 v3 + 完整梯 v5，故事版 A 小字去框，EndCard 灯笼图标与下划线。详见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 11-14 回报。v5 仍待用户最终认可；最新视觉版本尚缺一条连续穿过阁楼出口到 B5 的新录像，实际听音和独立构建未验证。
+
+用户 11-15 授权本轮只做两项：首次 E 要按序经历铃铛区探索（显示远处固定 Broken ladder）、梯位查看（解锁固定 Press E），然后才允许首次摇铃出梯；EndCard 选项移入女孩左侧红框。当前执行单：`CommandForAgentToInitialRun/2026-11-15_Unity_FirstBell_Exploration_EndCard.md`。两个提示为世界位置固定、触发后持续；首次解锁前 E 无任何副作用，菜单重开重置。任务已放共享入口，目前可见会话中未连接网络工作站 Codex，不能声称已发送聊天消息或已开跑；用户需让那边 Codex 读取任务单。
+
+新用户标注归档到 `ForDesignScreenshot/2026-11-15_Home_FirstBell_Exploration/`；两段 11-13 旧视频归到 `2026-11-13_Home_User_Recordings/`，原字节保留，不是本轮实现的验收。下面 11-14 / 11-13 各节为当时快照。
+
+## 2026-11-14 续接快照（历史）
 
 Unity 端 `3417fc4` 已接入楼下 v3、阁楼 v3、灯笼 v4 和完整梯 v4，并完成两轮路线检查；此文件下方的 11-13「尚未实施」描述是旧快照。用户新一轮视觉反馈及执行要求以 `CommandForAgentToInitialRun/2026-11-14_Unity_Home_Visual_Refinement.md` 为准：现在层改用带梯子的 `Home_Present_v1.png`，记忆层用无梯的 v3、滤镜及独立完整梯；拾灯提示固定在灯上方；故事版 A 右下小字去框；EndCard 选择项采用开始菜单灯笼图标和下划线。机制与其他 Bug 留到后续。
 

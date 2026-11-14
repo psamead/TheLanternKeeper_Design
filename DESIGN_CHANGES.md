@@ -24,6 +24,7 @@
 
 | 日期 | 变更 | 原因 | 影响的文件 | 状态 |
 |---|---|---|---|---|
+| 2026-11-15 | 第一次 E 摇铃按序解锁：铃铛附近探索区 → 远处固定 Broken ladder → 梯位查看区 → 固定 Press E → 首次有效摇铃出完整梯；进度本局记忆，重开重置。EndCard 选项移至女孩左侧红框 | 用户希望先探索、发现阻路，再主动用灯推进故事；本轮先看这两项效果 | 执行单 `2026-11-15_Unity_FirstBell_Exploration_EndCard.md`、HOME_ART_RESUME、Unity 交互/提示/EndCard；截图归档 | 已确认，任务已放共享入口，待 Unity 端执行与验收 |
 | 2026-11-07 | Home 比例：Maela ×1.4（约 2.2 单位）、背景 ×0.8，让房间读作正常的家 | 镜头拉近后 Maela 相对家具太小，像被缩小了 | HANDPAINTED_SPEC §1、LESSONS §8、Codex 任务 2026-11-07_Unity_Home_Scale_P1 | 已确认 |
 | 2026-11-07 | **提议（完整版 /《妖精丘陵》再议）**：“被遗忘的人会变小”——梅拉在奶奶家里变小，大房间成为攀爬关卡 | 11-07 比例问题时用户注意到的画面潜力 | 若采用要改：STORY_BIBLE 世界规则、奶奶“认不出”→ 易变成“看不见”、序章 P3/P4、所有场景按小人比例设计、Soazig 画成巨人 | 提议 |
 | 2026-11-07 | 菜单与 Home 之间加序章（故事版 P，4 张约 25 秒）；P1 试用 Google Flow（Veo）动画，不理想就用静态图 + 推镜头；Flow 深入调试留给《妖精丘陵》 | 开场直接进 Home，玩家不知道背景 | DEMO_IMPLEMENTATION_PLAN v1.2、ART_HANDOFF §9、ART_PROMPTS、UNITY_AGENTS | 已确认 |

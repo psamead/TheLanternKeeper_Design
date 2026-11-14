@@ -27,11 +27,15 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 | 2026-11-12_Story_Polish | （Codex 下一个任务）跳页 bug、字幕加粗、Press W、序章配乐 |
 | 2026-11-12_LanternSwitch | （Codex 之后的任务）灯笼切换、梯子、阁楼 |
 
+| `2026-11-13_Prologue_UI` | 用户标注的序章底部 Next / Skip 提示，红叉标记待复核 |
+
 **存放规则（11-11）**：Codex 的所有输出直接放 `YYYY-MM-DD_主题/`，中间文件放其中的 `_work/`；写不进来时先放 Unity 根目录 `_CodexCaptures/` 再拷过来。`_codex_capture/` 不再使用。用户标注图命名 `user_note_HHMM_说明.png`（本地时间）。
 
 注：2026-11-07 之前的任务说明和 deprecated 进度记录里写的是旧的平铺路径，文件现在在对应日期文件夹里。
 
-- `2026-11-13_Home_Review/`：用户 8 项反馈的命名副本与索引、82 秒录屏抽帧概览；原图和录屏留在原位，修复回报放 `after/`。
+- `2026-11-13_Home_Review/`：用户 8 项反馈图、Unity 录屏及抽帧概览；修复回报放 `after/`。
 - `2026-11-13_Home_Visual_Notes/`：用户 11-13 晚新增 8 张视觉反馈图；11-14 视觉修整执行单与回报见该目录 README。
+- `2026-11-13_Home_User_Recordings/`：根目录两段 22:11 / 22:13 用户旧版录像，11-15 核对内容与哈希后归档，保留原始文件字节；不是新探索机制的验收。
+- `2026-11-15_Home_FirstBell_Exploration/`：3 张新标注图，首次摇铃的两阶段探索、固定文字和 EndCard 移位；Unity 新验收放 `after/`。
 
-当前 Unity 视觉执行清单：`CommandForAgentToInitialRun/2026-11-14_Unity_Home_Visual_Refinement.md`；上一轮记录见 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。
+当前 Unity 执行清单：`CommandForAgentToInitialRun/2026-11-15_Unity_FirstBell_Exploration_EndCard.md`，尚待 Unity 端执行。11-14 视觉单已在 Unity `a84fa68` 实施，回报见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。此前任务和证据保留历史。
