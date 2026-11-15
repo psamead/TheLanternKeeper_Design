@@ -11,10 +11,12 @@
 > Unity 项目：`TheLanternKeeper2D`（Unity 6000.3.24f1，已连 GitHub；输入用新 Input System）。SharedWorkFolder 路径：\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder
 >
 >
-> **当前 Home 交接（2026-11-15）**：先读共享目录 `CommandForAgentToInitialRun/README.md` 与 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。`a803050` 是上一轮实现基线；README 指向的 `2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md` 是当前待执行新任务，不要重跑旧任务。当前 Home 背景已由用户确认正确，禁止按历史错版截图/录像回退或替换。报告需区分 Editor 自动输入、物理输入、独立构建和扬声器听测；未做的项目必须明示。
+> **当前 Home 交接（2026-11-15）**：先读共享目录 `CommandForAgentToInitialRun/README.md` 与 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。`a803050` 是上一轮实现基线；README 指向的 `2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md` 是当前待执行新任务，不要重跑旧任务。当前 Home 背景已由用户确认正确，禁止按历史错版截图/录像回退或替换。报告需区分 Editor 自动输入、物理输入、独立构建和扬声器听测；未做的项目必须明示。
 
 ## 固定规格
-- Unity 6.3 LTS，URP 2D，PC（Windows）。游戏内文字只用英文。
+
+- **2026-11-15 最新用户要求**：阁楼靴底基线提高至绿线，联动实体地板/落点/触发器；B5 保持当前画面直接显示选项，不再二次淡黑；EndCard 的 Back to Menu 和 Quit 均返回 00_StartMenu，开始菜单自己的 Quit 保留。随后导出并实跑完整 Windows 包、push Unity，再尝试 Web/Pages 真链接验证。新任务尚未执行。
+- Unity 6.3 LTS，URP 2D，Windows x64 优先交付；随后尝试 Web 构建与 GitHub Pages。游戏内文字只用英文。
 - 1920×1080，PPU 100，正交相机 Size 5.4；**不用** Pixel Perfect Camera。
 - 相机跟随用 **Cinemachine 3.1.7**（已安装）：Main Camera 挂 `CinemachineBrain`；每个场景一个 `CinemachineCamera`（Lens 正交 5.4）+ `CinemachinePositionComposer` + `CinemachineConfiner2D`。不要自己写跟随脚本。
 - 碰撞用 Tilemap：`Collision_Both / _Present / _Memory`（Grid Cell Size 1）；画面用分层美术（L0–L4）。
@@ -30,8 +32,10 @@
 - 不做：灯油、检查点、敌人、潮汐、多结局、存档。新增内容先对照 DEMO_IMPLEMENTATION_PLAN §2。
 
 ## 工作规则
+
+- **运行包与文档检查另行存放（2026-11-15）**：Windows/Web 构建先在工程 Assets 外 `Builds/`，最终完整包与 ZIP 放共享 `DemoBuilds/2026-11-15_FinalDemo/`，不放截图目录，不提交二进制到设计或 Unity 源码主分支。Word 排版 PDF/PNG 放根目录 `.story_document_qa/`。新任务的构建交付路径优先于旧的“所有导出”截图规则。
 - **设计文件一律从局域网共享文件夹读取 / 拷贝（11-12 用户要求）**：`\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder`。任务里写的 `SharedWorkFolder/...`、`TechArtAsset/...` 都指这里，它永远是最新的（比 GitHub 新）。**不要**从 GitHub 克隆、pull、fetch 或下载 raw 文件来取设计内容——GitHub 设计仓库只是给学生看的发布版，常常落后。共享文件夹连不上时停下来汇报，不要改用 GitHub。（Unity 项目自己的 Git / GitHub 照常用。）
-- **录屏 / 截图 / 导出文件的存放位置（11-11 用户要求，必须遵守）**：一律放 `SharedWorkFolder/ForDesignScreenshot/YYYY-MM-DD_主题/`（中间文件放同目录下 `_work/` 子文件夹）。**不要**存到 Videos、Desktop、Downloads、Temp 或其他任何地方——用户找不到。
+- **录屏 / 截图文件的存放位置（11-11 用户要求，必须遵守）**：一律放 `SharedWorkFolder/ForDesignScreenshot/YYYY-MM-DD_主题/`（中间文件放同目录下 `_work/` 子文件夹）。**不要**存到 Videos、Desktop、Downloads、Temp 或其他任何地方——用户找不到。
   - 写共享文件夹失败时（例如 Unity Recorder 不能直接写 UNC 网络路径），改存 Unity 工程根目录的 `TheLanternKeeper2D/_CodexCaptures/YYYY-MM-DD_主题/`（在 `Assets/` 外面；`_CodexCaptures/` 要写进 Unity 的 `.gitignore`，不进 Git），然后自己复制到上面的共享位置。
   - 汇报时写出文件的完整最终路径；如果有文件留在 `_CodexCaptures/`，也要说明。
 - **做完任务必须关掉多余场景（11-11 用户要求）**：测试时用 additive 打开 / 加载的场景，结束前全部 Unload / Remove，Hierarchy 里只留一个场景（默认 `00_StartMenu`），并确认没有残留的 DontDestroyOnLoad 测试对象。多个场景同时开着会让编辑器和 Play Mode 慢一倍（用户实测，11-11 那次 Codex 留下了很多场景）。汇报里写一句"Editor 已回到只开 00_StartMenu"。

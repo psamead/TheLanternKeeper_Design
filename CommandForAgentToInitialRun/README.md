@@ -1,15 +1,19 @@
 # CommandForAgentToInitialRun
 
-This folder contains dated, actionable task sheets for Codex on the Unity workstation (the remote/network-side Unity machine).
+This folder contains dated actionable task sheets for Codex on the Unity workstation. Local chat resumes belong in the repository root as *_RESUME.md; art knowledge and lessons belong in TechnicalArt. A prepared task is not an implementation or acceptance report.
 
-Put a task sheet here only when it is intended to be executed against the Unity project. It should state the target outcome, scope, required source assets, ordered steps or investigation questions, acceptance checks, and what evidence/status to report back. Keep Unity-side task history here by date.
+## Current task 2026-11-15
 
-Local design/art chat continuation summaries belong in the repository root as `*_RESUME.md`. They provide context and reading order for the local Codex chat; they are not execution commands. Reusable art decisions and production lessons belong in `TechnicalArt/`, while people-facing supplements belong with the relevant Word documents.
+Read [Attic baseline EndCard Windows and Web](2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md). Status: **prepared and awaiting the Unity workstation Codex**. The user will manually ask that Codex to read it.
 
-The latest task is [2026-11-15 Home story gate, attic and audio follow-up](2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md). It is **prepared and awaiting the Unity workstation Codex**; the user will ask that Codex to read it. The previous [pickup gate, story audio and safe attic arrival](2026-11-15_Unity_PickupGate_StoryAudio_Attic.md) was implemented in Unity `a803050`, but its earlier PASS does not prove this follow-up is done. Keep the user-approved Home background unchanged. Record new implementation and tests in `TechnicalArt/MENU_UNITY_PROGRESS.md` and the new task’s evidence folder.
+The user broadly approves last night's recorded version and requests three small changes: raise the attic walking baseline to the green mark; keep B5 visible and show options without a second black fade; make EndCard Quit return to the Start Menu too. Then deliver a complete Windows x64 build, commit/push the Unity repository, and attempt Unity Web plus GitHub Pages playback. No new implementation, executable or live page is claimed yet.
 
-The follow-up rechecks the pickup gate, ordered triggers, A4 ending, attic placement, audio mix and EndCard position against the latest user feedback.
+The [previous follow-up](2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md) has no new execution report. Its pickup/story gate, ordered exploration, A4, page audio and safe attic requirements are carried into the current task as regression checks. Keep passing behavior; do not rerun old task sheets independently. The approved Home background stays as it is. The old EndCard Application.Quit behavior is superseded; Start Menu Quit is outside this change.
 
-The [earlier 2026-11-15 first bell task](2026-11-15_Unity_FirstBell_Exploration_EndCard.md) was implemented in Unity `c7ba7f2` and should not be rerun. Its allowance for recording exploration before pickup and its immediate hint dismissal are superseded by the current task. EndCard option placement remains as implemented.
+## Earlier implemented baselines
 
-The [2026-11-14 visual task](2026-11-14_Unity_Home_Visual_Refinement.md) was implemented in Unity commit `a84fa68`; its checks and limits are in `TechnicalArt/MENU_UNITY_PROGRESS.md`. Earlier decisions are in [2026-11-13 Home review](2026-11-13_Unity_Home_Review_Art_Transition_Audio.md). The local art-chat continuation is [HOME_ART_RESUME.md](../HOME_ART_RESUME.md).
+- [Pickup gate story audio attic](2026-11-15_Unity_PickupGate_StoryAudio_Attic.md): Unity a803050, Editor report exists; physical listening/hardware and standalone checks were not verified.
+- [First bell and EndCard placement](2026-11-15_Unity_FirstBell_Exploration_EndCard.md): c7ba7f2; pre-pickup exploration and immediate hint dismissal were superseded.
+- [Visual refinement](2026-11-14_Unity_Home_Visual_Refinement.md): a84fa68. [Home art review](2026-11-13_Unity_Home_Review_Art_Transition_Audio.md): 3417fc4.
+
+New evidence: ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/. Runnable packages: DemoBuilds/2026-11-15_FinalDemo/. Word QA: .story_document_qa/. Implementation reports: TechnicalArt/MENU_UNITY_PROGRESS.md. Local context: HOME_ART_RESUME.md.

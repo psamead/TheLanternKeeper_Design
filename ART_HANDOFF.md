@@ -148,6 +148,14 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 ## 9. 当前进度与下一步（2026-11-15 更新）
 
+### 最新用户录屏意见与交付任务
+
+用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
+
+当前执行入口为 `CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。本地已准备任务与三张用户图，未在 Unity 实施、未导出 EXE、未部署网页。`a803050` 是已知上一轮游戏实现基线；`122e013` 仅更新 Unity 文档链接。用户认可录像整体效果，不等同于此前全部边界、扬声器或独立构建已通过。此前 follow-up 未有新执行报告，其门槛、A4、音频与安全条目并入新单的回归核对，已符合的项目保留。当前 Home 背景继续沿用用户确认版本。
+
+给人阅读的当前版本：`TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v4.docx` 与 `purposal_story/守灯人_Demo制作方案_v1.9.docx`。下文此前“当前状态”是历史记录。
+
 ### Home 当前交接
 
 Unity 第一版首次探索与 EndCard 调整已在 `c7ba7f2` 实施。随后增加的拾灯与 A 门槛、A 后回门边、按序探索、铃声结束后提示渐隐、A4 收尾修正、逐页音频和阁楼安全有 Unity `a803050` 实施报告。用户最新复核后要求进一步修正/确认；follow-up 任务已准备，尚未由 Unity 工作站 Codex 执行。当前 Home 背景已确认正确，不调整。

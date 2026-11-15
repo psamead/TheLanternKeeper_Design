@@ -36,6 +36,8 @@
 ## 3. 工作准则
 
 ### 3.1 文件与版本
+
+- 2026-11-15 发布整理：运行包/ZIP 放根目录 `DemoBuilds/日期_主题/`（Git 忽略），Word 排版检查 PDF/PNG 放 `.story_document_qa/`；只有用户反馈截图、游戏截图与录像进入 `ForDesignScreenshot/日期_主题/`。当前 Unity 执行入口以 Command README 为准。
 - md（给 Agent）放根目录；Word（给人看）放 `story_draft/`、`purposal_story/`、`TechnicalArt/`；旧版本放 `deprecated/`。
 - 根目录 `*_RESUME.md` 是**当前本地对话/工作续接摘要**，写清上下文、阅读顺序和暂停点，不写成另一台机器的执行命令。`CommandForAgentToInitialRun/` 专放**发给 Unity 工作站/网络端 Codex 的可执行任务单**，需有目标、步骤、相关资产、验收与回报要求；新任务先看该目录 `README.md`。不要把本地续接摘要放进该目录。
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。

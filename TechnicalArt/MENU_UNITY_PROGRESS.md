@@ -474,3 +474,22 @@ Publication verified: Unity commit `a8030500baab20c7870cfe0dd79d87d28847df65` pu
 **背景限制**：用户明确说目前铃铛关卡 Home 背景是正确的；较早错误版本只存在于旧录像/截图，不要据此换图或改背景。新任务开始后必须使用当前 Unity 场景/资产验证。
 
 **录像归档**：`ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md` 索引一段 184.033 秒历史全流程录像；它不是本轮验收。新证据应该是真实 Play Mode 录制并放到新任务指定目录。该原片约 142 MB，没有 Git LFS 配置/客户端，本次只在工作区归档，不推送此大文件；索引文档可纳入本次文档发布。
+
+
+## 2026-11-15 最新用户录屏反馈与小修发布任务 已准备
+
+用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
+
+当前执行入口为 `CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。本地已准备任务与三张用户图，未在 Unity 实施、未导出 EXE、未部署网页。`a803050` 是已知上一轮游戏实现基线；`122e013` 仅更新 Unity 文档链接。用户认可录像整体效果，不等同于此前全部边界、扬声器或独立构建已通过。此前 follow-up 未有新执行报告，其门槛、A4、音频与安全条目并入新单的回归核对，已符合的项目保留。当前 Home 背景继续沿用用户确认版本。
+
+当前任务单：`CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。三张用户图已按原字节归档到 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release`（含 README/hash）；`after/` 预留新验收。Word 排版 QA 放 `.story_document_qa/`；运行包另放 `DemoBuilds/`。本地只整理设计/任务/文档，不声称已向工作站发送聊天消息或已启动执行。
+
+| 项目 | 当前状态 |
+|---|---|
+| 昨晚录像整体效果 | 用户表示基本满意，仍有三项小修 |
+| 新任务与参考图 | 已准备 |
+| Unity 小修与回归 | 待工作站执行 |
+| Windows x64 包与 EXE 实跑 | 未导出、未验证 |
+| Unity 新提交与 push | 待工作站执行 |
+| Web 构建与 Pages 真实 URL | 未构建、未部署、未验证 |
+| 本轮新成品用户验收 | 尚未进行 |

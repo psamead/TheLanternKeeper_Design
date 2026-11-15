@@ -11,11 +11,11 @@ The Unity project lives in a separate repository: <https://github.com/psamead/Th
 
 ## Latest handoff 2026-11-15
 
-The current Home background is approved. Unity `a803050` is the previous implementation baseline. The user has since requested a follow-up to recheck the no-lantern gate, ordered exploration, A4 exit, page audio, attic landing, and EndCard options. The task is prepared for the Unity workstation Codex and has not run yet. The earlier Editor report does not count as validation of these follow-up requirements.
+The user broadly approves last night's recorded version and requests a higher attic walking baseline, B5 options without a second black fade, and EndCard Quit returning to Start Menu. Then the Unity workstation should deliver a complete Windows x64 package, commit/push the Unity repository, and attempt Web plus GitHub Pages playback. The approved Home background stays as it is.
 
-For the current design, read [Demo flow and audio cues](DEMO_IMPLEMENTATION_PLAN.md), [Home art knowledge base](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md), [Home progress report](TechnicalArt/MENU_UNITY_PROGRESS.md), and [local chat resume](HOME_ART_RESUME.md). The new Unity task is prepared and waiting for the user to ask the remote Codex to read it; see [CommandForAgentToInitialRun](CommandForAgentToInitialRun/README.md). The user's 12 screenshots and first source recording are indexed in `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`; the full-demo reference recording is in `ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md`.
+Current task: [2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md](CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md). **Prepared; no new implementation, executable or live website is claimed.** Earlier gate/audio/attic requirements remain regression checks. See [progress](TechnicalArt/MENU_UNITY_PROGRESS.md), [local resume](HOME_ART_RESUME.md), and [three user reference images](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md).
 
-People-facing Word versions: [Home art handoff and lessons, v3](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v3.docx) and [Demo implementation plan, v1.8](purposal_story/守灯人_Demo制作方案_v1.8.docx).
+People-facing Word versions: [Home handoff v4](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v4.docx), [Demo plan v1.9](purposal_story/守灯人_Demo制作方案_v1.9.docx). Runnable packages go to local DemoBuilds/; Word QA stays in .story_document_qa/.
 
 ## Get and update
 

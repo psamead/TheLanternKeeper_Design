@@ -38,6 +38,8 @@
 
 ## 4. Demo 范围（摘要，以 DEMO_IMPLEMENTATION_PLAN.md 为准）
 
+2026-11-15 最新小修与交付：阁楼脚底基线提高至绿线；B5 无二次淡黑直接显示选项；EndCard 两个选项均回开始菜单。之后导出 Windows x64 完整包、push Unity，再尝试 Web/Pages。任务已准备，Unity/构建/部署均未执行；当前单见 `CommandForAgentToInitialRun/README.md`。
+
 - Scene：`00_StartMenu` → `01_Home`（含故事版 A）→ `03_EndCard`（故事版 B）→ 回菜单。`02_Harbor` 保留给完整版，不进 Build Settings。
 - 唯一核心机制：按 E 在现在层 / 记忆层之间全屏切换（碰撞 Tilemap 开关 + 分层美术里的标志物 Sprite 显隐 + Global Light 2D 变色）。
 - 不做：灯油、检查点、敌人、潮汐、多结局、存档。

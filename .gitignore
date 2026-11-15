@@ -22,3 +22,6 @@ __pycache__/
 
 # Codex capture scratch (local only)
 ForDesignScreenshot/_codex_capture/
+
+# Runnable Windows/Web deliverables stay local, outside screenshot archives
+DemoBuilds/

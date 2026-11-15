@@ -1,6 +1,14 @@
 # Home 美术：本地对话接续
 
-## 最新状态 2026-11-15 后续复核
+## 最新状态 2026-11-15 用户认可录屏并准备小修与交付
+
+用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
+
+当前执行入口为 `CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。本地已准备任务与三张用户图，未在 Unity 实施、未导出 EXE、未部署网页。`a803050` 是已知上一轮游戏实现基线；`122e013` 仅更新 Unity 文档链接。用户认可录像整体效果，不等同于此前全部边界、扬声器或独立构建已通过。此前 follow-up 未有新执行报告，其门槛、A4、音频与安全条目并入新单的回归核对，已符合的项目保留。当前 Home 背景继续沿用用户确认版本。
+
+截图与验收入口：`ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md`。当前暂停在任务已准备，等用户让另一台 Codex 手动读取。以下各节是先前状态快照。
+
+## 历史快照 2026-11-15 早前后续复核
 
 上一轮 `a803050` 已有 Editor 连续路线与边界检查报告。用户进一步复核指出仍需确保未持灯时只见 Press T、A4 不重复显现、A 后从门边开始新探索、逐页声音和阁楼落地/防坠达到指定表现。新的执行单已准备好，尚待另一台 Unity 工作站 Codex 手动读取并运行：`CommandForAgentToInitialRun/2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md`。本机未在 Unity 中执行新任务。扬声器实听、物理键鼠操作和独立构建仍需明确验收。
 

@@ -9,11 +9,11 @@ Unity 工程在另一个仓库：<https://github.com/psamead/TheLanternKeeper2D>
 
 ## 最新交接 2026-11-15
 
-当前 Home 背景已由用户确认正确。Unity `a803050` 是上一轮实现基线。用户随后提出 follow-up，要求复核未持灯门槛、按序探索、A4 收尾、逐页声音、阁楼落点和 EndCard 选项。新任务已准备给 Unity 工作站 Codex，尚未执行；上一轮 Editor 报告不能代替新要求的验收。
+用户认可昨晚录像整体效果，提出三项小修：阁楼行走基线提高至绿线；B5 保持画面直接出选项；EndCard Quit 也返回开始菜单。之后由 Unity 工作站交付完整 Windows x64 包，提交/push Unity，再尝试 Web 构建与 GitHub Pages 网页试玩。当前 Home 背景已确认正确。
 
-当前设计先读 [Demo 流程与音频 cue](DEMO_IMPLEMENTATION_PLAN.md)、[Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md)、[Unity 进度报告](TechnicalArt/MENU_UNITY_PROGRESS.md) 和[本地接续说明](HOME_ART_RESUME.md)。新 Unity 任务单已准备，等用户在另一台机器让 Codex 读取；入口见 [CommandForAgentToInitialRun](CommandForAgentToInitialRun/README.md)。12 张用户截图和原始录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`；全流程参考录像见 `ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md`。
+当前任务：[阁楼基线与 EndCard 小修及交付](CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md)。**任务已准备，Unity 新改动、EXE 与网页均未执行或生成。** 旧门槛/音频/阁楼要求并入回归核对，详见 [进度](TechnicalArt/MENU_UNITY_PROGRESS.md)、[本地接续](HOME_ART_RESUME.md) 与 [三张反馈图](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md)。
 
-给人阅读的 Word 版：[Home 美术交接与经验 v3](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v3.docx)，[Demo 制作方案 v1.8](purposal_story/守灯人_Demo制作方案_v1.8.docx)。
+给人阅读的 Word：[Home 交接与经验 v4](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v4.docx)，[Demo 制作方案 v1.9](purposal_story/守灯人_Demo制作方案_v1.9.docx)。运行包另放本地 DemoBuilds/，Word 排版检查放 .story_document_qa/。
 
 ## 获取与更新
 

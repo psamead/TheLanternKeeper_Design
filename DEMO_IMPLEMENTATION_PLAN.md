@@ -1,6 +1,8 @@
-<!-- 与 purposal_story/守灯人_Demo制作方案_v1.8.docx 同步内容；Markdown 与 Word 版本号各自递增。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
+<!-- 与 purposal_story/守灯人_Demo制作方案_v1.9.docx 同步内容；Markdown 与 Word 版本号各自递增。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
 
-# 《The Lantern Keeper》Demo 制作方案（v1.5，2026-11-15：Home 流程修订待执行）
+# 《The Lantern Keeper》Demo 制作方案（v1.6，2026-11-15：阁楼与结尾小修及构建待执行）
+
+本轮用户已认可昨晚录像整体效果。当前任务为阁楼脚底基线抬到绿线、B5 直接出选项、EndCard 两个选项均回开始菜单；随后交付 Windows x64 完整包、push Unity 并尝试 Web/Pages。任务已准备，Unity 与构建发布尚未执行；详见 §4.4 和 CommandForAgentToInitialRun/README.md。以下保留历次范围与实现规格。
 
 > **2026-11-07 范围再缩小**（DESIGN_CHANGES）：只做第一章的开头——奶奶家 + 阁楼（新手村），用两段故事版（插图慢推镜头 + 英文字幕）讲清灯笼的来历、引出后面的故事，然后 To be continued。**码头（02_Harbor）、老佩尔、记忆贝壳移到完整版。** 目标：4–6 分钟、能从头玩到尾。
 >
@@ -19,7 +21,7 @@
 
 | 级别 | 内容 |
 |---|---|
-| 必须做 | 3 个 Scene 与切换（00_StartMenu、01_Home、03_EndCard）；移动 / 跳跃；拾起灯笼；灯笼切换；对话框（奶奶）；**故事版 P（序章，4 张）**、故事版 A（灯笼的来历，3–4 张）与故事版 B（后续引子，4–5 张）；Back to Menu / Quit |
+| 必须做 | 3 个 Scene 与切换（00_StartMenu、01_Home、03_EndCard）；移动 / 跳跃；拾起灯笼；灯笼切换；对话框（奶奶）；**故事版 P（序章，4 张）**、故事版 A（灯笼的来历，3–4 张）与故事版 B（后续引子，4–5 张）；Back to Menu / Quit（EndCard 两者均回菜单，§4.4） |
 | 有时间再做 | 飞蛾跟随提示；切换颜色过渡与音效；Home 背景音乐（冷 / 暖两轨）；记忆层窗外灯塔亮灯 |
 | 不做（移到完整版） | **02_Harbor 码头、老佩尔、记忆贝壳、人群剪影**；记忆值 / 灯油、烛台检查点、海妖、潮汐、多结局、存档、手柄、中文切换；掉落重生（Home 里没有坑） |
 
@@ -40,6 +42,8 @@
 
 ## 4. 机制规格
 
+最新用户小修与交付以 §4.4 为准；§4.1–4.3 的门槛和声音意图继续作为回归检查。
+
 | 机制 | 规格 | Unity 实现提示 |
 |---|---|---|
 | 移动 / 跳跃 | 左右 + 单段跳；**默认跑**（3.2），按住 **Shift 慢走**（速度按步幅匹配，约 0.8）；参数在 Inspector 可调 | Rigidbody2D + BoxCollider2D；Maela 骨骼 Prefab（Idle / Walk / Run / JumpUp / Fall / Lantern），动作数据唯一来源 `TechArtAsset/Characters/Maela/_work/anim_v2/poses.py` |
@@ -52,7 +56,7 @@
 
 ### 4.1 Home 首次探索与阁楼路线（2026-11-15 用户确认）
 
-本节记录用户最新确认的目标流程。Unity `a803050` 是上一轮实现基线；用户随后指出需要再次核对/修正，本节不能视为已通过。执行任务见 `CommandForAgentToInitialRun/2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md`。
+本节记录用户最新确认的目标流程。Unity `a803050` 是上一轮实现基线；用户随后指出需要再次核对/修正，本节不能视为已通过。该要求现并入 §4.4 最新任务的回归核对，当前执行入口见 `CommandForAgentToInitialRun/README.md`。
 
 | 阶段 | 玩家行为 | 反馈与门槛 |
 |---|---|---|
@@ -79,9 +83,28 @@ E 是“使用灯笼”的动作；T 是“拾取灯笼”的动作。提示必�
 
 ### 4.3 当前执行状态
 
-上一轮 `a803050` 有 Editor 路线和边界检查记录，但用户随后报告仍需修正拾灯前提示门槛、A4 重复显现、门边回位、音频/阁楼表现。**本轮 follow-up 尚未运行**，见新任务单与进度报告最新条目。当前 Home 背景已由用户确认正确，本轮不要调整。扬声器听感、实体键鼠、独立构建仍须分开标注，不能用数值参数代替实听。
+上一轮 `a803050` 有 Editor 路线和边界报告；此前 follow-up 没有新执行回报。用户最新认可昨晚录像整体效果，并提出 §4.4 三项小修和构建发布要求；门槛、A4、声音与安全并入最新任务的回归核对。新单已准备，Unity/Windows/Web/Pages 尚未执行。当前 Home 背景正确；扬声器听感、实体键鼠与独立构建分别记录。
+
+### 4.4 最新录屏小修与交付 2026-11-15
+
+用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
+
+当前执行入口为 `CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。本地已准备任务与三张用户图，未在 Unity 实施、未导出 EXE、未部署网页。`a803050` 是已知上一轮游戏实现基线；`122e013` 仅更新 Unity 文档链接。用户认可录像整体效果，不等同于此前全部边界、扬声器或独立构建已通过。此前 follow-up 未有新执行报告，其门槛、A4、音频与安全条目并入新单的回归核对，已符合的项目保留。当前 Home 背景继续沿用用户确认版本。
+
+| 项目 | 目标 | 状态 |
+|---|---|---|
+| 阁楼行走线 | 靴底提高至绿线，实体地板、安全落点及必要窗触发同步；楼下不随改 | 已确认，待 Unity |
+| B5 收尾 | 末页图、字幕、最终镜头保持，直接显示左侧选项，不二次淡黑或重播 B5；声音连续 | 已确认，待 Unity |
+| EndCard Quit | 保留标签，和 Back to Menu 一样返回开始菜单并重置；开始菜单自身 Quit 保留 | 已确认，待 Unity |
+| Windows x64 | 完整 EXE 依赖目录与 ZIP，实际启动并走通；交付 DemoBuilds | 待导出与实跑 |
+| Unity Git | 定向提交/push 并核对远端 hash | 待工作站执行 |
+| Web 与 Pages | Unity Web 构建、HTTP 本地运行、部署 Pages、真实 HTTPS 完整路线 | 待尝试，未上线 |
+
+范围仍是 Menu/P → Home/A/阁楼 → EndCard/B；本轮不新增奶奶立绘/对白/UI 等旧待办作为导出前置。用户认可昨晚录像整体效果，本轮修改后的结果仍待用户验收。截图见 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md`。可运行包与 Word QA 分别归档到 DemoBuilds/ 和 .story_document_qa/。
 
 ## 5. 技术结构
+
+
 
 | 脚本 | 职责 |
 |---|---|
@@ -142,19 +165,19 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 ## 7. 实施清单
 
 ### 程序
-- ◐ 上一轮 `a803050` 已实施并有 Editor 验证报告；最新用户复核提出门槛、A4、落点和音频问题，follow-up 任务待 Unity 工作站执行。
+- ◐ 上一轮 `a803050` 已实施并有 Editor 报告；用户认可录像整体效果，§4.4 三项小修及 Windows/Web 交付任务待工作站执行，旧问题并入回归核对。
 - ☑ 11-15 首次摇铃第一版 `c7ba7f2` 与后续门槛修正 `a803050` 均已实施并 Editor 验证；EndCard 选项移位保留。第二轮未覆盖项（真实扬声器、物理键鼠、独立构建）见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。
 - ☑ 建项目、Git；场景互相切换；开始菜单（11-05）
 - ☑ PlayerController + Cinemachine 跟随（Home 可玩房间，11-07）
-- ◐ Home 路线上一轮通过 Editor 检查；最新的拾灯门槛、A4 结尾、提示交接、阁楼安全与音频需求待 follow-up 重验。Present 断梯灰盒已移除；保留固定 `Broken ladder` 信息提示。
+- ◐ Home 路线上一轮通过 Editor 检查；最新的拾灯门槛、A4 结尾、提示交接、阁楼安全与音频需求并入 §4.4 新单回归核对。Present 断梯灰盒已移除；保留固定 `Broken ladder` 信息提示。
 - ☑ LanternSwitch + 冷暖光照 + WorldLayerObject（首次锁定铃声、后续即时切换、层物体显隐/碰撞，11-12）
 - ☑ Core_Persistent + 叠加关卡（GameState / AudioManager / LevelLoader，11-08）
 - ◐ 对话、☑ 拾灯笼（11-13 实际 T 输入拾取、A 后单一 E 提示；对话待做）
-- ◐ StoryboardPlayer：P/A/B 与 EndCard 路线已接入；上一轮报告称 A4/逐页音频已修正，但最新反馈要求复核 A4 是否重复显现、声场时序和落点衔接。follow-up 待执行；扬声器实听未做。
+- ◐ StoryboardPlayer：P/A/B 与 EndCard 路线已接入；上一轮报告称 A4/逐页音频已修正，但最新反馈要求复核 A4 是否重复显现、声场时序和落点衔接。回归核对见 §4.4；扬声器实听未做。
 - ☑ Build Settings 去掉 02_Harbor（11-07）
 - ☑ 11-13 Home 修正：P/A/B 故事版遮罩、统一世界提示、镜头边界、B5 按钮缩放；梯子 v5 去除白边后由 `a803050` 接入并在路线录像中使用。素材最终美术接受仍待用户确认。
 - ~~试玩 2–3 人并修改~~（11-12 用户决定：不做）
-- ☐ 打包 Windows
+- ☐ 按 §4.4 小修后导出并实际运行 Windows x64 完整包；push Unity 后尝试 Web 构建与 Pages 真实 URL 验证
 
 ### 美术（详见 ART_HANDOFF.md）
 - ☑ 主角 Maela 定稿 + `.psb` + Idle（11-07）
