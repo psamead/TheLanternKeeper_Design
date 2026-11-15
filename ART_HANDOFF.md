@@ -146,7 +146,15 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 5. ~~游戏内画风~~：已定为手绘 2D、偏暗民俗奇幻（2026-11-02）；与《妖精丘陵》的借鉴 / 回避见 HANDPAINTED_SPEC §0。
 6. ~~Maela 提灯的手~~：已定（11-05）——改**右手**（朝右时灯笼在近镜头一侧）。
 
-## 9. 当前进度与下一步（2026-11-13 更新）
+## 9. 当前进度与下一步（2026-11-15 更新）
+
+### Home 当前交接
+
+Unity 第一版首次探索与 EndCard 调整已在 `c7ba7f2` 实施。随后增加的拾灯与 A 门槛、A 后回门边、按序探索、铃声结束后提示渐隐、A4 收尾修正、逐页音频和阁楼安全有 Unity `a803050` 实施报告。用户最新复核后要求进一步修正/确认；follow-up 任务已准备，尚未由 Unity 工作站 Codex 执行。当前 Home 背景已确认正确，不调整。
+
+**当前状态：第二轮 Unity 改动已完成。** 详细实测、录像和未覆盖项目见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。扬声器实听、物理键鼠操作和独立构建仍未验证。给人阅读的设计表与状态见 `DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；用户原图与本轮录像见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。较早的 11-13 旧版错误背景录像仅为历史材料，不用来改当前背景或作为本轮验收证据。
+
+下列 2026-11-13 状态及后续历史步骤保留作为追溯材料；其中“尚未接入”“下次再做”等旧待办不再代表当前状态。
 
 **2026-11-13 当前交接**：Home 灰盒、切层、爬梯和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。手绘风格优先，房间透视可接受。灯笼采用 `Props/Lantern_v4.png`；阁楼当前候选为 `_candidates/Attic_PerspectiveRef_v3.png`（v2 放大原图经用户 Photoshop 去除画中梯子、处理窗外灯塔灯部；分层源在 `Attic/_work/Attic_PerspectiveRef_v3.psd`）。v2 保留历史；完整梯当前候选为 `Props/Ladder_Whole_v4.png`（用户手工拼接的透明长梯，分层源 `Props/_work/Ladder_Whole_v4.psd`）。用户最新决定取消操作攀爬和断梯占位物：现在层梯位留空，切换记忆并完成钟声后，玩家到梯下锁定操作、淡变到阁楼梯旁。灯笼 v4、楼下无梯底图 v3、阁楼候选 v3、完整梯 v4 均尚未接入 Unity。详细执行和验收见 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。
 

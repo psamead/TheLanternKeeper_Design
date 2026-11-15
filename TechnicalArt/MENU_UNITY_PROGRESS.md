@@ -385,7 +385,7 @@
 - No Recorder movie was produced in this run; still captures and runtime route checks are available.
 - Commit `b61eb3f3f666b5a5e7ce85bc4c08250ecdd9322a` (`LanternSwitch + ladder + attic greybox`) pushed; `origin/main` verified at the same hash. Editor returned to Edit Mode with only `00_StartMenu` open.
 
-## 2026-11-13 — Home 用户实机反馈与新 Unity 交接（待实施）
+## 2026-11-13 — Home 用户实机反馈与新 Unity 交接（当时待实施；后续已完成）
 
 用户录屏和 8 张标注图发现镜头构图/露底、提示尺寸和重叠、故事版过渡透出 Home、旧梯子占位、梯子攀爬动作/阁楼落点、EndCard 按钮内部尺寸及 Home/A 中段音乐等问题。用户确定取消操作攀爬：楼下梯位空置并显示 `Broken ladder` 状态字；钟声后显示完整梯，玩家走到梯下后锁输入，淡出并转移至阁楼梯旁，镜头就位后淡入解锁。拾取键改 T（若冲突再选 Z），按用户标注整体缩小提示。底图使用同一张无梯 Home_Present_v3 并使用既有滤镜表现冷暖。故事版透底与提示重叠先调查实际生命周期、Canvas/遮罩和状态逻辑；不把 Singleton 当作未经验证的修复。配乐先检查/接通现有 Ar Mor Du。
 
@@ -427,3 +427,50 @@
 - **New delivered evidence.** Eleven PNGs, all verified 1920x1080, and `FirstBell_ContinuousRoute.mp4` are in `\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder\ForDesignScreenshot\2026-11-15_Home_FirstBell_Exploration\after\`. Video: 121.400 s, H.264 1920x1080 at 30 fps / 3642 frames, AAC stereo 48 kHz, 113460809 bytes. Full FFmpeg decode succeeded; audio mean -23.0 dB, peak -5.4 dB confirms non-silent audio. Local fallback/shared SHA256 matched `45DBEDF20B1EB4FA90506DCC8D918CCFF590F3A78D55169AE79AC4AEA98BB613`. Recorder used the permitted project `_CodexCaptures/2026-11-15_Home_FirstBell_Exploration/` fallback based on the known UNC finalization failure; after verified copying, the local task video was removed. No captures from this run remain locally. This is a new 11-15 recording, not the historical 11-13 video.
 - **Corrections / evidence limits.** Initial visual inspection caught cloned TMP transforms returning to origin; dedicated anchor parents fixed it and checks were repeated. The first route reached EndCard but its test driver continued waiting for the destroyed Player's position and timed out; the driver was corrected and the final complete route passed. The Console retains that resolved test-driver timeout, with no new project compile/runtime error observed in the successful rerun. Temporary driver source is archived as `after/_work/FirstBellValidation.cs` and removed from Assets. Input was injected through Unity Input System, not physical hardware. No standalone build or speaker listening assessment was performed. Final layout, audio mix and existing ladder v5 art acceptance await user viewing/listening.
 - **Records / publication / cleanup.** Local `Docs/2026-11-15_FirstBell_Exploration.md` and `Docs/PROJECT_HANDOFF.md` updated; shared DEMO_IMPLEMENTATION_PLAN section 7 checked after Play Mode verification. Unity commit `c7ba7f23627ce072206ac7e68b019f42a85228fa` (`Gate first bell behind ordered exploration and move EndCard options`) pushed to `main`; `git ls-remote origin refs/heads/main` matched exactly. The four pre-existing EndCard hunks and TMP/Packages changes remain unstaged. Final Editor: Edit Mode, one clean 00_StartMenu, zero Player/GameState runtime or test objects. Editor 已回到只开 00_StartMenu.
+- **Design follow-up 2026-11-15 — implemented in the following section.** The user clarified that exploration must wait until lantern pickup and Story A completion; after A, Maela returns beside the door, then the player re-enters the lantern zone and inspects the ladder zone in order. The two fixed hints remain through the complete first bell and fade only after the ladder appears; their triggers are then retired and the ladder transition zone takes over. The attic reveals with Maela already standing on solid floor and prevents falling downstairs. A1–A4 and B/EndCard have page-specific music and wave/wind cues. The current Home background is approved and was preserved. See the completed implementation and test report immediately below; this paragraph is the original pre-implementation handoff snapshot.
+- Task: `CommandForAgentToInitialRun/2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`. Unity commit `a803050` and its Editor validation supersede this waiting status. Speaker listening, physical keyboard/mouse and standalone build remain unverified.
+
+
+## 2026-11-15 第二轮 — PickupGate / StoryAudio / Attic 已实施及实测
+
+任务：`CommandForAgentToInitialRun/2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`，基线 Unity `c7ba7f2`。本轮取代旧规则中的拾灯前探索与 E 接受立即隐藏提示。当前 Home 背景、EndCard 位置和手绘源图保持。
+
+- 状态层及真实入口同时要求 HasLantern + StoryACompleted；拾灯前实际多次走过两区、按 E 均保持未探索。A 内不预存；自然、Esc、单页快进统一在门边站稳返回，阶段仍为零。多 Player 碰撞体、乱序、按住 E 跨解锁、同帧只进一阶段、回菜单新局重置均通过。
+- A4 原因确认：旧 fadeBackAtEnd 先重新揭开 A Canvas，回调才关闭。现在黑幕下清除全部 A 图层/提示并摆放玩家，再揭开 Home；没有删 A4 正常页。检查录像连续 92 帧（末尾 A4 约 2 秒 + Home 前 1 秒），未见无字幕 A4 再出现、旧提示或多余层。调试去字幕捕获已关闭。
+- `ReturnAfterStoryA=(-4.7,-3.2,0)`，在原灯位探索 x[-3.6,-2.4] 外。碰撞体脚底按实际 Ground 支撑求解，清零速度/跳跃缓冲，黑幕内同步物理及 Cinemachine。首个 Home 可见样本根节点 (-4.7000,-3.1958)，Grounded=True，控制仍锁定；持灯与朝向保留。
+- 首铃完整播放期间两条固定字持续；铃声结束切 Memory，再 .5 秒渐隐。两个旧探索 Collider/组件退出并清占用/订阅。梯子 renderer 全显且 tutorialExited 后才启独立梯区；占区等待、多碰撞体不需退出重入，最多传送一次。后续 E 不复活教学。
+- 原阁楼地板 x[2.2,3.4] 存在空洞，已改为连续支撑 x[1.8,10.2]、表面 y=2.725；左右墙/屋顶均为 Ground，两层共用。落点锚点 (4.7,2.725)，首个阁楼可见样本根节点 (4.7000,2.7288)，Grounded=True，控制锁定。逐帧揭幕无可见下坠；真实持续跑、跳、贴左梯口和右边界、切层均未掉回楼下。独立边界测试临时禁用窗口根物件；正常录像窗口始终有效并进入 B。阁楼构图单向锁定。
+- 故意把运行时落点移至无支撑处：实际 transition 保持 alpha=1 + ControlsLocked=True，玩家留楼下，并明确报错；未按超时揭幕。该测试运行态已丢弃。
+- A/B 逐页配置已写入 StoryboardData.audioCue；取消整段 A duck 和 B5 Stop。ArMorDu 同声源/采样位置连续承接，无新 BGM。共享 `TechArtAsset/Audio/Storyboard/` 已归档独立 wave-only / wind-only 源程序、WAV、OGG、参数 README；风分轨没有 wave/foam helper。原 Home ambience 含远处混合元素，不把它称作纯风。
+
+| 段落 | 音乐 | 环境 | 淡变/停止 | 实测 |
+|---|---:|---|---|---|
+| A1 | .25→.60 | Home interior .18 | 1 s | 页状态/增益通过 |
+| A2 | .60 | Home interior .18 | 1 s | 通过 |
+| A3 | .38 | 独立 Waves v1 .55 | 1 s | 通过 |
+| A4/跳过目标 | .38 | 无故事浪 | 1 s 后 wave source Stop | 观测 isPlaying=False |
+| Home | .26 | Interior .50 | 1 s 恢复 | 通过；首次铃声沿用既有 duck |
+| B1–B4 | .60 | 独立 Wind v1 .40 | 1 s | 各页观测通过 |
+| B5 自然/跳过 | .60 | Wind .40 | 保持至退出场景 | 两路径均通过，单 music voice |
+
+证据：`ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/after/`。
+- `PickupStory_ContinuousRoute.mp4`：自然 Menu/P → 拾灯前 Home → T/A → 门边 → 两步探索 → 完整铃声/渐字 → 阁楼运动/切层 → 窗口 → 自然 B5 停留。Time.timeScale=1，无加速、剪切或改速；133.666633 秒 / 4010 帧，1920×1080 H.264 30 fps，AAC 双声道 48 kHz，121478915 bytes。完整解码成功，音频 mean -21.9 dB、peak -5.2 dB。
+- SHA256 本地/共享一致：`064DCF205B7D4BEBBA9A16B47463FA4EA77000D0FF2E73ED4D8C509E50BADA7F`。本地 fallback 视频已删除；本任务 `_CodexCaptures` 无剩余捕获文件。
+- `FRAME_REVIEW.md`、`edge_cases_checks.txt`、`continuous_route_checks.txt`、`_work/frame_audit.csv`（1801 连续帧）、`_work/audio_cue_observations.txt`、逐帧 PNG/索引及临时测试源码已归档。独立最终 PNG 均 1920×1080。Assets 测试驱动已移除。
+- 成功跑测无新产品编译错误/非预期运行错误。Console 留有一次已修正测试夹具异常（切层重新启用了测试禁用的窗 Collider）与一次故意触发的无支撑落点错误；不宣称 Console 历史记录为空。
+- 限制：注入 Unity Input System 事件，不是物理键鼠或独立构建验证。未实际监听扬声器，非静音/音量正确不能称混音音质通过；用户仍需听音和最终位置/美术确认。
+- Unity 本地详细记录：`Docs/2026-11-15_Pickup_Story_Attic.md`，同步 PROJECT_HANDOFF / MENU_UNITY_HANDOFF。只定向提交本任务，保留无关 TMP/字体、EndCard 场景、Packages 改动。
+
+Final Editor verification: Edit Mode, not compiling, exactly one clean `00_StartMenu`, zero runtime Player/GameState objects, temporary test scripts absent. Editor 已回到只开 00_StartMenu。
+
+Publication verified: Unity commit `a8030500baab20c7870cfe0dd79d87d28847df65` pushed to `origin/main`; local HEAD equals remote refs/heads/main. Only the 31 task files were committed; the seven pre-existing TMP/font/EndCard/Packages files remain local. Editor 已回到只开 00_StartMenu。
+
+## 2026-11-15 用户复核后续任务（待 Unity 工作站执行）
+
+用户检查 `a803050` 后补充了新的目标门槛和现场表现，不能将上一轮 PASS 视为本轮完成。新任务单：`CommandForAgentToInitialRun/2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md`。用户会在另一台机器手动让 Codex 读取；本地未连接远端 Codex，也未在 Unity 中运行这些新修订。
+
+本轮关键验收：未持灯只显示 Press T；持灯并完成 A 后由门边重新走完原灯位和梯位两个有序碰撞才依次显示固定 Broken ladder / Press E；铃声结束后旧提示与探索碰撞淡出/关闭，再由独立梯区触发传送；A4 不重复露出；角色回门边及阁楼落点正确；阁楼实体边界阻止跌回楼下；A1–A4、B/EndCard 音乐与海浪/海风按用户 cue 生效；EndCard 选项组位置与命中范围确认。
+
+**背景限制**：用户明确说目前铃铛关卡 Home 背景是正确的；较早错误版本只存在于旧录像/截图，不要据此换图或改背景。新任务开始后必须使用当前 Unity 场景/资产验证。
+
+**录像归档**：`ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md` 索引一段 184.033 秒历史全流程录像；它不是本轮验收。新证据应该是真实 Play Mode 录制并放到新任务指定目录。该原片约 142 MB，没有 Git LFS 配置/客户端，本次只在工作区归档，不推送此大文件；索引文档可纳入本次文档发布。

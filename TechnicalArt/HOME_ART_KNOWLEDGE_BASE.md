@@ -1,6 +1,26 @@
 # Home 美术知识库与交接补充
 
-更新：2026-11-13。读者：Psamead、设计 Agent、Unity Agent。本文记录本轮已确认的选择与待办；同名 Word 是给人阅读的同步版本。与早期正视构图、工具或版本说明冲突时，以本补充为准。
+更新：2026-11-15。读者：Psamead、设计 Agent、Unity Agent。本文记录当前 Home 视觉、流程决策和可复用经验；Unity 实施状态以 `MENU_UNITY_PROGRESS.md` 最新日期记录为准。较早的 11-13 快照只作历史参考。
+
+## 当前设计决定与待执行修订 2026-11-15
+
+- **背景**：用户已确认目前铃铛关卡使用的 Home 背景正确；较早 11-13 录像展示的是错误版本，仅供历史参考。本轮不要根据那批录像改背景或换回旧资产。
+- **拾灯与探索**：未持灯时只显示 Press T。拾灯并完成/跳过故事 A 后，女孩回到门边；玩家重新靠近原灯位才记录第一步并显示固定的 Broken ladder，再新进入梯位触发区才显示固定 Press E。首次 E 必须重新按下才有效。
+- **铃声与碰撞交接**：首次有效 E 后，Broken ladder 和 Press E 在铃声完整播放期间保留；铃声结束且完整梯出现后，提示渐隐并停用两个探索区，独立梯子碰撞区再接手传送。
+- **阁楼**：淡入时角色已经站稳在阁楼梯口旁地板；通过真实地面与边界碰撞防止从阁楼坠回楼下，不用相机边界代替实体碰撞。
+- **故事声音**：A1 音乐低到正常，A2 保持正常，A3 降低并有海浪，A4 与 A3 同音量且无海浪；B 与 EndCard 保持正常音乐并加入独立海风。
+- **执行状态**：以上一轮拾灯与 A 门槛、顺序探索、铃声后提示交接、A4 收尾、逐页音频和阁楼安全在 Unity `a803050` 有实现记录。用户随后指出仍需复核/修正，follow-up 任务已准备、尚未执行。扬声器听测、物理键鼠和独立构建均不得标为通过；本轮状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。
+
+完整玩家流程和音频 cue 表见 `DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；用户图和验收录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。上一轮 Unity 任务已完成；新 follow-up 任务单待 Unity 工作站 Codex 执行。先读 `CommandForAgentToInitialRun/README.md`，再读最新单，不能把两轮任务混为一轮。
+
+## 当前 Home 资产版本
+
+- 楼下：`TechArtAsset/Scenes/Home/Present/Home_Present_v3.png`，当前背景经用户确认正确；不因本次交互修订更换。
+- 灯笼：`TechArtAsset/Scenes/Home/Props/Lantern_v4.png`。
+- 完整梯：`TechArtAsset/Scenes/Home/Props/Ladder_Whole_v5.png`，透明边清理版，当前作为 Unity 中的选用梯图；最终画面验收仍以用户观看为准。
+- 阁楼：`TechArtAsset/Scenes/Home/Attic/_candidates/Attic_PerspectiveRef_v3.png`。
+
+这些资产的制作/接入/最终接受是不同状态。Unity 已运行版本与尺寸、碰撞、镜头和淡变验收见 `MENU_UNITY_PROGRESS.md`，不要由共享目录中存在 PNG 推断它已经进 Unity。
 
 ## 当前阶段
 
@@ -14,10 +34,10 @@ Unity 已完成 Home 灰盒、LanternSwitch、完整梯与断梯切换、爬梯�
 - 阁楼：TechArtAsset/Scenes/Home/Attic/_candidates/Attic_PerspectiveRef_v3.png，2912×1632。用户选中四宫格左上图，Upscale Subtle 后在 Photoshop 手工去除背景中画死的梯子，并处理窗外灯塔灯部；修改前 v2 保留在同目录。v3 是当前选用的手绘背景候选，尚未做游戏接入验收；梯口、窗口、地面与互动位置仍需核对。
 - 阁楼可编辑源：TechArtAsset/Scenes/Home/Attic/_work/Attic_PerspectiveRef_v3.psd，由用户原临时文件 `Attic_PerspectiveRef_v2_m.psd` 归档；未将 PSD 接入 Unity。
 - 阁楼来源：原 job 83223836-af12-427b-ae2d-cdd704152b9a，index 0；放大 job bf19f584-cd7e-43d5-b936-2b345e8a5097。原始提示词记录于 ART_PROMPTS 的 S02-H v4。
-- 完整梯：用户手工拼接、抠图的完整长梯已导出为 `TechArtAsset/Scenes/Home/Props/Ladder_Whole_v4.png`（1440×4200，透明 PNG），作为钟声事件后显示的独立梯子；不要求爬行动画；分层源 `_work/Ladder_Whole_v4.psd`，白底短梯素材 `_work/Ladder_Whole_MJ_crop_src_v1.png`。保留原手绘风格。用户最新决定不制作或显示现在层断梯；v1/v2 单体只保留历史。v4 待 Unity 核对高度、踏板间距、底部挂点与碰撞。用户在 v4 中增强主体不透明度并调整拼接处；v3 源文件、导出及预览保留历史。导出保持 PSD 原画布与像素，待实际游戏尺寸校对。
+- **完整梯（当前导入版本 v5）**：`TechArtAsset/Scenes/Home/Props/Ladder_Whole_v5.png`（1440×4200，透明 PNG）作为钟声后显示的独立梯子，不要求攀爬动画。Unity `a803050` 已接入并通过连续路线验证；v4 与 PSD 留作历史源。用户最终美术接受仍待确认。
 - Home_Attic_Both_v1.png 和 Lantern_v1/v2 是旧路线候选：用户反馈手绘风格不一致。保留历史，不作为本轮默认采用图。
 
-## 楼下无梯背景更新 2026-11-13
+## 楼下无梯背景更新 2026-11-13（历史资产记录）
 
 用户移除了楼下底图右侧的梯子，当前导出为 `TechArtAsset/Scenes/Home/Present/Home_Present_v3.png`（2520×1080）。源文件原名 `Home_Present_v2.psd`，因已有 v2 断梯背景，递增并归档到 `Present/_work/Home_Present_v3.psd`。原 v1 和 `Home_Present_v2_brokenLadder.png` 保留历史。
 
@@ -36,15 +56,13 @@ Unity 已完成 Home 灰盒、LanternSwitch、完整梯与断梯切换、爬梯�
 
 ## 下一次对话如何继续
 
-先读本文件、ART_HANDOFF 第 9 节、ART_ref/ASSETS、ART_PROMPTS 和 MENU_UNITY_PROGRESS 末尾；本轮按新 Unity 执行清单继续。文档及资产已整理，Unity 实施和验收仍待执行。
-
-下一步执行 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。导入 Home_Present_v3、Attic_PerspectiveRef_v3、Ladder_Whole_v4、Lantern_v4；解决镜头边界、W 改 T、提示重叠、故事透底、EndCard 按钮内缩；取消爬梯并实现梯下锁输入淡变到阁楼；补齐 Home/A 段音乐。原因需先复现，Singleton 已是原架构设计，不能假定它能修透底。执行者需记录证据并完整测试，明确未验证事项。
+先读本文件顶部当前决定、`ART_HANDOFF.md` 第 9 节、`ART_ref/ASSETS.md`、`ART_PROMPTS.md` 和 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。上一轮 `a803050` 已有 Editor 验证，但用户复核后建立了新的 follow-up。下一轮先读 Command README 与新任务单；不重跑旧单。背景经用户确认正确，不根据历史错版视频调整。旧版本资产/Unity 状态仍保留在下文作为追溯记录。
 
 ## 文档与发布范围
 
 ART_ref/ASSETS 管文件版本；ART_PROMPTS 管实际提示词与参数；LESSONS_ART_PIPELINE 管可复用经验；根目录 `HOME_ART_RESUME.md` 是本地美术 / 设计 Codex 的对话续接入口；`CommandForAgentToInitialRun/` 只放发给 Unity 工作站 / 网络端 Codex 的可执行任务单。旧 Word v1.5 制作指南和 Prompt 集配合本次 Word 补充阅读。
 
-本轮推送应包含灯笼 v4、阁楼 v3、楼下 Home_Present_v3 与完整梯 v4 PNG；源 PSD/PSB 保留本地。所有新图尚未接入 Unity。
+当时计划推送灯笼 v4、阁楼 v3、楼下 Home_Present_v3 与完整梯 v4 PNG；源 PSD/PSB 保留本地。以上是 11-13 历史记录。当前接入与验证以本文件开头和 MENU_UNITY_PROGRESS 最新条目为准。
 
 ## 2026-11-13 用户实机反馈后的最新决定
 

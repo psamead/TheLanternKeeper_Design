@@ -6,7 +6,9 @@ Put a task sheet here only when it is intended to be executed against the Unity 
 
 Local design/art chat continuation summaries belong in the repository root as `*_RESUME.md`. They provide context and reading order for the local Codex chat; they are not execution commands. Reusable art decisions and production lessons belong in `TechnicalArt/`, while people-facing supplements belong with the relevant Word documents.
 
-The current task is [2026-11-15 pickup gate, story audio and safe attic arrival](2026-11-15_Unity_PickupGate_StoryAudio_Attic.md). Require pickup AND Story A completion before recording any exploration; correct the A4 exit, return Maela beside the door, keep tutorial hints through the first bell then fade them and retire their triggers, ensure grounded attic arrival and prevent falling downstairs, and apply the requested music/wave/wind cues. The current Home background is approved. This task is prepared for the Unity workstation and awaits execution there.
+The latest task is [2026-11-15 Home story gate, attic and audio follow-up](2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md). It is **prepared and awaiting the Unity workstation Codex**; the user will ask that Codex to read it. The previous [pickup gate, story audio and safe attic arrival](2026-11-15_Unity_PickupGate_StoryAudio_Attic.md) was implemented in Unity `a803050`, but its earlier PASS does not prove this follow-up is done. Keep the user-approved Home background unchanged. Record new implementation and tests in `TechnicalArt/MENU_UNITY_PROGRESS.md` and the new task’s evidence folder.
+
+The follow-up rechecks the pickup gate, ordered triggers, A4 ending, attic placement, audio mix and EndCard position against the latest user feedback.
 
 The [earlier 2026-11-15 first bell task](2026-11-15_Unity_FirstBell_Exploration_EndCard.md) was implemented in Unity `c7ba7f2` and should not be rerun. Its allowance for recording exploration before pickup and its immediate hint dismissal are superseded by the current task. EndCard option placement remains as implemented.
 

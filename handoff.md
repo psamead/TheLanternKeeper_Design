@@ -65,11 +65,11 @@
 - 设计仓库：由 Psamead 维护。Claude 改完文档在本地提交（作者 `psamead <psamead@users.noreply.github.com>`），Psamead 在 Windows 上 `git push`。不上传：源文件、第三方参考图（见 `.gitignore`）。README 英文在前（`README.md`），中文 `README.zh-CN.md`，两份同步改。
 - 完成事项后在 `DEMO_IMPLEMENTATION_PLAN.md` 第 7 节把 ☐ 改为 ☑；未在 Play Mode 验证的不要标为完成。
 
-## 7. 当前状态（2026-11-13）
+## 7. 当前状态（2026-11-15）
 
-**2026-11-13 当前交接**：Home 灰盒、切层、梯子和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。保留手绘风格，房间透视可接受。已选资产为 `Lantern_v4.png`、`Home_Present_v3.png`、`Attic_PerspectiveRef_v3.png`、`Ladder_Whole_v4.png`，均尚未接入 Unity。
+**Home 当前交接**：用户确认当前 Home 背景正确。第一版探索与 EndCard 位置在 `c7ba7f2`；拾灯/A 门槛与视听/阁楼修订在 `a803050` 均有实施报告。用户最新复核后要求进一步修正，Unity follow-up 单已放入 `CommandForAgentToInitialRun/`，尚未执行。扬声器实听、物理键鼠和独立构建仍需明确验收。完整状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。
 
-本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。另一台 Unity 工作站 Codex 的执行任务单为 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+人读当前设计摘要见 `DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；经验见 `TechnicalArt/LESSONS_ART_PIPELINE.md`；实施状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md`；图片/录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。本地设计对话从 [Home 知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 与 [接续摘要](HOME_ART_RESUME.md) 开始。Unity 工作站 Codex 先读 `CommandForAgentToInitialRun/README.md` 与最新进度；已完成单不要重跑。
 
 ### 早期状态快照（2026-11-07，供追溯）
 

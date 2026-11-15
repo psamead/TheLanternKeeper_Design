@@ -23,9 +23,10 @@
 ## 3. 变更记录
 
 | 日期 | 变更 | 原因 | 影响的文件 | 状态 |
+| 2026-11-15 | Home 探索必须在拾灯且故事 A 结束后开始；A 后女孩回到门边；首次铃声结束后才渐隐并关闭两处探索区，梯子触发区接手；阁楼淡入时站稳且不能坠回楼下；A/B 按页调整音乐与海浪/海风 | 用户观看 `c7ba7f2` 路线录屏后明确了先后、提示时机、音乐情绪和阁楼安全 | `DEMO_IMPLEMENTATION_PLAN.md`、`STORY_BIBLE.md`（只做一致性核对，不改设定）、`UNITY_AGENTS.md`、`TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md`、`TechnicalArt/LESSONS_ART_PIPELINE.md`、`TechnicalArt/MENU_UNITY_PROGRESS.md`、Unity 执行单与人读交接 | 已确认并于 2026-11-15 在 Unity `a803050` 实施/Editor 验证；扬声器听测、物理键鼠及独立构建未验证；背景确认正确 |
 |---|---|---|---|---|
-| 2026-11-15 | 拾灯与 A 完成为探索前置；A 后门边返回；铃声结束才渐隐教学文字并停用探索区、启用梯区；阁楼站稳且不坠回楼下；A/B 分段音乐与风浪调整 | 用户观看 c7ba7f2 后明确顺序和听感，替换此前允许提前探索的约定 | 新单 `2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`、HOME_ART_RESUME、Unity 探索/故事音频/阁楼 | 已确认，待 Unity 端实施与验收；背景确认正确 |
-| 2026-11-15 | 第一次 E 摇铃按序解锁：铃铛附近探索区 → 远处固定 Broken ladder → 梯位查看区 → 固定 Press E → 首次有效摇铃出完整梯；进度本局记忆，重开重置。EndCard 选项移至女孩左侧红框 | 用户希望先探索、发现阻路，再主动用灯推进故事；本轮先看这两项效果 | 执行单 `2026-11-15_Unity_FirstBell_Exploration_EndCard.md`、HOME_ART_RESUME、Unity 交互/提示/EndCard；截图归档 | 已确认，任务已放共享入口，待 Unity 端执行与验收 |
+| 2026-11-15 | 拾灯与 A 完成为探索前置；A 后门边返回；铃声结束才渐隐教学文字并停用探索区、启用梯区；阁楼站稳且不坠回楼下；A/B 分段音乐与风浪调整 | 用户观看 c7ba7f2 后明确顺序和听感，替换此前允许提前探索的约定 | 新单 `2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`、HOME_ART_RESUME、Unity 探索/故事音频/阁楼 | 已在 Unity `a803050` 实施并 Editor 验证；听音/物理输入/构建限制见进度报告；背景确认正确 |
+| 2026-11-15 | 第一次 E 摇铃按序解锁：原灯位探索区 → 远处固定 Broken ladder → 梯位查看区 → 固定 Press E → 首次有效摇铃出完整梯；进度本局记忆，重开重置。EndCard 选项移至女孩左侧红框 | 用户希望先探索、发现阻路，再主动用灯推进故事；本轮先看这两项效果 | 执行单 `2026-11-15_Unity_FirstBell_Exploration_EndCard.md`、HOME_ART_RESUME、Unity 交互/提示/EndCard；截图归档 | 第一版已在 `c7ba7f2` 实施；其中“拾灯前可记录探索”和“E 接受后立刻隐藏提示”已被下方决定取代；EndCard 移位保留 |
 | 2026-11-07 | Home 比例：Maela ×1.4（约 2.2 单位）、背景 ×0.8，让房间读作正常的家 | 镜头拉近后 Maela 相对家具太小，像被缩小了 | HANDPAINTED_SPEC §1、LESSONS §8、Codex 任务 2026-11-07_Unity_Home_Scale_P1 | 已确认 |
 | 2026-11-07 | **提议（完整版 /《妖精丘陵》再议）**：“被遗忘的人会变小”——梅拉在奶奶家里变小，大房间成为攀爬关卡 | 11-07 比例问题时用户注意到的画面潜力 | 若采用要改：STORY_BIBLE 世界规则、奶奶“认不出”→ 易变成“看不见”、序章 P3/P4、所有场景按小人比例设计、Soazig 画成巨人 | 提议 |
 | 2026-11-07 | 菜单与 Home 之间加序章（故事版 P，4 张约 25 秒）；P1 试用 Google Flow（Veo）动画，不理想就用静态图 + 推镜头；Flow 深入调试留给《妖精丘陵》 | 开场直接进 Home，玩家不知道背景 | DEMO_IMPLEMENTATION_PLAN v1.2、ART_HANDOFF §9、ART_PROMPTS、UNITY_AGENTS | 已确认 |
@@ -62,3 +63,9 @@
 ## 2026-11-13 Home 操作与过渡调整 用户确认待实施
 
 用户要求取消操作式攀爬：钟声触发完整梯后，进入梯下范围锁定操作、淡出并转移到阁楼入口梯旁，淡入后恢复操作；现在层移除灰盒短梯，以小型 Broken ladder 提示表示状态。拾取键不得再用 W，用户允许 T 或 Z，执行单默认建议 T；E 切换及首次完整钟声规则保留。底图共用无梯 v3，冷暖用现有滤镜/灯光，不再要求另画记忆底图。配套修正镜头与 UI、故事版遮挡并补中段配乐。以上为用户本轮授权的修改方向，尚未在 Unity 实施或验收；详见 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。
+
+## 2026-11-15 Home 流程后续复核（待 Unity 执行）
+
+用户在检查 `a803050` 后补充：未持灯只显示 Press T；持灯且完成故事 A 后，女孩从门边重新探索原灯位，再到梯位查看，依次解锁固定 Broken ladder 与 Press E。铃声结束、完整梯出现后，提示渐隐并关闭旧探索碰撞，再启用梯子传送区。A4 不能重复显现；女孩应从门边进入探索，并在阁楼梯口旁地面站稳，阁楼实体边界要防止掉回楼下。音乐、海浪、海风按故事页分别控制。EndCard 选项组移到标注位置且交互范围同行。
+
+用户确认目前 Home 铃铛关卡背景正确，本轮不更换或回退背景。新执行单 `CommandForAgentToInitialRun/2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md` 已准备，等待用户在另一台机器让 Codex 读取；尚未在 Unity 执行。

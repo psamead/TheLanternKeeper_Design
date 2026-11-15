@@ -7,11 +7,13 @@ Unity 工程在另一个仓库：<https://github.com/psamead/TheLanternKeeper2D>
 
 > 本仓库**只读**：由 Psamead 维护和推送。拉取后请不要直接修改；有意见请告诉 Psamead / York。
 
-## 最新交接 2026-11-13
+## 最新交接 2026-11-15
 
-**2026-11-13 当前交接**：Home 灰盒、切层、梯子和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。保留手绘风格，房间透视可接受。已选资产为 `Lantern_v4.png`、`Home_Present_v3.png`、`Attic_PerspectiveRef_v3.png`、`Ladder_Whole_v4.png`，均尚未接入 Unity。
+当前 Home 背景已由用户确认正确。Unity `a803050` 是上一轮实现基线。用户随后提出 follow-up，要求复核未持灯门槛、按序探索、A4 收尾、逐页声音、阁楼落点和 EndCard 选项。新任务已准备给 Unity 工作站 Codex，尚未执行；上一轮 Editor 报告不能代替新要求的验收。
 
-本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。另一台 Unity 工作站 Codex 的可执行任务单单独放在 [Home Unity 审查与接入指令](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md)。
+当前设计先读 [Demo 流程与音频 cue](DEMO_IMPLEMENTATION_PLAN.md)、[Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md)、[Unity 进度报告](TechnicalArt/MENU_UNITY_PROGRESS.md) 和[本地接续说明](HOME_ART_RESUME.md)。新 Unity 任务单已准备，等用户在另一台机器让 Codex 读取；入口见 [CommandForAgentToInitialRun](CommandForAgentToInitialRun/README.md)。12 张用户截图和原始录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`；全流程参考录像见 `ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md`。
+
+给人阅读的 Word 版：[Home 美术交接与经验 v3](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v3.docx)，[Demo 制作方案 v1.8](purposal_story/守灯人_Demo制作方案_v1.8.docx)。
 
 ## 获取与更新
 

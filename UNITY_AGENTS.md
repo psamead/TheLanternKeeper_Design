@@ -9,6 +9,9 @@
 4. 改设定前：`SharedWorkFolder/DESIGN_CHANGES.md`
 
 > Unity 项目：`TheLanternKeeper2D`（Unity 6000.3.24f1，已连 GitHub；输入用新 Input System）。SharedWorkFolder 路径：\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder
+>
+>
+> **当前 Home 交接（2026-11-15）**：先读共享目录 `CommandForAgentToInitialRun/README.md` 与 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。`a803050` 是上一轮实现基线；README 指向的 `2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md` 是当前待执行新任务，不要重跑旧任务。当前 Home 背景已由用户确认正确，禁止按历史错版截图/录像回退或替换。报告需区分 Editor 自动输入、物理输入、独立构建和扬声器听测；未做的项目必须明示。
 
 ## 固定规格
 - Unity 6.3 LTS，URP 2D，PC（Windows）。游戏内文字只用英文。
@@ -19,20 +22,23 @@
 - 角色：2D Animation + PSD Importer（`.psb` 骨骼，PPU 200）；剪纸式 Transform 骨骼，动作由 `Assets/_Project/Editor/MaelaAnimBuilder.cs` 生成（数据源 `SharedWorkFolder/TechArtAsset/Characters/Maela/_work/anim_v2/poses.py`），不要手改 .anim。
 - **场景结构（11-08）**：`Core_Persistent` 常驻（Maela、Main Camera = 唯一 AudioListener、Cinemachine + Confiner2D、Global Light 2D、EventSystem、`GameState` / `AudioManager` / `LevelLoader` 单例）；关卡（`01_Home` …）叠加加载，只放关卡内容 + `LevelInfo` + `SpawnPoint` + `LevelBootstrap`。菜单、序章、EndCard 是普通场景。不要再用 DontDestroyOnLoad 带音频。
 - **Maela PSB 导入规则**：图层 ID / 名字 / 画布尺寸不能变；外框变大时按 Claude 准备的 patched meta（A 路）导入，跑 Tools ▸ Lantern Keeper ▸ **Check Maela Sprite Rects** 必须 PASS，再跑一次 **Realign Maela Sprites**；前后顺序只改 prefab 的 sortingOrder。
-- 操作：A/D 或方向键移动（默认跑），Shift 慢走，Space/W 跳，E 举灯（规则见 DEMO_IMPLEMENTATION_PLAN 灯笼切换），Esc 回菜单。
+- 操作：A/D 或方向键移动（默认跑），Shift 慢走，Space/W/Up 跳，T 拾灯，E 举灯/切换世界（规则见 DEMO_IMPLEMENTATION_PLAN 灯笼切换），Esc 回菜单。当前 Home 镜头参考值为 3.45、阁楼 3.4（2026-11-13 场景记录）；改动前先检查当前场景实际值。
+- Home 首次探索（2026-11-15 用户确认）：未持灯时只显示 Press T；拾灯并完整结束/跳过故事 A 后，才可记录第一探索区并按序解锁固定 Broken ladder、第二探索区与固定 Press E。首次有效 E 后保留两条提示直到铃声完整结束，再渐隐并关闭旧探索区，由独立完整梯传送区接手。具体实现和本轮复核以 `CommandForAgentToInitialRun/README.md` 指向的最新任务为准；此处是设计摘要。
 
 ## 范围
 - 只做 Demo（2026-11-07 缩小）：00_StartMenu → 序章（故事版 P）→ 01_Home（含故事版 A）→ 03_EndCard（故事版 B），4–6 分钟。`02_Harbor` 留给完整版，不进 Build Settings。
 - 不做：灯油、检查点、敌人、潮汐、多结局、存档。新增内容先对照 DEMO_IMPLEMENTATION_PLAN §2。
 
 ## 工作规则
-- **设计文件一律从局域网共享文件夹读取 / 拷贝（11-12 用户要求）**：`\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder`。任务里写的 `SharedWorkFolder/...`、`TechArtAsset/...` 都指这里，它永远是最新的（比 GitHub 新）。**不要**从 GitHub 克隆、pull、fetch 或下载 raw 文件来取设计内容——GitHub 设计仓库只是给学生看的发布版，常常落后。共享文件夹连不上时，**可以**改从 GitHub 取，但必须留记录：在汇报和 `TechnicalArt/MENU_UNITY_PROGRESS.md` 里写一条「GitHub fallback」——连不上的原因（报错原文）、从 GitHub 取了哪些文件、对应的 GitHub commit hash。这样用户能检查是否用了旧版本，下次补更新。（Unity 项目自己的 Git / GitHub 照常用。）
+- **设计文件一律从局域网共享文件夹读取 / 拷贝（11-12 用户要求）**：`\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder`。任务里写的 `SharedWorkFolder/...`、`TechArtAsset/...` 都指这里，它永远是最新的（比 GitHub 新）。**不要**从 GitHub 克隆、pull、fetch 或下载 raw 文件来取设计内容——GitHub 设计仓库只是给学生看的发布版，常常落后。共享文件夹连不上时停下来汇报，不要改用 GitHub。（Unity 项目自己的 Git / GitHub 照常用。）
 - **录屏 / 截图 / 导出文件的存放位置（11-11 用户要求，必须遵守）**：一律放 `SharedWorkFolder/ForDesignScreenshot/YYYY-MM-DD_主题/`（中间文件放同目录下 `_work/` 子文件夹）。**不要**存到 Videos、Desktop、Downloads、Temp 或其他任何地方——用户找不到。
   - 写共享文件夹失败时（例如 Unity Recorder 不能直接写 UNC 网络路径），改存 Unity 工程根目录的 `TheLanternKeeper2D/_CodexCaptures/YYYY-MM-DD_主题/`（在 `Assets/` 外面；`_CodexCaptures/` 要写进 Unity 的 `.gitignore`，不进 Git），然后自己复制到上面的共享位置。
   - 汇报时写出文件的完整最终路径；如果有文件留在 `_CodexCaptures/`，也要说明。
 - **做完任务必须关掉多余场景（11-11 用户要求）**：测试时用 additive 打开 / 加载的场景，结束前全部 Unload / Remove，Hierarchy 里只留一个场景（默认 `00_StartMenu`），并确认没有残留的 DontDestroyOnLoad 测试对象。多个场景同时开着会让编辑器和 Play Mode 慢一倍（用户实测，11-11 那次 Codex 留下了很多场景）。汇报里写一句"Editor 已回到只开 00_StartMenu"。
 - 一次只做实施清单里的一项；在 Play Mode 验证后才在 §7 打勾，并 git commit 一次。
+- **设计文档回写（2026-11-15）**：完成 Unity 任务后，更新共享 `TechnicalArt/MENU_UNITY_PROGRESS.md`、Unity 工程 `Docs/PROJECT_HANDOFF.md` 与适用的进度 / 实施文档；区分已验证结果、失败和未验证项。若任务单是后续修订，注明被替代的旧行为及仍保留的旧结果，不把“准备任务”写成完成。
 - 文本放 ScriptableObject，不写死在脚本里。
+- **设计文档回写（2026-11-15）**：完成 Unity 任务后，更新共享 `TechnicalArt/MENU_UNITY_PROGRESS.md`、Unity 工程 `Docs/PROJECT_HANDOFF.md` 与适用的进度 / 实施文档；区分已验证结果、失败和未验证项。若任务单是后续修订，注明被替代的旧行为及仍保留的旧结果，不把“准备任务”写成完成。
 - 美术资产只从 `SharedWorkFolder/TechArtAsset/` 拷入 `Assets/Art/`，不改源文件；美术源文件（.psd/.psb）不进 Git。
 - 不读、不搜索：`Library/`、`Temp/`、`Logs/`、`obj/`、`Builds/`、`*.meta`；`.unity` / `.prefab` 文件只在必要时读相关片段。
 - 报错时只看 Console 里相关的几行。

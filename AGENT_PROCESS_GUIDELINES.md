@@ -40,6 +40,9 @@
 - 根目录 `*_RESUME.md` 是**当前本地对话/工作续接摘要**，写清上下文、阅读顺序和暂停点，不写成另一台机器的执行命令。`CommandForAgentToInitialRun/` 专放**发给 Unity 工作站/网络端 Codex 的可执行任务单**，需有目标、步骤、相关资产、验收与回报要求；新任务先看该目录 `README.md`。不要把本地续接摘要放进该目录。
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。
 - md 与对应 Word 同源，改一处要同步另一处。
+- 用户确认玩法或流程变化时，除执行单外同步更新：`DESIGN_CHANGES.md`（决定与状态）、`DEMO_IMPLEMENTATION_PLAN.md` / `handoff.md`（当前设计摘要）、对应 `TechnicalArt/` 知识库与制作经验、`TechnicalArt/MENU_UNITY_PROGRESS.md`（明确是否仅准备或已在 Unity 验证）、`HOME_ART_RESUME.md`（本地续接入口）和 `UNITY_AGENTS.md`（工作站 Agent 只需知道的当前门槛与入口）。如果根目录 Markdown 有配套 Word，另存新版本并同步；不能只改执行单，也不能把待办标成已完成。
+- 当前可执行任务由 `CommandForAgentToInitialRun/README.md` 明确指向；较新的任务覆盖冲突要求。旧执行单和历史回报保留作记录，必须标清被替代的行为与仍有效的结果，避免后续 Agent 读到旧规则后重做。
+- 给人看的更新采用清晰标题、短段落、必要时用流程表或音频 cue 表；任务步骤、验收细节放执行单，知识库记录可复用规律，进度表只写实际实施与验证事实。
 - `UNITY_AGENTS.md` 改完后，Claude 直接复制到 Unity 根目录 `AGENTS.md`（两份保持完全一样，2026-11-09 定）；提交由 Codex 或用户在 Unity 仓库做。
 - 参考图放 `ART_ref/`，每次新增或替换都更新 `ART_ref/ASSETS.md`。
 - 本文件夹是公开 Git 仓库：改完在本地 commit（作者 `psamead <psamead@users.noreply.github.com>`，不用个人邮箱），提醒用户 `git push`。第三方素材、源文件不上传（`deprecated/` 上传）；Unity 截图放 `ForDesignScreenshot/`；新增第三方图写进 `.gitignore`。改 README 时英文 `README.md` 与中文 `README.zh-CN.md` 一起改。

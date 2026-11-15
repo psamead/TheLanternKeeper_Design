@@ -9,11 +9,13 @@ The Unity project lives in a separate repository: <https://github.com/psamead/Th
 >
 > Most documents are written in Chinese. In-game text, titles and menus are English only.
 
-## Latest handoff 2026-11-13
+## Latest handoff 2026-11-15
 
-Home greybox, world switching, ladder climbing and attic exit have recorded Unity validation at `b61eb3f`. Current work is art consistency and integration preparation: preserve the painterly hand-painted style; room perspective is acceptable. Selected assets are `Lantern_v4.png`, `Home_Present_v3.png`, `Attic_PerspectiveRef_v3.png`, and `Ladder_Whole_v4.png`. They have not been integrated into Unity.
+The current Home background is approved. Unity `a803050` is the previous implementation baseline. The user has since requested a follow-up to recheck the no-lantern gate, ordered exploration, A4 exit, page audio, attic landing, and EndCard options. The task is prepared for the Unity workstation Codex and has not run yet. The earlier Editor report does not count as validation of these follow-up requirements.
 
-For a local design/art Codex chat, start with [Home art knowledge base](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) and [local chat resume](HOME_ART_RESUME.md). The matching human-readable Word supplement is `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`. The Unity workstation Codex task is separate: [Home Unity review and integration command](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md). Historical source files may be local-only; the shared folder remains the primary source for Unity work.
+For the current design, read [Demo flow and audio cues](DEMO_IMPLEMENTATION_PLAN.md), [Home art knowledge base](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md), [Home progress report](TechnicalArt/MENU_UNITY_PROGRESS.md), and [local chat resume](HOME_ART_RESUME.md). The new Unity task is prepared and waiting for the user to ask the remote Codex to read it; see [CommandForAgentToInitialRun](CommandForAgentToInitialRun/README.md). The user's 12 screenshots and first source recording are indexed in `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`; the full-demo reference recording is in `ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md`.
+
+People-facing Word versions: [Home art handoff and lessons, v3](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v3.docx) and [Demo implementation plan, v1.8](purposal_story/守灯人_Demo制作方案_v1.8.docx).
 
 ## Get and update
 

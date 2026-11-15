@@ -1,14 +1,14 @@
 # Home 美术：本地对话接续
 
-## 最新状态 2026-11-15 第二轮
+## 最新状态 2026-11-15 后续复核
 
-Unity 第一轮探索任务已在 `c7ba7f2` 实施并回报连续路线，实际听音仍未验收。用户观看后明确修正：未拾灯只显示 Press T，不能记录探索；必须 T 拾灯并结束 A，回门边，再进入原灯位区显示 Broken ladder、去梯位查看后才解锁 E。此前允许拾灯前记录探索的说明不再适用。
+上一轮 `a803050` 已有 Editor 连续路线与边界检查报告。用户进一步复核指出仍需确保未持灯时只见 Press T、A4 不重复显现、A 后从门边开始新探索、逐页声音和阁楼落地/防坠达到指定表现。新的执行单已准备好，尚待另一台 Unity 工作站 Codex 手动读取并运行：`CommandForAgentToInitialRun/2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md`。本机未在 Unity 中执行新任务。扬声器实听、物理键鼠操作和独立构建仍需明确验收。
 
-新执行单为 `CommandForAgentToInitialRun/2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`，还包含 A4 收尾重现修复、铃声完整响完后才渐隐文字并停用两个旧区/启用梯子传送区、阁楼淡入即站稳且不能掉回楼下。音频为 A1 渐强至正常、A2 正常、A3 较低+海浪、A4 保持低音量且无海浪、结尾 B 正常音乐+海风。当前背景正确，不调整背景。
+`2026-11-15_Unity_PickupGate_StoryAudio_Attic.md` 是 `a803050` 前一轮执行单，作为历史保留；本轮任务以 follow-up 新单为准。音频 cue 仍按 A1 渐强、A2 正常、A3 较低+海浪、A4 保持 A3 音量且无海浪、结尾 B 正常音乐+海风。用户再次确认当前 Home 背景正确，本轮不要改背景。
 
-本地已检查代码和用户 85 秒录像：RecordExploration 缺少持灯/A 完成门槛、首铃 Used/锁定立即关闭提示；A4 收尾先变暗又露出与 fadeBackAtEnd=1 在结束回调之前揭开黑幕相符。阁楼具体下落/坠穿原因仍需 Unity 端按新要求复现，不能把旧报告最终 Grounded 读数当作可见过程通过。新要求与灯笼照见记忆、Demo 单向进阁楼的剧情一致，不新增瞬移能力设定。
+本地代码分析与用户原始录像用于起草需求；Unity 工作站随后验证了探索记录条件、故事尾页切换、阁楼支撑和逐页音频设置。实施细节与边界测试见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。新要求与灯笼照见记忆、Demo 单向进阁楼的剧情一致，不新增瞬移能力设定。
 
-用户 12 张附图和原始录像归档在 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/`。本轮是新单准备和证据整理，未直接修改网络 Unity 工程；任务待那边 Codex 读取执行。旧任务已加已执行/后续入口标识。
+用户 12 张附图、原始反馈录像和上一轮验收索引在 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。全流程参考录像在 `ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/README.md`；它不是新任务验收证据。较早 11-13 录像曾显示错误背景版本，仅作历史资料，不代表当前 Home 背景有问题。
 
 ## 2026-11-15 第一轮快照（历史，已实施）
 
@@ -26,7 +26,7 @@ Unity 端 `3417fc4` 已接入楼下 v3、阁楼 v3、灯笼 v4 和完整梯 v4�
 
 完整梯 v5 已用 PhotoCraft CLI 对 v4 PNG 清理透明残留，保留 1440×4200 及完全不透明的原画像素；`TechArtAsset/Scenes/Home/Props/Ladder_Whole_v5.png` 是待 Unity 游戏画面验收的候选，v4 PNG 和 PSD 保留。用户标注图归档至 `ForDesignScreenshot/2026-11-13_Home_Visual_Notes/`。新视觉任务已准备交由 Unity 端 Codex 执行，尚未实施或验收。`TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md` 的 11-13 状态是历史记录，与上述新决定冲突时以本节和 11-14 执行单为准。
 
-## 2026-11-13 续接快照（历史）
+## 2026-11-13 续接快照（历史，旧状态已被 11-15 第二轮更新）
 
 用途：供本地美术 / 设计 Codex 新对话恢复上下文；本文件不是 Unity 执行命令。发给另一台 Unity 工作站 / 网络端 Codex 的可执行任务单放在 `CommandForAgentToInitialRun/`，当前 Home 执行单见 [Unity Home 审查与接入](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md)。目录分类规则见 [CommandForAgentToInitialRun/README.md](CommandForAgentToInitialRun/README.md)。
 
