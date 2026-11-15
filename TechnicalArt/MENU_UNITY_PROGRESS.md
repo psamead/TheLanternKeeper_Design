@@ -502,3 +502,28 @@ Publication verified: Unity commit `a8030500baab20c7870cfe0dd79d87d28847df65` pu
 新增 ForAgent/README.md 和 ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md，供另一台设计电脑通过共享读取并制作 4–5 页 PDF，回存 ForDesignPortfolio；仅资料已准备，作品集未开始制作，Unity 新实施/EXE/Web 状态未改变。
 
 当前设计与 Agent 原件已集中到 ForAgent/Design 和 ForAgent/Unity；Unity 工程 AGENTS.md 已与新规则原件同步。此变动仅文档，不属于 Unity 游戏实现。
+
+## 2026-11-15 Unity implementation and release delivery
+
+Supersedes the prepared-only status above. Implementation **6adac6ca9d5532c9f646defca38c94255e55070c** and Pages workflow **1fb2df14a6c4ca316690375fc2449725c2c978f0** are pushed. Final documentation-only changes do not alter either built game.
+
+- Attic floor/safe landing Y **3.295**, +.57; window trigger center **3.82**. Same camera/pose measurement: grounded root 3.29999, visible boot line **84.985%** from viewport top. Downstairs/background/camera preserved.
+- B5 retains current artwork/caption/camera pose and directly enables options. Natural/advance/Skip and input-release guard passed. Both EndCard Back to Menu and Quit reset and return to Start Menu; all four Editor mouse/keyboard cases passed.
+- Editor full route and gates, bell/hints, attic support/walk/run/jump/layers/boundaries and reset passed. B5 continuous short clip: `after/B5_ContinuousFinish.mp4`, 16.3333 seconds. Subjective listening and owner approval remain pending.
+- Complete Windows x64 non Development build and ZIP delivered with BuildReport, 0 errors, CRC/hash verification. Actual EXE startup succeeded; native screenshot capture timed out, so Windows gameplay, EndCard returns, reset and visuals remain unverified. No Editor result substitutes for this check.
+- Web build succeeded, 0 errors. Local HTTP route passed. Pages deployed and **actual HTTPS natural menu-to-B5, both return choices, replay reset, advance/Skip, attic controls and refresh passed** in Chrome. Browser audio context activated; physical listening/hardware acceptance is separate.
+
+Play: https://psamead.github.io/TheLanternKeeper2D/
+Deployment: https://github.com/psamead/TheLanternKeeper2D/actions/runs/43675728069
+
+Full packages, ZIPs, BuildReports and hash manifests: `DemoBuilds/2026-11-15_FinalDemo/`. Windows ZIP 153,525,239 bytes / SHA256 `6cff576047ffed445aa1b3daf304c69c11e5c7ba2fb82681f1f10d20e57441d2`; Web ZIP 126,633,577 bytes / SHA256 `d38f1053f570755b394e0fe3311c9afffdd0adf6f5b1df12e1c33fb2e4d48206`. Web uses gzip fallback and no threads; release/Pages artifact avoids storing the >100 MiB data file in main.
+
+Detailed report: `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/Release_Report.md`, with screenshots/video and `_work` logs/hash manifests. Local `Docs/PROJECT_HANDOFF.md`, README, release record, shared task status and knowledge-base handoff updated. Unrelated AGENTS/TMP/fonts/EndCard scene/package changes remain unstaged. Final source/remote hash evidence: `after/_work/final_git_verification.txt`.
+
+Editor verified Edit Mode, one clean StartMenu, zero runtime Player/GameState. Browser/server stopped. Editor 已回到只开 00_StartMenu。All 58 capture files are hash-verified on the share; duplicate local files remain in `C:\Users\Administrator\Documents\UnityProject\TheLanternKeeper2D\_CodexCaptures\2026-11-15_AtticBaseline_EndCard_Release\` because automatic approval review blocked deletion.
+
+## 2026-11-15 本地复核发布回报
+
+设计端复核 Unity 仓库 GitHub `main`：远端已推进至 `a469e412e5867ac488aac5558f17682c4c582ffd`，与 Unity 工作站归档的 `final_git_verification.txt` 一致；该提交只追加 README/Docs 发布记录，游戏构建来源仍为 `6adac6ca9d5532c9f646defca38c94255e55070c`。因此 Unity 已完成 Git push。
+
+作品集工作站已将 5 页 A3 横版 PDF、DesignCraft 原生文件、IDML、源素材包和页面预览写回共享目录。Unity HTTPS 网页路线及两个 EndCard 返回已通过浏览器报告；Windows EXE 只确认启动，游戏内路线因窗口捕获超时未能验证。两边的详细反馈分别见 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/Release_Report.md` 与 `ForAgent/PORTFOLIO_PRODUCTION_STATUS.md`。用户实机验收仍待完成。

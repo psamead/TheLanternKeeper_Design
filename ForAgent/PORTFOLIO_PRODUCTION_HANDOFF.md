@@ -1,6 +1,6 @@
 # 守灯人学生作品集跨电脑制作交接
 
-更新：2026-11-15。执行者是在另一台设计电脑上使用 Codex 的制作 Agent；该电脑可使用 InDesign、Vectorcraft 等已安装设计工具。请从网络共享读取本项目现有资料，完成学生作品集 4–5 页 PDF，并把最终 PDF 和可编辑制作包存回同一个共享项目。当前只完成本说明，作品集尚未制作。
+更新：2026-11-15。原交接目标现已完成首版：5 页 A3 横版英文 PDF 与可编辑制作包已保存到共享项目 `ForDesignPortfolio/`。本说明保留首轮制作要求和事实边界，供回查。成品与读者索引见 `ForDesignPortfolio/README.md`；实际工具、验收和来源见 `ForAgent/PORTFOLIO_PRODUCTION_STATUS.md`；Agent 规则见 `ForAgent/PORTFOLIO_PRODUCTION_AGENT.md`；后续版本入口见 `ForAgent/PORTFOLIO_NEXT_HANDOFF.md`。
 
 ## 1 开始工作与共享路径
 

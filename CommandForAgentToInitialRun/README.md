@@ -4,9 +4,9 @@ This folder contains dated actionable task sheets for Codex on the Unity worksta
 
 ## Current task 2026-11-15
 
-Read [Attic baseline EndCard Windows and Web](2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md). Status: **prepared and awaiting the Unity workstation Codex**. The user will manually ask that Codex to read it.
+Read [Attic baseline EndCard Windows and Web](2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md). Status: **implemented; Editor and HTTPS gameplay passed; Windows package delivered, startup verified, gameplay pending manual verification**. Read the execution report appended to the task and the latest progress entry.
 
-The user broadly approves last night's recorded version and requests three small changes: raise the attic walking baseline to the green mark; keep B5 visible and show options without a second black fade; make EndCard Quit return to the Start Menu too. Then deliver a complete Windows x64 build, commit/push the Unity repository, and attempt Unity Web plus GitHub Pages playback. No new implementation, executable or live page is claimed yet.
+The three changes are implemented in `6adac6ca9d5532c9f646defca38c94255e55070c`; Unity `main` is pushed through `a469e412e5867ac488aac5558f17682c4c582ffd`. Full Windows package is delivered and EXE startup passed; gameplay remains unverified because window capture timed out. The verified Web demo is https://psamead.github.io/TheLanternKeeper2D/ . Browser gameplay passed; subjective listening and owner acceptance remain pending.
 
 The [previous follow-up](2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md) has no new execution report. Its pickup/story gate, ordered exploration, A4, page audio and safe attic requirements are carried into the current task as regression checks. Keep passing behavior; do not rerun old task sheets independently. The approved Home background stays as it is. The old EndCard Application.Quit behavior is superseded; Start Menu Quit is outside this change.
 

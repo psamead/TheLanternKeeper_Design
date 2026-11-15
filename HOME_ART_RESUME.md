@@ -1,5 +1,13 @@
 # Home 美术：本地对话接续
 
+## 最新状态 2026-11-15 Unity 发布与作品集 v1 已回报
+
+Unity 工作站已实施阁楼基线、B5 直接显示选项、EndCard Quit 返回菜单三项修改；游戏提交 `6adac6ca9d5532c9f646defca38c94255e55070c` 已推送，Unity 仓库 `main` 当前远端/本地记录为 `a469e412e5867ac488aac5558f17682c4c582ffd`。Windows x64 完整包已交付且 ZIP 完整性通过；EXE 启动通过，但该工作站无法捕获窗口，故 Windows 内实际路线仍待用户验收。GitHub Pages 已部署并在 Chrome 完成菜单至 B5、两种返回、重开、跳过、阁楼操作和刷新路线。
+
+试玩地址：<https://psamead.github.io/TheLanternKeeper2D/>。部署记录：<https://github.com/psamead/TheLanternKeeper2D/actions/runs/43675728069>。完整报告见 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/Release_Report.md`；本地包见 `DemoBuilds/2026-11-15_FinalDemo/`。尚待用户实机查看 Windows 与网页视觉/声音并验收。
+
+作品集端已完成并回存 5 页 A3 横版英文 v1 PDF、可编辑 DesignCraft/IDML 包和逐页预览：`ForDesignPortfolio/README.md`。PDF 在交付时按 Editor 证据撰写；最新网页发布是在 PDF 之后发生，不能将网页路线验证误写为 PDF 交付时的依据。署名、课程、个人贡献仍未确认。
+
 ## 最新状态 2026-11-15 Agent 目录已整理与作品集跨电脑协作
 
 用户确认自己的完整录像看起来正常。当前 Unity 三项小修与构建任务保留，但不强制工作站重录整条流程；修后检查相关截图/必要短片以及 EXE/浏览器实际运行。旧 follow-up 单的整段录屏要求已显式替代。

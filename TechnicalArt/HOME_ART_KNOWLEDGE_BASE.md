@@ -1,5 +1,21 @@
 # Home 美术知识库与交接补充
 
+## 最新 Unity 与作品集反馈 2026-11-15
+
+Unity 工作站已交付阁楼基线调整、B5 无二次黑幕、EndCard Quit 回菜单。Unity GitHub `main` 已推送至 `a469e412e5867ac488aac5558f17682c4c582ffd`；游戏构建源是 `6adac6ca9d5532c9f646defca38c94255e55070c`。网页试玩地址为 https://psamead.github.io/TheLanternKeeper2D/，浏览器自然流程和返回菜单已通过报告。Windows 完整包已交付，EXE 启动通过，但 Windows 游戏内路线尚未实测。详细结果见 `MENU_UNITY_PROGRESS.md` 和发布报告。
+
+作品集端已完成 5 页 A3 横版英文 v1，PDF、DesignCraft/IDML 源、打包链接素材与预览位于 `ForDesignPortfolio/`。Unity 发布验证晚于 PDF 输出，v1 不冒称以这些发布结果作证。此轮仍待用户验收 Windows 实机、整体画面与声音；Home 背景保持已确认版本。以下较早的“待执行/准备发布”段落均为历史快照，按 `MENU_UNITY_PROGRESS.md` 最上方最新报告读取。
+
+## 作品集知识沉淀 2026-11-15
+
+首版学生作品集已完成：`ForDesignPortfolio/TheLanternKeeper_Portfolio_2026-11-15_v1.pdf`，配套可编辑 DesignCraft 与 IDML 源包、图片副本、字体许可、代码快照和页面预览。人类读者从 `ForDesignPortfolio/README.md` 开始；制作 Agent 读 `ForAgent/PORTFOLIO_PRODUCTION_AGENT.md`；下一轮交接读 `ForAgent/PORTFOLIO_NEXT_HANDOFF.md`，再查 `ForAgent/PORTFOLIO_PRODUCTION_STATUS.md`。原始需求仍保留在 `ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md`。
+
+排版经验：DesignCraft 命令 API 可直接完成多页栅格、品牌颜色、图像链接、页码导航、PDF/IDML 导出与页面预览，适合本项目跨电脑制作。把本地确认使用的字体副本放在制作包 `Document Fonts/`，同时携带许可证；图像链接全部复制至版本目录 `Links/`，清单记录共享源路径、像素尺寸和 SHA256；共享原始图保持只读。IDML 的 DesignCraft 重开检查通过，但 Adobe InDesign 实际开启尚未测试，不能记录成 INDD 已交付。
+
+内容经验：同一页或图组要清楚区分概念稿、宣传插图、故事版、菜单 mockup 与 Unity Editor 游戏画面；运行截图必须来自真实捕获，原画不可手动合成人物冒充实机。机制比较优先选同轮且镜头接近的现在/记忆截图，并标注它们近似同镜头；不要为了画面对称而称像素级完全一致。短源码应从当前工程脚本抽取，并在制作包内归档只读快照，方便回溯。
+
+交付经验：PDF 逐页渲染检查后，再核页数、A3 尺寸、字体嵌入、内部章节跳转、相对媒体目标、文字溢出及是否有缺字。若学生姓名、课程、职责或院校规范未确认，先省略，并在下一版本交接里列出所需信息；不要让 TODO 占位进入成品。已记录的具体工具版本、资产来源、限制和验收值以 `ForAgent/PORTFOLIO_PRODUCTION_STATUS.md` 及版本包 `export_validation.json` 为准。
+
 最新协作入口（2026-11-15）：`ForAgent/README.md`；作品集电脑读 `ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md`，制作 PDF 回存 `ForDesignPortfolio/`。用户现有完整录像可直接作已认可流程参考，不强制 Unity 重录整段；本轮改动与新构建分别核对。
 
 ## 最新决定 2026-11-15 录屏小修与发布准备
