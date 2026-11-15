@@ -28,6 +28,6 @@ The portfolio omits a student name, course, and individual contribution statemen
 
 ## Editing and later updates
 
-The editable source, links, supplied fonts and licences, code snapshots, image-source manifest, and export record are in `Source/TheLanternKeeper_Portfolio_2026-11-15_v1/`. Read that folder’s README before moving assets or changing the layout. The [production handoff](../ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md) records the original brief; [next update notes](../ForAgent/PORTFOLIO_NEXT_HANDOFF.md) record what is needed for a later revision.
+The editable source, links, supplied fonts and licences, code snapshots, image-source manifest, and export record are in the shared-drive folder `ForDesignPortfolio/Source/TheLanternKeeper_Portfolio_2026-11-15_v1/`. That full package stays on the project share; GitHub mirrors this reader PDF and its page previews. Read the source folder’s README before moving assets or changing the layout. The [production handoff](../ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md) records the original brief; [next update notes](../ForAgent/PORTFOLIO_NEXT_HANDOFF.md) record what is needed for a later revision.
 
 For a version update, duplicate the source package and save a new dated `v2` PDF and preview folder. Do not replace this v1 when adding confirmed credits, school specifications, fresh release evidence, or a tested public link.
