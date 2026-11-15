@@ -1,0 +1,4 @@
+Storyboard advance continuity (current image UV rectangle x,y,w,h)
+
+30% A1: before=(0.00626,0.00644,0.98720,0.98720) after=(0.00626,0.00644,0.98720,0.98720) maxDelta=0.000000 PASS
+80% A2: before=(0.02780,0.02483,0.94897,0.94897) after=(0.02780,0.02483,0.94897,0.94897) maxDelta=0.000000 PASS

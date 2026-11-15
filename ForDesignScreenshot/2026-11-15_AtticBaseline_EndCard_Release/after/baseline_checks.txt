@@ -1,0 +1,9 @@
+2026-11-15T11:37:44.8431916+08:00
+7.40 PASS Baseline placement
+7.40 Recorder started with audio: C:/Users/Administrator/Documents/UnityProject/TheLanternKeeper2D/_CodexCaptures/2026-11-15_AtticBaseline_EndCard_Release/B5_ContinuousFinish
+9.57 attic_before root=(4.70000, 2.72999, 0.00000) camera=(5.49245, 5.67200, -10.00000) size=3.4 grounded=True
+9.57 Boot_R_Sprite bounds=Center: (4.80, 2.88, 0.00), Extents: (0.18, 0.16, 0.10) viewportMin=(0.42808, 0.06632, 9.90000)
+9.57 Boot_L_Sprite bounds=Center: (4.64, 2.90, 0.00), Extents: (0.20, 0.17, 0.10) viewportMin=(0.41302, 0.06735, 9.90000)
+9.57 Collider feet=2.72999
+9.57 Screenshot attic_before 1920x1080
+9.57 PASS: finished

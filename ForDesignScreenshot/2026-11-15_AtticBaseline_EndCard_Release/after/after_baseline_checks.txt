@@ -1,0 +1,8 @@
+2026-11-15T11:39:21.3525518+08:00
+11.12 PASS Raised placement
+13.18 attic_after root=(4.70000, 3.29999, 0.00000) camera=(5.49245, 5.67200, -10.00000) size=3.4 grounded=True
+13.18 Boot_R_Sprite bounds=Center: (4.80, 3.45, 0.00), Extents: (0.18, 0.16, 0.10) viewportMin=(0.42808, 0.15015, 9.90000)
+13.18 Boot_L_Sprite bounds=Center: (4.64, 3.47, 0.00), Extents: (0.20, 0.17, 0.10) viewportMin=(0.41302, 0.15117, 9.90000)
+13.18 Collider feet=3.29999
+13.18 Screenshot attic_after 1920x1080
+13.18 PASS: finished

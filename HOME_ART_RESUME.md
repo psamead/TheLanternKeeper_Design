@@ -1,5 +1,9 @@
 # Home 美术：本地对话接续
 
+## 最新同步方式 2026-11-15 Git LFS
+
+用户授权上传大文件：本机已安装 Git LFS 3.8.0，仓库已初始化 LFS。项目 PSD/PSB、正式录像、作品集 Source 制作包及 Windows/Web DemoBuilds 现在纳入同步；制作缓存与第三方参考图仍按忽略规则保留本地。新电脑先安装 Git LFS、执行 `git lfs install`，克隆或更新后执行 `git lfs pull`。历史不重写。
+
 ## 最新状态 2026-11-15 Unity 发布与作品集 v1 已回报
 
 Unity 工作站已实施阁楼基线、B5 直接显示选项、EndCard Quit 返回菜单三项修改；游戏提交 `6adac6ca9d5532c9f646defca38c94255e55070c` 已推送，Unity 仓库 `main` 当前远端/本地记录为 `a469e412e5867ac488aac5558f17682c4c582ffd`。Windows x64 完整包已交付且 ZIP 完整性通过；EXE 启动通过，但该工作站无法捕获窗口，故 Windows 内实际路线仍待用户验收。GitHub Pages 已部署并在 Chrome 完成菜单至 B5、两种返回、重开、跳过、阁楼操作和刷新路线。

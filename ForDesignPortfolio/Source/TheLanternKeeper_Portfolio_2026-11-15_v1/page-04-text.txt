@@ -1,0 +1,54 @@
+THE LANTERN KEEPER     /     04  /  GAME STRUCTURE
+From illustrated story to lived memory
+The Demo narrows a larger seven-day tale into one room, an attic and a complete return to the menu.
+01  START MENU
+Menu design mockup.
+Play leads to the prologue;
+Settings / Quit frame the UI.
+>
+02  STORY / P
+Four illustrated slides establish
+the dark lighthouse, sea fog
+and grandmother's forgetting.
+>
+03  PLAY / HOME + A
+Pick up the lantern, learn its
+history, explore the room and
+restore a route to the attic.
+>
+04  STORY / B + END
+Five ending slides open the
+larger mystery. The last image
+holds “T o be continued…”.
+THE PLAYABLE THREAD  /  ORDERED TRIGGERS
+T
+PICK UP
+Story A plays
+1
+REDISCOVER
+Original lamp spot
+2
+INSPECT
+Ladder position
+E
+RING
+Memory revealed
+3
+APPROACH
+Fade to attic
+4
+WINDOW
+Begin ending B
+SCENES & CHAPTER LINKS
+Menu / P → Core + Home → EndCard / B.
+Home stays loaded beneath Story A;
+its completion restores player control.
+ILLUSTRATION PLAYER
+Click / any key advances; Esc skips.
+Captions, slow pans and fades share one player.
+SCOPE & PRODUCTION
+AI-assisted concept exploration → selection /
+Photoshop cleanup → cut-out assets → Unity.
+The harbour remains an illustration, not a level.
+01  STORY 02  CHARACTERS 03  WORLD 04  FLOW 05  MECHANICS 04 / 05
+public void RequestAdvance() => skipFrame = true;

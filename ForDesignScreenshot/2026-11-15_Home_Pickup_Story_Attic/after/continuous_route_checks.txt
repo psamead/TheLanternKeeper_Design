@@ -1,0 +1,30 @@
+2026-11-15T05:31:28.7668595+08:00
+80.31 PASS Normal route starts at Menu
+80.31 Recorder started with audio: C:/Users/Administrator/Documents/UnityProject/TheLanternKeeper2D/_CodexCaptures/2026-11-15_Home_Pickup_Story_Attic/PickupStory_ContinuousRoute
+112.05 PASS Fresh Home stage=Unexplored
+114.58 PASS Pickup zone before T does not count stage=Unexplored
+114.58 Screenshot 01_before_pickup 1920x1080
+144.15 PASS Natural A grounded door return
+144.15 PASS Natural A leaves exploration unstarted stage=Unexplored
+144.15 Screenshot 02_door_return 1920x1080
+146.41 PASS New discovery visit stage=Discovered
+150.88 PASS New ladder visit stage=Inspected
+152.95 Screenshot 03_fixed_hints 1920x1080
+153.48 PASS First E accepted and controls locked
+153.48 PASS Duplicate bell request rejected
+156.48 PASS Both hints retained through full bell; fade begins at world change
+157.01 PASS Both hints deactivated after fade
+157.01 PASS Old zones and recording disabled
+157.88 PASS Attic reveal finishes grounded at safe anchor: (4.70, 2.73, 0.00)
+157.88 PASS First E changed world exactly once
+157.91 Screenshot 04_attic_first_landing 1920x1080
+162.61 PASS Normal route left edge jump remains upstairs
+210.78 PASS Exactly one continuing ArMorDu voice on B5
+210.78 PASS Independent wind remains at .4 on B5
+210.78 PASS B5 music remains .6 instead of stopping
+210.78 Screenshot 05_endcard_dwell 1920x1080
+213.95 Realtime route completed with audio
+218.30 PASS Exactly one continuing ArMorDu voice on B5
+218.30 PASS Independent wind remains at .4 on B5
+218.30 PASS B5 music remains .6 instead of stopping
+218.72 PASS: finished

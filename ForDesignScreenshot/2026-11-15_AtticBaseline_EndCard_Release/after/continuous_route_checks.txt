@@ -1,0 +1,35 @@
+2026-11-15T11:40:59.4619990+08:00
+104.01 PASS Normal route starts at Menu
+135.06 PASS Fresh Home stage=Unexplored
+137.39 PASS Pickup zone before T does not count stage=Unexplored
+137.39 Screenshot 01_before_pickup 1920x1080
+166.75 PASS Natural A grounded door return
+166.75 PASS Natural A leaves exploration unstarted stage=Unexplored
+166.75 Screenshot 02_door_return 1920x1080
+168.99 PASS New discovery visit stage=Discovered
+173.18 PASS New ladder visit stage=Inspected
+175.23 Screenshot 03_fixed_hints 1920x1080
+175.86 PASS First E accepted and controls locked
+175.86 PASS Duplicate bell request rejected
+178.86 PASS Both hints retained through full bell; fade begins at world change
+179.37 PASS Both hints deactivated after fade
+179.37 PASS Old zones and recording disabled
+180.19 PASS Attic reveal finishes grounded at safe anchor: (4.70, 3.30, 0.00)
+180.19 PASS First E changed world exactly once
+180.22 04_attic_first_landing root=(4.70000, 3.29998, 0.00000) camera=(5.49245, 5.67200, -10.00000) size=3.4 grounded=True
+180.22 Boot_R_Sprite bounds=Center: (4.80, 3.45, 0.00), Extents: (0.18, 0.16, 0.10) viewportMin=(0.42808, 0.15014, 9.90000)
+180.22 Boot_L_Sprite bounds=Center: (4.64, 3.47, 0.00), Extents: (0.20, 0.17, 0.10) viewportMin=(0.41302, 0.15117, 9.90000)
+180.22 Collider feet=3.29998
+180.22 Screenshot 04_attic_first_landing 1920x1080
+184.99 PASS Normal route left edge jump remains upstairs
+218.71 Recorder started with audio: C:/Users/Administrator/Documents/UnityProject/TheLanternKeeper2D/_CodexCaptures/2026-11-15_AtticBaseline_EndCard_Release/B5_ContinuousFinish
+226.74 B5 finish rect before=(x:0.03, y:0.03, width:0.94, height:0.94) after=(x:0.03, y:0.03, width:0.94, height:0.94) black=0
+231.81 PASS Exactly one continuing ArMorDu voice on B5
+231.81 PASS Independent wind remains at .4 on B5
+231.81 PASS B5 music remains .6 instead of stopping
+231.81 Screenshot 05_endcard_dwell 1920x1080
+235.01 B5 visible continuity samples=491
+238.85 PASS Exactly one continuing ArMorDu voice on B5
+238.85 PASS Independent wind remains at .4 on B5
+238.85 PASS B5 music remains .6 instead of stopping
+239.48 PASS: finished

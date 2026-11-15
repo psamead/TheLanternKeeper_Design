@@ -1,0 +1,11 @@
+NARRATIVE GAME DESIGN     /     DEMO
+On the Breton coast, sea fog is stealing the town's memories.
+When her grandmother no longer recognises her, Maela lifts an old
+lantern that still carries her grandfather's flame. Its light reveals a
+past that can become a way forward.
+A cold night. One warm light.
+A hand-painted-style 2D narrative puzzle Demo.
+Present / memory switching  ·  Unity 2D URP
+Promotional illustration · not a gameplay capture
+01  STORY 02  CHARACTERS 03  WORLD 04  FLOW 05  MECHANICS 01 / 05
+WATCH THE RECORDED DEMO  >

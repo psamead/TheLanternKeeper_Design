@@ -5,9 +5,7 @@
 Thumbs.db
 desktop.ini
 .DS_Store
-# 美术源文件（体积大，不进 Git）
-*.psd
-*.psb
+# 项目 PSD/PSB 源文件由 Git LFS 管理
 # 第三方参考图：不是本项目的作品，只留在本地，不公开
 ART_ref/BRETON_*_REF_*.png
 ART_ref/FAIRYHILLS_REF_*.png
@@ -23,5 +21,5 @@ __pycache__/
 # Codex capture scratch (local only)
 ForDesignScreenshot/_codex_capture/
 
-# Runnable Windows/Web deliverables stay local, outside screenshot archives
-DemoBuilds/
+# 作品集临时制作缓存不上传；完整 Source 包通过 Git/LFS 同步
+ForDesignPortfolio/_work/

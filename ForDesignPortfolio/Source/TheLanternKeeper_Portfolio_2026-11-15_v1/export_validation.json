@@ -1,0 +1,53 @@
+{
+  "pdf": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\TheLanternKeeper_Portfolio_2026-11-15_v1.pdf",
+  "bytes": 19792500,
+  "pages": 5,
+  "page_sizes": [
+    [
+      1190.55,
+      841.89
+    ],
+    [
+      1190.55,
+      841.89
+    ],
+    [
+      1190.55,
+      841.89
+    ],
+    [
+      1190.55,
+      841.89
+    ],
+    [
+      1190.55,
+      841.89
+    ]
+  ],
+  "internal_links": 25,
+  "external_links": [
+    "Source/TheLanternKeeper_Portfolio_2026-11-15_v1/Media/user_recording_0546_14_full_demo.mp4"
+  ],
+  "fonts": [
+    {
+      "name": "/YZAXRZ+Cinzel-Regular",
+      "embedded": true
+    },
+    {
+      "name": "/UBONYV+EBGaramond-Regular",
+      "embedded": true
+    },
+    {
+      "name": "/XHQXTE+CourierNewPSMT",
+      "embedded": true
+    }
+  ],
+  "checks": [
+    "5 A3 landscape pages",
+    "All used PDF fonts embedded",
+    "25 internal chapter links",
+    "Relative video target exists",
+    "No replacement glyphs or TODO placeholders in extracted text",
+    "All pages rendered directly from final PDF with PDFium"
+  ]
+}

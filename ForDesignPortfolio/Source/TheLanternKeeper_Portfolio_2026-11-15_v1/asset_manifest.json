@@ -1,0 +1,322 @@
+[
+  {
+    "key": "poster",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ART_ref\\POSTER_BG_v2.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\poster.png",
+    "size": [
+      1792,
+      2688
+    ],
+    "sha256": "428b08ce0da85413f942b8958bcf3b7f560481ebf35b8b5b1572674565250b40"
+  },
+  {
+    "key": "title",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Menu\\TITLE_FRAMED_v1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\title.png",
+    "size": [
+      1470,
+      897
+    ],
+    "sha256": "3e1e4a3ea1eb0a4ea8a5c5c5a9b9faa1fbc71893eb2e58c40a5aa7470767131c"
+  },
+  {
+    "key": "menu",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Menu\\MENU_v1_mock.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\menu.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "bb2490130281ddf8852bd42af6cf5853295572c3e7e771d963aff25fe429aae3"
+  },
+  {
+    "key": "maela_concept",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ART_ref\\Maela_v1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\maela_concept.png",
+    "size": [
+      2688,
+      1792
+    ],
+    "sha256": "c11f6e18cf7649f76b717318fbcef16026e97ed40ded2e03b0064d2c25684c54"
+  },
+  {
+    "key": "maela_turn",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ART_ref\\Maela_v1_turnaround.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\maela_turn.png",
+    "size": [
+      4000,
+      2000
+    ],
+    "sha256": "0b2bf802f2b07fc854aa6e91e347711da94878d0e708980f447ce62ebdcd8f12"
+  },
+  {
+    "key": "maela_game",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ART_ref\\MAELA_GAME_SIDE_v1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\maela_game.png",
+    "size": [
+      1157,
+      2490
+    ],
+    "sha256": "b94cc8b242dd97e51587141fd283966bbe59e5fe6464e67c806f7db64db043ea"
+  },
+  {
+    "key": "soazig",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ART_ref\\SOAZIG_REF_v1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\soazig.png",
+    "size": [
+      1024,
+      1024
+    ],
+    "sha256": "cb4318e65fb216e759f9849a864a5dd8d980f30b684bf46a0228165fe512bba9"
+  },
+  {
+    "key": "home",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Scenes\\Home\\Present\\Home_Present_v3.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\home.png",
+    "size": [
+      2520,
+      1080
+    ],
+    "sha256": "53417491023eb9427c7cc73511220ae2e6f5760031325db6f2c9f43e6561e4cd"
+  },
+  {
+    "key": "attic",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Scenes\\Home\\Attic\\_candidates\\Attic_PerspectiveRef_v3.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\attic.png",
+    "size": [
+      2912,
+      1632
+    ],
+    "sha256": "975953b08705ec847d40ec592ac614adf08129696b3ce1c9eadade38f32c10ba"
+  },
+  {
+    "key": "lantern",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Scenes\\Home\\Props\\Lantern_v4.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\lantern.png",
+    "size": [
+      1032,
+      1875
+    ],
+    "sha256": "9e2bae48942fa68a684f0b693cd2b106db4a8d711765a7cf2c9967757c515d01"
+  },
+  {
+    "key": "ladder",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Scenes\\Home\\Props\\Ladder_Whole_v5.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\ladder.png",
+    "size": [
+      1440,
+      4200
+    ],
+    "sha256": "92ff8433c64a13b59bc7a09b55b0badda215044c2257accba31372c3a2cc0499"
+  },
+  {
+    "key": "crate",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Scenes\\Home\\Props\\Crate_v1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\crate.png",
+    "size": [
+      520,
+      440
+    ],
+    "sha256": "2257e406c7c2bb6a0d5893024f25c8489ce3bb656470fb4ac763ffea30104321"
+  },
+  {
+    "key": "present",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-15_Home_Pickup_Story_Attic\\after\\01_before_pickup.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\present.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "da8c98f0649336c8ff610013e67cbc54b9624c64762ce8a3fd49185248e0cc3f"
+  },
+  {
+    "key": "hints",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-15_Home_Pickup_Story_Attic\\after\\03_fixed_hints.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\hints.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "356fc7a2799a814765dc39b28bf7bd4e9b96bcdafb1d0ba9ee9c0164b3962955"
+  },
+  {
+    "key": "attic_play",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-15_Home_Pickup_Story_Attic\\after\\04_attic_first_landing.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\attic_play.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "16e00c5a10a36e27179292cc8e8674a0333802444c4ea6c3e5dc40578e99f86f"
+  },
+  {
+    "key": "endcard",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-15_Home_Pickup_Story_Attic\\after\\05_endcard_dwell.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\endcard.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "6cd2bc67dffcebb3485a66e4d0b4350d7facea0f0eca8fb3aac5881dd6579ad8"
+  },
+  {
+    "key": "memory_old",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-13_Home_Visual_Notes\\after\\memory_ladder_v5.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\memory_old.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "4c5e11c478bff1dafdf4d42bd64f12d49ab87404e8383757db07248999d1f3eb"
+  },
+  {
+    "key": "P1",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Prologue\\SB_P1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\P1.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "3a3133033583ec16c9482ff1cdf17090fb6264d9c78e053b31287b59e410dce0"
+  },
+  {
+    "key": "P2",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Prologue\\SB_P2.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\P2.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "61abbe3d31963be2316d10e81e1de08faf97b7fd0edf101b03ddd236b7922501"
+  },
+  {
+    "key": "P3",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Prologue\\SB_P3.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\P3.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "5738d8236f5524388e2ee5e69df3ed6f239380db75ba528ea7fcfb99546ef643"
+  },
+  {
+    "key": "P4",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Prologue\\SB_P4.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\P4.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "ec428349d1e913414547587da0e0de23f6b6e8b0ee0940b4509d1848b4128851"
+  },
+  {
+    "key": "A1",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\LanternOrigin_A\\SB_A1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\A1.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "fc7879b0d8c1d10e3d653edd4a27739c676b11f54c9adbe2d50e540be8be21a3"
+  },
+  {
+    "key": "A2",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\LanternOrigin_A\\SB_A2.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\A2.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "9fbd97daf6e7dc20101a8ab767a51526e17c9fd45f8509361ec38ac62492015f"
+  },
+  {
+    "key": "A3",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\LanternOrigin_A\\SB_A3.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\A3.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "34d9eab0ffe2d8e0e59c4ffba45c78a0b4c612e0c3de156b9376f6adf0e6ff3c"
+  },
+  {
+    "key": "A4",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\LanternOrigin_A\\SB_A4.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\A4.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "66e41ffb9c810461597678300647a2c10ca6b475348eeb258298490bf9c5bf53"
+  },
+  {
+    "key": "B1",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Ending_B\\SB_B1.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\B1.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "794ef97f1495af79688c237f5c8117146a2ea1481c66455955565d6b81e443d4"
+  },
+  {
+    "key": "B2",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Ending_B\\SB_B2.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\B2.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "7eecef62e515b53cc13cd89c9a4cddc94e051d5572fe1f220502fa4c7d291a84"
+  },
+  {
+    "key": "B3",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Ending_B\\SB_B3.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\B3.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "d729a93c7658f5db6b6e171dfa52f6dbf9e70071d13482ebc93022379d271dd7"
+  },
+  {
+    "key": "B4",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Ending_B\\SB_B4.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\B4.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "92bde9c4c75fe4f423b033905cfa8f126000df0649727164f914c5b88f0e36de"
+  },
+  {
+    "key": "B5",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\TechArtAsset\\Storyboard\\Ending_B\\SB_B5.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\B5.png",
+    "size": [
+      2208,
+      1242
+    ],
+    "sha256": "c41ceae2928e1361b7aabe1719f55c3d91241699cede41d3d5a8b6ccd9a4124a"
+  },
+  {
+    "key": "memory",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-15_Home_FirstBell_Exploration\\after\\06_route_memory_ladder.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\memory.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "e27457af4d9d25c9ebbe4211d46c3d3def0b040e28eed6817804672dd4380e80"
+  },
+  {
+    "key": "present_pair",
+    "source": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignScreenshot\\2026-11-15_Home_FirstBell_Exploration\\after\\05_route_both_fixed_hints.png",
+    "packaged": "\\\\haoxi-surfacep\\Administrator\\Documents\\MyFlie\\AsArtPortfolioTeaching\\Game_York\\SharedWorkFolder\\ForDesignPortfolio\\Source\\TheLanternKeeper_Portfolio_2026-11-15_v1\\Links\\present_pair.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "sha256": "df131bf51267628d350b916333358d5bd6b6ab7fe2b3324aa511e2f7eab3780f"
+  }
+]

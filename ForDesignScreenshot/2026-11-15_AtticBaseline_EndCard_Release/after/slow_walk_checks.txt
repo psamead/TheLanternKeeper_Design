@@ -1,0 +1,1 @@
+PASS Shift+D dx=0.5883503 grounded=True walking=True y=3.299999

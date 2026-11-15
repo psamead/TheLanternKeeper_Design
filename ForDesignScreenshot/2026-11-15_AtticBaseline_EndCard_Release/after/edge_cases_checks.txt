@@ -1,0 +1,32 @@
+2026-11-15T11:39:41.8803871+08:00
+46.66 PASS Actual repeated walking through both zones before pickup rejected stage=Unexplored
+46.66 PASS Only pickup prompt; premature E has no bell or layer change
+49.04 PASS State gate denies exploration during A
+51.03 PASS Skip A does not grant exploration stage=Unexplored
+51.03 PASS Skip A returns grounded at door: (-4.70, -3.20, 0.00)
+51.03 PASS Held E across A exit is not replayed
+51.78 PASS Out of order ladder with multiple colliders denied stage=Unexplored
+52.23 PASS Fresh discovery grants first step only while ladder occupied by child stage=Discovered
+52.65 PASS Another collider in occupied ladder does not grant inspection stage=Discovered
+53.97 PASS Fresh ladder visit completes ordered exploration stage=Inspected
+53.97 PASS E held across exploration unlock does not ring
+54.52 PASS First E accepted and controls locked
+54.52 PASS Duplicate bell request rejected
+57.53 PASS Both hints retained through full bell; fade begins at world change
+58.03 PASS Both hints deactivated after fade
+58.03 PASS Old zones and recording disabled
+58.85 PASS Attic reveal finishes grounded at safe anchor: (4.70, 3.30, 0.00)
+58.85 PASS First E changed world exactly once
+62.27 PASS Left wall and covered ladder gap contain sustained movement
+64.28 PASS Jump against left ladder edge returns to attic floor
+67.67 PASS Present layer retains attic floor
+73.76 PASS Right boundary contains sustained run and jump
+77.10 PASS Memory layer retains grounded support
+77.10 PASS Later layer switches cannot restore spent zones
+79.09 Screenshot edge_attic_safe 1920x1080
+80.76 PASS New session resets tutorial stage=Unexplored
+80.76 PASS New session resets pickup story and handoff
+80.76 PASS Both exploration colliders restored in new session
+89.19 PASS Individual page advances return grounded at door
+89.19 PASS Advance path preserves stage zero stage=Unexplored
+89.60 PASS: finished

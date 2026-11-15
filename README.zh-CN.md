@@ -9,21 +9,23 @@ Unity 工程在另一个仓库：<https://github.com/psamead/TheLanternKeeper2D>
 
 ## 最新交接 2026-11-15
 
-新增 [Agent 总入口](ForAgent/README.md) 与 [作品集制作交接](ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md)。另一台设计电脑通过共享读素材，制作 4–5 页 PDF 并把最终 PDF/可编辑源包回存 ForDesignPortfolio；当前仅说明已准备。用户已有整段录像可直接参考，不强制 Unity 再录完整流程。
+Unity 发布已实施并推送至 a469e41；[网页试玩](https://psamead.github.io/TheLanternKeeper2D/) 的浏览器路线已通过。Windows 包和 EXE 启动通过，Windows 游戏内路线及用户视觉/声音验收仍待完成。详见 [发布报告](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/Release_Report.md)。
 
-用户认可昨晚录像整体效果，提出三项小修：阁楼行走基线提高至绿线；B5 保持画面直接出选项；EndCard Quit 也返回开始菜单。之后由 Unity 工作站交付完整 Windows x64 包，提交/push Unity，再尝试 Web 构建与 GitHub Pages 网页试玩。当前 Home 背景已确认正确。
+5 页作品集 v1 已完成：[PDF 与制作包入口](ForDesignPortfolio/README.md)。新 Agent 从 [ForAgent 总入口](ForAgent/README.md) 开始；本地接续读 [HOME_ART_RESUME](HOME_ART_RESUME.md)。
 
-当前任务：[阁楼基线与 EndCard 小修及交付](CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md)。**任务已准备，Unity 新改动、EXE 与网页均未执行或生成。** 旧门槛/音频/阁楼要求并入回归核对，详见 [进度](TechnicalArt/MENU_UNITY_PROGRESS.md)、[本地接续](HOME_ART_RESUME.md) 与 [三张反馈图](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md)。
-
-给人阅读的 Word：[Home 交接与经验 v5](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v5.docx)，[Demo 制作方案 v2.0](purposal_story/守灯人_Demo制作方案_v2.0.docx)。运行包另放本地 DemoBuilds/，Word 排版检查放 .story_document_qa/。
+项目大文件现在使用 Git LFS：PSD/PSB 源文件、录像、作品集可编辑源/PDF，以及 DemoBuilds 中的完整 Windows/Web 交付包。克隆前安装 Git LFS；临时排版缓存和第三方参考图继续保留本地。
 
 ## 获取与更新
 
 ```bash
 # 建议克隆到 Unity 工程旁边（同级文件夹）
+git lfs install
 git clone https://github.com/psamead/TheLanternKeeper_Design.git
+cd TheLanternKeeper_Design
+git lfs pull
 # 以后更新
 git pull
+git lfs pull
 ```
 
 ## Agent 先读（按顺序，按需）
@@ -58,7 +60,7 @@ git pull
 | `ForDesignScreenshot/` | Unity / Codex 那边的截图，供设计核对 |
 | `deprecated/` | 被取代的旧版本和过程图（保留视觉演变） |
 
-未上传：`.psd/.psb` 源文件、第三方参考图（`BRETON_*`、`FAIRYHILLS_*`，`ASSETS.md` 中有登记但只在本地）。
+未上传：临时 QA 缓存、第三方参考图（`BRETON_*`、`FAIRYHILLS_*`，`ASSETS.md` 中有登记但只在本地）。
 
 ## 版权
 

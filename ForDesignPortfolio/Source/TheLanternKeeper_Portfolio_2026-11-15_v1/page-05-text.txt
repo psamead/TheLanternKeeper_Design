@@ -1,0 +1,38 @@
+THE LANTERN KEEPER     /     05  /  MECHANICS & IMPLEMENTATION
+The past becomes a passage
+Light is both an emotional cue and a rule: the remembered room contains the route that the present has lost.
+PRESENT / COLD MEMORY / WARM
+Editor capture, 15 Nov · before the first switch.
+The distant “Broken ladder” prompt establishes the blocked route.
+Editor capture, 15 Nov · a similar view after the switch.
+The independent ladder sprite appears with the warm world state.
+01  CHARACTER CONTROL
+A/D or arrows run; Shift walks; Space/W /Up
+jumps. A short input buffer and coyote time
+make the small room forgiving to navigate.
+float horizontalSpeed = slowWalk ?
+    walkSpeed : runSpeed;
+rb.linearVelocity = new Vector2(
+    x * horizontalSpeed,
+    rb.linearVelocity.y);
+PlayerController.cs · Update() excerpt
+02  INTERACTION GATES
+T rigger overlaps record discovery in order.
+Pickup + Story A + both exploration steps
+unlock E; the first bell locks movement.
+public bool CanUseLantern =>
+    hasLantern && storyACompleted &&
+    firstBellStage >=
+        FirstBellStage.Inspected &&
+    Time.frameCount > explorationFrame;
+GameState.cs · CanUseLantern excerpt
+03  TRANSITION & RETURN
+A memory-only ladder trigger fades to a safe
+attic landing; the window opens B. Buttons
+and keyboard selection return to the menu.
+GameState.ResetForMenu();
+SceneManager.LoadScene(
+    "00_StartMenu",
+    LoadSceneMode.Single);
+EndCardController.cs · BackT oMenu() excerpt
+01  STORY 02  CHARACTERS 03  WORLD 04  FLOW 05  MECHANICS 05 / 05

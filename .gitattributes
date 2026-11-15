@@ -1,1 +1,9 @@
-ForDesignPortfolio/*.pdf binary
+ForDesignPortfolio/*.pdf filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.psb filter=lfs diff=lfs merge=lfs -text
+*.designcraft filter=lfs diff=lfs merge=lfs -text
+*.idml filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.unityweb filter=lfs diff=lfs merge=lfs -text
+DemoBuilds/** filter=lfs diff=lfs merge=lfs -text

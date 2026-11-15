@@ -1,0 +1,36 @@
+2026-11-15T03:58:07.6301391+08:00
+6.08 PASS Fresh Home stage=Unexplored
+6.08 PASS Both exploration hints initially hidden
+6.08 PASS Direct RequestSwitch initially denied
+6.48 PASS Actual initial E has no switch
+6.48 Screenshot 01_initial_no_hints 1920x1080
+7.11 PASS Non-player trigger rejected stage=Unexplored
+7.66 PASS Ladder first with multiple Player colliders rejected stage=Unexplored
+8.18 PASS Discovery while child remains in ladder counts only first step stage=Discovered
+8.74 PASS Additional ladder collider while occupied cannot count second step stage=Discovered
+8.74 PASS Only fixed ladder hint after step one
+9.35 PASS Ladder hint persists outside discovery
+9.90 PASS Fresh ladder reentry unlocks exploration before pickup stage=Inspected
+9.90 PASS Two independent hints visible
+9.90 PASS Exploration alone cannot ring without lantern
+9.90 PASS Distinct fixed world anchors survive TMP layout
+9.90 Screenshot 02a_explored_before_pickup 1920x1080
+11.57 PASS World hints suppressed in Story A
+11.57 PASS RequestSwitch during A rejected
+14.01 PASS A skip restores saved exploration stage=Inspected
+14.01 PASS Held premature E not replayed on A unlock
+14.01 PASS Both fixed hints restored after skip
+19.07 Screenshot 02_two_persistent_hints 1920x1080
+19.74 PASS New E starts original first bell lock before world change
+19.74 PASS Tutorial hidden on first accepted bell
+19.74 PASS Duplicate request during bell denied
+23.92 PASS First bell changes to Memory once while E remains held
+27.51 PASS Subsequent E switches without reexploration
+28.91 PASS Menu reentry resets exploration stage=Unexplored
+28.91 PASS Menu resets pickup and Story A readiness
+55.91 PASS Natural A finish does not auto-unlock exploration stage=Discovered
+55.91 PASS Natural A restores only discovered hint
+56.32 PASS E after A before ladder remains denied
+56.32 PASS Independent discovery collider survives pickup
+56.82 PASS Ladder exploration after pickup works stage=Inspected
+57.13 PASS: finished

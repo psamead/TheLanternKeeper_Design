@@ -1,0 +1,31 @@
+THE LANTERN KEEPER     /     02  /  CHARACTERS & OBJECTS
+A silhouette that carries the story
+A yellow raincoat, dark bob and red boots keep Maela readable against the blue coastal world.
+MAELA  /  GAME-SIDE ART
+Cleaned source artwork for the game;
+not an in-engine animation capture.
+THE GIRL WHO STILL REMEMBERS
+Maela, the keeper's granddaughter, is the story's point of view. Her
+restrained proportions and clear outline support a quiet folk-fantasy
+tone. The warm lantern remains distinct from her yellow coat.
+FROM CONCEPT TO PLAYABLE CHARACTER
+The early concept carries the lamp in her left hand; the game-
+facing version uses the right. Separated body parts support cut-out
+movement and a clear lantern-raising action.
+Above: side/back development · right-hand lantern
+COPPER LANTERN
+The last pact flame:
+a story object and the key
+to the memory layer.
+MEMORY LADDER
+A restored route.
+Its trigger transitions
+to the attic.
+SOAZIG
+Grandmother; lost memory.
+Concept, not an NPC system.
+WOODEN CRATE
+A domestic object
+that gives the room
+scale and an obstacle.
+01  STORY 02  CHARACTERS 03  WORLD 04  FLOW 05  MECHANICS 02 / 05

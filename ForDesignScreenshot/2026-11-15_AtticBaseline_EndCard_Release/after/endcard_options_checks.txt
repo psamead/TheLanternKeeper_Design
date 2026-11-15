@@ -1,0 +1,30 @@
+2026-11-15T11:43:31.0049597+08:00
+252.63 PASS Held finish input cannot activate options
+252.63 PASS Skip lands on visible captioned B5
+253.22 PASS Exactly one continuing ArMorDu voice on B5
+253.22 PASS Independent wind remains at .4 on B5
+253.22 PASS B5 music remains .6 instead of stopping
+254.23 PASS One listener and EventSystem after return 0
+255.38 PASS Return 0 resets all session progress
+257.72 PASS Held finish input cannot activate options
+257.72 PASS Skip lands on visible captioned B5
+258.33 PASS Exactly one continuing ArMorDu voice on B5
+258.33 PASS Independent wind remains at .4 on B5
+258.33 PASS B5 music remains .6 instead of stopping
+259.33 PASS One listener and EventSystem after return 1
+260.45 PASS Return 1 resets all session progress
+262.77 PASS Held finish input cannot activate options
+262.77 PASS Skip lands on visible captioned B5
+263.36 PASS Exactly one continuing ArMorDu voice on B5
+263.36 PASS Independent wind remains at .4 on B5
+263.36 PASS B5 music remains .6 instead of stopping
+264.21 PASS One listener and EventSystem after return 2
+265.39 PASS Return 2 resets all session progress
+267.76 PASS Held finish input cannot activate options
+267.76 PASS Skip lands on visible captioned B5
+268.32 PASS Exactly one continuing ArMorDu voice on B5
+268.32 PASS Independent wind remains at .4 on B5
+268.32 PASS B5 music remains .6 instead of stopping
+269.49 PASS One listener and EventSystem after return 3
+270.67 PASS Return 3 resets all session progress
+271.46 PASS: finished

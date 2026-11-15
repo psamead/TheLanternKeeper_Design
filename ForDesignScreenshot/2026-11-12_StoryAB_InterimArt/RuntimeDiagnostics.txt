@@ -1,0 +1,5 @@
+StartMenu route grounded movement: dx=2.368 over 0.751 real s => 3.152 units/s; configured runSpeed=3.200; grounded=True; timeScale=1; captureFramerate=0
+Recorder A stopped; timeScale=1 captureFramerate=0
+Recorder B stopped; timeScale=1 captureFramerate=0
+Start Menu route (00_StartMenu → 00b_Prologue → 01_Home), timeScale=1, captureFramerate=0: GameState=1, AudioManager=1, LevelLoader=1, StoryboardPlayer=1, PlayerController=1, Maela Animator=1, AudioListener=1, EventSystem=1.
+Direct Home route (01_Home opened alone in Editor), timeScale=1, captureFramerate=0: GameState=1, AudioManager=1, LevelLoader=1, StoryboardPlayer=1, PlayerController=1, Maela Animator=1, AudioListener=1, EventSystem=1.

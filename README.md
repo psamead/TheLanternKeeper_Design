@@ -11,21 +11,23 @@ The Unity project lives in a separate repository: <https://github.com/psamead/Th
 
 ## Latest handoff 2026-11-15
 
-New agent entry: [ForAgent](ForAgent/README.md). A separate design workstation can read the [portfolio handoff](ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md), use the shared assets and return a 4–5-page PDF plus editable sources to ForDesignPortfolio/. The existing user recording is the reference for current flow; a duplicate full recording is not required. Portfolio production has not started.
+The Unity release is implemented and pushed through a469e41. Play the browser Demo at <https://psamead.github.io/TheLanternKeeper2D/>. Browser routes passed; the Windows package and EXE startup passed, while Windows gameplay and owner visual/audio acceptance remain pending. See [release report](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/Release_Report.md).
 
-The user broadly approves last night's recorded version and requests a higher attic walking baseline, B5 options without a second black fade, and EndCard Quit returning to Start Menu. Then the Unity workstation should deliver a complete Windows x64 package, commit/push the Unity repository, and attempt Web plus GitHub Pages playback. The approved Home background stays as it is.
+The five-page portfolio v1 is complete: [PDF and editing package](ForDesignPortfolio/README.md). New agents start at [ForAgent](ForAgent/README.md); current context is in [HOME_ART_RESUME](HOME_ART_RESUME.md).
 
-Current task: [2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md](CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md). **Prepared; no new implementation, executable or live website is claimed.** Earlier gate/audio/attic requirements remain regression checks. See [progress](TechnicalArt/MENU_UNITY_PROGRESS.md), [local resume](HOME_ART_RESUME.md), and [three user reference images](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md).
-
-People-facing Word versions: [Home handoff v5](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v5.docx), [Demo plan v2.0](purposal_story/守灯人_Demo制作方案_v2.0.docx). Runnable packages go to local DemoBuilds/; Word QA stays in .story_document_qa/.
+Large project files now use Git LFS: PSD/PSB art sources, videos, portfolio editable sources/PDF and complete Windows/Web deliverables in DemoBuilds/. Install Git LFS before cloning. Temporary QA files and third-party references remain local.
 
 ## Get and update
 
 ```bash
 # Recommended: clone next to the Unity project (sibling folder)
+git lfs install
 git clone https://github.com/psamead/TheLanternKeeper_Design.git
+cd TheLanternKeeper_Design
+git lfs pull
 # Later updates
 git pull
+git lfs pull
 ```
 
 ## For agents: read first (in order, as needed)
@@ -59,7 +61,7 @@ What happened recently: `ForAgent/Design/ART_HANDOFF.md` §10 (change log), `Tec
 | `ForDesignScreenshot/` | Screenshots from the Unity / Codex side for design review |
 | `deprecated/` | Superseded versions and process images (kept for visual history) |
 
-Not uploaded: `.psd/.psb` source files, third-party reference images (`BRETON_*`, `FAIRYHILLS_*` — listed in `ASSETS.md` but kept local only).
+Not uploaded: temporary QA caches and third-party reference images (`BRETON_*`, `FAIRYHILLS_*` — listed in `ASSETS.md` but kept local only).
 
 ## Licences
 

@@ -1,0 +1,4 @@
+CAPTION_BOUNDS PASS A1: box=(0.100,0.440)-(0.340,0.680) text=(0.105,0.486)-(0.335,0.634) font=44.0 lines=3
+CAPTION_BOUNDS PASS A2: box=(0.540,0.650)-(0.780,0.760) text=(0.545,0.663)-(0.775,0.747) font=37.4 lines=2
+CAPTION_BOUNDS PASS A3: box=(0.450,0.550)-(0.640,0.690) text=(0.463,0.553)-(0.627,0.687) font=39.6 lines=3
+CAPTION_BOUNDS PASS A4: box=(0.200,0.370)-(0.390,0.580) text=(0.214,0.376)-(0.376,0.574) font=44.0 lines=4

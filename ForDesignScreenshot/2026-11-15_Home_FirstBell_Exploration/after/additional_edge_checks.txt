@@ -1,0 +1,10 @@
+2026-11-15T04:05:08.5492204+08:00
+PASS Menu-origin session reset
+PASS One collider spanning both zones cannot skip two stages
+PASS Locked entry does not progress
+PASS Control lock hides both exploration hints
+PASS Unlock while remaining in ladder does not retroactively count
+PASS Actual T started Story A
+PASS Skipped A retains step one
+PASS Held E through actual second-zone entry does not execute after unlock
+PASS all additional edge checks; returning to menu

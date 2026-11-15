@@ -1,0 +1,37 @@
+2026-11-15T04:01:51.7092556+08:00
+4.29 PASS Continuous route starts at normal menu
+4.29 Recorder started with audio: C:/Users/Administrator/Documents/UnityProject/TheLanternKeeper2D/_CodexCaptures/2026-11-15_Home_FirstBell_Exploration/FirstBell_ContinuousRoute
+36.16 PASS Route new Home stage=Unexplored
+36.53 PASS Route premature E rejected
+36.53 Screenshot 03_route_initial 1920x1080
+38.63 PASS Route discovery entry stage=Discovered
+40.69 Screenshot 04_route_discovery 1920x1080
+68.96 PASS Route A preserves first step only stage=Discovered
+69.33 PASS Route E still denied after A
+72.69 PASS Route actual movement into second zone stage=Inspected
+78.83 Screenshot 05_route_both_fixed_hints 1920x1080
+79.36 PASS Route bell control lock
+83.39 PASS Route first bell switches exactly once
+83.39 Screenshot 06_route_memory_ladder 1920x1080
+85.69 Screenshot 07_route_attic 1920x1080
+122.93 Screenshot 08_endcard_natural 1920x1080
+122.93 EndCard root (670.00, -43.00)
+122.93 Back to Menu glyphWorldMin=(444.00, 501.68, 0.00) max=(754.21, 558.29, 0.00)
+122.93 Quit glyphWorldMin=(444.00, 431.48, 0.00) max=(546.94, 488.10, 0.00)
+122.93 PASS UI raycast hits moved BackToMenuButton at (670.00, 532.00)
+122.93 PASS UI raycast hits moved QuitButton at (670.00, 457.00)
+123.49 Screenshot 09_endcard_quit_keyboard 1920x1080
+125.66 Continuous route video completed
+126.21 PASS Actual mouse hover selects Back at moved position
+126.68 PASS Actual mouse hover selects Quit at moved position
+127.78 PASS Actual mouse click hits moved Quit button (Editor only)
+128.43 PASS actual mouse Back click returned to menu
+131.30 PASS Natural and skipped B5 share identical menu position
+131.30 Screenshot 10_endcard_skip 1920x1080
+131.30 EndCard root (670.00, -43.00)
+131.30 Back to Menu glyphWorldMin=(444.00, 501.68, 0.00) max=(754.21, 558.29, 0.00)
+131.30 Quit glyphWorldMin=(444.00, 431.48, 0.00) max=(546.94, 488.10, 0.00)
+131.30 PASS UI raycast hits moved BackToMenuButton at (670.00, 532.00)
+131.30 PASS UI raycast hits moved QuitButton at (670.00, 457.00)
+132.52 PASS keyboard selection and Enter return to menu
+132.54 PASS: finished

@@ -1,5 +1,7 @@
 # Home 美术知识库与交接补充
 
+2026-11-15 同步补充：用户授权将源文件与大媒体上传 GitHub，已安装 Git LFS 3.8.0。完整作品集 Source、项目 PSD/PSB、正式录像及 DemoBuilds 交付包现在纳入 LFS 同步；新电脑执行 `git lfs install` 后克隆/更新，再 `git lfs pull`。下方早期“只在本地”的大文件约定以本条为准，第三方参考和临时缓存继续忽略。
+
 ## 最新 Unity 与作品集反馈 2026-11-15
 
 Unity 工作站已交付阁楼基线调整、B5 无二次黑幕、EndCard Quit 回菜单。Unity GitHub `main` 已推送至 `a469e412e5867ac488aac5558f17682c4c582ffd`；游戏构建源是 `6adac6ca9d5532c9f646defca38c94255e55070c`。网页试玩地址为 https://psamead.github.io/TheLanternKeeper2D/，浏览器自然流程和返回菜单已通过报告。Windows 完整包已交付，EXE 启动通过，但 Windows 游戏内路线尚未实测。详细结果见 `MENU_UNITY_PROGRESS.md` 和发布报告。

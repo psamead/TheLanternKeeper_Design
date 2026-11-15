@@ -37,6 +37,8 @@
 
 ### 3.1 文件与版本
 
+- 2026-11-15 用户授权安装 Git LFS 并上传大文件，覆盖此前“源文件/运行包不上传”的约定。项目 PSD/PSB、录像、作品集原生/IDML/PDF 和 DemoBuilds 交付包使用 LFS；第三方参考图与临时 QA 缓存继续忽略。克隆/更新前安装 Git LFS，运行 `git lfs install`，拉取后运行 `git lfs pull`。不改写既有公开历史。
+
 - 2026-11-15 用户新建 `ForAgent/`，集中新 Agent 交接和阅读入口；跨电脑作品集说明放这里。`ForDesignPortfolio/` 放 4–5 页作品集最终 PDF，Source/Previews/_work 分别放源包、页面检查图和临时材料。作品集页面预览属于该交付包，不混入游戏截图验收目录。Unity 执行单继续放 CommandForAgentToInitialRun，本地续接继续放根目录 *_RESUME.md。
 
 - 2026-11-15 发布整理：运行包/ZIP 放根目录 `DemoBuilds/日期_主题/`（Git 忽略），Word 排版检查 PDF/PNG 放 `.story_document_qa/`；只有用户反馈截图、游戏截图与录像进入 `ForDesignScreenshot/日期_主题/`。当前 Unity 执行入口以 Command README 为准。
