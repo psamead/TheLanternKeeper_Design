@@ -1,6 +1,8 @@
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/handoff.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
 <!-- 给后续开发 Agent（Codex / Claude）的交接文档。新对话先读这份。 -->
 
-# handoff：《The Lantern Keeper》项目交接（v1.3，2026-11-08：Unity 改为 Core_Persistent + 叠加关卡，详见 UNITY_AGENTS.md）
+# handoff：《The Lantern Keeper》项目交接（v1.3，2026-11-08：Unity 改为 Core_Persistent + 叠加关卡，详见 ForAgent/Unity/UNITY_AGENTS.md）
 
 ## 1. 项目速览
 
@@ -15,16 +17,18 @@
 
 | 你要做什么 | 先读 |
 |---|---|
-| 了解故事 | `STORY_BIBLE.md` |
-| 写代码 / 搭场景 | 本文件 → `DEMO_IMPLEMENTATION_PLAN.md` → `TechnicalArt/HANDPAINTED_SPEC.md` |
-| 做美术 | `ART_HANDOFF.md` → `ART_PROMPTS.md` → `ART_ref/ASSETS.md` |
+| 了解故事 | `ForAgent/Design/STORY_BIBLE.md` |
+| 写代码 / 搭场景 | 本文件 → `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` → `TechnicalArt/HANDPAINTED_SPEC.md` |
+| 做美术 | `ForAgent/Design/ART_HANDOFF.md` → `ForAgent/Design/ART_PROMPTS.md` → `ART_ref/ASSETS.md` |
 | 查经验 / 踩坑 | `TechnicalArt/LESSONS_ART_PIPELINE.md` |
-| 做海报 / 菜单 | `ART_DIRECTION.md`；菜单进 Unity 看 `TechnicalArt/MENU_UNITY_HANDOFF.md` |
-| 改设定 | `DESIGN_CHANGES.md` |
+| 做海报 / 菜单 | `ForAgent/Design/ART_DIRECTION.md`；菜单进 Unity 看 `TechnicalArt/MENU_UNITY_HANDOFF.md` |
+| 改设定 | `ForAgent/Design/DESIGN_CHANGES.md` |
 | 了解工作规则 | `AGENT_PROCESS_GUIDELINES.md` |
-| 给 Unity 项目放 Codex 规则 | `UNITY_AGENTS.md`（复制到 Unity 根目录改名 `AGENTS.md`） |
+| 给 Unity 项目放 Codex 规则 | `ForAgent/Unity/UNITY_AGENTS.md`（复制到 Unity 根目录改名 `AGENTS.md`） |
 
 ## 3. 文件地图（SharedWorkFolder/）
+
+新的 Agent 总入口是 `ForAgent/README.md`；作品集制作交接在 `ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md`，另一台设计电脑制作 4–5 页 PDF 并将最终 PDF/源包写回 `ForDesignPortfolio/`。用户现有完整录像可复用，不要求 Unity 工作站重复录整段。
 
 | 位置 | 内容 |
 |---|---|
@@ -36,7 +40,7 @@
 | `TechArtAsset/` | 做好的游戏资产 |
 | `deprecated/` | 旧版本 |
 
-## 4. Demo 范围（摘要，以 DEMO_IMPLEMENTATION_PLAN.md 为准）
+## 4. Demo 范围（摘要，以 ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md 为准）
 
 2026-11-15 最新小修与交付：阁楼脚底基线提高至绿线；B5 无二次淡黑直接显示选项；EndCard 两个选项均回开始菜单。之后导出 Windows x64 完整包、push Unity，再尝试 Web/Pages。任务已准备，Unity/构建/部署均未执行；当前单见 `CommandForAgentToInitialRun/README.md`。
 
@@ -65,13 +69,15 @@
 - 文本（对话、插图文字）放 ScriptableObject，不写死在脚本里。
 - Git：每完成一项提交一次；美术源文件（.psd / .psb）不进 Git，放 `TechArtAsset/`。
 - 设计仓库：由 Psamead 维护。Claude 改完文档在本地提交（作者 `psamead <psamead@users.noreply.github.com>`），Psamead 在 Windows 上 `git push`。不上传：源文件、第三方参考图（见 `.gitignore`）。README 英文在前（`README.md`），中文 `README.zh-CN.md`，两份同步改。
-- 完成事项后在 `DEMO_IMPLEMENTATION_PLAN.md` 第 7 节把 ☐ 改为 ☑；未在 Play Mode 验证的不要标为完成。
+- 完成事项后在 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` 第 7 节把 ☐ 改为 ☑；未在 Play Mode 验证的不要标为完成。
 
 ## 7. 当前状态（2026-11-15）
 
+最新协作入口是 ForAgent/README.md。用户现有全流程录像已认可，不强制重复录整段；三项小修和构建任务看 Command README。作品集制作已备跨电脑交接说明，等待另一台设计电脑读取。下方早前状态是历史快照。
+
 **Home 当前交接**：用户确认当前 Home 背景正确。第一版探索与 EndCard 位置在 `c7ba7f2`；拾灯/A 门槛与视听/阁楼修订在 `a803050` 均有实施报告。用户最新复核后要求进一步修正，Unity follow-up 单已放入 `CommandForAgentToInitialRun/`，尚未执行。扬声器实听、物理键鼠和独立构建仍需明确验收。完整状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。
 
-人读当前设计摘要见 `DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；经验见 `TechnicalArt/LESSONS_ART_PIPELINE.md`；实施状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md`；图片/录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。本地设计对话从 [Home 知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 与 [接续摘要](HOME_ART_RESUME.md) 开始。Unity 工作站 Codex 先读 `CommandForAgentToInitialRun/README.md` 与最新进度；已完成单不要重跑。
+人读当前设计摘要见 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；经验见 `TechnicalArt/LESSONS_ART_PIPELINE.md`；实施状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md`；图片/录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。本地设计对话从 [Home 知识库](../../TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 与 [接续摘要](../../HOME_ART_RESUME.md) 开始。Unity 工作站 Codex 先读 `CommandForAgentToInitialRun/README.md` 与最新进度；已完成单不要重跑。
 
 ### 早期状态快照（2026-11-07，供追溯）
 

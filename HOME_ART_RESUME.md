@@ -1,5 +1,13 @@
 # Home 美术：本地对话接续
 
+## 最新状态 2026-11-15 Agent 目录已整理与作品集跨电脑协作
+
+用户确认自己的完整录像看起来正常。当前 Unity 三项小修与构建任务保留，但不强制工作站重录整条流程；修后检查相关截图/必要短片以及 EXE/浏览器实际运行。旧 follow-up 单的整段录屏要求已显式替代。
+
+用户新建 ForAgent 与 ForDesignPortfolio。已将 7 份当前设计原件迁至 ForAgent/Design、Unity 规则原件迁至 ForAgent/Unity；根目录只留 README、本地接续和工作准则，相关引用已同步。Agent 总入口为 ForAgent/README.md；另一台有 InDesign/Vectorcraft 的设计电脑读 ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md，从共享原素材制作 4–5 页学生作品集 PDF，最终 PDF 回存 ForDesignPortfolio 根目录，源包/预览放子目录。当前只完成交接资料，作品集未制作。学生姓名/个人职责未确认，不代填。用户会手动让那边 Codex 读取。
+
+
+
 ## 最新状态 2026-11-15 用户认可录屏并准备小修与交付
 
 用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
@@ -38,7 +46,7 @@ Unity 端 `3417fc4` 已接入楼下 v3、阁楼 v3、灯笼 v4 和完整梯 v4�
 
 用途：供本地美术 / 设计 Codex 新对话恢复上下文；本文件不是 Unity 执行命令。发给另一台 Unity 工作站 / 网络端 Codex 的可执行任务单放在 `CommandForAgentToInitialRun/`，当前 Home 执行单见 [Unity Home 审查与接入](CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md)。目录分类规则见 [CommandForAgentToInitialRun/README.md](CommandForAgentToInitialRun/README.md)。
 
-先读 TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md、ART_HANDOFF.md 第 9 节、ART_ref/ASSETS.md、ART_PROMPTS.md、TechnicalArt/MENU_UNITY_PROGRESS.md 末尾。
+先读 TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md、ForAgent/Design/ART_HANDOFF.md 第 9 节、ART_ref/ASSETS.md、ForAgent/Design/ART_PROMPTS.md、TechnicalArt/MENU_UNITY_PROGRESS.md 末尾。
 
 当前暂停点：Home 灰盒功能已有 Unity b61eb3f 的验证记录；用户已给出新一轮实机问题并授权按执行单处理。文档与资产已整理推送；Unity 实施和验收仍待执行。
 

@@ -11,11 +11,13 @@ The Unity project lives in a separate repository: <https://github.com/psamead/Th
 
 ## Latest handoff 2026-11-15
 
+New agent entry: [ForAgent](ForAgent/README.md). A separate design workstation can read the [portfolio handoff](ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md), use the shared assets and return a 4–5-page PDF plus editable sources to ForDesignPortfolio/. The existing user recording is the reference for current flow; a duplicate full recording is not required. Portfolio production has not started.
+
 The user broadly approves last night's recorded version and requests a higher attic walking baseline, B5 options without a second black fade, and EndCard Quit returning to Start Menu. Then the Unity workstation should deliver a complete Windows x64 package, commit/push the Unity repository, and attempt Web plus GitHub Pages playback. The approved Home background stays as it is.
 
 Current task: [2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md](CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md). **Prepared; no new implementation, executable or live website is claimed.** Earlier gate/audio/attic requirements remain regression checks. See [progress](TechnicalArt/MENU_UNITY_PROGRESS.md), [local resume](HOME_ART_RESUME.md), and [three user reference images](ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md).
 
-People-facing Word versions: [Home handoff v4](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v4.docx), [Demo plan v1.9](purposal_story/守灯人_Demo制作方案_v1.9.docx). Runnable packages go to local DemoBuilds/; Word QA stays in .story_document_qa/.
+People-facing Word versions: [Home handoff v5](TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v5.docx), [Demo plan v2.0](purposal_story/守灯人_Demo制作方案_v2.0.docx). Runnable packages go to local DemoBuilds/; Word QA stays in .story_document_qa/.
 
 ## Get and update
 
@@ -28,15 +30,15 @@ git pull
 
 ## For agents: read first (in order, as needed)
 
-1. `ART_HANDOFF.md` **§9 "Current progress and next steps"** — where the project is now and what comes next
-2. `handoff.md` — project overview, demo scope, code conventions
-3. `DEMO_IMPLEMENTATION_PLAN.md` — scenes, mechanics, dialogue, implementation checklist (§7)
-4. `STORY_BIBLE.md` — story and setting (v2.0)
+1. `ForAgent/Design/ART_HANDOFF.md` **§9 "Current progress and next steps"** — where the project is now and what comes next
+2. `ForAgent/Design/handoff.md` — project overview, demo scope, code conventions
+3. `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` — scenes, mechanics, dialogue, implementation checklist (§7)
+4. `ForAgent/Design/STORY_BIBLE.md` — story and setting (v2.0)
 5. `TechnicalArt/HANDPAINTED_SPEC.md` — art style, resolution, import settings
 6. `TechnicalArt/LESSONS_ART_PIPELINE.md` — lessons learned / pitfalls
-7. `UNITY_AGENTS.md` — Unity-side rules (the Unity repo's root `AGENTS.md` is derived from it)
+7. `ForAgent/Unity/UNITY_AGENTS.md` — Unity-side rules (the Unity repo's root `AGENTS.md` is derived from it)
 
-What happened recently: `ART_HANDOFF.md` §10 (change log), `TechnicalArt/MENU_UNITY_PROGRESS.md`, or `git log`.
+What happened recently: `ForAgent/Design/ART_HANDOFF.md` §10 (change log), `TechnicalArt/MENU_UNITY_PROGRESS.md`, or `git log`.
 
 ## Scenes (demo)
 
@@ -46,13 +48,14 @@ What happened recently: `ART_HANDOFF.md` §10 (change log), `TechnicalArt/MENU_U
 
 | Path | Contents |
 |---|---|
-| Root `*.md` | Specs and handoff notes for people and agents |
+| `ForAgent/` | Specs and handoff notes for people and agents |
 | `story_draft/`, `purposal_story/` | Story setting, demo plan (Word) |
 | `TechnicalArt/` | Technical / promotional art docs, fonts (OFL), Unity progress log |
 | `ART_ref/` | Concept art, references, `ASSETS.md` asset list |
 | `TechArtAsset/` | Finished game assets (exported PNG, OGG) |
 | `HOME_ART_RESUME.md` (root) | Local design/art Codex chat continuation; context and reading order, not an execution task |
 | `CommandForAgentToInitialRun/` | Dated, actionable task instructions for the Unity-workstation / remote Codex; see its README |
+| `ForDesignPortfolio/` | Student 4–5-page PDF, editable sources, and page previews produced on the design workstation |
 | `ForDesignScreenshot/` | Screenshots from the Unity / Codex side for design review |
 | `deprecated/` | Superseded versions and process images (kept for visual history) |
 

@@ -1,5 +1,7 @@
 # Home 美术知识库与交接补充
 
+最新协作入口（2026-11-15）：`ForAgent/README.md`；作品集电脑读 `ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md`，制作 PDF 回存 `ForDesignPortfolio/`。用户现有完整录像可直接作已认可流程参考，不强制 Unity 重录整段；本轮改动与新构建分别核对。
+
 ## 最新决定 2026-11-15 录屏小修与发布准备
 
 用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
@@ -19,7 +21,7 @@
 - **故事声音**：A1 音乐低到正常，A2 保持正常，A3 降低并有海浪，A4 与 A3 同音量且无海浪；B 与 EndCard 保持正常音乐并加入独立海风。
 - **执行状态**：以上一轮拾灯与 A 门槛、顺序探索、铃声后提示交接、A4 收尾、逐页音频和阁楼安全在 Unity `a803050` 有实现记录。用户随后指出仍需复核/修正，follow-up 任务已准备、尚未执行。扬声器听测、物理键鼠和独立构建均不得标为通过；本轮状态见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。
 
-完整玩家流程和音频 cue 表见 `DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；用户图和验收录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。上一轮 Unity 任务已完成；新 follow-up 任务单待 Unity 工作站 Codex 执行。先读 `CommandForAgentToInitialRun/README.md`，再读最新单，不能把两轮任务混为一轮。
+完整玩家流程和音频 cue 表见 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；用户图和验收录像索引见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。上一轮 Unity 任务已完成；新 follow-up 任务单待 Unity 工作站 Codex 执行。先读 `CommandForAgentToInitialRun/README.md`，再读最新单，不能把两轮任务混为一轮。
 
 ## 当前 Home 资产版本
 
@@ -64,7 +66,7 @@ Unity 已完成 Home 灰盒、LanternSwitch、完整梯与断梯切换、爬梯�
 
 ## 下一次对话如何继续
 
-先读本文件顶部当前决定、`ART_HANDOFF.md` 第 9 节、`ART_ref/ASSETS.md`、`ART_PROMPTS.md` 和 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。上一轮 `a803050` 已有 Editor 验证，但用户复核后建立了新的 follow-up。下一轮先读 Command README 与新任务单；不重跑旧单。背景经用户确认正确，不根据历史错版视频调整。旧版本资产/Unity 状态仍保留在下文作为追溯记录。
+先读本文件顶部当前决定、`ForAgent/Design/ART_HANDOFF.md` 第 9 节、`ART_ref/ASSETS.md`、`ForAgent/Design/ART_PROMPTS.md` 和 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。上一轮 `a803050` 已有 Editor 验证，但用户复核后建立了新的 follow-up。下一轮先读 Command README 与新任务单；不重跑旧单。背景经用户确认正确，不根据历史错版视频调整。旧版本资产/Unity 状态仍保留在下文作为追溯记录。
 
 ## 文档与发布范围
 

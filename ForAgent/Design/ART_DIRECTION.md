@@ -1,3 +1,5 @@
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/ART_DIRECTION.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
 <!-- 宣传美术方向。与 TechnicalArt/守灯人_美术方向_标题海报菜单_v1.3.docx 同源。 -->
 
 # 《The Lantern Keeper》美术方向：标题 · 海报 · 开始菜单

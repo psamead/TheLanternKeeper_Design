@@ -10,6 +10,8 @@
 
 ## 2 参考图与归档
 
+**2026-11-15 录屏要求更新**：用户确认自己的完整录像看起来正常，可以直接作为现有流程参考：`ForDesignScreenshot/2026-11-15_Home_FullDemo_Recordings/user_recording_0546_14_full_demo.mp4`。不强制另录一整段，也不因旧 follow-up 单尚未有新报告就整套重做。修后针对三项改动验证；静态图无法体现的 B5 连续衔接可补短片。Windows/Web 新产物仍应实际运行核对，但不要求每次全流程录屏。
+
 全部原图见 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/README.md`，按内容认图，不按旧录屏画面推断当前资产版本。
 
 1. user_note_attic_green_baseline.png：阁楼地板绿线是脚底走路基线目标。
@@ -64,7 +66,7 @@
 
 ## 8 证据与回报
 
-- 新截图及至少一段带声音连续验收录像放 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/`；抽帧和验证记录放同目录 `_work/`。Word/PDF 排版检查不放这里。
+- 使用用户已有完整录像作现有流程参考。修后相关截图、必要的短录屏（例如 B5 直接显示选项的连续几秒）放 `ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/`；不强制重录整条带声流程。抽帧和验证记录放同目录 `_work/`，Word 排版检查放 .story_document_qa。
 - Windows/Web 本地包交付到 `DemoBuilds/2026-11-15_FinalDemo/` 各自子目录；报告共享最终完整路径、ZIP/hash/大小和使用说明。共享写入失败时本地保留在工程 Assets 外并报告最终位置与复制结果。
 - 更新共享 TechnicalArt/MENU_UNITY_PROGRESS.md，Unity Docs/PROJECT_HANDOFF.md 和任务相关记录；将本单逐项状态回写，区分任务已准备、Unity 已实施、Editor 验证、Windows 实跑、Web 本地实跑、Pages 已部署、真实 URL 可玩、用户已验收。
 - 定向提交并推送实现和必要部署配置，核对远端提交；最后退出 Play Mode，只留一个干净 00_StartMenu，清除临时测试对象。回报“Editor 已回到只开 00_StartMenu”。

@@ -1,12 +1,14 @@
-<!-- 美术交接文件：给美术对话（宣传美术 + 技术美术）、Codex 和日后追踪用。结构参考 Animation_yichun《妖精丘陵》的 ART_HANDOFF.md。 -->
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/ART_HANDOFF.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
+<!-- 美术交接文件：给美术对话（宣传美术 + 技术美术）、Codex 和日后追踪用。结构参考 Animation_yichun《妖精丘陵》的 ForAgent/Design/ART_HANDOFF.md。 -->
 
 # ART_HANDOFF：《The Lantern Keeper》美术宣传 + 技术美术交接
 
 ## 0. 怎么用这份文件
 
-- 这是**美术工作**的起点。故事与玩法以 `STORY_BIBLE.md`（v2.0）和 `DEMO_IMPLEMENTATION_PLAN.md` 为准；美术以本文件为准。
-- 新对话开始时先读：本文件 → `STORY_BIBLE.md` → `ART_ref/ASSETS.md` → `ART_PROMPTS.md` → `TechnicalArt/HANDPAINTED_SPEC.md`。**实际动手出图按 `TechnicalArt/ART_PRODUCTION_GUIDE.md` 的步骤**（角色 → 道具 → 场景 → NPC → 标题 → 海报 → 菜单 → 像素素材）。
-- **设定可以改，但要走流程**：先登记到 `DESIGN_CHANGES.md`。只改美术细节（配色、服装小件）可以直接改并登记；涉及故事含义的只登记为「提议」，确认后再改 `STORY_BIBLE.md`。
+- 这是**美术工作**的起点。故事与玩法以 `ForAgent/Design/STORY_BIBLE.md`（v2.0）和 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` 为准；美术以本文件为准。
+- 新对话开始时先读：本文件 → `ForAgent/Design/STORY_BIBLE.md` → `ART_ref/ASSETS.md` → `ForAgent/Design/ART_PROMPTS.md` → `TechnicalArt/HANDPAINTED_SPEC.md`。**实际动手出图按 `TechnicalArt/ART_PRODUCTION_GUIDE.md` 的步骤**（角色 → 道具 → 场景 → NPC → 标题 → 海报 → 菜单 → 像素素材）。
+- **设定可以改，但要走流程**：先登记到 `ForAgent/Design/DESIGN_CHANGES.md`。只改美术细节（配色、服装小件）可以直接改并登记；涉及故事含义的只登记为「提议」，确认后再改 `ForAgent/Design/STORY_BIBLE.md`。
 - 每完成一项，把第 6 节的 ☐ 改为 ☑，并在第 10 节写一行变更记录；第 9 节是最新交接进度。
 - 改动 md 时同步对应的 Word（`purposal_story/`、`TechnicalArt/`）；改前把旧版复制进 `deprecated/`。
 
@@ -125,7 +127,7 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 - ☐ 对话框（9-slice）、头像框 ×3
 - ☐ 故事版 A ×4（灯笼的来历）、B ×5（后续引子），画面与字幕见 DEMO_IMPLEMENTATION_PLAN §6
 
-### 6.4 宣传美术（详见 `ART_DIRECTION.md`）
+### 6.4 宣传美术（详见 `ForAgent/Design/ART_DIRECTION.md`）
 - ☑ 标题字 → `TechArtAsset/Menu/TITLE_v1.png`（+ `_nosub` / `_noglow` / `_glow`）
 - ☑ 开始菜单 v1（11-03）：背景 `Menu/MENU_BG_v1.png`，静态稿 `Menu/MENU_v1_mock.png`；分层 L0_BG_1920 / L1_left_dark / TITLE_FRAMED_v1；按钮在 Unity 用 TMP（Cinzel）重建，选中 = 暖金 + 金色下划线 + 左侧小灯笼图标（图标待单独导出）
 - ☑ Demo 海报背景 → `ART_ref/POSTER_BG_v2.png`
@@ -148,19 +150,21 @@ TechArtAsset/Props/   TechArtAsset/UI/   TechArtAsset/Menu/   TechArtAsset/Audio
 
 ## 9. 当前进度与下一步（2026-11-15 更新）
 
+2026-11-15 作品集分工：另一台设计电脑从 `ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md` 恢复项目背景并制作 4–5 页 PDF，回存 `ForDesignPortfolio/`。本地已备说明，作品集未制作；已有用户全流程录像可作参考和取材，不强制重录完整流程。
+
 ### 最新用户录屏意见与交付任务
 
 用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
 
 当前执行入口为 `CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。本地已准备任务与三张用户图，未在 Unity 实施、未导出 EXE、未部署网页。`a803050` 是已知上一轮游戏实现基线；`122e013` 仅更新 Unity 文档链接。用户认可录像整体效果，不等同于此前全部边界、扬声器或独立构建已通过。此前 follow-up 未有新执行报告，其门槛、A4、音频与安全条目并入新单的回归核对，已符合的项目保留。当前 Home 背景继续沿用用户确认版本。
 
-给人阅读的当前版本：`TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v4.docx` 与 `purposal_story/守灯人_Demo制作方案_v1.9.docx`。下文此前“当前状态”是历史记录。
+给人阅读的当前版本：`TechnicalArt/守灯人_Home美术交接与经验_2026-11-15_v5.docx` 与 `purposal_story/守灯人_Demo制作方案_v2.0.docx`。下文此前“当前状态”是历史记录。
 
 ### Home 当前交接
 
 Unity 第一版首次探索与 EndCard 调整已在 `c7ba7f2` 实施。随后增加的拾灯与 A 门槛、A 后回门边、按序探索、铃声结束后提示渐隐、A4 收尾修正、逐页音频和阁楼安全有 Unity `a803050` 实施报告。用户最新复核后要求进一步修正/确认；follow-up 任务已准备，尚未由 Unity 工作站 Codex 执行。当前 Home 背景已确认正确，不调整。
 
-**当前状态：第二轮 Unity 改动已完成。** 详细实测、录像和未覆盖项目见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。扬声器实听、物理键鼠操作和独立构建仍未验证。给人阅读的设计表与状态见 `DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；用户原图与本轮录像见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。较早的 11-13 旧版错误背景录像仅为历史材料，不用来改当前背景或作为本轮验收证据。
+**当前状态：第二轮 Unity 改动已完成。** 详细实测、录像和未覆盖项目见 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新条目。扬声器实听、物理键鼠操作和独立构建仍未验证。给人阅读的设计表与状态见 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` §4.1–4.3；用户原图与本轮录像见 `ForDesignScreenshot/2026-11-15_Home_Pickup_Story_Attic/README.md`。较早的 11-13 旧版错误背景录像仅为历史材料，不用来改当前背景或作为本轮验收证据。
 
 下列 2026-11-13 状态及后续历史步骤保留作为追溯材料；其中“尚未接入”“下次再做”等旧待办不再代表当前状态。
 
@@ -168,7 +172,7 @@ Unity 第一版首次探索与 EndCard 调整已在 `c7ba7f2` 实施。随后增
 
 楼下当前候选为 `Present/Home_Present_v3.png`（2520×1080，用户移除背景梯子；源 `Present/_work/Home_Present_v3.psd`）。用户说明游戏使用同底图加滤镜并在触发后叠加独立梯子，不另画记忆底图作为本次接入前置条件。新图未接入 Unity；具体触发和滤镜实现待核对。
 
-本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。发给另一台 Unity 工作站 Codex 的可执行任务单为 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
+本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](../../TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](../../HOME_ART_RESUME.md)。发给另一台 Unity 工作站 Codex 的可执行任务单为 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
 
 ### 历史推进记录
 
@@ -228,7 +232,7 @@ Unity 第一版首次探索与 EndCard 调整已在 `c7ba7f2` 实施。随后增
 - **11-12 凌晨**：Codex 跑完 StoryAB_InterimArt（Unity `c91cc8a`）：9 张故事版进 Unity，B5 字幕放天空 PASS；**2 倍速原因 = `ProjectSettings/TimeManager.asset` 的 `m_TimeScale` 被存成 20，已改回 1**（管理器都只有 1 个；故事版每页 6.00 s，跑速 3.15）；截图 / Recorder 录屏在 `ForDesignScreenshot/2026-11-12_StoryAB_InterimArt/`；编辑器只留 00_StartMenu。它报告故事版源图是 2048×1152（共享里是 2208×1242）→ 单独小任务 `2026-11-12_Unity_StoryAB_Refresh_ForCaptions.md`：换上定稿 A4 / B1、核对尺寸、每页截图（带字幕 `*_end` / 不带字幕 `*_clean`）+ 录屏 → 用户整体标字幕框 → 再跑 LanternSwitch。
   - A4 第三轮左上、B1 第二轮左下（斜构图方窗：更有指向性，关着的窗 = 距离、隔阂、人与人隔绝）定稿 → `SB_A4.png`、`SB_B1.png`。**故事版 P / A / B 全部定稿。**
 - **11-12 上午**：Codex 跑完 Refresh（故事版全部 2208×1242 已核对；A/B 9 页字幕框 PASS）。用户看后提出：跳页时画面沿推镜方向突然前后跳一下（bug）；A2/A4/B1/B4 字幕框再挪（目标：构图平衡 + 可读）；字幕整体加粗、阴影加重；EndCard 按钮挡住 B5 字幕 → 下移；拾灯笼提示改 "Press W" + 同色圆角描边框（Press E 同款）；序章没配乐 → 用 Ar Mor Du。→ Codex 任务 `2026-11-12_Unity_Story_Polish_PressW.md`（标注图 `ForDesignScreenshot/2026-11-12_StoryAB_Final/user_markup/`），之后才跑 LanternSwitch。
-- Unity `AGENTS.md` 已与 `UNITY_AGENTS.md` 同步（11-09，未提交，下次让 Codex 一起提交）；以后改 `UNITY_AGENTS.md` 就直接复制过去。
+- Unity `AGENTS.md` 已与 `ForAgent/Unity/UNITY_AGENTS.md` 同步（11-09，未提交，下次让 Codex 一起提交）；以后改 `ForAgent/Unity/UNITY_AGENTS.md` 就直接复制过去。
 - 截图规则：`ForDesignScreenshot/YYYY-MM-DD_主题/`，用户截图命名 `user_note_HHMM_说明.png`。
 
 2c. ☐ **Maela 补被挡部分（延后）**：Boot_L 前脚掌、Leg_Upper_L 大腿、Dress 下沿等，在 `TechArtAsset/Characters/Maela/_work/fix_v1.5/Maela_v1.5_m.psb` 上继续画（可扩外框；不改图层名 / 顺序，画布 149×320）。完成后：Claude 对比 v1.5 外框 → 生成 `Assets/_Project/Art/Characters/Maela/maela_realign.json` → Codex 运行 Tools ▸ Lantern Keeper ▸ Realign Maela Sprites（`MaelaSpriteRealign.cs`，每个 psb 版本只运行一次）。当前 Unity 用 v1.5（外框与 v1.4 相同）。
@@ -265,7 +269,7 @@ Unity 现状：`TheLanternKeeper2D` 有四个场景 `00_StartMenu`、`01_Home`�
 | 2026-11-03 | 场景编号改为开始菜单 `00_StartMenu`、章节 `01_Home` / `02_Harbor` / `03_EndCard`；Unity Editor 内重命名并保留 GUID，Build Settings、脚本路由、Harbor/EndCard 占位标签已同步。 |
 | 2026-11-03 | Unity 菜单音频接入：OGG 悬停/确认/返回音、循环 BGM 与海风环境声及淡入淡出；Play Mode 验证 Play 到 Home、Escape 返回菜单。未做扬声器听测、80 秒循环监听或独立 Player 构建。提交 `be85569`，详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
 | 2026-11-03 | 按用户要求清空 `01_Home` 的占位标题与 `Esc → menu` 文本，避免其在 Editor 同时加载开始菜单与 Home 时叠显示；场景已保存，单场景各自 AudioListener / EventSystem 正常。提交 `7415565` 已推送至 GitHub `main`；详见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。 |
-| 2026-11-03 | 共享文件夹建为 Git 仓库，公开发布到 `psamead/TheLanternKeeper_Design`（学生只拉取）；新增 README（Agent 阅读顺序）、`.gitignore`（不传 deprecated/、源文件、第三方参考图 BRETON_* / FAIRYHILLS_*）；UNITY_AGENTS.md 去掉局域网路径，改指向设计仓库 |
+| 2026-11-03 | 共享文件夹建为 Git 仓库，公开发布到 `psamead/TheLanternKeeper_Design`（学生只拉取）；新增 README（Agent 阅读顺序）、`.gitignore`（不传 deprecated/、源文件、第三方参考图 BRETON_* / FAIRYHILLS_*）；ForAgent/Unity/UNITY_AGENTS.md 去掉局域网路径，改指向设计仓库 |
 | 2026-11-03 | 仓库已推送到 GitHub；README 改为英文在前（`README.md`），中文另存 `README.zh-CN.md`，顶部互相链接切换；handoff、AGENT_PROCESS_GUIDELINES、LESSONS 与《项目总览与文件说明》Word 加入仓库说明 |
 | 2026-11-03 | `deprecated/` 改为上传（方便查看视觉演变）；新增 `ForDesignScreenshot/` 放 Unity / Codex 截图；README 两版同步 |
 | 2026-11-03 | 菜单 BGM / 环境声 AudioSource 初始音量保存为 0，由 MenuMusic 淡入至目标音量；Editor 检查 Settings Escape 返回音有效，但音乐源后续报告停止且输出采样为零，持续播放与扬声器听感仍待核验。详见 TechnicalArt/MENU_UNITY_PROGRESS.md。 |

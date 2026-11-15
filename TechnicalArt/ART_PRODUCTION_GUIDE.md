@@ -3,7 +3,7 @@
 # 《The Lantern Keeper》美术资产制作指南：角色 · 场景 · 海报（v1）
 
 > 给人看的操作手册。与 `TechnicalArt/守灯人_美术资产制作指南_v1.4.docx` 同源。流程参考 Animation_yichun《妖精丘陵》的实际做法（概念图 → 定稿参考 → 用定稿统一后续出图 → 合成海报）。
-> 配套文件：`ART_PROMPTS.md`（全部 prompt）、`ART_HANDOFF.md`（角色外观约束、调色板）、`TechnicalArt/HANDPAINTED_SPEC.md`（手绘规格）、`ART_ref/ASSETS.md`（登记表）。
+> 配套文件：`ForAgent/Design/ART_PROMPTS.md`（全部 prompt）、`ForAgent/Design/ART_HANDOFF.md`（角色外观约束、调色板）、`TechnicalArt/HANDPAINTED_SPEC.md`（手绘规格）、`ART_ref/ASSETS.md`（登记表）。
 
 ## 0. 总览：做什么、按什么顺序
 
@@ -26,14 +26,14 @@
 
 1. 确认出图工具：Midjourney（网页版）或 OpenAI 图像。下文以 Midjourney 为例，OpenAI 用法见第 9 节。
 2. Midjourney 设置里确认模型版本：角色用 **Niji 6**，场景和道具用 **V7**。版本不对时 `--cw` 等参数会报错。
-3. 打开 `ART_HANDOFF.md` 第 4 节，对照角色“必须保留 / 不要画”。
+3. 打开 `ForAgent/Design/ART_HANDOFF.md` 第 4 节，对照角色“必须保留 / 不要画”。
 4. 每次选定一张图，马上存进 `ART_ref/` 并在 `ASSETS.md` 登记一行（文件名、prompt 编号、状态）。
 
 ## 2. 第一步：主角 Maela
 
 ### 2.1 出第一轮
 
-- 使用 `ART_PROMPTS.md` 的 **C01**（Niji 6，`--ar 3:2 --s 150`）。
+- 使用 `ForAgent/Design/ART_PROMPTS.md` 的 **C01**（Niji 6，`--ar 3:2 --s 150`）。
 - 第一轮没有参考图，Character Reference 留空。
 - 跑 2–3 次（每次 4 张），挑出最接近的一张。
 
@@ -139,8 +139,8 @@
 
 - ☐ 文件存到正确位置，命名照第 2–8 节
 - ☐ `ART_ref/ASSETS.md` 加一行
-- ☐ `ART_HANDOFF.md` 第 6 节把 ☐ 改为 ☑，第 10 节写一行，并更新第 9 节交接进度
-- ☐ 如果改了角色外观或设定，登记 `DESIGN_CHANGES.md`
+- ☐ `ForAgent/Design/ART_HANDOFF.md` 第 6 节把 ☐ 改为 ☑，第 10 节写一行，并更新第 9 节交接进度
+- ☐ 如果改了角色外观或设定，登记 `ForAgent/Design/DESIGN_CHANGES.md`
 
 ## 12. 实操经验（2026-10-31，Maela 与海报背景）
 

@@ -1,6 +1,6 @@
 # 技术美术规格：手绘 2D 资产与 Unity 管线（v1.1）
 
-> 给美术与 Unity 制作共用。与 `TechnicalArt/守灯人_技术美术方案_手绘规格_v1.1.docx` 同源。取代已移入 `deprecated/` 的 `PIXEL_ART_SPEC.md`（2026-11-02，见 `DESIGN_CHANGES.md`）。
+> 给美术与 Unity 制作共用。与 `TechnicalArt/守灯人_技术美术方案_手绘规格_v1.1.docx` 同源。取代已移入 `deprecated/` 的 `PIXEL_ART_SPEC.md`（2026-11-02，见 `ForAgent/Design/DESIGN_CHANGES.md`）。
 > 标「建议」的数值是起点，做出第一批素材、在 Unity 里试过后可调，调整后登记。
 
 ## 0. 风格目标
@@ -18,7 +18,7 @@
 | 质感 | 少量排线 / 颗粒肌理增加手工感 | 凯尔特结纹、三螺旋纹（都是它的标志）。**我们的民俗符号是白鼬尾纹（Hermine）+ 布列塔尼镂空蕾丝**（参考 `ART_ref/BRETON_*_REF_01.png`） |
 
 - **一句话**：和《妖精丘陵》同为“手绘民俗奇幻”，但它是暖、甜、Q；我们是冷夜里的一盏暖灯——安静、略带忧郁、最终有希望，角色比例更接近真实。
-- **调色板**：仍用 `ART_HANDOFF.md` §4.1；梅拉雨衣 #F6D743 全画面最亮；暖光只来自灯笼与塔灯。
+- **调色板**：仍用 `ForAgent/Design/ART_HANDOFF.md` §4.1；梅拉雨衣 #F6D743 全画面最亮；暖光只来自灯笼与塔灯。
 
 ## 1. 基础规格
 
@@ -135,7 +135,7 @@ Interactables（NPC、灯笼、贝壳）
 
 ## 8. 生产流程
 
-AI 概念图（Midjourney Niji 6，风格后缀 STYLE_GAME，见 `ART_PROMPTS.md`）→ 定稿（ASSETS.md 标“当前定稿”）→ **Photoshop 清理**：统一线条与调色板、去 AI 瑕疵、**去边**（浅色背景抠图留下的亮边，深色场景里很显眼）、发光物体内部填实、补缺的部分 → **拆层**（场景按 §4，角色按 §3.1）→ 导出 PNG / `.psb` → `TechArtAsset/` → Unity 替换色块。
+AI 概念图（Midjourney Niji 6，风格后缀 STYLE_GAME，见 `ForAgent/Design/ART_PROMPTS.md`）→ 定稿（ASSETS.md 标“当前定稿”）→ **Photoshop 清理**：统一线条与调色板、去 AI 瑕疵、**去边**（浅色背景抠图留下的亮边，深色场景里很显眼）、发光物体内部填实、补缺的部分 → **拆层**（场景按 §4，角色按 §3.1）→ 导出 PNG / `.psb` → `TechArtAsset/` → Unity 替换色块。
 
 ### 8.1 清理以游戏尺寸为准（2026-11-07）
 

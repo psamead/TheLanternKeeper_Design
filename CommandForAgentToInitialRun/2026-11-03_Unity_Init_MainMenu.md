@@ -3,7 +3,7 @@
 Shared folder = `SharedWorkFolder` (if it is mapped to a drive letter on your computer, use that path). The Unity project is **`TheLanternKeeper2D`** (already created, already connected to GitHub, and you are already connected to Unity). Work inside it; do not create a new project.
 
 ## Step 0 — before anything else
-Fill in the actual path you use to reach `SharedWorkFolder` in the empty slot in `AGENTS.md` (project root), replacing `<在 Unity 那台电脑上填写网络共享路径>`. Do the same in `SharedWorkFolder/UNITY_AGENTS.md`. From now on, always use this path to find the shared documents.
+Fill in the actual path you use to reach `SharedWorkFolder` in the empty slot in `AGENTS.md` (project root), replacing `<在 Unity 那台电脑上填写网络共享路径>`. Do the same in `SharedWorkFolder/ForAgent/Unity/UNITY_AGENTS.md`. From now on, always use this path to find the shared documents.
 
 ## Already done by Claude (2026-11-03, not yet committed — include them in your "Before" commit)
 - Art and font are **already in the project**: `Assets/_Project/Art/Menu/` (MENU_L0_BG_1920, MENU_L1_left_dark, TITLE_FRAMED_v1, MENU_v1_mock = target image, do not use in the scene), `Assets/_Project/Art/UI/ICON_lantern_128.png` / `_64.png`, `Assets/_Project/Fonts/Cinzel-Variable.ttf` (+ OFL). Do not copy them again; only set import settings.
@@ -11,8 +11,8 @@ Fill in the actual path you use to reach `SharedWorkFolder` in the empty slot in
 - Project facts: Unity 6000.3.24f1; 2D Animation / PSD Importer / Input System already installed; **Active Input Handling = Input System Package (new)** — use `UnityEngine.InputSystem` (Keyboard.current / Mouse.current or an InputAction), not the legacy `Input` class. Add `InputSystemUIInputModule` on the EventSystem.
 
 ## Read first (only these)
-1. `SharedWorkFolder/UNITY_AGENTS.md` — rules (copy it into the Unity project root as `AGENTS.md` if it is not there yet).
-2. `SharedWorkFolder/handoff.md` §1, §4, §5.
+1. `SharedWorkFolder/ForAgent/Unity/UNITY_AGENTS.md` — rules (copy it into the Unity project root as `AGENTS.md` if it is not there yet).
+2. `SharedWorkFolder/ForAgent/Design/handoff.md` §1, §4, §5.
 3. `SharedWorkFolder/TechnicalArt/MENU_UNITY_HANDOFF.md` — the menu spec.
 4. Look at `SharedWorkFolder/TechArtAsset/Menu/MENU_v1_mock.png` — your result must match it.
 
@@ -30,5 +30,5 @@ Fill in the actual path you use to reach `SharedWorkFolder` in the empty slot in
 5. Enter Play Mode, compare with `MENU_v1_mock.png`, fix positions if they differ. Commit "Start menu v1".
 6. Report:
    - Create `SharedWorkFolder/TechnicalArt/MENU_UNITY_PROGRESS.md` (if the shared folder is not reachable from your computer, write it to `Docs/MENU_UNITY_PROGRESS.md` in the project instead and say so): what was done, what you checked in Play Mode, what is not verified, any differences from the mock.
-   - Add one dated line to `SharedWorkFolder/ART_HANDOFF.md` §10 (edit the current file; do not overwrite other changes).
+   - Add one dated line to `SharedWorkFolder/ForAgent/Design/ART_HANDOFF.md` §10 (edit the current file; do not overwrite other changes).
    - Tell the user the Unity project path and how to open the scene.

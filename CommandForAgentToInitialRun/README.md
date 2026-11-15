@@ -17,3 +17,5 @@ The [previous follow-up](2026-11-15_Unity_Home_StoryGate_Attic_Audio_Followup.md
 - [Visual refinement](2026-11-14_Unity_Home_Visual_Refinement.md): a84fa68. [Home art review](2026-11-13_Unity_Home_Review_Art_Transition_Audio.md): 3417fc4.
 
 New evidence: ForDesignScreenshot/2026-11-15_AtticBaseline_EndCard_Release/after/. Runnable packages: DemoBuilds/2026-11-15_FinalDemo/. Word QA: .story_document_qa/. Implementation reports: TechnicalArt/MENU_UNITY_PROGRESS.md. Local context: HOME_ART_RESUME.md.
+
+Recording clarification 2026-11-15: use the user's existing full-demo recording as the accepted reference for existing flow. Do not require a duplicate full recording. Verify the new changes with relevant screenshots or necessary short clips; real EXE/browser checks still apply. Cross-computer agent navigation and the separate portfolio handoff are in [ForAgent](../ForAgent/README.md).

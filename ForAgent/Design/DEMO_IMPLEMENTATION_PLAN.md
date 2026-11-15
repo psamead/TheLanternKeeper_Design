@@ -1,4 +1,6 @@
-<!-- 与 purposal_story/守灯人_Demo制作方案_v1.9.docx 同步内容；Markdown 与 Word 版本号各自递增。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
+<!-- 与 purposal_story/守灯人_Demo制作方案_v2.0.docx 同步内容；Markdown 与 Word 版本号各自递增。清单项用 ☐ / ☑ 标记进度。v1.0 在 deprecated/。 -->
 
 # 《The Lantern Keeper》Demo 制作方案（v1.6，2026-11-15：阁楼与结尾小修及构建待执行）
 
@@ -86,6 +88,8 @@ E 是“使用灯笼”的动作；T 是“拾取灯笼”的动作。提示必�
 上一轮 `a803050` 有 Editor 路线和边界报告；此前 follow-up 没有新执行回报。用户最新认可昨晚录像整体效果，并提出 §4.4 三项小修和构建发布要求；门槛、A4、声音与安全并入最新任务的回归核对。新单已准备，Unity/Windows/Web/Pages 尚未执行。当前 Home 背景正确；扬声器听感、实体键鼠与独立构建分别记录。
 
 ### 4.4 最新录屏小修与交付 2026-11-15
+
+2026-11-15 录屏补充：用户已有完整录像看起来正常，直接作既有流程参考，不强制 Unity Codex 再录完整流程；只对新改动保存对应截图/必要短片，EXE/浏览器运行仍须实测。作品集跨电脑制作另读 `ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md`；作品集不是新增可玩关卡。
 
 用户认可昨晚录屏版本整体效果，并提出三项小修：阁楼人物脚底行走基线提高至绿线；故事 B5 结束时直接在当前画面显示选项，不再淡黑再重新显示 B5；EndCard 的 Quit 同样返回开始菜单。之后由 Unity 工作站导出完整 Windows x64 可运行包，定向提交并 push Unity 仓库，再尝试 Web 构建及 GitHub Pages 网页试玩。
 
@@ -179,7 +183,7 @@ Unity 6.3 LTS · 2D URP · 1920×1080，PPU 100（角色 .psb 为 2× 源，PPU 
 - ~~试玩 2–3 人并修改~~（11-12 用户决定：不做）
 - ☐ 按 §4.4 小修后导出并实际运行 Windows x64 完整包；push Unity 后尝试 Web 构建与 Pages 真实 URL 验证
 
-### 美术（详见 ART_HANDOFF.md）
+### 美术（详见 ForAgent/Design/ART_HANDOFF.md）
 - ☑ 主角 Maela 定稿 + `.psb` + Idle（11-07）
 - ☑ Maela Run / JumpUp / Fall / Lantern（举灯切换，11-07）；☑ v1.6_m 补画被挡部分 + Walk / Run 分开（11-08）
 - ☑ 声音 v1：序章 BGM + 海风浪、Home 屋内环境、脚步 / 跳落 / 举灯；Unity `a803050` 加入 A/B 逐页增益、独立海浪与海风。真实扬声器混音与听感仍待验收。

@@ -1,5 +1,7 @@
 # Unity：Home 持灯后探索门槛、故事音频与阁楼到达修订（2026-11-15 后续）
 
+> 2026-11-15 用户补充：自己的完整录屏正常，不强制 Unity Agent 再录整条流程。此旧单下文的整段新录像要求不再是当前门槛；按 Command README 指向的新单做局部修改与构建验证。
+
 > 入口已更新：以 `2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md` 为当前执行单。此单尚无新实施报告；原门槛、A4、声音和安全要求并入新单回归检查。最新用户认可昨晚录屏整体效果，并要求阁楼基线、B5 直接出选项、EndCard Quit 回菜单及 Windows/Web 交付。勿独立重跑本单。
 
 执行者：另一台 Unity 工作站上的 Codex。**本文件是新任务单，请执行；不要重跑已完成的 `2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`。** 先读 Unity 根目录 `AGENTS.md`、本目录 `README.md`、本单及 `TechnicalArt/MENU_UNITY_PROGRESS.md` 最新报告，再核对共享目录与 Unity 工作区实时状态。只定向改本任务所需对象，保留无关工作区改动。

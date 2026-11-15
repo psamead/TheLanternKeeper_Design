@@ -1,3 +1,5 @@
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/DESIGN_CHANGES.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
 <!-- 设定变更记录：故事、玩法、美术共用。任何会影响已定设定的修改，先在这里登记，再改具体文件。 -->
 
 # DESIGN_CHANGES：设定变更记录与流程
@@ -6,10 +8,10 @@
 
 | 领域 | 以此为准 |
 |---|---|
-| 故事、世界观、角色、结局 | `STORY_BIBLE.md`（v2.0） |
-| Demo 范围、玩法、系统 | `DEMO_IMPLEMENTATION_PLAN.md`、`handoff.md` |
-| 美术规格与资产管线 | `ART_HANDOFF.md`、`TechnicalArt/HANDPAINTED_SPEC.md` |
-| 宣传美术 | `ART_DIRECTION.md` |
+| 故事、世界观、角色、结局 | `ForAgent/Design/STORY_BIBLE.md`（v2.0） |
+| Demo 范围、玩法、系统 | `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md`、`ForAgent/Design/handoff.md` |
+| 美术规格与资产管线 | `ForAgent/Design/ART_HANDOFF.md`、`TechnicalArt/HANDPAINTED_SPEC.md` |
+| 宣传美术 | `ForAgent/Design/ART_DIRECTION.md` |
 | 参考图与资产状态 | `ART_ref/ASSETS.md` |
 
 ## 2. 变更流程
@@ -23,7 +25,7 @@
 ## 3. 变更记录
 
 | 日期 | 变更 | 原因 | 影响的文件 | 状态 |
-| 2026-11-15 | Home 探索必须在拾灯且故事 A 结束后开始；A 后女孩回到门边；首次铃声结束后才渐隐并关闭两处探索区，梯子触发区接手；阁楼淡入时站稳且不能坠回楼下；A/B 按页调整音乐与海浪/海风 | 用户观看 `c7ba7f2` 路线录屏后明确了先后、提示时机、音乐情绪和阁楼安全 | `DEMO_IMPLEMENTATION_PLAN.md`、`STORY_BIBLE.md`（只做一致性核对，不改设定）、`UNITY_AGENTS.md`、`TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md`、`TechnicalArt/LESSONS_ART_PIPELINE.md`、`TechnicalArt/MENU_UNITY_PROGRESS.md`、Unity 执行单与人读交接 | 已确认并于 2026-11-15 在 Unity `a803050` 实施/Editor 验证；扬声器听测、物理键鼠及独立构建未验证；背景确认正确 |
+| 2026-11-15 | Home 探索必须在拾灯且故事 A 结束后开始；A 后女孩回到门边；首次铃声结束后才渐隐并关闭两处探索区，梯子触发区接手；阁楼淡入时站稳且不能坠回楼下；A/B 按页调整音乐与海浪/海风 | 用户观看 `c7ba7f2` 路线录屏后明确了先后、提示时机、音乐情绪和阁楼安全 | `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md`、`ForAgent/Design/STORY_BIBLE.md`（只做一致性核对，不改设定）、`ForAgent/Unity/UNITY_AGENTS.md`、`TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md`、`TechnicalArt/LESSONS_ART_PIPELINE.md`、`TechnicalArt/MENU_UNITY_PROGRESS.md`、Unity 执行单与人读交接 | 已确认并于 2026-11-15 在 Unity `a803050` 实施/Editor 验证；扬声器听测、物理键鼠及独立构建未验证；背景确认正确 |
 |---|---|---|---|---|
 | 2026-11-15 | 拾灯与 A 完成为探索前置；A 后门边返回；铃声结束才渐隐教学文字并停用探索区、启用梯区；阁楼站稳且不坠回楼下；A/B 分段音乐与风浪调整 | 用户观看 c7ba7f2 后明确顺序和听感，替换此前允许提前探索的约定 | 新单 `2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`、HOME_ART_RESUME、Unity 探索/故事音频/阁楼 | 已在 Unity `a803050` 实施并 Editor 验证；听音/物理输入/构建限制见进度报告；背景确认正确 |
 | 2026-11-15 | 第一次 E 摇铃按序解锁：原灯位探索区 → 远处固定 Broken ladder → 梯位查看区 → 固定 Press E → 首次有效摇铃出完整梯；进度本局记忆，重开重置。EndCard 选项移至女孩左侧红框 | 用户希望先探索、发现阻路，再主动用灯推进故事；本轮先看这两项效果 | 执行单 `2026-11-15_Unity_FirstBell_Exploration_EndCard.md`、HOME_ART_RESUME、Unity 交互/提示/EndCard；截图归档 | 第一版已在 `c7ba7f2` 实施；其中“拾灯前可记录探索”和“E 接受后立刻隐藏提示”已被下方决定取代；EndCard 移位保留 |
@@ -40,20 +42,20 @@
 | 2026-11-05 | 斜挎包 **Demo 不做**（转身图、游戏版 `--no bag`）；另留一个“背包版” Maela，完整版作**过了新手村之后的储物包** | 用户决定；Demo 少一个部件 | ART_HANDOFF §4.2 / §8、ART_PROMPTS C01-T / C01-G；完整版：STORY_BIBLE、完整版概念设计说明 | Demo 部分已完成；完整版储物包为提议 |
 | 2026-10-31 | 海报概念图画风改为沿用 Maela 绘本风（原定“高清像素风插画”） | 用户决定；游戏内画风可不同 | ART_HANDOFF §2、ART_DIRECTION K1、ART_PROMPTS K1-BG | 已完成 |
 | 2026-10-31 | 游戏内画风：像素（原定）或接近海报的绘本风 | 与学生讨论中 | ART_HANDOFF §2、PIXEL_ART_SPEC、生产流程 | 已确认 → 见下一行 |
-| 2026-11-02 | **游戏画风改为手绘 2D**：沿用概念图绘本风、稍游戏化，方向接近《妖精丘陵》但不照搬；1920×1080 / PPU 100；场景分层大图，角色骨骼动画；碰撞仍用 Tilemap | 用户决定；美术主要靠 AI 出图再清理，像素需全手画 | ART_HANDOFF、HANDPAINTED_SPEC（新）、PIXEL_ART_SPEC（移入 deprecated）、ART_PROMPTS、ART_PRODUCTION_GUIDE、ART_DIRECTION、handoff.md、DEMO_IMPLEMENTATION_PLAN、AGENT_PROCESS_GUIDELINES、对应 Word | 已完成 |
+| 2026-11-02 | **游戏画风改为手绘 2D**：沿用概念图绘本风、稍游戏化，方向接近《妖精丘陵》但不照搬；1920×1080 / PPU 100；场景分层大图，角色骨骼动画；碰撞仍用 Tilemap | 用户决定；美术主要靠 AI 出图再清理，像素需全手画 | ART_HANDOFF、HANDPAINTED_SPEC（新）、PIXEL_ART_SPEC（移入 deprecated）、ART_PROMPTS、ART_PRODUCTION_GUIDE、ART_DIRECTION、ForAgent/Design/handoff.md、DEMO_IMPLEMENTATION_PLAN、AGENT_PROCESS_GUIDELINES、对应 Word | 已完成 |
 | 2026-11-02 | 美术基调：奇幻为主、带一点民俗的暗与静，不走恐怖，落脚点是抉择与成长（11-02 修订）；不做 Q 版；角色约 5 头身、正常眼睛、表情克制；借《妖精丘陵》墨线 / 平涂 / 强光源，回避其甜美粉彩 | 用户：角色太小孩，主题偏 fantasy、略 dark | HANDPAINTED_SPEC §0、ART_PROMPTS（STYLE_CHAR、STYLE_GAME）、ART_HANDOFF §4.2 | 已完成 |
 | 2026-11-02 | 字体系统：标题 Cinzel Decorative（油墨毛边）、副标题 IM Fell English SC、菜单 Cinzel、对话 EB Garamond、回忆 Cormorant Garamond Italic；取代像素字体候选 | 画风改手绘；与《妖精丘陵》区分 | ART_HANDOFF §2、ART_DIRECTION §2、字体与UI决定.xlsx | 已完成 |
 | 2026-11-02 | 民俗视觉符号：主用**白鼬尾纹 + 布列塔尼蕾丝**；三螺旋纹不作主视觉（《妖精丘陵》标题与菜单图标已用），最多作灯笼底座小刻纹 | 用户：与《妖精丘陵》太像 | ART_DIRECTION、HANDPAINTED_SPEC §0、标题框、UI 边框 | 已完成 |
 | 2026-11-03 | 菜单音效改为自然声（海浪 / 海风 / 木头或黄铜轻响），不用合成电子音；菜单需背景音乐 | 用户试玩：太电子、与主题不符 | Unity `ProceduralMenuAudio`、MENU_UNITY_PROGRESS | 提议（待做） |
-| 2026-11-07 | **Demo 范围再缩小（提议）**：只做 01_Home（新手村第一章：移动、跳跃、互动、灯笼切换全部在这里学会）→ 以故事版（4–6 张插图的慢推镜头 slide show 或短视频 + 英文字幕）引出后续故事 → To be continued；**02_Harbor 整个场景不做**（连带老佩尔、贝壳、人群剪影、码头分层底图）。03_EndCard 改为故事版播放。补充（用户）：灯笼能力在阁楼获得，用一段故事版（slide show / 短动画 + 文字）讲清来历；之后玩家按键切换现在 / 记忆，场景随之变化；不另设多段切换谜题（分层切换的做法借自《妖精丘陵》，不扩展成主要玩法）；保留一处必须切换才能前进：断梯只在记忆层完好，灯笼在楼下拾起 | 用户：避免工作量过大 | DEMO_IMPLEMENTATION_PLAN v1.1、ART_HANDOFF §4.4 / §6 / §9、STORY_BIBLE §6、handoff.md、UNITY_AGENTS / Unity AGENTS.md、README ×2、Demo 制作方案 Word v1.4 | 已完成（11-07 用户确认） |
+| 2026-11-07 | **Demo 范围再缩小（提议）**：只做 01_Home（新手村第一章：移动、跳跃、互动、灯笼切换全部在这里学会）→ 以故事版（4–6 张插图的慢推镜头 slide show 或短视频 + 英文字幕）引出后续故事 → To be continued；**02_Harbor 整个场景不做**（连带老佩尔、贝壳、人群剪影、码头分层底图）。03_EndCard 改为故事版播放。补充（用户）：灯笼能力在阁楼获得，用一段故事版（slide show / 短动画 + 文字）讲清来历；之后玩家按键切换现在 / 记忆，场景随之变化；不另设多段切换谜题（分层切换的做法借自《妖精丘陵》，不扩展成主要玩法）；保留一处必须切换才能前进：断梯只在记忆层完好，灯笼在楼下拾起 | 用户：避免工作量过大 | DEMO_IMPLEMENTATION_PLAN v1.1、ART_HANDOFF §4.4 / §6 / §9、STORY_BIBLE §6、ForAgent/Design/handoff.md、UNITY_AGENTS / Unity AGENTS.md、README ×2、Demo 制作方案 Word v1.4 | 已完成（11-07 用户确认） |
 | 2026-10-31 | Maela 改为右手提灯（朝右时灯笼在近镜头一侧，不被身体挡住；flipX 后同样在近侧） | 侧面可读性 | ART_HANDOFF §4.2 / §8、ART_PROMPTS C01-T / C01-G、HANDPAINTED_SPEC §3.1 | 已完成（11-05 用户确认；概念图 Maela_v1 保持左手不改） |
 
 ## 4. 影响清单（改设定时逐项检查）
 
-- ☐ `STORY_BIBLE.md` 与 `story_draft/` 故事设定 Word
+- ☐ `ForAgent/Design/STORY_BIBLE.md` 与 `story_draft/` 故事设定 Word
 - ☐ `purposal_story/` 完整版概念设计说明、Demo 制作方案
-- ☐ `DEMO_IMPLEMENTATION_PLAN.md`、`handoff.md`
-- ☐ `ART_HANDOFF.md` §4、`ART_PROMPTS.md`、`ART_ref/ASSETS.md`、已做好的资产
+- ☐ `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md`、`ForAgent/Design/handoff.md`
+- ☐ `ForAgent/Design/ART_HANDOFF.md` §4、`ForAgent/Design/ART_PROMPTS.md`、`ART_ref/ASSETS.md`、已做好的资产
 - ☐ Demo 台词
 
 ## 2026-11-13 Home 画风与构图修正 用户确认
@@ -77,4 +79,11 @@
 
 当前执行入口为 `CommandForAgentToInitialRun/2026-11-15_Unity_AtticBaseline_EndCard_Windows_Web.md`。本地已准备任务与三张用户图，未在 Unity 实施、未导出 EXE、未部署网页。`a803050` 是已知上一轮游戏实现基线；`122e013` 仅更新 Unity 文档链接。用户认可录像整体效果，不等同于此前全部边界、扬声器或独立构建已通过。此前 follow-up 未有新执行报告，其门槛、A4、音频与安全条目并入新单的回归核对，已符合的项目保留。当前 Home 背景继续沿用用户确认版本。
 
-状态：用户已确认设计方向；新任务已准备，Unity 实施与所有构建/发布待执行。用户认可的是昨晚录像整体效果，本轮基线、B5、Quit 及构建成品尚未验收。
+状态：用户已确认设计方向；新任务已准备，Unity 实施与所有构建/发布待执行。用户认可的是昨晚录像整体效果，本轮基线、B5、Quit 及构建成品尚未验收。## 2026-11-15 协作目录与录像要求更新
+
+用户确认现有完整录像中的流程正常，取消工作站必须重复录整段的门槛；保留局部改动检查和新 EXE/Web 实际运行。新建 ForAgent 作为跨电脑交接入口、ForDesignPortfolio 作为学生 4–5 页 PDF 与源包回存位置。已准备作品集制作说明；未制作作品集，不改变游戏内容或三项小修状态。
+
+
+## 2026-11-15 当前 Agent 文档归类已执行
+
+将 7 份根目录当前设计原件迁入 ForAgent/Design，Unity 规则原件迁入 ForAgent/Unity；更新当前 Markdown 引用与 Unity AGENTS 副本，根目录保留 README、本地接续与工作准则。ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md 已核对 24 项素材路径/尺寸，供另一台设计电脑制作 4–5 页 PDF 并回存 ForDesignPortfolio。状态：交接与归类已完成；作品集、Unity 小修和新构建未制作或运行。

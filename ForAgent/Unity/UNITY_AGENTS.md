@@ -1,12 +1,14 @@
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Unity/UNITY_AGENTS.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
 <!-- 草稿（2026-11-02）：复制到 Unity 项目根目录并改名为 AGENTS.md，供 Codex 每次对话自动读取。保持简短；细节放在下列文档里，需要时再读。 -->
 
 # AGENTS.md — The Lantern Keeper（Unity Demo）
 
 ## 先读（按需，不要一次全读）
-1. `SharedWorkFolder/handoff.md` — 项目速览、代码结构、约定
-2. `SharedWorkFolder/DEMO_IMPLEMENTATION_PLAN.md` — 范围、机制、台词、实施清单（§7 打勾）
+1. `SharedWorkFolder/ForAgent/Design/handoff.md` — 项目速览、代码结构、约定
+2. `SharedWorkFolder/ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` — 范围、机制、台词、实施清单（§7 打勾）
 3. `SharedWorkFolder/TechnicalArt/HANDPAINTED_SPEC.md` — 分辨率、尺度、场景层级（§5）、导入设置（§6）、灰盒色块（§7）
-4. 改设定前：`SharedWorkFolder/DESIGN_CHANGES.md`
+4. 改设定前：`SharedWorkFolder/ForAgent/Design/DESIGN_CHANGES.md`
 
 > Unity 项目：`TheLanternKeeper2D`（Unity 6000.3.24f1，已连 GitHub；输入用新 Input System）。SharedWorkFolder 路径：\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder
 >
@@ -32,6 +34,8 @@
 - 不做：灯油、检查点、敌人、潮汐、多结局、存档。新增内容先对照 DEMO_IMPLEMENTATION_PLAN §2。
 
 ## 工作规则
+
+- **录屏要求更新（2026-11-15）**：用户已有完整录像并确认整体正常，不强制另录一条重复整段流程。只验证本轮改动，按需保存相关截图/短片；Windows EXE 与 Web/Pages 新产物仍实际运行，不能由旧视频推断构建通过。总入口 `SharedWorkFolder/ForAgent/README.md`；作品集制作是另一台设计电脑的职责。
 
 - **运行包与文档检查另行存放（2026-11-15）**：Windows/Web 构建先在工程 Assets 外 `Builds/`，最终完整包与 ZIP 放共享 `DemoBuilds/2026-11-15_FinalDemo/`，不放截图目录，不提交二进制到设计或 Unity 源码主分支。Word 排版 PDF/PNG 放根目录 `.story_document_qa/`。新任务的构建交付路径优先于旧的“所有导出”截图规则。
 - **设计文件一律从局域网共享文件夹读取 / 拷贝（11-12 用户要求）**：`\\haoxi-surfacep\Administrator\Documents\MyFlie\AsArtPortfolioTeaching\Game_York\SharedWorkFolder`。任务里写的 `SharedWorkFolder/...`、`TechArtAsset/...` 都指这里，它永远是最新的（比 GitHub 新）。**不要**从 GitHub 克隆、pull、fetch 或下载 raw 文件来取设计内容——GitHub 设计仓库只是给学生看的发布版，常常落后。共享文件夹连不上时停下来汇报，不要改用 GitHub。（Unity 项目自己的 Git / GitHub 照常用。）

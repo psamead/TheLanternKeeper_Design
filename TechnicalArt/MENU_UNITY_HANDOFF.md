@@ -1,7 +1,7 @@
 # 开始菜单 → Unity 搭建交接（给 Codex / Claude）
 
 > 2026-11-03。项目《守灯人 The Lantern Keeper》，2D 手绘（见 `TechnicalArt/HANDPAINTED_SPEC.md`），先做 PC 版。
-> 先读：`handoff.md`（项目与 Demo 范围）、`DEMO_IMPLEMENTATION_PLAN.md`、`UNITY_AGENTS.md`（规则）。本文件只讲开始菜单。
+> 先读：`ForAgent/Design/handoff.md`（项目与 Demo 范围）、`ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md`、`ForAgent/Unity/UNITY_AGENTS.md`（规则）。本文件只讲开始菜单。
 > 视觉目标图：`TechArtAsset/Menu/MENU_v1_mock.png`（1920×1080）——Unity 结果应与它一致。
 
 ## 1. 素材（都在 `SharedWorkFolder/` 下，只复制，不改源文件）
@@ -63,4 +63,4 @@ Scene: 00_StartMenu
 ## 6. 完成后请记录
 
 - 在 `TechnicalArt/MENU_UNITY_PROGRESS.md`（新建）写：完成了什么、Play Mode 里实际看过哪些、还没验证什么。
-- 在 `ART_HANDOFF.md` §10 加一行日期记录；在 `DEMO_IMPLEMENTATION_PLAN.md` §7 只给 Play Mode 验证过的项打 ☑。
+- 在 `ForAgent/Design/ART_HANDOFF.md` §10 加一行日期记录；在 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` §7 只给 Play Mode 验证过的项打 ☑。

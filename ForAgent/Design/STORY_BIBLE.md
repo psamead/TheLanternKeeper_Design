@@ -1,4 +1,6 @@
-<!-- 故事设定（v2.0）。与 story_draft/守灯人_故事设定_StoryBible_v2.1_民俗奇幻.docx 同源；冲突时以本文件为准。修改流程见 DESIGN_CHANGES.md。 -->
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/STORY_BIBLE.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
+<!-- 故事设定（v2.0）。与 story_draft/守灯人_故事设定_StoryBible_v2.1_民俗奇幻.docx 同源；冲突时以本文件为准。修改流程见 ForAgent/Design/DESIGN_CHANGES.md。 -->
 
 # 《The Lantern Keeper》故事设定 STORY BIBLE（v2.0）
 
@@ -87,7 +89,7 @@
 | 亡魂化为飞蛾 | 欧洲多地民间说法 | 飞蛾 = 洛伊克 |
 | 灯塔守护记忆边界 | 无出处 | 原创核心设定 |
 
-## 9. 与美术有关的约束（摘要，详见 ART_HANDOFF.md）
+## 9. 与美术有关的约束（摘要，详见 ForAgent/Design/ART_HANDOFF.md）
 
 - 现在层冷（雾蓝灰），记忆层暖（暖金）；梅拉的黄色雨衣是全画面最亮色，两层都不变。
 - 灯笼是铜制、带玻璃罩的手提风灯，暖白火焰；它是全作唯一的“约定之火”，所有暖光都应源自它或塔灯。

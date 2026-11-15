@@ -40,7 +40,7 @@ All files: Force To Mono **off**, Preload Audio Data on for SFX.
 3. Music + ambience: add a `MenuMusic` GameObject in `00_StartMenu` with two 2D `AudioSource`s — BGM (loop, volume 0.6) and ambience (loop, volume 0.45), both Play On Awake. Fade both in over 2 s at scene start. When Play is confirmed, fade both out over ~1 s, **then** load `01_Home` (let the lantern confirm sound be heard; do not cut it).
 4. Keep only one `AudioListener` (Main Camera).
 5. Play Mode check: music and sea start and loop with no click at the loop point (listen once past 80 s if possible); hover sounds rotate; confirm + fade-out before Play loads `01_Home`; Esc in Settings plays the wood sound. Ask the user to save the scene (Ctrl+S) in Unity before you commit. Commit "Menu audio: natural SFX + BGM" and push.
-6. Report: append a dated section to `SharedWorkFolder/TechnicalArt/MENU_UNITY_PROGRESS.md` (what was done, what you checked, what was not verified — e.g. no real speaker listening) and one dated line to `SharedWorkFolder/ART_HANDOFF.md` §10 (edit the current file; do not overwrite other changes).
+6. Report: append a dated section to `SharedWorkFolder/TechnicalArt/MENU_UNITY_PROGRESS.md` (what was done, what you checked, what was not verified — e.g. no real speaker listening) and one dated line to `SharedWorkFolder/ForAgent/Design/ART_HANDOFF.md` §10 (edit the current file; do not overwrite other changes).
 
 ## Do not
 - Do not add an Audio Mixer yet (volume settings come later with the Settings panel).

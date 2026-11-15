@@ -37,24 +37,26 @@
 
 ### 3.1 文件与版本
 
+- 2026-11-15 用户新建 `ForAgent/`，集中新 Agent 交接和阅读入口；跨电脑作品集说明放这里。`ForDesignPortfolio/` 放 4–5 页作品集最终 PDF，Source/Previews/_work 分别放源包、页面检查图和临时材料。作品集页面预览属于该交付包，不混入游戏截图验收目录。Unity 执行单继续放 CommandForAgentToInitialRun，本地续接继续放根目录 *_RESUME.md。
+
 - 2026-11-15 发布整理：运行包/ZIP 放根目录 `DemoBuilds/日期_主题/`（Git 忽略），Word 排版检查 PDF/PNG 放 `.story_document_qa/`；只有用户反馈截图、游戏截图与录像进入 `ForDesignScreenshot/日期_主题/`。当前 Unity 执行入口以 Command README 为准。
-- md（给 Agent）放根目录；Word（给人看）放 `story_draft/`、`purposal_story/`、`TechnicalArt/`；旧版本放 `deprecated/`。
+- 当前设计和 Agent 规则原件集中在 `ForAgent/Design/`、`ForAgent/Unity/`，总入口是 `ForAgent/README.md`；根目录只保留项目 README、本地 *_RESUME.md 与本工作准则。Word（给人看）放 `story_draft/`、`purposal_story/`、`TechnicalArt/`；旧版本放 `deprecated/`。
 - 根目录 `*_RESUME.md` 是**当前本地对话/工作续接摘要**，写清上下文、阅读顺序和暂停点，不写成另一台机器的执行命令。`CommandForAgentToInitialRun/` 专放**发给 Unity 工作站/网络端 Codex 的可执行任务单**，需有目标、步骤、相关资产、验收与回报要求；新任务先看该目录 `README.md`。不要把本地续接摘要放进该目录。
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。
 - md 与对应 Word 同源，改一处要同步另一处。
-- 用户确认玩法或流程变化时，除执行单外同步更新：`DESIGN_CHANGES.md`（决定与状态）、`DEMO_IMPLEMENTATION_PLAN.md` / `handoff.md`（当前设计摘要）、对应 `TechnicalArt/` 知识库与制作经验、`TechnicalArt/MENU_UNITY_PROGRESS.md`（明确是否仅准备或已在 Unity 验证）、`HOME_ART_RESUME.md`（本地续接入口）和 `UNITY_AGENTS.md`（工作站 Agent 只需知道的当前门槛与入口）。如果根目录 Markdown 有配套 Word，另存新版本并同步；不能只改执行单，也不能把待办标成已完成。
+- 用户确认玩法或流程变化时，除执行单外同步更新：`ForAgent/Design/DESIGN_CHANGES.md`（决定与状态）、`ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` / `ForAgent/Design/handoff.md`（当前设计摘要）、对应 `TechnicalArt/` 知识库与制作经验、`TechnicalArt/MENU_UNITY_PROGRESS.md`（明确是否仅准备或已在 Unity 验证）、`HOME_ART_RESUME.md`（本地续接入口）和 `ForAgent/Unity/UNITY_AGENTS.md`（工作站 Agent 只需知道的当前门槛与入口）。如果当前 Markdown（包括已迁入 ForAgent 的说明）有配套 Word，另存新版本并同步；不能只改执行单，也不能把待办标成已完成。
 - 当前可执行任务由 `CommandForAgentToInitialRun/README.md` 明确指向；较新的任务覆盖冲突要求。旧执行单和历史回报保留作记录，必须标清被替代的行为与仍有效的结果，避免后续 Agent 读到旧规则后重做。
 - 给人看的更新采用清晰标题、短段落、必要时用流程表或音频 cue 表；任务步骤、验收细节放执行单，知识库记录可复用规律，进度表只写实际实施与验证事实。
-- `UNITY_AGENTS.md` 改完后，Claude 直接复制到 Unity 根目录 `AGENTS.md`（两份保持完全一样，2026-11-09 定）；提交由 Codex 或用户在 Unity 仓库做。
+- `ForAgent/Unity/UNITY_AGENTS.md` 改完后，Claude 直接复制到 Unity 根目录 `AGENTS.md`（两份保持完全一样，2026-11-09 定）；提交由 Codex 或用户在 Unity 仓库做。
 - 参考图放 `ART_ref/`，每次新增或替换都更新 `ART_ref/ASSETS.md`。
 - 本文件夹是公开 Git 仓库：改完在本地 commit（作者 `psamead <psamead@users.noreply.github.com>`，不用个人邮箱），提醒用户 `git push`。第三方素材、源文件不上传（`deprecated/` 上传）；Unity 截图放 `ForDesignScreenshot/`；新增第三方图写进 `.gitignore`。改 README 时英文 `README.md` 与中文 `README.zh-CN.md` 一起改。
 
 ### 3.2 设定
-- 设定以 `STORY_BIBLE.md` 为准；修改先登记 `DESIGN_CHANGES.md`。
+- 设定以 `ForAgent/Design/STORY_BIBLE.md` 为准；修改先登记 `ForAgent/Design/DESIGN_CHANGES.md`。
 - 为补齐逻辑而新增的细节标「建议」并列入待确认。
 
 ### 3.3 范围
-- 本项目只做 Demo，体量参考 Battle Car Arena；完整版只作方向。新增内容前先对照 `DEMO_IMPLEMENTATION_PLAN.md` 的范围清单。
+- 本项目只做 Demo，体量参考 Battle Car Arena；完整版只作方向。新增内容前先对照 `ForAgent/Design/DEMO_IMPLEMENTATION_PLAN.md` 的范围清单。
 - 优先级：完整流程 > 核心机制能看懂 > 画面统一 > 反馈 > 数量。
 
 ### 3.4 出图（沿用《妖精丘陵》经验）
@@ -72,7 +74,7 @@
 
 ### 3.5 质量检查
 - Word 交付前渲染为 PDF 检查版式。
-- 每张生成图对照 `ART_HANDOFF.md` §4 的“必须保留 / 不要画”逐项检查。
+- 每张生成图对照 `ForAgent/Design/ART_HANDOFF.md` §4 的“必须保留 / 不要画”逐项检查。
 
 - 截图 / 录屏放 `ForDesignScreenshot/YYYY-MM-DD_主题/` 子文件夹，不要放在根目录（2026-11-07 起）。
 

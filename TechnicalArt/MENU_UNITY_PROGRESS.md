@@ -4,7 +4,7 @@
 
 ## 已完成
 
-- 已将项目根目录 `AGENTS.md` 与共享 `UNITY_AGENTS.md` 的共享路径占位符替换为实际 UNC 路径。
+- 已将项目根目录 `AGENTS.md` 与共享 `ForAgent/Unity/UNITY_AGENTS.md` 的共享路径占位符替换为实际 UNC 路径。
 - 确认仓库已有 Unity `.gitignore` 规则。
 - 本地提交 `7d8ffdf Before start menu v1` 已推送；通过 `git ls-remote` 确认远端 `main` 指向该提交。
 - 在目标 Unity 6000.3.24f1 Editor 中创建了 `01_StartMenu`、`02_Home`、`03_Harbor`、`04_EndCard`，并按该顺序加入 Build Settings；原 `SampleScene` 保持原样且不在 Build Settings 中。
@@ -493,3 +493,12 @@ Publication verified: Unity commit `a8030500baab20c7870cfe0dd79d87d28847df65` pu
 | Unity 新提交与 push | 待工作站执行 |
 | Web 构建与 Pages 真实 URL | 未构建、未部署、未验证 |
 | 本轮新成品用户验收 | 尚未进行 |
+
+
+## 2026-11-15 用户澄清录屏与作品集交接 已准备
+
+用户明确表示自己完整录像里的现有流程正常，因此最新任务不再要求 Unity Codex 重录整条带声流程。旧 follow-up 是历史单，不独立重跑；三项小修用对应截图/必要短片验证，Windows 与网页构建仍分别实跑。原录像可供设计与作品集取材，不能说明后来构建通过。
+
+新增 ForAgent/README.md 和 ForAgent/PORTFOLIO_PRODUCTION_HANDOFF.md，供另一台设计电脑通过共享读取并制作 4–5 页 PDF，回存 ForDesignPortfolio；仅资料已准备，作品集未开始制作，Unity 新实施/EXE/Web 状态未改变。
+
+当前设计与 Agent 原件已集中到 ForAgent/Design 和 ForAgent/Unity；Unity 工程 AGENTS.md 已与新规则原件同步。此变动仅文档，不属于 Unity 游戏实现。

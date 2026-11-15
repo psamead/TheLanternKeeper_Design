@@ -21,7 +21,7 @@
 4. `LanternPickupInteractable.PickUp()` 对整个 A 调用 `SetMusicDucked(true)` 和 `SetAmbienceDucked(true)`，目前没有 A1–A4 逐页音频。`EndCardController.ShowButtons()` 会把音乐淡到 0；本次结尾正常配乐要求要覆盖结尾静置页。
 5. `LadderAtticTransition` 把玩家直接设到 `atticLanding.position`，再等 Grounded 最多 90 个物理帧，未着地仍只 Warning 后淡入。`AtticCameraZone` 离区会恢复楼下构图。落点、地板空洞和离区是否能掉回楼下需实机复现，不能只以最终某一帧 Grounded 为通过。
 
-剧情检查结论：拾起爷爷留下的“约定之火”→ A 讲来历 → 看见断梯阻路 → 首次 E/铃声照出记忆中的完整梯 → 进入阁楼 → 窗边 B，符合 `STORY_BIBLE.md` 的灯笼/记忆规则和 Demo 单线范围。A4 是能力预示，不自动算玩家已经切层或完成首次 E。铃声沿用持灯 E 的叙事反馈，不新增独立铃铛道具；传送表现省略攀爬，不在剧情中解释成新增瞬移能力。阁楼单向安全通行不增加支线/谜题。
+剧情检查结论：拾起爷爷留下的“约定之火”→ A 讲来历 → 看见断梯阻路 → 首次 E/铃声照出记忆中的完整梯 → 进入阁楼 → 窗边 B，符合 `ForAgent/Design/STORY_BIBLE.md` 的灯笼/记忆规则和 Demo 单线范围。A4 是能力预示，不自动算玩家已经切层或完成首次 E。铃声沿用持灯 E 的叙事反馈，不新增独立铃铛道具；传送表现省略攀爬，不在剧情中解释成新增瞬移能力。阁楼单向安全通行不增加支线/谜题。
 
 ## 1. 严格门槛：拾灯 + A 结束后才开始探索
 

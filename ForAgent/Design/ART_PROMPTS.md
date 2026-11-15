@@ -1,3 +1,5 @@
+<!-- 2026-11-15 文档迁移：当前原件在 ForAgent/Design/ART_PROMPTS.md；除可点击相对链接外，文内文件路径相对共享根目录。 -->
+
 > 2026-11-13 Home 更新：以 `TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md` 及同目录 `守灯人_Home美术交接与经验_2026-11-13_v1.docx` 为最新补充。风格优先，接受场景透视；旧正视限制按历史记录阅读。
 
 <!-- 出图 prompt 集。每生成 / 采用一张图，更新 ART_ref/ASSETS.md。准则来自《妖精丘陵》AGENT_PROCESS_GUIDELINES §5.3–5.4。 -->
@@ -52,7 +54,7 @@
 | S02-M | 奶奶家 · 记忆 | the same cottage interior in warm afternoon sunlight, intact ladder, fishing nets and family photos on the walls STYLE_SCENE WARM | V7 |
 | S03 | 远景 | a calm sea horizon at night, faint silhouette of a drowned medieval bell tower under the water surface, distant cliffs, layered parallax background STYLE_SCENE COLD | V7, --ar 32:9 |
 
-## 4. 宣传（详见 ART_DIRECTION.md）
+## 4. 宣传（详见 ForAgent/Design/ART_DIRECTION.md）
 
 | # | 对象 | Prompt | 参数 |
 |---|---|---|---|

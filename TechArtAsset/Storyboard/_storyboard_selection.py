@@ -33,7 +33,7 @@ wb.save("STORYBOARD_SELECTION.xlsx")
 def md(rows): return "\n".join(["| "+" | ".join(H)+" |","|"+"---|"*len(H)]+["| "+" | ".join(r)+" |" for r in rows])
 open("STORYBOARD_SELECTION.md","w",encoding="utf-8").write(f"""# 故事版选图记录（P / Soazig / A / B）
 
-> 每张图选了哪一张、为什么。给人看的版本是同目录 `STORYBOARD_SELECTION.xlsx`（同一份内容，由 `_storyboard_selection.py` 生成，改这里的表就重跑脚本）。提示词见 `ART_PROMPTS.md` §4b / §4c，过程见 `ART_HANDOFF.md` §9。在线挑选表（Claude Sheets）：「守灯人 故事版 A/B 第一轮」「守灯人 故事版补图 11-11」——以本文件为准。
+> 每张图选了哪一张、为什么。给人看的版本是同目录 `STORYBOARD_SELECTION.xlsx`（同一份内容，由 `_storyboard_selection.py` 生成，改这里的表就重跑脚本）。提示词见 `ForAgent/Design/ART_PROMPTS.md` §4b / §4c，过程见 `ForAgent/Design/ART_HANDOFF.md` §9。在线挑选表（Claude Sheets）：「守灯人 故事版 A/B 第一轮」「守灯人 故事版补图 11-11」——以本文件为准。
 
 ## 选图原则（用户，11-08 ~ 11-12）
 - **情绪落差**：回忆镜头选最暖、最“高光”的，让后面的失去有跌落感；悲剧镜头去掉多余暖色（会读成“还有希望”）。
