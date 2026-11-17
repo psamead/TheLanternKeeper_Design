@@ -5,3 +5,6 @@ Start with `ForAgent/README.md` and `AGENT_PROCESS_GUIDELINES.md`, then read the
 For historical rationale and reusable lessons, read `ForAgent/CLAUDE_CONTEXT_2026-11-18.md`. It was reconciled with the design/release records on 2026-11-18. Use its lessons on demo scope, evidence boundaries, and handoff organization where relevant. Current project records and user instructions take priority over the imported history; do not replay expired tasks or treat recorded tests as newly performed.
 
 Keep design, prepared assets, implementation, runtime verification, and owner acceptance distinct. Do not broaden a task just because the imported note describes future work.
+
+
+For Midjourney prompt work, read `ForAgent/MIDJOURNEY_PROJECT_LESSONS.md` before drafting or adapting a prompt. Use the current project handoff for asset decisions; historical parameters are not universal defaults.

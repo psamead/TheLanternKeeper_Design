@@ -59,3 +59,6 @@ ForAgent 放新 Agent 总入口与跨电脑交接；CommandForAgentToInitialRun 
 ## Claude 历史上下文与经验（2026-11-18）
 
 [导入上下文与可复用经验](CLAUDE_CONTEXT_2026-11-18.md)：已对照当前发布、作品集和设计入口；只补充历史理由与经验，不恢复旧截止日期或旧测试限制，不改变当前设计。共享 Obsidian 知识库的 TheLanternKeeper2D 分区有对应副本。
+
+
+Midjourney 实用方法：[提示词、参考图与迭代经验](MIDJOURNEY_PROJECT_LESSONS.md)。含两项目的实测案例、失败边界、未测试模板和来源记录格式；不改变现有美术定稿。
