@@ -54,3 +54,8 @@ ForAgent 放新 Agent 总入口与跨电脑交接；CommandForAgentToInitialRun 
 | 标题、海报、菜单视觉系统 | [美术方向](Design/ART_DIRECTION.md) |
 | 出图提示词与历史生成参数 | [美术提示词](Design/ART_PROMPTS.md) |
 | Unity 工作站规则原件 | [Unity Agent 规则](Unity/UNITY_AGENTS.md) |
+
+
+## Claude 历史上下文与经验（2026-11-18）
+
+[导入上下文与可复用经验](CLAUDE_CONTEXT_2026-11-18.md)：已对照当前发布、作品集和设计入口；只补充历史理由与经验，不恢复旧截止日期或旧测试限制，不改变当前设计。共享 Obsidian 知识库的 TheLanternKeeper2D 分区有对应副本。
