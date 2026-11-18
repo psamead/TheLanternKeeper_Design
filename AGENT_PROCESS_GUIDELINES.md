@@ -41,7 +41,7 @@
 
 - 2026-11-15 用户新建 `ForAgent/`，集中新 Agent 交接和阅读入口；跨电脑作品集说明放这里。`ForDesignPortfolio/` 放 4–5 页作品集最终 PDF，Source/Previews/_work 分别放源包、页面检查图和临时材料。作品集页面预览属于该交付包，不混入游戏截图验收目录。Unity 执行单继续放 CommandForAgentToInitialRun，本地续接继续放根目录 *_RESUME.md。
 
-- 2026-11-15 发布整理：运行包/ZIP 放根目录 `DemoBuilds/日期_主题/`（Git 忽略），Word 排版检查 PDF/PNG 放 `.story_document_qa/`；只有用户反馈截图、游戏截图与录像进入 `ForDesignScreenshot/日期_主题/`。当前 Unity 执行入口以 Command README 为准。
+- 2026-11-15 发布整理：运行包/ZIP 放根目录 `DemoBuilds/日期_主题/`（正式交付包按当前 `.gitattributes` 使用 Git LFS），Word 排版检查 PDF/PNG 放 `.story_document_qa/`；只有用户反馈截图、游戏截图与录像进入 `ForDesignScreenshot/日期_主题/`。当前 Unity 执行入口以 Command README 为准。
 - 当前设计和 Agent 规则原件集中在 `ForAgent/Design/`、`ForAgent/Unity/`，总入口是 `ForAgent/README.md`；根目录只保留项目 README、本地 *_RESUME.md 与本工作准则。Word（给人看）放 `story_draft/`、`purposal_story/`、`TechnicalArt/`；旧版本放 `deprecated/`。
 - 根目录 `*_RESUME.md` 是**当前本地对话/工作续接摘要**，写清上下文、阅读顺序和暂停点，不写成另一台机器的执行命令。`CommandForAgentToInitialRun/` 专放**发给 Unity 工作站/网络端 Codex 的可执行任务单**，需有目标、步骤、相关资产、验收与回报要求；新任务先看该目录 `README.md`。不要把本地续接摘要放进该目录。
 - 新版本另存新文件名，不覆盖用户编辑过的文件；写入前比对设备上的修改时间。
@@ -51,7 +51,7 @@
 - 给人看的更新采用清晰标题、短段落、必要时用流程表或音频 cue 表；任务步骤、验收细节放执行单，知识库记录可复用规律，进度表只写实际实施与验证事实。
 - `ForAgent/Unity/UNITY_AGENTS.md` 改完后，Claude 直接复制到 Unity 根目录 `AGENTS.md`（两份保持完全一样，2026-11-09 定）；提交由 Codex 或用户在 Unity 仓库做。
 - 参考图放 `ART_ref/`，每次新增或替换都更新 `ART_ref/ASSETS.md`。
-- 本文件夹是公开 Git 仓库：改完在本地 commit（作者 `psamead <psamead@users.noreply.github.com>`，不用个人邮箱），提醒用户 `git push`。第三方素材、源文件不上传（`deprecated/` 上传）；Unity 截图放 `ForDesignScreenshot/`；新增第三方图写进 `.gitignore`。改 README 时英文 `README.md` 与中文 `README.zh-CN.md` 一起改。
+- 本文件夹是公开 Git 仓库：改完在本地 commit（作者 `psamead <psamead@users.noreply.github.com>`，不用个人邮箱），提醒用户 `git push`。第三方参考图与临时缓存不上传；项目源文件和正式交付包按当前 `.gitattributes` 使用 Git LFS（`deprecated/` 保留历史）；Unity 截图放 `ForDesignScreenshot/`；新增第三方图写进 `.gitignore`。改 README 时英文 `README.md` 与中文 `README.zh-CN.md` 一起改。
 
 ### 3.2 设定
 - 设定以 `ForAgent/Design/STORY_BIBLE.md` 为准；修改先登记 `ForAgent/Design/DESIGN_CHANGES.md`。
@@ -80,10 +80,17 @@
 
 - 截图 / 录屏放 `ForDesignScreenshot/YYYY-MM-DD_主题/` 子文件夹，不要放在根目录（2026-11-07 起）。
 
-## 2026-11-13 Home 美术交接
+## 历史快照：2026-11-13 Home 美术交接
+
+以下是当时交接状态，已被 11-15 发布报告取代；当前入口为 `ForAgent/README.md` 与 `CommandForAgentToInitialRun/README.md`。
 
 **2026-11-13 当前交接**：Home 灰盒、切层、梯子和阁楼出口已有 Unity `b61eb3f` 的验证记录；本轮处于美术统一与接入准备。保留手绘风格，房间透视可接受。已选资产为 `Lantern_v4.png`、`Home_Present_v3.png`、`Attic_PerspectiveRef_v3.png`、`Ladder_Whole_v4.png`，均尚未接入 Unity。
 
 本地美术 / 设计 Codex 新对话先读 [Home 美术知识库](TechnicalArt/HOME_ART_KNOWLEDGE_BASE.md) 和[本地接续说明](HOME_ART_RESUME.md)。发给另一台 Unity 工作站 Codex 的可执行任务单为 `CommandForAgentToInitialRun/2026-11-13_Unity_Home_Review_Art_Transition_Audio.md`。给人看的同步补充为 `TechnicalArt/守灯人_Home美术交接与经验_2026-11-13_v1.docx`。本次暂停在交接完成处；下次先看用户提出的 Unity 设计问题。
 
 本轮经验、拒绝批次和素材来源详见知识库。用户明确要求本次提交后推送 GitHub，可直接完成推送；后续发布按当次授权执行。
+
+
+## 2026-11-18 资料与历史记忆整理
+
+导入记忆应先与当前设计、实施和发布报告核对；原始导出保留在 ClaudeMemory，不整包复制入公开设计仓库。当前原件位置、归档边界及经验记录方法见 [资料与经验索引](ForAgent/PROJECT_ARCHIVE_AND_LEARNING.md)。本次只调整导航和冲突说明，未改变游戏设计或验收状态。

@@ -39,4 +39,9 @@ Unity / Codex 截图和录屏，以及用户标注截图。**每次任务一个�
 - `2026-11-15_Home_FirstBell_Exploration/`：3 张新标注图，首次摇铃的两阶段探索、固定文字和 EndCard 移位；Unity 新验收放 `after/`。
 - `2026-11-15_Home_Pickup_Story_Attic/`：本轮 12 张用户附图、85 秒原始录像，拾灯/A 前置、故事版音频/收尾、铃声后碰撞移交、阁楼安全落点；图序见目录 README，新验收放 `after/`。
 
-当前 Unity 执行清单：`CommandForAgentToInitialRun/2026-11-15_Unity_PickupGate_StoryAudio_Attic.md`，待 Unity 端执行。11-15 第一轮已在 `c7ba7f2` 实施，11-14 视觉单已在 `a84fa68` 实施，回报见 `TechnicalArt/MENU_UNITY_PROGRESS.md`。此前任务和证据保留历史。
+当前任务入口：[Unity 任务索引](../CommandForAgentToInitialRun/README.md)。11-15 最终小修已有实施与发布报告：[发布证据](2026-11-15_AtticBaseline_EndCard_Release/after/Release_Report.md)。按既有报告，浏览器路线已通过，Windows 包已交付并验证启动；Windows 游戏内路线与用户视觉/声音验收仍待完成。本次整理未重跑测试。此前任务和证据保留历史，不作为独立待执行清单。
+
+- `2026-11-15_Home_FullDemo_Recordings/`：用户认可整体效果的旧版全流程参考，不能替代后续修改验收。
+- `2026-11-15_AtticBaseline_EndCard_Release/`：阁楼基线、B5 直接显示选项、Quit 回菜单的用户反馈与发布证据；新结果见 `after/`。
+
+归档与查找总规则见 [资料与经验索引](../ForAgent/PROJECT_ARCHIVE_AND_LEARNING.md)。
