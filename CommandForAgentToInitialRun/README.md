@@ -1,5 +1,11 @@
 # CommandForAgentToInitialRun
 
+## Latest owner report 2026-11-18
+
+2026-11-18 用户反馈：网络另一台机器上的 Codex 已跑过 Unity，暂未发现问题；作品集制作端 Codex 也已跑过，暂未发现问题。来源为用户本次转述，本地未重新运行。此反馈作为继续工作的可用基线；未指定 EXE/Web、具体提交、测试路线或作品集软件兼容性，不扩写为所有平台及所有细节最终验收。
+
+后续接手与资料维护注意事项见 [资料与经验索引](../ForAgent/PROJECT_ARCHIVE_AND_LEARNING.md)。下方保留先前制作和验证记录；其中待审阅说明应结合本次反馈阅读，不自动重开旧任务。
+
 This folder contains dated actionable task sheets for Codex on the Unity workstation. Local chat resumes belong in the repository root as *_RESUME.md; art knowledge and lessons belong in TechnicalArt. A prepared task is not an implementation or acceptance report.
 
 ## Current task 2026-11-15

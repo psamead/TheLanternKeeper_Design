@@ -1,5 +1,7 @@
 # The Lantern Keeper · Design Repository
 
+Latest owner feedback (2026-11-18): Codex on the network Unity workstation and the portfolio workstation has run the work without problems so far. This is owner-reported feedback; the earlier release report retains its original validation limits. Continuation and knowledge-base guidance: [archive and learning index](ForAgent/PROJECT_ARCHIVE_AND_LEARNING.md).
+
 **English** | [简体中文](README.zh-CN.md)
 
 Design and art documentation for a hand-painted 2D side-scrolling puzzle **demo** set on the Breton coast: story, gameplay plan, art specs, handoff notes, and finished art / audio assets.

@@ -1,5 +1,7 @@
 # The Lantern Keeper（守灯人）· 设计仓库
 
+最新用户反馈（2026-11-18）：网络 Unity 工作站与作品集工作站的 Codex 均已跑过，暂未发现问题，作为后续接续基线；原发布报告保留当时的验证范围。后续接手及知识库维护见[资料与经验索引](ForAgent/PROJECT_ARCHIVE_AND_LEARNING.md)。
+
 [English](README.md) | **简体中文**
 
 2D 手绘横版解谜 Demo 的**设计与美术文档**：故事、玩法方案、美术规格、交接记录、已完成的美术 / 音频资产。
